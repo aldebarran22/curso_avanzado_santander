@@ -20,8 +20,14 @@ def csvToDict(csv, sep=';'):
     return [dict(zip(cabs, i.split(sep))) \
          for i in filas[1:]]
 
+def dictToCSV(L, sep=";"):
+    # Devolver un bloque de texto en formato CSV:
+    pass
+
 if __name__ == '__main__':
     L = csvToDict(csv)
     for i in L:
         print(i)
+    txt = dictToCSV(L)
+    print(txt == csv)
 
