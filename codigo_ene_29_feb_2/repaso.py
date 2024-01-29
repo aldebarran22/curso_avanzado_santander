@@ -93,10 +93,23 @@ def listcomp():
     t2 = tuple((2**i for i in range(0,11)))
     print(t2, type(t2))
 
-
+def suma(a,b):
+    return a+b
 
 if __name__ == '__main__':
     #diccionario()
     #copiarObjetosMutables()
     #slicing()
-    listcomp()
+    #listcomp()
+
+    print(suma(3,5)) # forma posicional
+    print(suma(b=5, a=3)) # nominal
+
+    t = (3,5)
+    print(suma(*t)) # con una tupla
+
+    d = {"a":3, "b":5}
+    print(suma(**d)) # con un dict
+
+    L = [3,5]
+    print(suma(*L)) # con una lista
