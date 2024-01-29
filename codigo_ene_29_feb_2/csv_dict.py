@@ -22,12 +22,16 @@ def csvToDict(csv, sep=';'):
 
 def dictToCSV(L, sep=";"):
     # Devolver un bloque de texto en formato CSV:
-    pass
+    cabs = sep.join(L[0].keys())
+    lineas = [sep.join(i.values())  for i in L]
+    lineas.insert(0, cabs)
+    return "\n".join(lineas)
 
 if __name__ == '__main__':
     L = csvToDict(csv)
     for i in L:
         print(i)
     txt = dictToCSV(L)
+    print(txt)
     print(txt == csv)
 
