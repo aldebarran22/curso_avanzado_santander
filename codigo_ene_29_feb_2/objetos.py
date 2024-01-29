@@ -82,6 +82,7 @@ class Empleado:
 if __name__=='__main__':
     emp = Empleado(1, "Ana","Ventas")
     emp.telefono = 600363635
+    emp.__dict__['fijo'] = 914586699
     print(emp, emp.__dict__)
 
     exit()
