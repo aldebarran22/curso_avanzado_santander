@@ -95,6 +95,8 @@ class EmpleadoEmpresa(Empleado):
 
 def testEmpleado():
     emp = Empleado(1, "Ana","Ventas")
+
+
     emp.telefono = 600363635
     emp.__dict__['fijo'] = 914586699
     print(emp, emp.__dict__)
@@ -129,6 +131,20 @@ def testEmpleadoEmpresa():
     print(s)
     obj = eval(s)
     print(obj, obj.__class__)
+
+class Terrestre: 
+    def desplazar(self): 
+        print("El animal anda")
+
+class Acuatico: 
+    def desplazar(self): 
+        print("El animal nada")
+
+class Cocodrilo(Terrestre, Acuatico): 
+    
+    def desplazar(self):
+        Terrestre.desplazar(self)
+        Acuatico.desplazar(self)
 
 if __name__=='__main__':
     #testEmpleado()

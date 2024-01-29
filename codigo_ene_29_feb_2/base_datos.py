@@ -33,6 +33,9 @@ class BaseDatos:
 if __name__=='__main__':
     try:
         bd = BaseDatos('../BBDD/empresa3.db')
+        L = bd.selectEmpleados()
+        L.sort()
+        print(L)
     except Exception as e:
         print(e.__class__.__name__, e)
 
