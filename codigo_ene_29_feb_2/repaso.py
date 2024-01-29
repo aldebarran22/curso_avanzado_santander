@@ -97,6 +97,9 @@ def listcomp():
 def suma(a,b):
     return a+b
 
+def suma(a,b,c):
+    return a+b+c
+
 def histograma():
     # Generar número aleatorios y crear un histograma
     # imprimir los 5 que más se repiten.
@@ -117,10 +120,6 @@ def histograma():
     # Crear el histograma con Counter:
     c = Counter(L)
     print(c)
-
-
-
-
 
 if __name__ == '__main__':
     #diccionario()
