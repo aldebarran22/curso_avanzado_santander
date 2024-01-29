@@ -69,8 +69,8 @@ class Empleado:
         self.cargo = cargo
 
     def __str__(self):
-        #return str(self.id) + " " + self.nombre + " " + self.cargo
-        return " ".join([k+":"+str(v) for k,v in self.__dict__.items()])
+        return str(self.id) + " " + self.nombre + " " + self.cargo
+        #return " ".join([k+":"+str(v) for k,v in self.__dict__.items()])
 
     def __repr__(self):
         return str(self)
@@ -83,7 +83,15 @@ class Empleado:
         pass
 
 class EmpleadoEmpresa(Empleado):
-    pass
+    
+    def __init__(self, id=0, nombre="", cargo="", sueldo=0.0, empresa=""):
+        Empleado.__init__(self, id, nombre, cargo)
+        #super().__init__(id, nombre, cargo)
+        self.sueldo = sueldo
+        self.empresa = empresa
+
+    def __str__(self):
+        return super().__str__() + " " + str(self.sueldo) + " " + self.empresa
 
 def testEmpleado():
     emp = Empleado(1, "Ana","Ventas")
@@ -109,7 +117,8 @@ def testEmpleado():
     print(Ljson)
 
 def testEmpleadoEmpresa():
-    pass
+    emp2 = EmpleadoEmpresa(nombre="Ana", sueldo=2000.0, empresa="TRT")
+    print(emp2)
 
 if __name__=='__main__':
     #testEmpleado()
