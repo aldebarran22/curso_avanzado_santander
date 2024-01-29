@@ -55,6 +55,9 @@ Propiedades de los objetos:
 __class__.__name__
 __doc__
 __dict__ --> los atributos: keys, y los valores: values
+
+Python es un lenguaje de POO dinámico, permite crear att. 
+en t.de ejecución
 """
 
 class Empleado:
@@ -66,13 +69,32 @@ class Empleado:
         self.cargo = cargo
 
     def __str__(self):
-        return str(self.id) + " " + self.nombre + " " + self.cargo
+        #return str(self.id) + " " + self.nombre + " " + self.cargo
+        return " ".join([k+":"+str(v) for k,v in self.__dict__.items()])
 
     def __repr__(self):
         return str(self)
 
+    def __del__(self):
+        #print('borrando: ', self.nombre)
+        pass
+
 if __name__=='__main__':
     emp = Empleado(1, "Ana","Ventas")
-    print(emp)
+    emp.telefono = 600363635
+    print(emp, emp.__dict__)
+
+    exit()
     L = [emp, Empleado(2,"Gema","Gerente"), Empleado(3,"Pablo","Admin")]
     print(L)
+    L.sort(key=lambda obj : obj.cargo)
+    print(L)
+
+    # Extraer los nombres de los empleados:
+    nombres = [obj.nombre for obj in L]
+    nombres.sort()
+    print(nombres)
+
+    # Ordenar con un criterio por defecto:
+
+    # Convertir a json
