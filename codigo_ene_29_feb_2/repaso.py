@@ -96,6 +96,25 @@ def listcomp():
 def suma(a,b):
     return a+b
 
+def histograma():
+    # Generar número aleatorios y crear un histograma
+    # imprimir los 5 que más se repiten.
+
+    # Generar 1000 número ale.
+    L = [randint(1,10) for _ in range(1000)]
+
+    # Quitar los repetidos:
+    k = set(L)
+
+    # Crear un histograma con un diccionario:
+    histo = dict()
+    for i in k:
+        histo[i] = L.count(i) # calcula el número de repeticiones
+    R = sorted(histo.items(), key=lambda t:t[1], reverse=True)
+    print(R[:5])
+
+
+
 if __name__ == '__main__':
     #diccionario()
     #copiarObjetosMutables()
@@ -118,3 +137,6 @@ if __name__ == '__main__':
     fichero = "Francia"
     path = f"C:/mis documentos/{fichero}.csv"
     print(path)
+    print('-' * 20)
+
+    histograma()
