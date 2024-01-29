@@ -27,6 +27,13 @@ def dictToCSV(L, sep=";"):
     lineas.insert(0, cabs)
     return "\n".join(lineas)
 
+def dictToCSV2(L, sep=";"):
+    # Devolver un bloque de texto en formato CSV:
+    cabs = sep.join(L[0].keys())
+    lineas = [sep.join(i.values())  for i in L]
+    lineas.insert(0, cabs)
+    return "\n".join(lineas)
+
 if __name__ == '__main__':
     L = csvToDict(csv)
     for i in L:
