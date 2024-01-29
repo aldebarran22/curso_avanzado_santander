@@ -65,6 +65,14 @@ class Empleado:
         self.nombre = nombre
         self.cargo = cargo
 
+    def __str__(self):
+        return str(self.id) + " " + self.nombre + " " + self.cargo
+
+    def __repr__(self):
+        return str(self)
+
 if __name__=='__main__':
     emp = Empleado(1, "Ana","Ventas")
     print(emp)
+    L = [emp, Empleado(2,"Gema","Gerente"), Empleado(3,"Pablo","Admin")]
+    print(L)
