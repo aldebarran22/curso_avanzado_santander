@@ -33,6 +33,10 @@ atributos:
     dentro del constructor
 - de clase
 
+Acceso a los atributos (encapsulación)
+__privado
+publico
+
 constructor:
 - __init__, si no se indica se especifica uno por defecto
 destructor
@@ -46,4 +50,21 @@ __repr__()              repr()
 __del__()               del()
 instancia = Clase()
 del(instancia) --> instancia.__del__()
+
+Propiedades de los objetos:
+__class__.__name__
+__doc__
+__dict__ --> los atributos: keys, y los valores: values
 """
+
+class Empleado:
+    """Implementación clase empleado"""
+
+    def __init__(self, id=0, nombre="", cargo=""):
+        self.id = id
+        self.nombre = nombre
+        self.cargo = cargo
+
+if __name__=='__main__':
+    emp = Empleado(1, "Ana","Ventas")
+    print(emp)
