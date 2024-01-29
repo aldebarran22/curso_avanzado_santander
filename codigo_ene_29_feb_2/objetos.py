@@ -75,17 +75,22 @@ class Empleado:
     def __repr__(self):
         return str(self)
 
+    def __lt__(self, otro):
+        return self.nombre < otro.nombre
+
     def __del__(self):
         #print('borrando: ', self.nombre)
         pass
 
-if __name__=='__main__':
+class EmpleadoEmpresa(Empleado):
+    pass
+
+def testEmpleado():
     emp = Empleado(1, "Ana","Ventas")
     emp.telefono = 600363635
     emp.__dict__['fijo'] = 914586699
     print(emp, emp.__dict__)
 
-    exit()
     L = [emp, Empleado(2,"Gema","Gerente"), Empleado(3,"Pablo","Admin")]
     print(L)
     L.sort(key=lambda obj : obj.cargo)
@@ -97,5 +102,15 @@ if __name__=='__main__':
     print(nombres)
 
     # Ordenar con un criterio por defecto:
+    L.sort()
 
     # Convertir a json
+    Ljson = [obj.__dict__ for obj in L]
+    print(Ljson)
+
+def testEmpleadoEmpresa():
+    pass
+
+if __name__=='__main__':
+    #testEmpleado()
+    testEmpleadoEmpresa()
