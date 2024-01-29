@@ -14,13 +14,25 @@ class BaseDatos:
         else:
             self.con = dbapi.connect(path)
 
+    def selectEmpleados(self):
+        cur = None 
+        try:
+            cur = self.con.cursor()
+            sql = "select id, nombre, cargo from empleados"
+            cur.execute(sql)
+            return [Empleado(*t) for t in cur.fetchall()]
+        except Exception as e:
+            print(e)
+        finally:
+            if cur: cur.close()
+
     def __del__(self):
         if hasattr(self, "con"):
             self.con.close()
 
 if __name__=='__main__':
     try:
-        bd = BaseDatos('no existe.dat')
+        bd = BaseDatos('../BBDD/empresa3.db')
     except Exception as e:
         print(e.__class__.__name__, e)
 
