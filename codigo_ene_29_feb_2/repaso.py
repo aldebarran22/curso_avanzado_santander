@@ -10,6 +10,7 @@ L.sort()
 
 import copy
 from random import randint
+from collections import Counter
 
 def diccionario():
     cad = "hola"
@@ -112,6 +113,12 @@ def histograma():
         histo[i] = L.count(i) # calcula el número de repeticiones
     R = sorted(histo.items(), key=lambda t:t[1], reverse=True)
     print(R[:5])
+
+    # Crear el histograma con Counter:
+    c = Counter(L)
+    print(c)
+
+
 
 
 
