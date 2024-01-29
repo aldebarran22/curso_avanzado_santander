@@ -15,7 +15,6 @@ csv = """id;nombre;cargo
 
 def csvToDict(csv, sep=';'):
     # Devolver un dict por cada una de la filas.
-    d = dict()
     filas = csv.split("\n")
     cabs = filas[0].split(sep)
     return [dict(zip(cabs, i.split(sep))) \

@@ -51,7 +51,18 @@ def copiarObjetosMutables():
     print('L2', L2, id(L2))
     print()
 
+def slicing():
+    # Se aplica a list, str y tuple
+    # L[ini:fin-1:salto=1]
+    L = [1,3,4,5,6,7]
+    print('los 3 primeros: ', L[0:3], L[:3])
+    print('los 3 últimos: ', L[-3:])
+    print('quitar primero y último: ',L[1:-1])
+    print('la lista de dos en dos: ', L[::2])
+    print('invertida: ', L[::-1])
+    # numba
 
 if __name__ == '__main__':
     #diccionario()
-    copiarObjetosMutables()
+    #copiarObjetosMutables()
+    slicing()
