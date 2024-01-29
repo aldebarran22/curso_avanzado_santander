@@ -76,6 +76,25 @@ def listcomp():
     L3 = [i for i in L2 if i % 3 == 0]
     print(L3)
 
+    # Conjunto de números aleatorios:
+    c = {randint(10,50) for _ in range(20)}
+    print(c)
+
+    # lista de tuplas:
+    L = [(i, 2**i) for i in range(0,11)]
+    print(L)
+
+    d = {i:2**i for i in range(0,11)}
+    print(d)
+
+    t = (2**i for i in range(0,11))
+    print(t)
+
+    t2 = tuple((2**i for i in range(0,11)))
+    print(t2, type(t2))
+
+
+
 if __name__ == '__main__':
     #diccionario()
     #copiarObjetosMutables()
