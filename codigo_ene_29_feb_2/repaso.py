@@ -113,3 +113,8 @@ if __name__ == '__main__':
 
     L = [3,5]
     print(suma(*L)) # con una lista
+
+    # f-string
+    fichero = "Francia"
+    path = f"C:/mis documentos/{fichero}.csv"
+    print(path)
