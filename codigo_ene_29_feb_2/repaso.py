@@ -23,6 +23,7 @@ def copiarObjetosMutables():
     L[0] = 1000
     print('L',L, id(L))
     print('L2', L2, id(L2))
+    print()
 
     # Copiar pero con elementos inmutables:
     L = [1,2,3,4]
@@ -49,9 +50,6 @@ def copiarObjetosMutables():
     print('L',L, id(L))
     print('L2', L2, id(L2))
     print()
-
-
-
 
 
 if __name__ == '__main__':
