@@ -119,6 +119,16 @@ def testEmpleado():
 def testEmpleadoEmpresa():
     emp2 = EmpleadoEmpresa(nombre="Ana", sueldo=2000.0, empresa="TRT")
     print(emp2)
+    print(emp2.__class__.__name__)
+
+    # Otra forma de crear un objeto en Python
+    emp1 = emp2.__class__()
+    print(emp1)
+
+    s = "{}({},{},{})".format("Empleado",0,"'Miguel'","'Ventas'")
+    print(s)
+    obj = eval(s)
+    print(obj, obj.__class__)
 
 if __name__=='__main__':
     #testEmpleado()
