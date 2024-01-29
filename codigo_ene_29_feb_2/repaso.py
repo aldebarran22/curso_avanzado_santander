@@ -9,6 +9,7 @@ L.sort()
 """
 
 import copy
+from random import randint
 
 def diccionario():
     cad = "hola"
@@ -60,9 +61,23 @@ def slicing():
     print('quitar primero y último: ',L[1:-1])
     print('la lista de dos en dos: ', L[::2])
     print('invertida: ', L[::-1])
-    # numba
+    # numba para optimizar
+
+def listcomp():
+    # Generar una lista de las potencias de dos:
+    L = [2**i for i in range(0,11)]
+    print(L)
+
+    # Generar 20 aleatorios:
+    L2 = [randint(10,50) for _ in range(20)]
+    print(L2)
+
+    # Filtrar multiplos de 3:
+    L3 = [i for i in L2 if i % 3 == 0]
+    print(L3)
 
 if __name__ == '__main__':
     #diccionario()
     #copiarObjetosMutables()
-    slicing()
+    #slicing()
+    listcomp()
