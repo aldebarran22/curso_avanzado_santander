@@ -23,12 +23,24 @@ class Manejador(abc.ABC):
 
 
 class Email(Manejador):
-    pass
+    def __init__(self, siguiente=None):
+        Manejador.__init__(self, siguiente)
+
+    def procesarPeticion(self, peticion):
+        pass
 
 
 class SMS(Manejador):
-    pass
+    def __init__(self, siguiente=None):
+        Manejador.__init__(self, siguiente)
+
+    def procesarPeticion(self, peticion):
+        pass
 
 
 class WhatsApp(Manejador):
-    pass
+    def __init__(self, siguiente=None):
+        Manejador.__init__(self, siguiente)
+
+    def procesarPeticion(self, peticion):
+        pass
