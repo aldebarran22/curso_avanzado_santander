@@ -27,7 +27,15 @@ class Email(Manejador):
         Manejador.__init__(self, siguiente)
 
     def procesarPeticion(self, peticion):
-        pass
+        if peticion.destino == 'email':
+            print('Enviar email con: ', peticion.contenido)
+
+        elif self.siguiente != None:
+            print('Transmitir la petición al siguiente.')
+            self.siguiente.procesarPeticion(peticion)
+        else:
+            print('Fin de cadena, no se puede procesar')
+
 
 
 class SMS(Manejador):
@@ -44,3 +52,9 @@ class WhatsApp(Manejador):
 
     def procesarPeticion(self, peticion):
         pass
+
+if __name__ == '__main__':
+    peticion = Peticion("sms", "Contenido del mensaje")
+
+    cadenaResp = Email(WhatsApp(SMS()))
+    cadenaResp.procesarPeticion(peticion)
