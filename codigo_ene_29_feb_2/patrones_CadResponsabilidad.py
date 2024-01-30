@@ -31,7 +31,7 @@ class Email(Manejador):
             print("Enviar email con: ", peticion.contenido)
 
         elif self.siguiente != None:
-            print("Transmitir la petición al siguiente.")
+            print("Email: Transmitir la petición al siguiente.")
             self.siguiente.procesarPeticion(peticion)
         else:
             print("Fin de cadena, no se puede procesar")
@@ -46,7 +46,7 @@ class SMS(Manejador):
             print("Enviar SMS con: ", peticion.contenido)
 
         elif self.siguiente != None:
-            print("Transmitir la petición al siguiente.")
+            print("SMS: Transmitir la petición al siguiente.")
             self.siguiente.procesarPeticion(peticion)
         else:
             print("Fin de cadena, no se puede procesar")
@@ -61,14 +61,14 @@ class WhatsApp(Manejador):
             print("Enviar whatsapp con: ", peticion.contenido)
 
         elif self.siguiente != None:
-            print("Transmitir la petición al siguiente.")
+            print("WhatsApp: Transmitir la petición al siguiente.")
             self.siguiente.procesarPeticion(peticion)
         else:
             print("Fin de cadena, no se puede procesar")
 
 
 if __name__ == "__main__":
-    peticion = Peticion("sms", "Contenido del mensaje")
+    peticion = Peticion("telegram", "Contenido del mensaje")
 
     cadenaResp = Email(WhatsApp(SMS()))
     cadenaResp.procesarPeticion(peticion)
