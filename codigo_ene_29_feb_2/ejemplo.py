@@ -7,6 +7,7 @@ def singleton(refresh=False):
         singleton.instancia=""
     
     if singleton.instancia:
+        # Si la instancia creada la devolvemos:
         return singleton.instancia
 
     # Asignar tiempo a la variable:
@@ -14,7 +15,7 @@ def singleton(refresh=False):
     print("Singleton creado")    
     return singleton.instancia
 
-# Asocia un atributo a una función
+# Asocia un atributo a una funciÃ³n
 singleton.instancia=""
 
 
