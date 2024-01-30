@@ -38,7 +38,9 @@ class BordeDecorator(VentanaDecorator):
         VentanaDecorator.__init__(self, ventana)
 
     def dibujar(self):
-        pass
+        print(" | ", end="")
+        self.ventana.dibujar()
+        print(" | ", end="")
 
 
 class AyudaDecorator(VentanaDecorator):
@@ -46,10 +48,19 @@ class AyudaDecorator(VentanaDecorator):
         VentanaDecorator.__init__(self, ventana)
 
     def dibujar(self):
-        pass
+        self.ventana.dibujar()
+        print(" [help] ", end="")
 
 
 if __name__ == "__main__":
     v1 = Ventana("Clientes")
     v1.dibujar()
+    print()
+
+    v2 = BordeDecorator(v1)
+    v2.dibujar()
+    print()
+
+    v3 = BordeDecorator(AyudaDecorator(Ventana("Aplicación")))
+    v3.dibujar()  # | dibujar |
     print()
