@@ -79,11 +79,27 @@ class Factoria1:
     """Mantiene los prototipos creados
     desde el principio"""
 
-    def __init__(self) -> None:
-        pass
+    def __init__(self, figura) -> None:
+        # Mantenemos los prototipos en un dict
+        # k: str -> v: instancia
+        self.prototipos = dict()
+        L = figura.__subclasses__()
+        for c in L:
+            self.prototipos[c.__name__] = c()
 
-    def getPrototipo(self):
-        pass
+    def getPrototipo(self, nombre):
+        # Localiza el prototipo y lo clona
+        k = nombre.capitalize()
+        if k not in self.prototipos:
+            raise ValueError(f"No existe el prototipo:{nombre}")
+        else:
+            # Se clona:
+            return self.prototipos[k].clone()
+
+    def print(self):
+        print("Prototipos:")
+        for k, v in self.prototipos.items():
+            print(k, v)
 
 
 class Factoria2:
