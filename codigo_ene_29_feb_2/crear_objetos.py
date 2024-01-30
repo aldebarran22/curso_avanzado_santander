@@ -35,7 +35,7 @@ p1 = Punto(8,6)
 print("p1:",p1)
 
 
-# Se inyecta el cada {} un par·metro
+# Se inyecta el cada {} un par√°metro
 p2 = eval("{}({},{})".format("Punto",2,4))
 print("p2:",p2)
 
@@ -67,5 +67,4 @@ print(p1.__class__)
 p7 = p1.__class__(8,99)
 print("p7:",p7)
 
-
-          
+print(globals())
