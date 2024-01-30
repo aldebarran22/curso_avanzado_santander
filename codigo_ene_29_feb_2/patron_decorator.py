@@ -64,3 +64,7 @@ if __name__ == "__main__":
     v3 = BordeDecorator(AyudaDecorator(Ventana("Aplicación")))
     v3.dibujar()  # | dibujar |
     print()
+
+    v4 = BordeDecorator(BordeDecorator(Ventana("Aplicación")))
+    v4.dibujar()  # | dibujar |
+    print()
