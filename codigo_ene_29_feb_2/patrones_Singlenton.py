@@ -38,6 +38,7 @@ class Singletoni18n:
     def getInstance(idioma="es"):
         # Comprobar si tenemos que cargar el fichero:
         if Singletoni18n.__idioma != idioma:
+            print('Se actualiza el idioma')
             Singletoni18n.__palabras = cargaFichero(idioma)
             Singletoni18n.__idioma = idioma
 
@@ -51,4 +52,5 @@ if __name__ == "__main__":
     print(d)
 
     print(Singletoni18n.getInstance()["facebook"])
-    print(Singletoni18n.getInstance("en")["facebook"])
+    print(Singletoni18n.getInstance("es")["inicio"])
+    print(Singletoni18n.getInstance('en')["twitter"])
