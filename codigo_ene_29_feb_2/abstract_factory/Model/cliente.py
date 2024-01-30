@@ -14,11 +14,16 @@ def menu(L):
     print("MENU")
     for pos, c in enumerate(L):
         print(pos + 1, c.__name__)
-    op = int(input("Seleccionar factoria"))
+    op = int(input("Seleccionar factoria: "))
     return L[op - 1]()
 
 
 if __name__ == "__main__":
     L = Factoria.__subclasses__()
     factoria = menu(L)
-    print(factoria.__class__)
+    # print(factoria.__class__)
+    telefono = factoria.createTno()
+    tableta = factoria.createTablet()
+
+    telefono.llamar()
+    tableta.internet()
