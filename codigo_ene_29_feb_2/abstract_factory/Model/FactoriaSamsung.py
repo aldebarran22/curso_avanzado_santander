@@ -5,6 +5,7 @@ from Factoria import Factoria
 
 class FactoriaSamsung(Factoria):
     def __init__(self):
+        pass
 
     def createTablet(self, ):
         pass
