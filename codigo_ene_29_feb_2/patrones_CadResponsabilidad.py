@@ -27,15 +27,14 @@ class Email(Manejador):
         Manejador.__init__(self, siguiente)
 
     def procesarPeticion(self, peticion):
-        if peticion.destino == 'email':
-            print('Enviar email con: ', peticion.contenido)
+        if peticion.destino == "email":
+            print("Enviar email con: ", peticion.contenido)
 
         elif self.siguiente != None:
-            print('Transmitir la petición al siguiente.')
+            print("Transmitir la petición al siguiente.")
             self.siguiente.procesarPeticion(peticion)
         else:
-            print('Fin de cadena, no se puede procesar')
-
+            print("Fin de cadena, no se puede procesar")
 
 
 class SMS(Manejador):
@@ -43,7 +42,14 @@ class SMS(Manejador):
         Manejador.__init__(self, siguiente)
 
     def procesarPeticion(self, peticion):
-        pass
+        if peticion.destino == "sms":
+            print("Enviar SMS con: ", peticion.contenido)
+
+        elif self.siguiente != None:
+            print("Transmitir la petición al siguiente.")
+            self.siguiente.procesarPeticion(peticion)
+        else:
+            print("Fin de cadena, no se puede procesar")
 
 
 class WhatsApp(Manejador):
@@ -51,9 +57,17 @@ class WhatsApp(Manejador):
         Manejador.__init__(self, siguiente)
 
     def procesarPeticion(self, peticion):
-        pass
+        if peticion.destino == "whatsapp":
+            print("Enviar whatsapp con: ", peticion.contenido)
 
-if __name__ == '__main__':
+        elif self.siguiente != None:
+            print("Transmitir la petición al siguiente.")
+            self.siguiente.procesarPeticion(peticion)
+        else:
+            print("Fin de cadena, no se puede procesar")
+
+
+if __name__ == "__main__":
     peticion = Peticion("sms", "Contenido del mensaje")
 
     cadenaResp = Email(WhatsApp(SMS()))
