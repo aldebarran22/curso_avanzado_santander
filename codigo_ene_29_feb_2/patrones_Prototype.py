@@ -1,5 +1,11 @@
 """
+Diseñar dos factorías (mantener un catálogo
+de prototipos)
+a) Se crean los prototipos al instanciar la factoria
+b) Se crean bajo demanda.
 
+Cada factoría tendrá un método para solicitar
+un objeto y este será clonado.
 """
 
 import abc
@@ -16,7 +22,7 @@ class Prototipo(abc.ABC):
 
     @abc.abstractmethod
     def clone(self):
-        return
+        pass
 
 
 class Circulo(Prototipo):
@@ -67,3 +73,24 @@ class Triangulo(Prototipo):
 
     def clone(self):
         return copy.copy(self)
+
+
+class Factoria1:
+    """Mantiene los prototipos creados
+    desde el principio"""
+
+    def __init__(self) -> None:
+        pass
+
+    def getPrototipo(self):
+        pass
+
+
+class Factoria2:
+    """Crea los prototipos bajo demanda"""
+
+    def __init__(self) -> None:
+        pass
+
+    def getPrototipo(self):
+        pass
