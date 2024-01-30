@@ -25,3 +25,31 @@ class Ventana(IVentana):
 
     def dibujar(self):
         print(self.titulo, end="")
+
+
+class VentanaDecorator(IVentana):
+    def __init__(self, ventana):
+        # Mantiene una referencia a la ventana que decora
+        self.ventana = ventana
+
+
+class BordeDecorator(VentanaDecorator):
+    def __init__(self, ventana):
+        VentanaDecorator.__init__(self, ventana)
+
+    def dibujar(self):
+        pass
+
+
+class AyudaDecorator(VentanaDecorator):
+    def __init__(self, ventana):
+        VentanaDecorator.__init__(self, ventana)
+
+    def dibujar(self):
+        pass
+
+
+if __name__ == "__main__":
+    v1 = Ventana("Clientes")
+    v1.dibujar()
+    print()
