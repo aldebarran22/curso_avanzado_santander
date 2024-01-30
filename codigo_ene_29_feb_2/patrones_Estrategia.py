@@ -59,9 +59,14 @@ class Contexto:
             # Instanciar la estrategia:
             est = algoritmo()
             nombreEst = est.__class__.__name__
+            print('Probando ',nombreEst)
 
             t1 = datetime.now()
             est.ordenar(unaLista)
             t2 = datetime.now()
 
             print(nombreEst, "Tiempo de ordenación: ", t2 - t1)
+
+if __name__ == '__main__':
+    contexto = Contexto(Estrategia, 10000)
+    contexto.crono()
