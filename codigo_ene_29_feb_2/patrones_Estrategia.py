@@ -8,6 +8,8 @@ de ordenación de cada algoritmo.
 
 """
 import abc
+from datetime import datetime
+from random import randint
 
 
 class Estrategia(abc.ABC):
@@ -42,3 +44,24 @@ class EstrategiaInsDirecta(Estrategia):
 class EstrategiaPython(Estrategia):
     def ordenar(self, unaLista):
         unaLista.sort()
+
+
+class Contexto:
+    def __init__(self, clase, n):
+        self.estrategias = clase.__subclasses__()
+        self.L = [randint(1, 10000) for _ in range(n)]
+
+    def crono(self):
+        for algoritmo in self.estrategias:
+            # Obtener una copia de la lista:
+            unaLista = self.L.copy()
+
+            # Instanciar la estrategia:
+            est = algoritmo()
+            nombreEst = est.__class__.__name__
+
+            t1 = datetime.now()
+            est.ordenar(unaLista)
+            t2 = datetime.now()
+
+            print(nombreEst, "Tiempo de ordenación: ", t2 - t1)
