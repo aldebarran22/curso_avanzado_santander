@@ -1,7 +1,9 @@
 #!/usr/bin/python
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 from Tablet import Tablet
 
+
 class IPad(Tablet):
-    pass
+    def internet(self):
+        print("conectar a internet con IPad")
