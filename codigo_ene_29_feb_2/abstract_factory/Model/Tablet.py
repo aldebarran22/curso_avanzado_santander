@@ -1,5 +1,10 @@
 #!/usr/bin/python
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
-class Tablet:
-    pass
+import abc
+
+
+class Tablet(abc.ABC):
+    @abc.abstractmethod
+    def internet(self):
+        pass
