@@ -68,3 +68,8 @@ if __name__ == "__main__":
     v4 = BordeDecorator(BordeDecorator(Ventana("Aplicación")))
     v4.dibujar()  # | dibujar |
     print()
+
+    v5 = Ventana("Clientes")
+    for i in range(5):
+        v5 = BordeDecorator(v5)
+    v5.dibujar()
