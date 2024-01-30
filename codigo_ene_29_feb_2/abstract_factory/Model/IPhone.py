@@ -1,7 +1,9 @@
 #!/usr/bin/python
-#-*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 
 from Tno import Tno
 
+
 class IPhone(Tno):
-    pass
+    def llamar(self):
+        print("llamando con un iphone")

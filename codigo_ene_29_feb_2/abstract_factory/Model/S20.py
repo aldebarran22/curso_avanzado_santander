@@ -4,4 +4,6 @@
 from Tno import Tno
 
 class S20(Tno):
-    pass
+
+    def llamar(self):
+        print('Llamar con S20')
