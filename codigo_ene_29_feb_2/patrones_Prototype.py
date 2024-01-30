@@ -130,9 +130,9 @@ class Factoria2:
             print(k, v)
 
 
-def testFactoria1():
+def testFactoria(claseFactoria):
     try:
-        f = Factoria1(Prototipo)
+        f = claseFactoria(Prototipo)
         f.print()
         print()
         p1 = f.getPrototipo("RECTANGULO")
@@ -149,4 +149,4 @@ def testFactoria1():
 
 
 if __name__ == "__main__":
-    testFactoria1()
+    testFactoria(Factoria1)
