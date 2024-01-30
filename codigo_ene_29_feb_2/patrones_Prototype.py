@@ -105,11 +105,30 @@ class Factoria1:
 class Factoria2:
     """Crea los prototipos bajo demanda"""
 
-    def __init__(self) -> None:
-        pass
+    def __init__(self, figura) -> None:
+        # Crear dict sin instanciar los prototipos
+        self.prototipos = {c.__name__: None for c in figura.__subclasses__()}
 
-    def getPrototipo(self):
-        pass
+    def getPrototipo(self, nombre):
+        # Antes de clonar comprobar si ya está
+        # creado el prototipo, si no, se crea
+        # y al final se clona
+        k = nombre.capitalize()
+        if k not in self.prototipos:
+            raise ValueError(f"No existe el prototipo:{nombre}")
+        else:
+            # Crear el prototipo:
+            cad = f"{k}()"
+            self.prototipos[k] = eval(cad)
+
+            # Se clona:
+            return self.prototipos[k].clone()
+
+    def print(self):
+        print("Prototipos:")
+        for k, v in self.prototipos.items():
+            print(k, v)
+
 
 def testFactoria1():
     try:
@@ -127,6 +146,7 @@ def testFactoria1():
 
     except Exception as e:
         print(e)
+
 
 if __name__ == "__main__":
     testFactoria1()
