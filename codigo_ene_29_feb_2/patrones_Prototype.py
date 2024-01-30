@@ -110,3 +110,23 @@ class Factoria2:
 
     def getPrototipo(self):
         pass
+
+def testFactoria1():
+    try:
+        f = Factoria1(Prototipo)
+        f.print()
+        print()
+        p1 = f.getPrototipo("RECTANGULO")
+        p1.color = "green"
+        print(p1)
+        print()
+        f.print()
+
+        p2 = f.getPrototipo("Rombo")
+        print(p2)
+
+    except Exception as e:
+        print(e)
+
+if __name__ == "__main__":
+    testFactoria1()
