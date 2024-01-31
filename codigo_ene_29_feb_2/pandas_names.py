@@ -5,6 +5,12 @@ en un rango de años.
 """
 import pandas as pd
 from pandas import DataFrame
+from os import listdir
+
+
+def ficheros():
+    L = listdir("../../practicas/avanzado2/pandas/names")
+    print(L)
 
 
 def cargarDF(año):
@@ -33,6 +39,14 @@ def sumarDosAñosAdd(año1, año2, delindex=False):
         suma.reset_index(["nombre", "sexo"], inplace=True)
     return suma
 
+def sumarRangoAños(ini, fin):
+    dfSuma = cargarDF(ini)
+    for año in range(ini+1, fin+1):
+        dfAño = cargarDF(año)
+        dfSuma = sumarDosAñosAdd(dfSuma, dfAño)
+    return dfSuma
+
+
 
 if __name__ == "__main__":
     # df = cargarDF(1970)
@@ -40,3 +54,8 @@ if __name__ == "__main__":
 
     dfSuma = sumarDosAñosAdd(1970, 1971)
     print(dfSuma.head(6))
+
+    dfSumaRango = sumarRangoAños(1970, 1975)
+    print(dfSumaRango.head(6))
+
+    #ficheros()
