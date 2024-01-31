@@ -22,16 +22,21 @@ def sumarDosAños(año1, año2):
     suma = df1 + df2
     return suma
 
-def sumarDosAñosAdd(año1, año2):
+
+def sumarDosAñosAdd(año1, año2, delindex=False):
     """Suma dos DataFrames con el método  add"""
     df1 = cargarDF(año1)
     df2 = cargarDF(año2)
     suma = df1.add(df2, fill_value=0)
+    suma.sort_values("cuenta", inplace=True, ascending=False)
+    if delindex:
+        suma.reset_index(["nombre", "sexo"], inplace=True)
     return suma
 
+
 if __name__ == "__main__":
-    #df = cargarDF(1970)
-    #print(df.head(5))
+    # df = cargarDF(1970)
+    # print(df.head(5))
 
     dfSuma = sumarDosAñosAdd(1970, 1971)
     print(dfSuma.head(6))
