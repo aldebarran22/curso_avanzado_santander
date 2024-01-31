@@ -29,23 +29,28 @@ def sumarDosAños(año1, año2):
     return suma
 
 
-def sumarDosAñosAdd(año1, año2, delindex=False):
+def sumarDosAñosAdd(año1, año2, sort=True, delindex=False):
     """Suma dos DataFrames con el método  add"""
     df1 = cargarDF(año1)
     df2 = cargarDF(año2)
     suma = df1.add(df2, fill_value=0)
-    suma.sort_values("cuenta", inplace=True, ascending=False)
+
+    if sort:
+        suma.sort_values("cuenta", inplace=True, ascending=False)
+
     if delindex:
         suma.reset_index(["nombre", "sexo"], inplace=True)
     return suma
 
+
 def sumarRangoAños(ini, fin):
     dfSuma = cargarDF(ini)
-    for año in range(ini+1, fin+1):
+    for año in range(ini + 1, fin + 1):
         dfAño = cargarDF(año)
-        dfSuma = sumarDosAñosAdd(dfSuma, dfAño)
-    return dfSuma
+        dfSuma = dfSuma.add(dfAño, fill_value=0)
 
+    dfSuma.sort_values("cuenta", inplace=True, ascending=False)
+    return dfSuma
 
 
 if __name__ == "__main__":
@@ -54,8 +59,8 @@ if __name__ == "__main__":
 
     dfSuma = sumarDosAñosAdd(1970, 1971)
     print(dfSuma.head(6))
-
+    print()
     dfSumaRango = sumarRangoAños(1970, 1975)
     print(dfSumaRango.head(6))
 
-    #ficheros()
+    # ficheros()
