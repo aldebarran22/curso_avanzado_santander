@@ -28,6 +28,14 @@ def sumarDosAños(año1, año2):
     suma = df1 + df2
     return suma
 
+def concatDosAños(año1, año2):
+    """Copiar los dos ficheros en uno. Concatenar"""
+    df1 = cargarDF(año1)
+    df2 = cargarDF(año2)
+    dfTodo = pd.concat([df1, df2])
+    dfTodo.sort_values(by=['nombre','sexo'], inplace=True)
+    return dfTodo
+
 
 def sumarDosAñosAdd(año1, año2, sort=True, delindex=False):
     """Suma dos DataFrames con el método  add"""
@@ -56,6 +64,11 @@ def sumarRangoAños(ini, fin):
 if __name__ == "__main__":
     # df = cargarDF(1970)
     # print(df.head(5))
+
+    dfTodo = concatDosAños(1970, 1971)
+    print(dfTodo.head())
+    print(dfTodo.shape)
+    exit()
 
     dfSuma = sumarDosAñosAdd(1970, 1971)
     print(dfSuma.head(6))
