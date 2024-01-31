@@ -9,7 +9,9 @@ from pandas import DataFrame
 
 def cargarDF(año):
     """Carga y devuelve un DataFrame"""
-    pass
+    path = f"../../practicas/avanzado2/pandas/names/{año}.txt"
+    df = pd.read_csv(path)
+    return df
 
 
 def sumarDosAños(año1, año2):
@@ -18,5 +20,7 @@ def sumarDosAños(año1, año2):
 
 
 if __name__ == "__main__":
-    dfSuma = sumarDosAños(1970, 1971)
-    print(dfSuma.head(6))
+    df = cargarDF(1970)
+    print(df.head(5))
+    # dfSuma = sumarDosAños(1970, 1971)
+    # print(dfSuma.head(6))
