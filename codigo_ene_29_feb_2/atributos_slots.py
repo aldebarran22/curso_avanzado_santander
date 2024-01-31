@@ -9,5 +9,6 @@ class S():
 
 x = S(42)
 print(x.val)
+print(x.__dict__)
 
 x.new = "not possible"

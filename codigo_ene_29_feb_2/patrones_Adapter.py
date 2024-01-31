@@ -1,6 +1,7 @@
 import math
+import abc
 
-class Vector3D(object):
+class Vector3D:
 	
 	def __init__(self,x=0,y=0,z=0):
 		self.__x = x
@@ -26,23 +27,28 @@ class Vector3D(object):
 		return str(self.__x)+","+str(self.__y)+","+str(self.__z)
 		
 		
-class Vector2D(object):
+class Vector2D(abc.ABC):
 	
+	@abc.abstractmethod
 	def getAbcisa(self): 
 		pass
-		
+	
+	@abc.abstractmethod
 	def getOrdenada(self):
 		pass
-		
+	
+	@abc.abstractmethod
 	def prod(self, v):
 		pass
-		
+	
+	@abc.abstractmethod
 	def magnitud(self):
 		# La norma del vector
 		pass
 
 
 class VectorPlano(Vector2D,Vector3D):
+	"""Solución con herencia múltiple"""
 	
 	def __init__(self,a=0,b=0):
 		Vector3D.__init__(self, a, b, 0)
@@ -65,6 +71,7 @@ class VectorPlano(Vector2D,Vector3D):
 		
 
 class VectorPlano2(Vector2D):
+	"""Solución 2: Utilizando composición"""
 	
 	def __init__(self, a=0, b=0):
 		self.__v3d = Vector3D(a,b,0)
