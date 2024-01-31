@@ -11,6 +11,7 @@ def cargarDF(año):
     """Carga y devuelve un DataFrame"""
     path = f"../../practicas/avanzado2/pandas/names/yob{año}.txt"
     df = pd.read_csv(path, header=None, names=["nombre", "sexo", "cuenta"])
+    df.set_index(["nombre", "sexo"], inplace=True)
     return df
 
 
@@ -21,10 +22,16 @@ def sumarDosAños(año1, año2):
     suma = df1 + df2
     return suma
 
+def sumarDosAñosAdd(año1, año2):
+    """Suma dos DataFrames con el método  add"""
+    df1 = cargarDF(año1)
+    df2 = cargarDF(año2)
+    suma = df1.add(df2, fill_value=0)
+    return suma
 
 if __name__ == "__main__":
-    # df = cargarDF(1970)
-    # print(df.head(5))
+    #df = cargarDF(1970)
+    #print(df.head(5))
 
-    dfSuma = sumarDosAños(1970, 1971)
+    dfSuma = sumarDosAñosAdd(1970, 1971)
     print(dfSuma.head(6))
