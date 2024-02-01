@@ -68,7 +68,7 @@ if __name__ == "__main__":
     dfTodo = concatDosAños(1970, 1971)
     print(dfTodo.head())
     print(dfTodo.shape)
-    exit()
+  
 
     dfSuma = sumarDosAñosAdd(1970, 1971)
     print(dfSuma.head(6))
