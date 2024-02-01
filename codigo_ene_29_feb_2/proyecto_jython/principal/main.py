@@ -11,6 +11,15 @@ from java.util import Scanner
 from java.io import File
 
 from random import randint
+from es.curso.clases import Usuario
+
+def crearColeccionUsuarios():
+    L = []
+    L.append(Usuario('admin','1234','admin@webmaster.es'))
+    L.append(Usuario('admin2','abc','anonimo@webmaster.es'))
+    L.append(Usuario('admin3','zaz','sistemas@webmaster.es'))
+    
+    print(L)
 
 def leerFichero():
     scan = None
@@ -35,4 +44,5 @@ def cargarColeccion():
 
 if __name__ == '__main__':
     #cargarColeccion()
-    leerFichero()
+    #leerFichero()
+    crearColeccionUsuarios()
