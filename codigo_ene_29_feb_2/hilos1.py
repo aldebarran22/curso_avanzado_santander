@@ -11,8 +11,9 @@ from time import sleep
 
 
 class Mensajes(Thread):
-    def __init__(self, n=10):
-        Thread.__init__(self, name="Mensajes")
+    def __init__(self, n=10, i=0):
+        nombre = f"hilo-{i}"
+        Thread.__init__(self, name=nombre)
         self.n = n
 
     def run(self):
@@ -33,15 +34,21 @@ class Aleatorio(Thread):
 
 
 if __name__ == "__main__":
-    m = Mensajes(12)
+    L = []
+    for i in range(1, 6):
+        m = Mensajes(randint(5, 10), i)
+        m.start()
+        L.append(m)
+
+    for h in L:
+        h.join()
+
     a = Aleatorio(13)
 
     # Poner en marcha los hilos
-    m.start()
     a.start()
 
     # Esperar a que terminen los hilos:
-    m.join()
     a.join()
 
     print("main termina")
