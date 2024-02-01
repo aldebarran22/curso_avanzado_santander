@@ -26,16 +26,31 @@ class TBuffer:
 
 class Productor(Thread):
     def __init__(self, buf, num_muestras_p, nombre):
+        Thread.__init__(self, name=nombre)
         self.buf = buf
         self.num_muestras_p = num_muestras_p
         self.nombre = nombre
 
     def run(self):
-        pass
+        for i in range(self.num_muestras_p):
+            numero = randint(1, 10)
+            # Comprobar si hay hueco para colocar una muestra en el buffer
+            self.buf.sem_huecos.acquire()
+            # Aseguramos exclusión mutua, sólo escribe 1 a la vez
+            with self.buf.mutex:
+                print(self.getName(), ":", numero)
+                self.buf.buffer[self.buf.ind_p] = numero
+                self.buf.ind_p = (self.buf.ind_p + 1) % tam_buffer
+                print(self.buf.buffer)
+
+            # Avisar de una nueva muestra que se puede consumir
+            self.buf.sem_items.release()
+            sleep(randint(1, 2))
 
 
 class Consumidor(Thread):
     def __init__(self, buf, num_muestras_c, nombre):
+        Thread.__init__(self, name=nombre)
         self.buf = buf
         self.num_muestras_c = num_muestras_c
         self.nombre = nombre
