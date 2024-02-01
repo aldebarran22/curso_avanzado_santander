@@ -5,6 +5,7 @@ import pickle as p
 import shelve
 from base_datos import BaseDatos
 
+
 def serializarConShelve(path, *empleados):
     shelf = None
     try:
@@ -13,12 +14,27 @@ def serializarConShelve(path, *empleados):
         for e in empleados:
             clave = f"k{k}"
             shelf[clave] = e
-            k+=1
-            
+            k += 1
+
     except Exception as e:
         print(e)
     finally:
-        if shelf: shelf.close()
+        if shelf:
+            shelf.close()
+
+
+def deserializarConShelve(path):
+    shelf = None
+    try:
+        shelf = shelve.open(path)
+        return shelf["e1"], shelf["e2"], shelf["e3"]
+
+    except Exception as e:
+        print(e)
+    finally:
+        if shelf:
+            shelf.close()
+
 
 def serializarPickle(L, path):
     fich = None
@@ -55,3 +71,10 @@ if __name__ == "__main__":
     serializarPickle(L, "empleados.bin")
     L2 = deserializarPickle("empleados.bin")
     print(L2)
+
+    L3 = L[:3]
+    serializarConShelve("empleados2", *L3)
+    e1, e2, e3 = deserializarConShelve("empleados2")
+    print(e1)
+    print(e2)
+    print(e3)
