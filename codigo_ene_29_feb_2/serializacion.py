@@ -6,11 +6,28 @@ from base_datos import BaseDatos
 
 
 def serializarPickle(L, path):
-    pass
+    fich = None
+    try:
+        fich = open(path, "wb")
+        p.dump(L, fich)
+
+    except Exception as e:
+        print(e)
+    finally:
+        if fich:
+            fich.close()
 
 
 def deserializarPickle(path):
-    pass
+    fich = None
+    try:
+        fich = open(path, "rb")
+
+    except Exception as e:
+        print(e)
+    finally:
+        if fich:
+            fich.close()
 
 
 if __name__ == "__main__":
