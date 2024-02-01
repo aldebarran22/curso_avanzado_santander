@@ -40,13 +40,11 @@ if __name__ == "__main__":
         m.start()
         L.append(m)
 
+    a = Aleatorio(13)
+    a.start()
+
     for h in L:
         h.join()
-
-    a = Aleatorio(13)
-
-    # Poner en marcha los hilos
-    a.start()
 
     # Esperar a que terminen los hilos:
     a.join()
