@@ -45,7 +45,7 @@ class Productor(Thread):
 
             # Avisar de una nueva muestra que se puede consumir
             self.buf.sem_items.release()
-            sleep(randint(1, 2))
+            sleep(randint(2, 3))
 
 
 class Consumidor(Thread):
@@ -56,7 +56,22 @@ class Consumidor(Thread):
         self.nombre = nombre
 
     def run(self):
-        pass
+        for i in range(self.num_muestras_c):
+            # Comprobar si tiene una muestra:
+            self.buf.sem_items.acquire()
+            with self.buf.mutex:
+                numero = self.buf.buffer[self.buf.ind_c]
+                print(self.getName(), ":", numero)
+                self.buf.buffer[self.buf.ind_c] = -1
+                print(self.buf.buffer)
+                self.buf.ind_c = (self.buf.ind_c + 1) % tam_buffer
+
+            # Avisar de un nuevo hueco:
+            self.buf.sem_huecos.release()
+
+            # Consumir la muestra
+            print(self.getName(), " consume:", numero)
+            sleep(randint(2, 3))
 
 
 if __name__ == "__main__":
