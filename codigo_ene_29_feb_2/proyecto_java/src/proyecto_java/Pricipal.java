@@ -11,6 +11,7 @@ public class Pricipal {
 		String path = "D:/OneDrive/Escritorio/python_avanzado_santander/repositorio/codigo_ene_29_feb_2/ficheros.py";
 		interprete.execfile(path);
 		System.out.println("Ejecutando script ...");
+		interprete.close();
 	}
 
 }
