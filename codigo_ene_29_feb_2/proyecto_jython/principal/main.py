@@ -12,6 +12,24 @@ from java.io import File
 
 from random import randint
 from es.curso.clases import Usuario
+from collections import deque, namedtuple
+
+def coleccionesJython():
+    L = [1,2,3,4,5,6,7]
+    
+    d = deque(L)
+    d.append(-1)
+    d.appendleft(-2)    
+    print(d)
+    d.rotate(5)
+    print(d)
+    
+    CuentaBancaria = namedtuple("CuentaBancaria", ['sucursal','entidad','dc','numero'])
+    cc = CuentaBancaria(1000,2000,99,1234567)
+    print(cc.dc)
+    print(cc)
+    print(cc._asdict())
+    
 
 def crearColeccionUsuarios():
     L = []
@@ -45,4 +63,5 @@ def cargarColeccion():
 if __name__ == '__main__':
     #cargarColeccion()
     #leerFichero()
-    crearColeccionUsuarios()
+    #crearColeccionUsuarios()
+    coleccionesJython()
