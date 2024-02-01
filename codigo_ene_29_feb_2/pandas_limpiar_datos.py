@@ -18,6 +18,12 @@ def cargaDF(path):
     # Viento y presión a integer:
     df["Wind"] = pd.to_numeric(df.Wind.str.replace(" mph",""), downcast="integer")
     df["Pressure"] = pd.to_numeric(df.Pressure.str.replace(" mb",""), downcast="integer")
+
+    df['DateTime'] = pd.to_datetime("2005 " + df.Date + " " + \
+                                    df.Time.str.replace(" GMT",""), \
+                                        infer_datetime_format=True)
+    
+    df.drop(columns=['Date','Time'], inplace=True)
     df.info()
 
 
