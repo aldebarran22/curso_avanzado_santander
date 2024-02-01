@@ -27,7 +27,7 @@ def deserializarConShelve(path):
     shelf = None
     try:
         shelf = shelve.open(path)
-        return shelf["e1"], shelf["e2"], shelf["e3"]
+        return shelf["k3"], shelf["k1"], shelf["k2"]
 
     except Exception as e:
         print(e)
@@ -74,7 +74,7 @@ if __name__ == "__main__":
 
     L3 = L[:3]
     serializarConShelve("empleados2", *L3)
-    e1, e2, e3 = deserializarConShelve("empleados2")
+    e3, e1, e2 = deserializarConShelve("empleados2")
     print(e1)
     print(e2)
     print(e3)
