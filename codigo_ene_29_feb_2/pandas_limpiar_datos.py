@@ -35,7 +35,9 @@ def cargaDF(path):
 if __name__ == "__main__":
     df = cargaDF("../../practicas/avanzado2/pandas/csv/IRMA.csv")
 
+    print(df.head())
+
     # Calcular la correlación entre la presión y la temperatura:
     correlacion = np.corrcoef(df.Pressure, df.Wind)
-    valor = round(correlacion[0][1] * 100.0, 2)
+    valor = round(correlacion[0][1] * 100, 2)
     print("Correlación : ", valor, '%')
