@@ -2,8 +2,23 @@
 Librerías de Serialización en python: pickle y shelve
 """
 import pickle as p
+import shelve
 from base_datos import BaseDatos
 
+def serializarConShelve(path, *empleados):
+    shelf = None
+    try:
+        shelf = shelve.open(path)
+        k = 1
+        for e in empleados:
+            clave = f"k{k}"
+            shelf[clave] = e
+            k+=1
+            
+    except Exception as e:
+        print(e)
+    finally:
+        if shelf: shelf.close()
 
 def serializarPickle(L, path):
     fich = None
