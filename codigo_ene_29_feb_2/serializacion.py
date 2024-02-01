@@ -9,7 +9,7 @@ def serializarPickle(L, path):
     fich = None
     try:
         fich = open(path, "wb")
-        p.dump(L, fich)
+        p.dump(L, fich, protocol=2)
 
     except Exception as e:
         print(e)
@@ -22,6 +22,8 @@ def deserializarPickle(path):
     fich = None
     try:
         fich = open(path, "rb")
+        obj = p.load(fich)
+        return obj
 
     except Exception as e:
         print(e)
@@ -34,7 +36,7 @@ if __name__ == "__main__":
     bd = BaseDatos("../BBDD/empresa3.db")
     L = bd.selectEmpleados()
     print(L)
-
+    print("-" * 10)
     serializarPickle(L, "empleados.bin")
     L2 = deserializarPickle("empleados.bin")
     print(L2)
