@@ -56,6 +56,15 @@ class ProductosBD(Resource):
         except Exception as e:
             abort(404, message=str(e))
 
+    def post(self):
+        try:
+            args = parser.parse_args()
+            print(args)
+            return {"create": 1}
+
+        except Exception as e:
+            return {"error": str(e)}
+
 
 class CategoriasBD(Resource):
     def get(self, nombre):
