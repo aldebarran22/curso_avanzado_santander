@@ -19,6 +19,26 @@ def exportarXML(path, pathDestino):
             # Se crea una etiqueta por cada producto:
             producto = SubElement(top, "producto")
 
+            # Crear un att en cada producto con la PK
+            producto.set("id", str(p.id))
+
+            # Añadir las propiedades de cada producto
+            nombre = SubElement(producto, "nombre")
+            nombre.text = p.nombre
+
+            # Otra etiqueta anidada:
+            categoria = SubElement(producto, "categoria")
+            categoria.set("idcat", str(p.cat.id))
+            nombreCat = SubElement(categoria, "nombre")
+            nombreCat.text = p.cat.nombre
+
+            # Resto de propiedades de cada producto
+            precio = SubElement(producto, "precio")
+            precio.text = "%.2f" % p.precio
+
+            existencias = SubElement(producto, "existencias")
+            existencias.text = "%d" % p.exis
+
         print(tostring(top))
 
     except Exception as e:
