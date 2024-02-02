@@ -29,6 +29,20 @@ class ProductosBD(Resource):
         except Exception as e:
             abort(404, message=str(e))
 
+    def delete(self, id):
+        # Borrar un producto de la Base de datos con la PK (id)
+        try:
+            bd = BaseDatos(path)
+            n = bd.delete(id)
+            if n == 0:
+                # No lo ha encontrado
+                raise ValueError(f"El id: {id} no existe en la BD")
+            else:
+                return {"delete": 1}
+
+        except Exception as e:
+            abort(404, message=str(e))
+
 
 class CategoriasBD(Resource):
     def get(self, nombre):
@@ -45,7 +59,8 @@ class CategoriasBD(Resource):
 # Mapeo:
 # GET: http://localhost:5000/productos
 # GET: http://localhost:5000/productos/
-api.add_resource(ProductosBD, "/productos", "/productos/")
+# DELETE: http://localhost:5000/productos/id
+api.add_resource(ProductosBD, "/productos", "/productos/", "/productos/<int:id>")
 
 # GET: http://localhost:5000/categorias/nombre
 api.add_resource(CategoriasBD, "/categorias/<string:nombre>")
