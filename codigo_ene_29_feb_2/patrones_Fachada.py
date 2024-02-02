@@ -49,6 +49,7 @@ class C:
             return aux.decode("utf-8")
         else:
             return None
+        
 if __name__ == "__main__":
     resul = C.strchr("hola que tal", "q")
     print(resul)
