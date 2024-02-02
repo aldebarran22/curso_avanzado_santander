@@ -5,7 +5,14 @@ Obtener información de la Base de datos en json / xml
 import json
 from base_datos import Categoria, Producto, BaseDatos
 from xml.etree.ElementTree import Element, SubElement, Comment, tostring
+from xml.etree.ElementTree import iterparse
 from xml.etree import ElementTree
+
+
+def importarXML(path):
+    eventos = ["start", "end"]
+    for evento, nodo in iterparse(path, eventos):
+        print(evento, nodo.tag)
 
 
 def exportarXML(path, pathDestino):
@@ -90,5 +97,6 @@ def exportarJSON(path, pathDestino):
 if __name__ == "__main__":
     path = "../../BBDD/empresa3.db"
     # exportarJSON(path, "productos.json")
-    importarJSON("productos.json")
+    # importarJSON("productos.json")
     # exportarXML(path, "productos.xml")
+    importarXML("productos.xml")
