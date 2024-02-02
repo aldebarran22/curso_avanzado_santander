@@ -10,20 +10,29 @@ def exportarXML():
     pass
 
 
-def exportarJSON():
-    pass
-
-
-def testBD(path, pathDestino):
+def importarJSON(path):
     fich = None
     try:
-        #fich = open(pathDestino, "w")
+        with open(path, "r", encoding="utf8") as fich:
+            Ljson = json.load(fich)
+            print(Ljson[:2])
+
+    except Exception as e:
+        print(e)
+    finally:
+        if fich:
+            fich.close()
+
+
+def exportarJSON(path, pathDestino):
+    fich = None
+    try:
         bd = BaseDatos(path)
         L = bd.select()
         Ljson = [producto.to_json() for producto in L]
 
-        with open(pathDestino, 'w', encoding='utf8') as fich:
-            json.dump(Ljson, fich, ensure_ascii=False)       
+        with open(pathDestino, "w", encoding="utf8") as fich:
+            json.dump(Ljson, fich, ensure_ascii=False, indent=4)
 
     except Exception as e:
         print(e)
@@ -34,4 +43,5 @@ def testBD(path, pathDestino):
 
 if __name__ == "__main__":
     path = "../../BBDD/empresa3.db"
-    testBD(path, "productos.json")
+    exportarJSON(path, "productos.json")
+    importarJSON("productos.json")
