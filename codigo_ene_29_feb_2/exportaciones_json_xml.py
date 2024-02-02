@@ -12,7 +12,8 @@ from xml.etree import ElementTree
 def importarXML(path):
     eventos = ["start", "end"]
     enCat = False
-    
+    L = []
+
     for evento, nodo in iterparse(path, eventos):
         # print(evento, nodo.tag)
         if evento == "start":
@@ -20,12 +21,18 @@ def importarXML(path):
                 enCat = True
 
             if nodo.tag == "nombre" and not enCat:
-                print(nodo.text)
+                nombre = nodo.text
+
+            if nodo.tag == "precio":
+                precio = float(nodo.text)
 
         elif evento == "end":
             if nodo.tag == "categoria":
                 enCat = False
 
+            if nodo.tag == 'producto':
+                    L.append((nombre,precio))
+    print(L[:3])
 
 def exportarXML(path, pathDestino):
     try:
