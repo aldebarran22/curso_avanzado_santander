@@ -26,7 +26,11 @@ class C:
 
         C.__strchr.restype = c_char_p
         C.__strchr.argtypes = [c_char_p, c_char]
-        return C.__strchr(cadena.encode("utf-8"), letra.encode("utf-8"))
+        aux = C.__strchr(cadena.encode("utf-8"), letra.encode("utf-8"))
+        if aux != None:
+            return aux.decode("utf-8")
+        else:
+            return None
 
 
 if __name__ == "__main__":
