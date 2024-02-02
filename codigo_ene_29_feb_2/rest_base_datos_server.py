@@ -58,9 +58,11 @@ class ProductosBD(Resource):
 
     def post(self):
         try:
-            args = parser.parse_args()
-            print(args)
-            return {"create": 1}
+            args = parser.parse_args()            
+            objProducto = Producto.create(args)
+            bd = BaseDatos(path)
+            n = bd.create(objProducto)
+            return {"create": n}
 
         except Exception as e:
             return {"error": str(e)}
