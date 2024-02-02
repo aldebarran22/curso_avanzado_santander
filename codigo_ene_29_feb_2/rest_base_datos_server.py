@@ -8,7 +8,7 @@ D -> Delete -> Verbo DELETE (eliminar un recurso)
 """
 
 from flask import Flask
-from flask_restful import Resource, Api, abort
+from flask_restful import Resource, Api, abort, reqparse
 from base_datos import Empleado, Producto, Categoria, BaseDatos
 
 # Creamos la aplicación y el Api
@@ -16,6 +16,19 @@ app = Flask(__name__)
 api = Api(app)
 
 path = "../../BBDD/empresa3.db"
+
+# La categoría que va dentro del producto
+parser_cat = reqparse.RequestParser()
+parser_cat.add_argument("id", type=int)
+parser_cat.add_argument("nombre", type=str)
+
+# producto:
+parser = reqparse.RequestParser()
+parser.add_argument("id", type=int)
+parser.add_argument("nombre", type=str)
+parser.add_argument("cat", type=dict)
+parser.add_argument("precio", type=float)
+parser.add_argument("exis", type=int)
 
 
 class ProductosBD(Resource):
