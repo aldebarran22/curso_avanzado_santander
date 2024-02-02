@@ -76,7 +76,7 @@ class Producto:
         self.id = id
         self.nombre = nombre
         self.cat = cat
-        self.precio = precio
+        self.precio = round(precio,2)
         self.exis = exis
 
     @staticmethod

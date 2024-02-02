@@ -17,11 +17,13 @@ def exportarJSON():
 def testBD(path, pathDestino):
     fich = None
     try:
-        fich = open(pathDestino, "w")
+        #fich = open(pathDestino, "w")
         bd = BaseDatos(path)
         L = bd.select()
         Ljson = [producto.to_json() for producto in L]
-        json.dump(Ljson, fich)
+
+        with open(pathDestino, 'w', encoding='utf8') as fich:
+            json.dump(Ljson, fich, ensure_ascii=False)       
 
     except Exception as e:
         print(e)
