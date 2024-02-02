@@ -13,6 +13,12 @@ def testGET():
         json.dump(datos, f)
         print('Fichero generado ...')
 
+def testDELETE(id):
+    url = f"http://localhost:5000/productos/{id}"
+    resp = requests.delete(url)
+    datos = resp.json()
+    print(datos)
 
 if __name__ == "__main__":
-    testGET()
+    #testGET()
+    testDELETE(10)
