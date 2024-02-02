@@ -40,15 +40,18 @@ def exportarXML(path, pathDestino):
             existencias.text = "%d" % p.exis
 
         print(tostring(top))
-        
+
         # Grabar al fichero:
         tree = ElementTree.ElementTree()
         tree._setroot(top)
         tree.write(pathDestino)
-        
 
     except Exception as e:
         print(e)
+
+
+def procesarJSON(id=0, nombre="", cat=None, precio=0.0, exis=0):
+    print(id, nombre)
 
 
 def importarJSON(path):
@@ -58,7 +61,7 @@ def importarJSON(path):
             Ljson = json.load(fich)
 
             for d in Ljson:
-                print(d["nombre"])
+                procesarJSON(**d)
 
     except Exception as e:
         print(e)
@@ -87,5 +90,5 @@ def exportarJSON(path, pathDestino):
 if __name__ == "__main__":
     path = "../../BBDD/empresa3.db"
     # exportarJSON(path, "productos.json")
-    # importarJSON("productos.json")
-    exportarXML(path, "productos.xml")
+    importarJSON("productos.json")
+    # exportarXML(path, "productos.xml")
