@@ -26,7 +26,7 @@ def testDELETE(id):
 def testPOST():
     url = "http://localhost:5000/productos/"
     cat = Categoria(1, "Bebidas")
-    prod = Producto(0, "CocaCola2", cat, 1.8, 100)
+    prod = Producto(100, "CocaCola3", cat, 1.8, 100)
     headers = {"Content-Type": "application/json"}
     resp = requests.post(url, headers=headers, data=json.dumps(prod.to_json()))
     print(resp.json())
