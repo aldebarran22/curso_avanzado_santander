@@ -30,8 +30,25 @@ class ProductosBD(Resource):
             abort(404, message=str(e))
 
 
+class CategoriasBD(Resource):
+    def get(self, nombre):
+        # Recuperar todos los productos
+        try:
+            bd = BaseDatos(path)
+            L = bd.select(nombre)
+            return [p.to_json() for p in L]
+
+        except Exception as e:
+            abort(404, message=str(e))
+
+
 # Mapeo:
+# GET: http://localhost:5000/productos
+# GET: http://localhost:5000/productos/
 api.add_resource(ProductosBD, "/productos", "/productos/")
+
+# GET: http://localhost:5000/categorias/nombre
+api.add_resource(CategoriasBD, "/categorias/<string:nombre>")
 
 if __name__ == "__main__":
     app.run(debug=True)
