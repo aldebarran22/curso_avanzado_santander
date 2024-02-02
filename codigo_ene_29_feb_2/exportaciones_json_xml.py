@@ -14,9 +14,22 @@ def exportarJSON():
     pass
 
 
-def testBD():
-    pass
+def testBD(path, pathDestino):
+    fich = None
+    try:
+        fich = open(pathDestino, "w")
+        bd = BaseDatos(path)
+        L = bd.select()
+        Ljson = [producto.to_json() for producto in L]
+        json.dump(Ljson, fich)
+
+    except Exception as e:
+        print(e)
+    finally:
+        if fich:
+            fich.close()
 
 
 if __name__ == "__main__":
-    testBD()
+    path = "../../BBDD/empresa3.db"
+    testBD(path, "productos.json")
