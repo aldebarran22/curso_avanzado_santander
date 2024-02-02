@@ -9,6 +9,26 @@ from xml.etree.ElementTree import iterparse
 from xml.etree import ElementTree
 
 
+def testXPath(path):
+    with open(path, "rt") as f:
+        tree = ElementTree.parse(f)
+        # Capturar la etiqueta raíz
+        root = tree.getroot()
+
+        print('Nombre de los productos:')
+        for t in root.findall(".//producto/nombre"):
+            print(t.text)
+
+        cat = set()
+        for t in root.findall(".//producto/categoria/nombre"):
+            cat.add(t.text)
+            
+        print(cat)
+
+
+        
+
+
 def importarXML(path):
     eventos = ["start", "end"]
     enCat = False
@@ -30,9 +50,10 @@ def importarXML(path):
             if nodo.tag == "categoria":
                 enCat = False
 
-            if nodo.tag == 'producto':
-                    L.append((nombre,precio))
+            if nodo.tag == "producto":
+                L.append((nombre, precio))
     print(L[:3])
+
 
 def exportarXML(path, pathDestino):
     try:
@@ -118,4 +139,5 @@ if __name__ == "__main__":
     # exportarJSON(path, "productos.json")
     # importarJSON("productos.json")
     # exportarXML(path, "productos.xml")
-    importarXML("productos.xml")
+    # importarXML("productos.xml")
+    testXPath("productos.xml")
