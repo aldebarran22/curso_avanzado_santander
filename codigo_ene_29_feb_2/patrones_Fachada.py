@@ -21,7 +21,12 @@ class C:
     def strchr(cadena, letra):
         """Busca la posición de letra en cadena
         y devuelve la subcadena hasta el final"""
-        pass
+        if len(letra) != 1:
+            raise ValueError("Letra debe tener un sólo char")
+
+        C.__strchr.restype = c_char_p
+        C.__strchr.argtypes = [c_char_p, c_char]
+        return C.__strchr(cadena.encode("utf-8"), letra.encode("utf-8"))
 
 
 if __name__ == "__main__":
