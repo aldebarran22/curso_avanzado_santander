@@ -40,6 +40,12 @@ def exportarXML(path, pathDestino):
             existencias.text = "%d" % p.exis
 
         print(tostring(top))
+        
+        # Grabar al fichero:
+        tree = ElementTree.ElementTree()
+        tree._setroot(top)
+        tree.write(pathDestino)
+        
 
     except Exception as e:
         print(e)
