@@ -138,3 +138,7 @@ if __name__ == "__main__":
     # testPersona()
     # testGuia()
     testGrupo()
+
+    print(Persona.__subclasses__())
+    print([c.__name__ for c in Persona.__subclasses__()])
+    print(issubclass(Guia, Persona))
