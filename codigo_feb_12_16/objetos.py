@@ -48,6 +48,18 @@ class Guia(Persona):
         # super().__init__(nombre, edad, altura)
         self.idiomas = idiomas
 
+    def hablarCon(self, otro=None):
+        if otro == None:
+            super().hablarCon(otro)
+        else:
+            c1 = set(self.idiomas)
+            c2 = set(otro.idiomas)
+            comunes = c1 & c2
+            if len(comunes) == 0:
+                raise ValueError("No coinciden en los idiomas")
+            else:
+                print(self.nombre,"y",otro.nombre,"pueden hablar en:",comunes)
+
     def __str__(self):
         return Persona.__str__(self)+" "+";".join(self.idiomas)
 
