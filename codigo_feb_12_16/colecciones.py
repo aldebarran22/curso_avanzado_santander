@@ -21,7 +21,7 @@ def csvToDict(path):
 
 
 def dictToCSV(d):
-    return 0
+    return None
 
 
 if __name__ == "__main__":
