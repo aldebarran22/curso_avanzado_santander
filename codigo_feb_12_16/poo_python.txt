@@ -16,8 +16,15 @@ POO en Python:
 	del			__del__  (destructor)
 
 Superclase en Py: object
+Por defecto cualquier clase hereda de objeto
+
 Referencia al objeto que está en curso: self
+ - Se utiliza para crear los att.
+
 Referencia a la clase: cls
+  - Para crear instancias
+
+Constructor: __init__
 
 Tipos de métodos:
 - De instancia: self
@@ -31,3 +38,28 @@ Tipos de att:
 Acceso a los miembros de una clase:
 - público (por defecto)
 - privado: __privado
+
+No tiene interface
+Clases Abstractas: SI módulo abc
+Definir métodos abstracto
+
+Python NO admite sobrecarga (de base)
+ - Posibilidad con polimorfismo paramétrico
+
+- Sobrescribir métodos de la clase Padre: SI
+- Comunicación con la clase Padre: nombre de clase: 
+	-ClasePadre.__init__(self) -> obligatorio pasar self
+	-super().__init__()
+
+Relaciones entre clases:
+- Herencia: clases que tienen algo en común: Empleado: JefeProyecto, Analista ...
+- Composición: Descomposición de objeto en partes (cada parte pertenece a una clase)
+- Asociación: Dos objetos interactúan en el tiempo: 
+   objeto1.metodo(objeto2)
+   Coche, SurtidorGas
+
+   coche = Coche()
+   surtidor = Surtidor()
+   coche.repostar(surtidor)
+
+
