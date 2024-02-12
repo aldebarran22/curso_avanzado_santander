@@ -38,6 +38,10 @@ class Persona:
         pass
 
 
+class Guia(Persona):
+    pass
+
+
 def testPersona():
     p1 = Persona("Ana", 23, 1.77)
     print(p1)
@@ -52,6 +56,14 @@ def testPersona():
     c = {p1, Persona("Jorge", 56, 1.8), Persona("Raúl", 55, 1.68)}
     L2 = sorted(c)
     print(L2)
+    p1.telefono = 917788554
+    del p1.__dict__["altura"]
+    print(p1.__dict__)
+    L3 = [obj.__dict__ for obj in L]
+    print(L3)
+    # Crear un objeto con el __class__
+    p2 = p1.__class__("Jose")
+    print(p2)
 
 
 if __name__ == "__main__":
