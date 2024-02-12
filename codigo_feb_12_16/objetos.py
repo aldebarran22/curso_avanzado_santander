@@ -49,6 +49,9 @@ def testPersona():
     print(L)
     L.sort()
     print(L)
+    c = {p1, Persona("Jorge", 56, 1.8), Persona("Raúl", 55, 1.68)}
+    L2 = sorted(c)
+    print(L2)
 
 
 if __name__ == "__main__":
