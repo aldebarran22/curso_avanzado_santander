@@ -15,7 +15,13 @@ class Clase:
 @func.register(Clase)
 def _(arg):
 	print('un objeto de Clase')
-	
+
+@func.register(list)
+@func.register(set)
+@func.register(tuple)
+def _(arg):
+	print('Tenemos ', len(arg),'elementos en la colección')
+	#print(arg[0])	
 	
 if __name__ == '__main__':
 	func('hola')
@@ -23,3 +29,4 @@ if __name__ == '__main__':
 	func(8.99)
 	a = Clase()
 	func(a)
+	func([1,2,3,4])
