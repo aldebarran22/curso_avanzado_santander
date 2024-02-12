@@ -10,10 +10,12 @@ class Figura(abc.ABC):
         self.etiqueta = etiqueta
         self.color = color
 
+    def __str__(self):
+        return self.etiqueta+" "+self.color
+
     @abc.abstractmethod
     def calcularArea(self):
         pass
 
 if __name__ == '__main__':
     f = Figura("Triangulo", "red")
-    
