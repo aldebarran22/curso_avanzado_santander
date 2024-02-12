@@ -1,0 +1,33 @@
+POO en Python:
+- Herencia Simple y múltiple.
+- Sobrecarga de operadores:
+  Relacionales: return bool
+  	<	__lt__
+	>	__gt__
+	==	__eq__
+
+  Aritméticos: return instancia de la clase
+	+	__add__
+	-	__sub__
+
+  Funciones del lenguaje  métodos de la clase
+	str			__str__
+	repr			__repr__
+	del			__del__  (destructor)
+
+Superclase en Py: object
+Referencia al objeto que está en curso: self
+Referencia a la clase: cls
+
+Tipos de métodos:
+- De instancia: self
+- De clase: cls
+- estáticos: ni self, ni cls
+
+Tipos de att:
+- de instancia
+- de clase
+
+Acceso a los miembros de una clase:
+- público (por defecto)
+- privado: __privado
