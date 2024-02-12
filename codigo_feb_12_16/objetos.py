@@ -102,7 +102,15 @@ class Grupo:
 
     def __len__(self):
         return len(self.grupo)
+    
+
+def testGrupo():
+    g = Grupo()
+    p1 = Persona("Jorge", 56, 1.8)
+    p2 = Persona("Raúl", 55, 1.68)
+    g.añadir(p1, p2)
 
 if __name__ == "__main__":
-    testPersona()
+    #testPersona()
     #testGuia()
+    testGrupo()
