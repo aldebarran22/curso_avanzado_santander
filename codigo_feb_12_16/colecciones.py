@@ -25,4 +25,5 @@ def dictToCSV(d):
 
 
 if __name__ == "__main__":
-    csvToDict("ficheros/Empleados.txt")
+    d = csvToDict("ficheros/Empleados.txt")
+    print(d)
