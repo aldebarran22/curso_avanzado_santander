@@ -10,4 +10,4 @@ def cargaFich(lang="es"):
         print(linea)
     fich.close()
 
-cargaFich()
+cargaFich("en")
