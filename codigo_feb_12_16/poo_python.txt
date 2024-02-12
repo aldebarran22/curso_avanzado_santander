@@ -11,9 +11,10 @@ POO en Python:
 	-	__sub__
 
   Funciones del lenguaje  métodos de la clase
-	str			__str__
-	repr			__repr__
-	del			__del__  (destructor)
+	str(obj)			__str__
+	repr(obj)			__repr__
+	del(obj)			__del__  (destructor)
+	len(obj)			__len__
 
 Superclase en Py: object
 Por defecto cualquier clase hereda de objeto
@@ -61,5 +62,8 @@ Relaciones entre clases:
    coche = Coche()
    surtidor = Surtidor()
    coche.repostar(surtidor)
+
+Lenguaje dinámico: Se pueden modificar los objetos en 
+t.ejecución.
 
 

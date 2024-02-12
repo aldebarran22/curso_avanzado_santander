@@ -90,8 +90,19 @@ def testPersona():
     # Crear un objeto con el __class__
     p2 = p1.__class__("Jose")
     print(p2)
+    
 
+class Grupo:
+
+    def __init__(self):
+        self.grupo = []
+
+    def añadir(self, persona):
+        self.grupo.append(persona)
+
+    def __len__(self):
+        return len(self.grupo)
 
 if __name__ == "__main__":
-    #testPersona()
-    testGuia()
+    testPersona()
+    #testGuia()
