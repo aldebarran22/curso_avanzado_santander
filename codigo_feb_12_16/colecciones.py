@@ -25,10 +25,18 @@ def csvToDict(path):
             fich.close()
 
 
-def dictToCSV(d):
-    return None
+def dictToCSV(L):
+    """Restaura un formato CSV a partir de una lista de dicts"""
+    csv = ""
+    cabs = ";".join(L[0].keys())
+    csv = cabs+"\n"
+    for d in L:
+        csv += ";".join(d.values())+"\n"
+    return csv
 
 
 if __name__ == "__main__":
     d = csvToDict("ficheros/Empleados.txt")
     print(d)
+    txt = dictToCSV(d)
+    print(txt)
