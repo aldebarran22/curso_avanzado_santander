@@ -6,7 +6,20 @@ class Time:
         self.s = ss
 
     def __add__(self, other):
-        pass
+        r = Time(self.h+other.h, self.m+other.m, self.s+other.s)
+        r.reajustar()
+        return r
+    
+    def reajustar(self):
+        minutos = self.s // 60
+        self.s %= 60
+
+        self.m += minutos
+        horas = self.m // 60
+        self.m %= 60
+
+        self.h += horas
+
 
     def __str__(self):
         return "%02d:%02d:%02d" % (self.h, self.m, self.s)
@@ -48,3 +61,4 @@ if __name__ == "__main__":
     t1 = Time(2, 33, 45)
     t2 = Time(4, 46, 12)
     r = t1 + t2  # r = t1.__add__(t2)
+    print(t1, t2, r)
