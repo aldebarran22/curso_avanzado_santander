@@ -42,6 +42,7 @@ class Guia(Persona):
     """
     Implementación de la clase guía
     """
+
     def __init__(self, nombre="", edad=0, altura=0.0, idiomas=[]):
         # Llamar a la clase Padre:
         Persona.__init__(self, nombre, edad, altura)
@@ -58,15 +59,17 @@ class Guia(Persona):
             if len(comunes) == 0:
                 raise ValueError("No coinciden en los idiomas")
             else:
-                print(self.nombre,"y",otro.nombre,"pueden hablar en:",comunes)
+                print(self.nombre, "y", otro.nombre, "pueden hablar en:", comunes)
 
     def __str__(self):
-        return Persona.__str__(self)+" "+";".join(self.idiomas)
+        return Persona.__str__(self) + " " + ";".join(self.idiomas)
+
 
 def testGuia():
-    g1 = Guia("Jorge", 34, 1.8, ['inglés','francés','chino'])
-    g2 = Guia("Sara", 45, 1.82, ['alemán','chino','inglés'])
+    g1 = Guia("Jorge", 34, 1.8, ["inglés", "francés", "chino"])
+    g2 = Guia("Sara", 45, 1.82, ["alemán", "chino", "inglés"])
     g1.hablarCon(g2)
+
 
 def testPersona():
     p1 = Persona("Ana", 23, 1.77)
@@ -90,30 +93,48 @@ def testPersona():
     # Crear un objeto con el __class__
     p2 = p1.__class__("Jose")
     print(p2)
-    
+
 
 class Grupo:
 
     def __init__(self):
         self.grupo = []
+        self.indice = 0
 
     def añadir(self, *persona):
         self.grupo.extend(persona)
-   
+
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        if self.indice == len(self.grupo):
+            self.indice = 0
+            raise StopIteration
+        else:
+            aux = self.grupo[self.indice]
+            self.indice += 1
+            return aux
+
     def __len__(self):
         return len(self.grupo)
-    
+
 
 def testGrupo():
     g = Grupo()
     p1 = Persona("Jorge", 56, 1.8)
     p2 = Persona("Raúl", 55, 1.68)
-    g.añadir(p1, p2)
-    print('len:', len(g))
+    p3 = Persona("Paula", 35, 1.69)
+    g.añadir(p1, p2, p3)
+    print("len:", len(g))
+    for obj in g:
+        print(obj)
+    print("-" * 10)
     for obj in g:
         print(obj)
 
+
 if __name__ == "__main__":
-    #testPersona()
-    #testGuia()
+    # testPersona()
+    # testGuia()
     testGrupo()
