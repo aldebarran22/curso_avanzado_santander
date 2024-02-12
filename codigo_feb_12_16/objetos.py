@@ -39,8 +39,22 @@ class Persona:
 
 
 class Guia(Persona):
-    pass
+    """
+    Implementación de la clase guía
+    """
+    def __init__(self, nombre="", edad=0, altura=0.0, idiomas=[]):
+        # Llamar a la clase Padre:
+        Persona.__init__(self, nombre, edad, altura)
+        # super().__init__(nombre, edad, altura)
+        self.idiomas = idiomas
 
+    def __str__(self):
+        return Persona.__str__(self)+" "+";".join(self.idiomas)
+
+def testGuia():
+    g1 = Guia("Jorge", 34, 1.8, ['inglés','francés'])
+    g2 = Guia("Sara", 45, 1.82, ['alemán','chino'])
+    g1.hablarCon(g2)
 
 def testPersona():
     p1 = Persona("Ana", 23, 1.77)
@@ -67,4 +81,5 @@ def testPersona():
 
 
 if __name__ == "__main__":
-    testPersona()
+    #testPersona()
+    testGuia()
