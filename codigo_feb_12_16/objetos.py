@@ -97,9 +97,9 @@ class Grupo:
     def __init__(self):
         self.grupo = []
 
-    def añadir(self, persona):
-        self.grupo.append(persona)
-
+    def añadir(self, *persona):
+        self.grupo.extend(persona)
+   
     def __len__(self):
         return len(self.grupo)
     
@@ -109,6 +109,9 @@ def testGrupo():
     p1 = Persona("Jorge", 56, 1.8)
     p2 = Persona("Raúl", 55, 1.68)
     g.añadir(p1, p2)
+    print('len:', len(g))
+    for obj in g:
+        print(obj)
 
 if __name__ == "__main__":
     #testPersona()
