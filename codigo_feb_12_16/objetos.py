@@ -64,8 +64,8 @@ class Guia(Persona):
         return Persona.__str__(self)+" "+";".join(self.idiomas)
 
 def testGuia():
-    g1 = Guia("Jorge", 34, 1.8, ['inglés','francés'])
-    g2 = Guia("Sara", 45, 1.82, ['alemán','chino'])
+    g1 = Guia("Jorge", 34, 1.8, ['inglés','francés','chino'])
+    g2 = Guia("Sara", 45, 1.82, ['alemán','chino','inglés'])
     g1.hablarCon(g2)
 
 def testPersona():
