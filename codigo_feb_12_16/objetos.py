@@ -30,14 +30,12 @@ class Persona:
     def __repr__(self):
         return str(self)
 
-    """
     def __lt__(self, other):
         return self.edad < other.edad
-    """
 
     def __del__(self):
-        print("se borra a ", self.nombre)
-        # pass
+        # print("se borra a ", self.nombre)
+        pass
 
 
 def testPersona():
@@ -47,7 +45,10 @@ def testPersona():
     # print(p1.__str__())
     L = [p1, Persona("Jorge", 44, 1.8), Persona("Raúl", 55, 1.68)]
     print(L)
-    
+    L.sort(key=lambda obj: obj.nombre, reverse=True)
+    print(L)
+    L.sort()
+    print(L)
 
 
 if __name__ == "__main__":
