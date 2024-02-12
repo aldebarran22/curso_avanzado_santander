@@ -101,6 +101,9 @@ class Grupo:
         self.grupo = []
         self.indice = 0
 
+    def __bool__(self):
+        return len(self.grupo)!=0
+
     def añadir(self, *persona):
         self.grupo.extend(persona)
 
@@ -132,6 +135,7 @@ def testGrupo():
     print("-" * 10)
     for obj in g:
         print(obj)
+    print(bool(g))
 
 
 if __name__ == "__main__":
@@ -142,3 +146,4 @@ if __name__ == "__main__":
     print(Persona.__subclasses__())
     print([c.__name__ for c in Persona.__subclasses__()])
     print(issubclass(Guia, Persona))
+    print(Persona.cumple)

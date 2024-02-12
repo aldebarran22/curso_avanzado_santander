@@ -15,6 +15,7 @@ POO en Python:
 	repr(obj)			__repr__
 	del(obj)			__del__  (destructor)
 	len(obj)			__len__
+	bool(obj)			__bool__
 
 Superclase en Py: object
 Por defecto cualquier clase hereda de objeto
