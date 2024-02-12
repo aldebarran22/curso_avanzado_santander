@@ -11,10 +11,8 @@ def csvToDict(path):
         csv = fich.read()
         lineas = csv.split("\n")
         cabs = lineas[0].split(";")
-        d = [dict(zip(cabs, f.split(";")))  for f in lineas[1:-1]]
-        print(d)
-
-
+        d = [dict(zip(cabs, f.split(";"))) for f in lineas[1:-1]]
+        return d
     except Exception as e:
         print(e.__class__.__name__, e)
     finally:
