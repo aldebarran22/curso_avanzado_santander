@@ -21,8 +21,10 @@ class Persona:
         if not otro:
             print(self.nombre, "está hablando solo")
         else:
+            # f-string
             print(f"{self.nombre} y {otro.nombre} están hablando")
 
+    """
     def __str__(self):
         return self.nombre + " " + str(self.edad) + " " + str(self.altura)
 
@@ -31,7 +33,17 @@ class Persona:
 
     def __lt__(self, other):
         return self.edad < other.edad
+    """
 
     def __del__(self):
         # print('se borra a ', self.nombre)
         pass
+
+
+def testPersona():
+    p1 = Persona("Ana", 23, 1.77)
+    print(p1)
+
+
+if __name__ == "__main__":
+    testPersona()
