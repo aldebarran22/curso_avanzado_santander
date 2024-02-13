@@ -72,3 +72,9 @@ class ManejadorWhatsApp(Manejador):
 
         else:
             print("fin de cadena, no se procesar la petición")
+
+
+if __name__ == "__main__":
+    obj = ManejadorWhatsApp(ManejadorSMS(ManejadorEMail()))
+    peticion = Peticion("email", "Contenido del mensaje a enviar")
+    obj.procesarPeticion(peticion)
