@@ -2,7 +2,6 @@
 Singleton para almacenar un traductor
 """
 
-
 def cargaFich(lang="es"):
     fich = None
     try:
@@ -20,11 +19,17 @@ def cargaFich(lang="es"):
     finally:
         if fich:
             fich.close()
-
+class Singletoni18n:
+    
+    @staticmethod
+    def getInstance():
+        pass
 
 def nuevoCliente():
-    pass
+    print(Singletoni18n.getInstance()['inicio'])
 
+def editarCliente():
+    print(Singletoni18n.getInstance()['inicio'])
 
 if __name__ == "__main__":
     d = cargaFich("en")
