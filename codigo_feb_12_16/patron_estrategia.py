@@ -5,6 +5,8 @@ tiempos de ejecución.
 """
 
 import abc
+from random import randint
+from datetime import datetime
 
 
 class Estrategia(abc.ABC):
@@ -44,3 +46,21 @@ class EstrategiaPython(Estrategia):
 
     def ordenar(self, unaLista):
         unaLista.sort()
+
+
+class Contexto:
+
+    def __init__(self, n, clase):
+        self.n = n
+        self.clase = clase
+        self.unaLista = [randint(1, 10000) for _ in range(n)]
+
+    def cronometrarEstrategias(self):
+
+        L = self.unaLista.copy()
+
+
+if __name__ == "__main__":
+    n = 10000
+    contexto = Contexto(n, Estrategia)
+    contexto.cronometrarEstrategias()
