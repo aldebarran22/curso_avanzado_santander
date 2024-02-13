@@ -6,9 +6,7 @@ import sys, copy
 # Partimos de la clase Punto:
 
 class Punto:
-
         __slots__ = ("__x", "__y")
-
         
         def __init__(self, x, y):
                 self.__x = x
@@ -36,10 +34,11 @@ print("p1:",p1)
 
 
 # Se inyecta el cada {} un parámetro
-p2 = eval("{}({},{})".format("Punto",2,4))
+p2 = eval("{}({},{})".format("Punto",2,4)) # "Punto(2,4)"
 print("p2:",p2)
 
 
+print(sys.modules[__name__], type(sys.modules[__name__]))
 p3 = getattr(sys.modules[__name__],"Punto")(7,6)
 print("p3:",p3)
 
@@ -68,3 +67,12 @@ p7 = p1.__class__(8,99)
 print("p7:",p7)
 
 print(globals())
+
+
+def suma(a,b):
+        return a+b
+
+t = (1,2)
+print(suma(*t))
+d = {"a":1, "b":2}
+print(suma(**d))
