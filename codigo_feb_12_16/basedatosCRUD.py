@@ -177,9 +177,11 @@ if __name__ == "__main__":
         for emp in L:
             print(emp)
 
+        """
         emp = Empleado(0, "Paula", "Representante de ventas")
         bd.create(emp)
         print(emp)
+        """
 
         """
         obj = bd.read(14)
