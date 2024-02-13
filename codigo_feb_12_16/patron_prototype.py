@@ -24,7 +24,6 @@ class Prototipo(abc.ABC):
     def clone(self):
         pass
 
-
 class Circulo(Prototipo):
     def __init__(self, etiqueta="circulo", color="black", radio=5.0):
         Prototipo.__init__(self, etiqueta, color)
@@ -35,7 +34,6 @@ class Circulo(Prototipo):
 
     def clone(self):
         return copy.copy(self)
-
 
 class Rectangulo(Prototipo):
     def __init__(self, etiqueta="rectangulo", color="black", ancho=5.0, alto=10.0):
@@ -55,7 +53,6 @@ class Rectangulo(Prototipo):
     def clone(self):
         return copy.copy(self)
 
-
 class Triangulo(Prototipo):
     def __init__(self, etiqueta="triangulo", color="black", base=2.5, altura=8.0):
         Prototipo.__init__(self, etiqueta, color)
@@ -73,17 +70,23 @@ class Triangulo(Prototipo):
 
     def clone(self):
         return copy.copy(self)
-    
+
 class Factoria1:
     """
     Al instanciar la factoria se crean TODOS los prototipos
     Y cada vez que se solicita un prototipo se clona
     """
+
     def __init__(self):
         """
         Definir la estructura de prototipos e inicializarlos
         """
-        pass
+        self.prototipos = dict()
+        for clase in Prototipo.__subclasses__():
+            k = clase.__name__.lower()
+            obj = clase()
+            self.prototipos[k] = obj
+
 
     def getPrototipo(self, nombre):
         """
@@ -95,6 +98,7 @@ class Factoria1:
         """Imprimir el catalogo de prototipos"""
         pass
 
+
 class Factoria2:
     """
     Al instanciar la factoria se NO crea los prototipos
@@ -102,6 +106,7 @@ class Factoria2:
     si ya existe, si no se crea y luego siempre se clona.
     Crea los prototipos bajo demanda
     """
+
     def __init__(self):
         """
         Definir la estructura de prototipos
