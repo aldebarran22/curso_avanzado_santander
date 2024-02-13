@@ -20,3 +20,20 @@ class Manejador(abc.ABC):
     @abc.abstractmethod
     def procesarPeticion(self, peticion):
         pass
+
+class ManejadorEMail(Manejador):
+    def __init__(self, siguiente=None):
+        Manejador.__init__(self, siguiente)
+
+    def procesarPeticion(self, peticion):
+        if peticion.destino == 'email':
+            # Utilizar un API de email
+            print('Enviar por email: ', peticion.contenido)
+
+        elif self.siguiente != None:
+            print('Email transmite la petición al siguiente')
+            self.siguiente.procesarPeticion(peticion)
+
+        else:
+            print('fin de cadena, no se procesar la petición')
+
