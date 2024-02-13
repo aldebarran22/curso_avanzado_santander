@@ -5,6 +5,10 @@ Implementación patrón abstract factory:
 """
 
 import abc
+from IPad import IPad
+from IPhone import IPhone
+from S20 import S20
+from GalaxyA import GalaxyA
 
 
 # Factorias
