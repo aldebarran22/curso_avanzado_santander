@@ -38,11 +38,12 @@ class Singletoni18n:
 
 
 def nuevoCliente():
-    Singletoni18n.getInstance()
+    print(Singletoni18n.getInstance()['inicio'])
 
 
 def editarCliente():
-    Singletoni18n.getInstance("en")
+    print(Singletoni18n.getInstance("en")['inicio'])
+    print(Singletoni18n.getInstance("en")['twitter'])
 
 
 if __name__ == "__main__":
