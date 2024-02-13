@@ -58,7 +58,7 @@ class Contexto:
     def cronometrarEstrategias(self):
 
         for algoritmo in self.clase.__subclasses__():
-            print(f'Prueba con {algoritmo.__name__}')    
+            print(f"Prueba con {algoritmo.__name__}")
             L = self.unaLista.copy()
             # Crear cada una de las estrategias:
             objeto = algoritmo()
@@ -67,7 +67,8 @@ class Contexto:
             objeto.ordenar(L)
             t2 = datetime.now()
 
-            print("Tiempo de ordenación: ",t2-t1,'para ',self.n,'elementos')
+            print("Tiempo de ordenación: ", t2 - t1, "para ", self.n, "elementos")
+            print()
 
 
 if __name__ == "__main__":
