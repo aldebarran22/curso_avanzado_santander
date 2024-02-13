@@ -76,5 +76,5 @@ class ManejadorWhatsApp(Manejador):
 
 if __name__ == "__main__":
     obj = ManejadorWhatsApp(ManejadorSMS(ManejadorEMail()))
-    peticion = Peticion("email", "Contenido del mensaje a enviar")
+    peticion = Peticion("socket", "Contenido del mensaje a enviar")
     obj.procesarPeticion(peticion)
