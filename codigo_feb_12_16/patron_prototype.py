@@ -103,7 +103,7 @@ class Factoria1:
     def print(self):
         """Imprimir el catalogo de prototipos"""
         print("Catálogo de prototipos:")
-        for k, v in self.prototipos:
+        for k, v in self.prototipos.items():
             print(k, v)
 
 
@@ -117,20 +117,34 @@ class Factoria2:
 
     def __init__(self):
         """
-        Definir la estructura de prototipos
+        Definir la estructura de prototipos y los inicializa a vacío
         """
-        pass
+        self.prototipos = dict()
+        for clase in Prototipo.__subclasses__():
+            k = clase.__name__.lower()
+            self.prototipos[k] = None
 
     def getPrototipo(self, nombre):
         """
         Devuelve un clone del prototipo seleccionado, pero si no existe
         lo crea, y después lo clona
         """
-        pass
+        if nombre.lower() in self.prototipos:
+            # Comprobar si el objeto ya está creado:
+            if not self.prototipos[nombre.lower()]:
+                clase = "{}()".format(nombre.capitalize())
+                self.prototipos[nombre.lower()] = eval(clase)
+
+            # Siempre se clona:
+            return self.prototipos[nombre.lower()].clone()
+        else:
+            raise ValueError(f"No existe  el prototipo:{nombre}")
 
     def print(self):
         """Imprimir el catalogo de prototipos"""
-        pass
+        print("Catálogo II de prototipos:")
+        for k, v in self.prototipos.items():
+            print(k, v)
 
 
 def testFactoria(factoria):
@@ -143,6 +157,7 @@ def testFactoria(factoria):
     print("-" * 10)
     f.print()
 
+
 if __name__ == "__main__":
-    testFactoria(Factoria1)
-    #testFactoria(Factoria2)
+    # testFactoria(Factoria1)
+    testFactoria(Factoria2)
