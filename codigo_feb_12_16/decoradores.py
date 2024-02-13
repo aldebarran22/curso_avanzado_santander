@@ -1,4 +1,4 @@
-AUTHENTICATED = True
+AUTHENTICATED = False
 
 
 def autenticado(f):
