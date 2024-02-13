@@ -2,12 +2,30 @@
 Singleton para almacenar un traductor
 """
 
-def cargaFich(lang="es"):
-    path = f"idiomas/{lang}.txt"
-    fich = open(path, "r")
-    for linea in fich:
-        linea = linea.rstrip()
-        print(linea)
-    fich.close()
 
-cargaFich("en")
+def cargaFich(lang="es"):
+    fich = None
+    try:
+        path = f"idiomas/{lang}.txt"
+        idioma = dict()
+        fich = open(path, "r")
+        for linea in fich:
+            linea = linea.rstrip()
+            k, _, v = linea.partition("=")
+            idioma[k] = v
+        return idioma
+
+    except Exception as e:
+        print(e)
+    finally:
+        if fich:
+            fich.close()
+
+
+def nuevoCliente():
+    pass
+
+
+if __name__ == "__main__":
+    d = cargaFich("en")
+    print(d)
