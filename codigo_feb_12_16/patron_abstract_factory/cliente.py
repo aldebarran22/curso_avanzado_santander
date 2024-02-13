@@ -14,23 +14,31 @@ def seleccionarFabricante():
     op = int(input("Seleccionar factoria:"))
     return L[op - 1]()
 
+
 def seleccionarParametro():
-    nombreFactoria = "Factoria"+sys.argv[1].capitalize()
-    nombre = "{}()".format(nombreFactoria)
-    print(nombre)
-    clase = eval(nombre)
-    return clase
+    try:
+        aux = sys.argv[1].capitalize()
+        nombreFactoria = "Factoria" + aux
+        nombre = "{}()".format(nombreFactoria)
+        print(nombre)
+        clase = eval(nombre)
+        return clase
+    except Exception as e:
+        raise ValueError(f"No existe el fabricante: {aux}")
 
 if __name__ == "__main__":
-    if len(sys.argv)==1:
-        factory = seleccionarFabricante()
-    else:
-        factory = seleccionarParametro()
+    try:
+        if len(sys.argv) == 1:
+            factory = seleccionarFabricante()
+        else:
+            factory = seleccionarParametro()
 
-    print(factory.__class__)
+        print(factory.__class__)
 
-    tno = factory.createTno()
-    tablet = factory.createTablet()
+        tno = factory.createTno()
+        tablet = factory.createTablet()
 
-    tno.llamar()
-    tablet.internet()
+        tno.llamar()
+        tablet.internet()
+    except Exception as e:
+        print(e)
