@@ -49,6 +49,16 @@ class Empleado:
         return str(self)
 
 
+def log(f):
+    def inner(*args, **kwargs):
+        print(f.__name__)
+        print(args)
+        print(kwargs)
+        f(*args, **kwargs)
+
+    return inner
+
+
 class BaseDatos:
 
     def __init__(self, path):
@@ -57,6 +67,7 @@ class BaseDatos:
 
         self.con = db.connect(path)
 
+    @log
     def create(self, empleado):
         cur = None
         try:
@@ -161,10 +172,16 @@ class BaseDatos:
 
 if __name__ == "__main__":
     try:
-        bd = BaseDatos("../bd/empresa3.db")
-        L = bd.select("Gerente")
-        print(L)
+        bd = BaseDatos("../BBDD/empresa3.db")
+        L = bd.select()
+        for emp in L:
+            print(emp)
 
+        emp = Empleado(0, "Paula", "Representante de ventas")
+        bd.create(emp)
+        print(emp)
+
+        """
         obj = bd.read(14)
         print(obj)
 
@@ -172,7 +189,7 @@ if __name__ == "__main__":
         if bd.update(obj):
             print("Registro actualizado")
 
-        """
+        
         
 
         id = 29
@@ -181,9 +198,7 @@ if __name__ == "__main__":
         """
 
         """
-        emp = Empleado(0, "Andrés", "Gerente de ventas")
-        bd.create(emp)
-        print(emp)
+       
         """
 
     except Exception as e:
