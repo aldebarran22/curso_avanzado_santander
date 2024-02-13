@@ -20,10 +20,12 @@ class Ventana(IVentana):
     def dibujar(self):
         print(self.titulo, end=" ")
 
+
 class VentanaDecorator(IVentana):
 
     def __init__(self, ventana):
         self.ventana = ventana
+
 
 class DecoradorBorde(VentanaDecorator):
 
@@ -33,13 +35,15 @@ class DecoradorBorde(VentanaDecorator):
     def dibujar(self):
         pass
 
+
 class DecoradorCerrar(VentanaDecorator):
 
     def __init__(self, ventana):
         VentanaDecorator.__init__(self, ventana)
 
     def dibujar(self):
-        pass  
+        pass
+
 
 class DecoradorAyuda(VentanaDecorator):
 
@@ -47,4 +51,23 @@ class DecoradorAyuda(VentanaDecorator):
         VentanaDecorator.__init__(self, ventana)
 
     def dibujar(self):
-        pass  
+        pass
+
+
+if __name__ == "__main__":
+    # Ventana con borde:
+    # |Ventana con borde|
+    v1 = DecoradorBorde(Ventana("Ventana con borde"))
+    v1.dibujar()
+    print()
+
+    # ||Ventana con 2 bordes||
+    v3 = DecoradorBorde(DecoradorBorde(Ventana("Ventana con 2 bordes")))
+    v3.dibujar()
+    print()
+
+    # Ventana con todo:
+    # |Ventana con todo[Ayuda] X|
+    v2 = DecoradorBorde(DecoradorAyuda(DecoradorCerrar(Ventana("Ventana con todo"))))
+    v2.dibujar()
+    print()
