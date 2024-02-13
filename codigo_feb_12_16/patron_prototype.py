@@ -73,3 +73,48 @@ class Triangulo(Prototipo):
 
     def clone(self):
         return copy.copy(self)
+    
+class Factoria1:
+    """
+    Al instanciar la factoria se crean TODOS los prototipos
+    Y cada vez que se solicita un prototipo se clona
+    """
+    def __init__(self):
+        """
+        Definir la estructura de prototipos e inicializarlos
+        """
+        pass
+
+    def getPrototipo(self, nombre):
+        """
+        Devuelve un clone del prototipo seleccionado
+        """
+        pass
+
+    def print(self):
+        """Imprimir el catalogo de prototipos"""
+        pass
+
+class Factoria2:
+    """
+    Al instanciar la factoria se NO crea los prototipos
+    Y cada vez que se solicita un prototipo, se comprueba
+    si ya existe, si no se crea y luego siempre se clona.
+    Crea los prototipos bajo demanda
+    """
+    def __init__(self):
+        """
+        Definir la estructura de prototipos
+        """
+        pass
+
+    def getPrototipo(self, nombre):
+        """
+        Devuelve un clone del prototipo seleccionado, pero si no existe
+        lo crea, y después lo clona
+        """
+        pass
+
+    def print(self):
+        """Imprimir el catalogo de prototipos"""
+        pass
