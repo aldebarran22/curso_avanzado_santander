@@ -24,6 +24,7 @@ class Prototipo(abc.ABC):
     def clone(self):
         pass
 
+
 class Circulo(Prototipo):
     def __init__(self, etiqueta="circulo", color="black", radio=5.0):
         Prototipo.__init__(self, etiqueta, color)
@@ -34,6 +35,7 @@ class Circulo(Prototipo):
 
     def clone(self):
         return copy.copy(self)
+
 
 class Rectangulo(Prototipo):
     def __init__(self, etiqueta="rectangulo", color="black", ancho=5.0, alto=10.0):
@@ -53,6 +55,7 @@ class Rectangulo(Prototipo):
     def clone(self):
         return copy.copy(self)
 
+
 class Triangulo(Prototipo):
     def __init__(self, etiqueta="triangulo", color="black", base=2.5, altura=8.0):
         Prototipo.__init__(self, etiqueta, color)
@@ -71,6 +74,7 @@ class Triangulo(Prototipo):
     def clone(self):
         return copy.copy(self)
 
+
 class Factoria1:
     """
     Al instanciar la factoria se crean TODOS los prototipos
@@ -87,7 +91,6 @@ class Factoria1:
             obj = clase()
             self.prototipos[k] = obj
 
-
     def getPrototipo(self, nombre):
         """
         Devuelve un clone del prototipo seleccionado
@@ -99,7 +102,7 @@ class Factoria1:
 
     def print(self):
         """Imprimir el catalogo de prototipos"""
-        print('Catálogo de prototipos:')
+        print("Catálogo de prototipos:")
         for k, v in self.prototipos:
             print(k, v)
 
@@ -128,3 +131,18 @@ class Factoria2:
     def print(self):
         """Imprimir el catalogo de prototipos"""
         pass
+
+
+def testFactoria(factoria):
+    f = factoria()
+    f.print()
+    obj1 = f.getPrototipo("CIRCULO")
+    obj1.color = "red"
+    obj1.radio = 7.5
+    print(obj1)
+    print("-" * 10)
+    f.print()
+
+if __name__ == "__main__":
+    testFactoria(Factoria1)
+    #testFactoria(Factoria2)
