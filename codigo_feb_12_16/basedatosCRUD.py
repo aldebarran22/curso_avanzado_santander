@@ -55,6 +55,7 @@ def log(f):
         print(args)
         print(kwargs)
         f(*args, **kwargs)
+        # grabar al fichero
 
     return inner
 
@@ -90,6 +91,7 @@ class BaseDatos:
             if cur:
                 cur.close()
 
+    @log
     def update(self, emp):
         cur = None
         try:
@@ -107,6 +109,7 @@ class BaseDatos:
             if cur:
                 cur.close()
 
+    @log
     def delete(self, id):
         cur = None
         try:
