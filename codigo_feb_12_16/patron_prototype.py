@@ -148,14 +148,17 @@ class Factoria2:
 
 
 def testFactoria(factoria):
-    f = factoria()
-    f.print()
-    obj1 = f.getPrototipo("CIRCULO")
-    obj1.color = "red"
-    obj1.radio = 7.5
-    print(obj1)
-    print("-" * 10)
-    f.print()
+    try:
+        f = factoria()
+        f.print()
+        obj1 = f.getPrototipo("CIRCULO")
+        obj1.color = "red"
+        obj1.radio = 7.5
+        print(obj1)
+        print("-" * 10)
+        f.print()
+    except Exception as e:
+        print(e.__class__.__name__, e)
 
 
 if __name__ == "__main__":
