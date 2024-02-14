@@ -43,6 +43,9 @@ def sumarAños(ini, fin):
         else:
             print("no existe: ", pathFile)
 
+    print('Se han cargado: ', len(L))
+    resul = reduce(sumarDosDFs, L)
+    print(resul.head())
 
 if __name__ == "__main__":
     r = sumarDosAnyos(1913, 1914)
