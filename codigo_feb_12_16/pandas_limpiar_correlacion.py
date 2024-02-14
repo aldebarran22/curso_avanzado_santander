@@ -4,6 +4,7 @@ entre dos columnas: Viento y la Presión
 """
 
 import pandas as pd
+import numpy as np
 
 
 def limpiarDF(path):
@@ -28,6 +29,10 @@ def limpiarDF(path):
     df.drop(columns=["Date", "Time"], inplace=True)
     df.info()
     print(df.head())
+
+    # Correlación entre el viento y la presión:
+    t = np.corrcoef(df.Wind, df.Pressure)
+    print('Correlación:',t[0][1] * 100,'%')
 
 
 if __name__ == "__main__":
