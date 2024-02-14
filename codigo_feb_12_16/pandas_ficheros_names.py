@@ -29,9 +29,9 @@ def sumarDosAnyos(año1, año2):
 
 
 def sumarDosDFs(año1, año2):
-    #print(año1.head(3))
-    #print(año2.head(3))
-    #print("-" * 20)
+    # print(año1.head(3))
+    # print(año2.head(3))
+    # print("-" * 20)
     r = año1.add(año2, fill_value=0)
     r.sort_values(by="cuenta", ascending=False, inplace=True)
     return r
@@ -49,14 +49,13 @@ def sumarAños(ini, fin):
     print("Se han cargado: ", len(L))
     resul = reduce(sumarDosDFs, L)
     resul.reset_index(inplace=True)
-    resul.to_json("ficheros/names.json", \
-                  orient="records",indent=4)
+    resul.to_json("ficheros/names.json", orient="records", indent=4)
     print(resul.head())
     # Obtener 3 filas de DF:
-    print('-'*10)
+    print("-" * 10)
     print(resul.loc[:3])
-    print('-'*10)
-    print(resul.iat[1,0]) # Fila 1, col 0 (no cuentan los índices)
+    print("-" * 10)
+    print(resul.iat[1, 0])  # Fila 1, col 0 (no cuentan los índices)
 
 
 if __name__ == "__main__":
@@ -66,9 +65,10 @@ if __name__ == "__main__":
     # iterar por las filas:
     r.reset_index(inplace=True)
     i = 3
+    # iterrows devuelve una tuplas (indice, serie)
     for t, serie in r.iterrows():
-        i-=1
-        print(t,serie.values)
-        print('-'*10)
-        if i==0:break
-
+        i -= 1
+        print(t, serie.values)
+        print("-" * 10)
+        if i == 0:
+            break
