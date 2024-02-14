@@ -5,7 +5,7 @@ Operaciones con los ficheros de los nombres de EEUU
 import pandas as pd
 from pandas import DataFrame
 from os.path import isfile
-from functools import reduce
+from functools import reduce, singledispatch
 
 path = "../../practicas/avanzado2/pandas/names/"
 
@@ -19,7 +19,13 @@ def cargaAño(año):
     return df
 
 
+@singledispatch
 def sumarDosAnyos(año1, año2):
+    print("función por defecto")
+
+
+@sumarDosAnyos.register(int, int)
+def _(año1, año2):
     df = cargaAño(año1)
     df2 = cargaAño(año2)
     # r = df + df2 Arrastra NaN si no existe el índice en uno de los dos fich.
@@ -28,7 +34,8 @@ def sumarDosAnyos(año1, año2):
     return r
 
 
-def sumarDosDFs(año1, año2):
+@sumarDosAnyos.register(DataFrame, DataFrame)
+def _(año1, año2):
     r = año1.add(año2, fill_value=0)
     r.sort_values(by="cuenta", ascending=False, inplace=True)
     return r
@@ -39,7 +46,7 @@ def sumarAños(ini, fin):
     for año in range(ini, fin + 1):
         pathFile = path + f"yob{año}.txt"
         if isfile(pathFile):
-            L.append(cargaAño(año))
+            L.append(cargaAño(pathFile))
         else:
             print("no existe: ", pathFile)
 
