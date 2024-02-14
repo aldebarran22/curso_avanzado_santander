@@ -24,17 +24,14 @@ def sumarDosAnyos(año1, año2):
     print("función por defecto")
 
 
-@sumarDosAnyos.register(int, int)
+@sumarDosAnyos.register(int)
 def _(año1, año2):
     df = cargaAño(año1)
     df2 = cargaAño(año2)
-    # r = df + df2 Arrastra NaN si no existe el índice en uno de los dos fich.
-    r = df.add(df2, fill_value=0)
-    r.sort_values(by="cuenta", ascending=False, inplace=True)
-    return r
+    return sumarDosAnyos(df, df2)
 
 
-@sumarDosAnyos.register(DataFrame, DataFrame)
+@sumarDosAnyos.register(DataFrame)
 def _(año1, año2):
     r = año1.add(año2, fill_value=0)
     r.sort_values(by="cuenta", ascending=False, inplace=True)
@@ -46,9 +43,12 @@ def sumarAños(ini, fin):
     for año in range(ini, fin + 1):
         pathFile = path + f"yob{año}.txt"
         if isfile(pathFile):
-            L.append(cargaAño(pathFile))
+            L.append(cargaAño(año))
         else:
             print("no existe: ", pathFile)
+    print("Se han cargado: ", len(L))
+    resul = reduce(sumarDosAnyos, L)
+    print(resul.head())
 
 
 if __name__ == "__main__":
