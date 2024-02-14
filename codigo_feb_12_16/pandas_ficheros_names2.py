@@ -14,8 +14,6 @@ def cargaAño(año):
     pathFile = path + f"yob{año}.txt"
     df = pd.read_csv(pathFile, header=None, names=["nombre", "sexo", "cuenta"])
     df.set_index(["nombre", "sexo"], inplace=True)
-    # print(df.head())
-    # print(df.loc['Mary','F']) Número de veces que se repite Mary en F
     return df
 
 
@@ -54,3 +52,5 @@ def sumarAños(ini, fin):
 if __name__ == "__main__":
     r = sumarDosAnyos(1913, 1914)
     sumarAños(2012, 2020)
+
+    sumarDosAnyos("a","b")
