@@ -48,6 +48,9 @@ def sumarAños(ini, fin):
 
     print("Se han cargado: ", len(L))
     resul = reduce(sumarDosDFs, L)
+    resul.reset_index(inplace=True)
+    resul.to_json("ficheros/names.json", \
+                  orient="records",indent=4)
     print(resul.head())
 
 
