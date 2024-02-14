@@ -52,8 +52,23 @@ def sumarAños(ini, fin):
     resul.to_json("ficheros/names.json", \
                   orient="records",indent=4)
     print(resul.head())
+    # Obtener 3 filas de DF:
+    print('-'*10)
+    print(resul.loc[:3])
+    print('-'*10)
+    print(resul.iat[1,0]) # Fila 1, col 0 (no cuentan los índices)
 
 
 if __name__ == "__main__":
     r = sumarDosAnyos(1913, 1914)
     sumarAños(2012, 2020)
+
+    # iterar por las filas:
+    r.reset_index(inplace=True)
+    i = 3
+    for t, serie in r.iterrows():
+        i-=1
+        print(t,serie.values)
+        print('-'*10)
+        if i==0:break
+
