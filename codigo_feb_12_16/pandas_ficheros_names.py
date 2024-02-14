@@ -3,6 +3,7 @@ Operaciones con los ficheros de los nombres de EEUU
 """
 
 import pandas as pd
+from os.path import isfile
 
 path = "../../practicas/avanzado2/pandas/names/"
 
@@ -24,6 +25,16 @@ def sumarDosAños(año1, año2):
     r.sort_values(by="cuenta", ascending=False, inplace=True)
     return r
 
+def sumarAños(ini, fin):
+    for año in range(ini, fin+1):
+        pathFile = path + f"yob{año}.txt"
+        if isfile(pathFile):
+            print('existe: ',pathFile)    
+        else:
+            print('no existe: ',pathFile)
+
+
 
 if __name__ == "__main__":
     r = sumarDosAños(1913, 1914)
+    sumarAños(2012, 2020)
