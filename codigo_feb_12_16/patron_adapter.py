@@ -61,11 +61,12 @@ class VectorPlano1(Vector3D, Vector2D):
         return Vector3D.getY(self)
 
     def prod(self, v):
-        pass
+        v_3d = Vector3D(v.getAbcisa(), v.getOrdenada())
+        return Vector3D.productoEscalar(self, v_3d)
 
     def magnitud(self):
         # La norma del vector
-        pass
+        return Vector3D.norma(self)
 
 
 class VectorPlano2(Vector2D):
@@ -81,8 +82,28 @@ class VectorPlano2(Vector2D):
         return self.vector3D.getY()
 
     def prod(self, v):
-        pass
+        v_3d = Vector3D(v.getAbcisa(), v.getOrdenada())
+        return self.vector3D.productoEscalar(v_3d)
 
     def magnitud(self):
         # La norma del vector
-        pass
+        return self.vector3D.norma()
+
+
+if __name__ == "__main__":
+    v1 = VectorPlano1(3, 4)
+    v2 = VectorPlano1(8, 7)
+
+    print("v1", v1)
+    print("v2", v2)
+    print("La norma del vector (3,4) es: ", v1.magnitud())
+    print("El producto de los vectores (3,4) y (8,7) es : ", v1.prod(v2))
+    print()
+
+    # Prueba con la version de Composicion
+    v3 = VectorPlano2(3, 4)
+    v4 = VectorPlano2(8, 7)
+    print("v3", v3)
+    print("v4", v4)
+    print("La norma del vector (3,4) es: ", v3.magnitud())
+    print("El producto de los vectores (3,4) y (8,7) es : ", v4.prod(v3))
