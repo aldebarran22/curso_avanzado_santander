@@ -16,8 +16,14 @@ def cargaAño(año):
     return df
 
 
+def sumarDosAños(año1, año2):
+    df = cargaAño(año1)
+    df2 = cargaAño(año2)
+    # r = df + df2 Arrastra NaN si no existe el índice en uno de los dos fich.
+    r = df.add(df2, fill_value=0)
+    r.sort_values(by="cuenta", ascending=False, inplace=True)
+    return r
+
+
 if __name__ == "__main__":
-    df = cargaAño(1914)
-    df2 = cargaAño(1913)
-    # r = df + df2
-    # print(r.head(10))
+    r = sumarDosAños(1913, 1914)
