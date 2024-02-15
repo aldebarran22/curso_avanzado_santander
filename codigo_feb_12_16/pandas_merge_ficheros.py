@@ -5,7 +5,7 @@ y Empresas
 """
 
 import pandas as pd
-
+import sys
 
 def mezcla():
     # Cargar los 3 ficheros:
@@ -24,7 +24,7 @@ def mezcla():
     dfTotal.drop(columns=["idempleado", "idempresa", "id_x", "id_y"], inplace=True)
     dfTotal.rename(columns={"nombre": "empleado"}, inplace=True)
     print(dfTotal.columns)
-    dfTotal.to_html("ficheros/pedidos.html", index=True)
+    dfTotal.to_html(sys.stdout, index=False)
 
 
 if __name__ == "__main__":
