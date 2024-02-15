@@ -4,7 +4,7 @@ Exportar a JSON / XML empleados de la BD
 
 from basedatosCRUD import BaseDatos, Empleado
 import json
-from xml.etree.ElementTree import Element, SubElement, tostring, Comment
+from xml.etree.ElementTree import iterparse, Element, SubElement, tostring, Comment
 from xml.etree import ElementTree
 
 
@@ -63,7 +63,6 @@ def exportarXML(bd, path):
 def xpath(path):
     with open(path, "rt") as f:
         tree = ElementTree.parse(f)
-
     root = tree.getroot()
     # todos los nombres:
     L = [t.text for t in root.findall(".//nombre")]
@@ -86,6 +85,12 @@ def importarXML(path):
             print(n.tag, n.text)
 
 
+def importarSAX(path):
+    eventos = ["start","end"]
+
+    for (evento, nodo) in iterparse(path, eventos):
+        print(evento, nodo)
+
 if __name__ == "__main__":
     bd = BaseDatos("../BBDD/empresa3.db")
     # exportarJSON(bd, "ficheros/empleados.json")
@@ -93,4 +98,5 @@ if __name__ == "__main__":
     # print(L[:3])
     # exportarXML(bd, "ficheros/empleados.xml")
     # importarXML("ficheros/empleados.xml")
-    xpath("ficheros/productos.xml")
+    # xpath("ficheros/productos.xml")
+    importarSAX("ficheros/productos.xml")
