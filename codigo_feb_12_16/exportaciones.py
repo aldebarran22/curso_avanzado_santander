@@ -66,9 +66,9 @@ def importarXML(path):
 
     root = tree.getroot()
     #print(tostring(root))
-    for nodo in root.getchildren():
+    for nodo in root:
         print(nodo.tag, nodo.text, nodo.attrib)
-        for n in nodo.getchildren():
+        for n in nodo:
             print(n.tag, n.text)
 
 
