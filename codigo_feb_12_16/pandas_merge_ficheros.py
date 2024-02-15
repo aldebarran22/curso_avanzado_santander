@@ -17,6 +17,13 @@ def mezcla():
     print("Empleados:", dfEmpleados.shape)
     print("Empresas:", dfEmpresas.shape)
 
+    dfTotal = pd.merge(dfPedidos, dfEmpleados, left_on="idempleado", right_on="id")
+    
+    dfTotal = dfTotal.merge(dfEmpresas, left_on="idempresa",right_on="id")
+    print(dfTotal.columns)
+
+    dfTotal.drop(columns=['idempleado', 'idempresa','id_x','id_y'], inplace=True)
+    
 
 if __name__ == "__main__":
     mezcla()
