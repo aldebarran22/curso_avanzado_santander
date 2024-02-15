@@ -4,6 +4,8 @@ Exportar a JSON / XML empleados de la BD
 
 from basedatosCRUD import BaseDatos, Empleado
 import json
+from xml.etree.ElementTree import Element, SubElement, tostring, Comment
+from xml.etree import ElementTree
 
 
 def exportarJSON(bd, path):
@@ -39,8 +41,21 @@ def importarJSON(path):
             fich.close()
 
 
+def exportarXML(bd, path):
+    top = Element("empleados")
+    empleados = bd.select()
+    for e in empleados:
+        empleado = SubElement(top, "empleado", {"id":str(e.id)})
+        nombre = SubElement(empleado, "nombre")
+        nombre.text = e.nombre
+        cargo = SubElement(empleado, "cargo")
+        cargo.text = e.cargo
+    print(tostring(top))
+
+
 if __name__ == "__main__":
     bd = BaseDatos("../BBDD/empresa3.db")
-    exportarJSON(bd, "ficheros/empleados.json")
-    L = importarJSON("ficheros/empleados.json")
-    print(L[:3])
+    # exportarJSON(bd, "ficheros/empleados.json")
+    # L = importarJSON("ficheros/empleados.json")
+    # print(L[:3])
+    exportarXML(bd, "ficheros/empleados.xml")
