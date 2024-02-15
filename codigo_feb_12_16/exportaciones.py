@@ -69,6 +69,10 @@ def xpath(path):
     L = [t.text for t in root.findall(".//nombre")]
     print(L[:6])
 
+    # los nombres de las categorias: sin repetidos
+    c = {t.text for t in root.findall(".//categoria/nombre")}
+    print(c)
+
 
 def importarXML(path):
     with open(path, "rt") as f:
