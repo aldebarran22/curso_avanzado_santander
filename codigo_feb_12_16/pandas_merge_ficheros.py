@@ -18,12 +18,14 @@ def mezcla():
     print("Empresas:", dfEmpresas.shape)
 
     dfTotal = pd.merge(dfPedidos, dfEmpleados, left_on="idempleado", right_on="id")
-    
-    dfTotal = dfTotal.merge(dfEmpresas, left_on="idempresa",right_on="id")
-    print(dfTotal.columns)
 
-    dfTotal.drop(columns=['idempleado', 'idempresa','id_x','id_y'], inplace=True)
-    
+    dfTotal = dfTotal.merge(dfEmpresas, left_on="idempresa", right_on="id")
+
+    dfTotal.drop(columns=["idempleado", "idempresa", "id_x", "id_y"], inplace=True)
+    dfTotal.rename(columns={"nombre": "empleado"}, inplace=True)
+    print(dfTotal.columns)
+    dfTotal.to_html("ficheros/pedidos.html", index=True)
+
 
 if __name__ == "__main__":
     mezcla()
