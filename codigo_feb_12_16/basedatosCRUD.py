@@ -14,36 +14,36 @@ from os.path import isfile
 
 class Empleado:
     def __init__(self, id=0, nombre="", cargo=""):
-        self.__id = id
-        self.__nombre = nombre
-        self.__cargo = cargo
+        self.id = id
+        self.nombre = nombre
+        self.cargo = cargo
 
     def getId(self):
-        return self.__id
+        return self.id
 
     def setId(self, id):
-        self.__id = id
+        self.id = id
 
     def getNombre(self):
-        return self.__nombre
+        return self.nombre
 
     def setNombre(self, nombre):
-        self.__nombre = nombre
+        self.nombre = nombre
 
     def getCargo(self):
-        return self.__cargo
+        return self.cargo
 
     def setCargo(self, cargo):
-        self.__cargo = cargo
+        self.cargo = cargo
 
     def getTupla(self):
-        return (self.__nombre, self.__cargo)
+        return (self.nombre, self.cargo)
 
     def getTupla2(self):
-        return (self.__nombre, self.__cargo, self.__id)
+        return (self.nombre, self.cargo, self.id)
 
     def __str__(self):
-        return str(self.__id) + " " + self.__nombre + " " + self.__cargo
+        return str(self.id) + " " + self.nombre + " " + self.cargo
 
     def __repr__(self):
         return str(self)
@@ -51,7 +51,7 @@ class Empleado:
 
 def log(f):
     def inner(*args, **kwargs):
-        print(f.__name__)
+        print(f.name)
         print(args)
         print(kwargs)
         f(*args, **kwargs)
