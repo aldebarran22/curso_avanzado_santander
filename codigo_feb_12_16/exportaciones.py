@@ -87,9 +87,30 @@ def importarXML(path):
 
 def importarSAX(path):
     eventos = ["start","end"]
-
+    activo = True
     for (evento, nodo) in iterparse(path, eventos):
-        print(evento, nodo)
+        
+        if evento == 'start':
+            if nodo.tag == 'nombre' and activo:
+                nombre = nodo.text
+
+            if nodo.tag == 'categoria':
+                activo = False
+            
+            if nodo.tag == 'precio':
+                precio = float(nodo.text)
+
+        elif evento == 'end':
+
+            if nodo.tag == 'categoria':
+                activo = True
+
+            if nodo.tag == 'producto':
+                print(nombre, precio)
+
+
+        
+
 
 if __name__ == "__main__":
     bd = BaseDatos("../BBDD/empresa3.db")
