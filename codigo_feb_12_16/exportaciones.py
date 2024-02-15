@@ -60,9 +60,22 @@ def exportarXML(bd, path):
     tree.write(path)
 
 
+def importarXML(path):
+    with open(path, "rt") as f:
+        tree = ElementTree.parse(f)
+
+    root = tree.getroot()
+    #print(tostring(root))
+    for nodo in root.getchildren():
+        print(nodo.tag, nodo.text, nodo.attrib)
+        for n in nodo.getchildren():
+            print(n.tag, n.text)
+
+
 if __name__ == "__main__":
     bd = BaseDatos("../BBDD/empresa3.db")
     # exportarJSON(bd, "ficheros/empleados.json")
     # L = importarJSON("ficheros/empleados.json")
     # print(L[:3])
-    exportarXML(bd, "ficheros/empleados.xml")
+    # exportarXML(bd, "ficheros/empleados.xml")
+    importarXML("ficheros/empleados.xml")
