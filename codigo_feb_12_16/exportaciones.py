@@ -43,14 +43,21 @@ def importarJSON(path):
 
 def exportarXML(bd, path):
     top = Element("empleados")
+    top.set("version", "1.0")
     empleados = bd.select()
+    comentario = Comment("fichero de empleados de la BD")
+    top.append(comentario)
     for e in empleados:
-        empleado = SubElement(top, "empleado", {"id":str(e.id)})
+        empleado = SubElement(top, "empleado", {"id": str(e.id)})
         nombre = SubElement(empleado, "nombre")
         nombre.text = e.nombre
         cargo = SubElement(empleado, "cargo")
         cargo.text = e.cargo
-    print(tostring(top))
+
+    # Grabar en un fichero:
+    tree = ElementTree.ElementTree()
+    tree._setroot(top)
+    tree.write(path)
 
 
 if __name__ == "__main__":
