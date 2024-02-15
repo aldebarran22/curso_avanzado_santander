@@ -7,6 +7,7 @@ y Empresas
 import pandas as pd
 import sys
 
+
 def mezcla():
     # Cargar los 3 ficheros:
     dfPedidos = pd.read_csv("pandas_ficheros/Pedidos.txt", sep=";")
@@ -24,7 +25,7 @@ def mezcla():
     dfTotal.drop(columns=["idempleado", "idempresa", "id_x", "id_y"], inplace=True)
     dfTotal.rename(columns={"nombre": "empleado"}, inplace=True)
     print(dfTotal.columns)
-    dfTotal.to_html(sys.stdout, index=False)
+    dfTotal.to_html("ficheros/pedidos.html", index=False)
 
 
 if __name__ == "__main__":
