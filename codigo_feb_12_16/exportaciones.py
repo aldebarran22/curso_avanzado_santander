@@ -13,6 +13,7 @@ def exportarJSON(bd, path):
         empleados = bd.select()
         L = [emp.__dict__ for emp in empleados]
         json.dump(L, fich, indent=4)
+        # print(json.dumps(L, indent=4)
 
     except Exception as e:
         print(e)
