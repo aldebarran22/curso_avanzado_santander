@@ -7,7 +7,7 @@ from threading import Thread, Lock, Semaphore
 from random import randint
 from time import sleep
 
-num_muestras = 10
+num_muestras = 12
 tam_buffer = 5
 
 num_productores = 2
@@ -104,3 +104,4 @@ if __name__ == "__main__":
 
     for c in consumidores:
         c.join()
+    print("Fin main")
