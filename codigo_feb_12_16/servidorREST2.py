@@ -3,10 +3,16 @@ Servidor REST crud implementado con Flask
 """
 
 from flask import Flask
-from flask_restful import Resource, Api, abort
+from flask_restful import Resource, Api, abort, reqparse
 from basedatosCRUD import Empleado, BaseDatos
 
 path = "../BBDD/empresa3.db"
+
+# Parseador de los parámetros de un empleado:
+parser = reqparse.RequestParser()
+parser.add_argument("id", type=int)
+parser.add_argument("nombre", type=str)
+parser.add_argument("cargo", type=str)
 
 # Instanciar la aplicación:
 app = Flask(__name__)
@@ -22,6 +28,20 @@ class EmpleadoListRecurso(Resource):
 
         except Exception as e:
             abort(404, str(e))
+
+    def post(self):
+        # Crear un empleado en la BD:
+        try:
+            bd = BaseDatos(path)
+            args = parser.parse_args()
+            empleado = Empleado(args['id'], args['nombre'],args['cargo'])
+            n = bd.create(empleado)
+            return {"create":n}
+        
+        except Exception as e:
+            return {"error":str(e)}
+
+
 
 class EmpleadoResource(Resource):
 
