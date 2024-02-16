@@ -3,6 +3,7 @@ Implementación del patrón Fachada para acceder a función de C de bajo nivel
 """
 
 from ctypes import *
+from os.path import isfile
 
 
 class C:
@@ -36,6 +37,28 @@ class C:
             return resul
 
 
+class DLL_C:
+
+    def __init__(self, path):
+        try:
+            if isfile(path):
+                self.dll = cdll.LoadLibrary(path)
+            else:
+                raise FileNotFoundError(f"No existe la DLL: {path}")
+
+        except Exception as e:
+            raise e
+
+    def sumar(self, a, b):
+        return self.dll.sumar(c_int(a), c_int(b))
+
+    def restar(self, a, b):
+        return self.dll.restar(c_int(a), c_int(b))
+
+    def HelloWorld(self):
+        self.dll.HelloWorld()
+
+
 if __name__ == "__main__":
     resul = C.strchr("hola que tal", "q")
     print(resul)
@@ -45,3 +68,6 @@ if __name__ == "__main__":
 
     resul = C.strstr("hola que tal", "que")
     print(resul)
+
+    dll_c = DLL_C("dll2.dll")
+    dll_c.HelloWorld()
