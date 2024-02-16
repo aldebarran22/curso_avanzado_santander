@@ -21,7 +21,7 @@ def testEmpleados():
 
 def crearEmpleado():
     url = "http://localhost:5000/empleados"
-    emp = Empleado(0, "Julia", "Gerente")
+    emp = Empleado(0, "Jose Julio", "Gerente")
     headers = {"Content-Type": "application/json"}
     datos = json.dumps(emp.__dict__)
     resp = post(url, headers=headers, data=datos)
