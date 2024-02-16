@@ -51,7 +51,7 @@ class Empleado:
 
 def log(f):
     def inner(*args, **kwargs):
-        print(f.name)
+        print(f.__name__)
         print(args)
         print(kwargs)
         f(*args, **kwargs)
@@ -68,7 +68,6 @@ class BaseDatos:
 
         self.con = db.connect(path)
 
-    @log
     def create(self, empleado):
         cur = None
         try:

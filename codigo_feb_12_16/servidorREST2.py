@@ -34,13 +34,15 @@ class EmpleadoListRecurso(Resource):
         try:
             bd = BaseDatos(path)
             args = parser.parse_args()
+            print("args:", args)
             empleado = Empleado(args["id"], args["nombre"], args["cargo"])
+            print("empleado: ", empleado)
             n = bd.create(empleado)
+            print("n: ", n)
             return {"create": n}
 
         except Exception as e:
-            raise e
-            # return {"error":str(e)}
+            return {"error": str(e)}
 
 
 class EmpleadoResource(Resource):
