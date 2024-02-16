@@ -34,13 +34,13 @@ class EmpleadoListRecurso(Resource):
         try:
             bd = BaseDatos(path)
             args = parser.parse_args()
-            empleado = Empleado(args['id'], args['nombre'],args['cargo'])
+            empleado = Empleado(args["id"], args["nombre"], args["cargo"])
             n = bd.create(empleado)
-            return {"create":n}
-        
-        except Exception as e:
-            return {"error":str(e)}
+            return {"create": n}
 
+        except Exception as e:
+            raise e
+            # return {"error":str(e)}
 
 
 class EmpleadoResource(Resource):
