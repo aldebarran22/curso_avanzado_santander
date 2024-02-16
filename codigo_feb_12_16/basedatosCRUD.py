@@ -54,7 +54,7 @@ def log(f):
         print(f.__name__)
         print(args)
         print(kwargs)
-        f(*args, **kwargs)
+        return f(*args, **kwargs)
         # grabar al fichero
 
     return inner
