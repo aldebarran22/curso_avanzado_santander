@@ -69,5 +69,5 @@ if __name__ == "__main__":
     resul = C.strstr("hola que tal", "que")
     print(resul)
 
-    dll_c = DLL_C("dll2.dll")
+    dll_c = DLL_C("./dll2.dll")
     dll_c.HelloWorld()
