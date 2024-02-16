@@ -8,11 +8,33 @@ from xml.etree.ElementTree import iterparse, Element, SubElement, tostring, Comm
 from xml.etree import ElementTree
 
 
+def serializarShelve(path, *objetos):
+    Shelf = shelve.open(path)
+    n = len(objetos)
+    i = 1
+    for obj in objetos:
+        clave = f"k-{i}"
+        Shelf[clave] = obj
+        i += 1
+    Shelf.close()
+    return n
+
+
+def deserializarShelve(path, n):
+    Shelf = shelve.open(path)
+    for i in range(1, n + 1):
+        clave = f"k-{i}"
+        obj = Shelf[clave]
+        i += 1
+        print(obj)
+    Shelf.close()
+
+
 def serializarPickle(L, path):
     fich = None
     try:
         fich = open(path, "wb")
-        pickle.dump(L, fich)
+        pickle.dump(L, fich, protocol=2)
     except Exception as e:
         print(e)
     finally:
@@ -143,3 +165,5 @@ if __name__ == "__main__":
     # importarXML("ficheros/empleados.xml")
     # xpath("ficheros/productos.xml")
     # importarSAX("ficheros/productos.xml")
+    serializarPickle(bd.select(), "ficheros/empleados.bin")
+    L = deserializarPickle("ficheros/empleados.bin")
