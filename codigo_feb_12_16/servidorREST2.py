@@ -13,7 +13,7 @@ app = Flask(__name__)
 api = Api(app)
 
 
-class EmpleadoRecurso(Resource):
+class EmpleadoListRecurso(Resource):
     def get(self):
         try:
             bd = BaseDatos(path)
@@ -23,10 +23,23 @@ class EmpleadoRecurso(Resource):
         except Exception as e:
             abort(404, str(e))
 
+class EmpleadoResource(Resource):
+
+    def get(self, id):
+        try:
+            bd = BaseDatos(path)
+            emp = bd.read(id)
+            return emp.__dict__
+
+        except ValueError as e:
+            abort(404, message=str(e))
+
 
 # Mapear el recurso con la petición
 # GET: http://localhost:5000/empleados  --> Todos los empleados!
-api.add_resource(EmpleadoRecurso, "/empleados")
+api.add_resource(EmpleadoListRecurso, "/empleados")
+# GET: http://localhost:5000/empleados/id
+api.add_resource(EmpleadoResource, "/empleados/<int:id>")
 
 if __name__ == "__main__":
     # Poner el servidor en marcha:
