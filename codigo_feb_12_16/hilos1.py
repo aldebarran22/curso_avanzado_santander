@@ -2,10 +2,9 @@
 Hilos en Python
 """
 
-from threading import Thread
+from threading import Thread, active_count
 from time import sleep
 from random import randint
-
 
 
 class Mensajes(Thread):
@@ -28,5 +27,6 @@ if __name__ == "__main__":
         L.append(h)
         h.start()
 
+    print("Hilos activos: ", active_count())
     for h in L:
         h.join()
