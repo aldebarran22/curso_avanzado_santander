@@ -68,6 +68,7 @@ class BaseDatos:
 
         self.con = db.connect(path)
 
+    @log
     def create(self, empleado):
         cur = None
         try:
