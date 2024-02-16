@@ -3,9 +3,34 @@ Exportar a JSON / XML empleados de la BD
 """
 
 from basedatosCRUD import BaseDatos, Empleado
-import json
+import json, pickle, shelve
 from xml.etree.ElementTree import iterparse, Element, SubElement, tostring, Comment
 from xml.etree import ElementTree
+
+
+def serializarPickle(L, path):
+    fich = None
+    try:
+        fich = open(path, "wb")
+        pickle.dump(L, fich)
+    except Exception as e:
+        print(e)
+    finally:
+        if fich:
+            fich.close()
+
+
+def deserializarPickle(path):
+    fich = None
+    try:
+        fich = open(path, "rb")
+        L = pickle.load(fich)
+        return L
+    except Exception as e:
+        print(e)
+    finally:
+        if fich:
+            fich.close()
 
 
 def exportarJSON(bd, path):
@@ -86,30 +111,27 @@ def importarXML(path):
 
 
 def importarSAX(path):
-    eventos = ["start","end"]
+    eventos = ["start", "end"]
     activo = True
-    for (evento, nodo) in iterparse(path, eventos):
-        
-        if evento == 'start':
-            if nodo.tag == 'nombre' and activo:
+    for evento, nodo in iterparse(path, eventos):
+
+        if evento == "start":
+            if nodo.tag == "nombre" and activo:
                 nombre = nodo.text
 
-            if nodo.tag == 'categoria':
+            if nodo.tag == "categoria":
                 activo = False
-            
-            if nodo.tag == 'precio':
+
+            if nodo.tag == "precio":
                 precio = float(nodo.text)
 
-        elif evento == 'end':
+        elif evento == "end":
 
-            if nodo.tag == 'categoria':
+            if nodo.tag == "categoria":
                 activo = True
 
-            if nodo.tag == 'producto':
+            if nodo.tag == "producto":
                 print(nombre, precio)
-
-
-        
 
 
 if __name__ == "__main__":
@@ -120,4 +142,4 @@ if __name__ == "__main__":
     # exportarXML(bd, "ficheros/empleados.xml")
     # importarXML("ficheros/empleados.xml")
     # xpath("ficheros/productos.xml")
-    importarSAX("ficheros/productos.xml")
+    # importarSAX("ficheros/productos.xml")
