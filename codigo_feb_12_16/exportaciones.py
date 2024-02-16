@@ -6,6 +6,7 @@ from basedatosCRUD import BaseDatos, Empleado
 import json, pickle, shelve
 from xml.etree.ElementTree import iterparse, Element, SubElement, tostring, Comment
 from xml.etree import ElementTree
+from fecha_hora import Time, Date
 
 
 def serializarShelve(path, *objetos):
@@ -47,6 +48,7 @@ def deserializarPickle(path):
     try:
         fich = open(path, "rb")
         L = pickle.load(fich)
+        print(L)
         return L
     except Exception as e:
         print(e)
@@ -167,3 +169,8 @@ if __name__ == "__main__":
     # importarSAX("ficheros/productos.xml")
     serializarPickle(bd.select(), "ficheros/empleados.bin")
     L = deserializarPickle("ficheros/empleados.bin")
+
+    n = serializarShelve(
+        "ficheros/empleados", Time(9, 44, 55), Date(1, 1, 2020), bd.read(1)
+    )
+    deserializarShelve("ficheros/empleados", n)
