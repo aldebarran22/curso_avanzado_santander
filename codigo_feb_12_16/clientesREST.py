@@ -8,5 +8,12 @@ def testHello():
     resp = get(url)
     print(resp.json())
 
+def testEmpleados():
+    url = "http://localhost:5000/empleados"
+    resp = get(url)
+    print(resp.json())
+
+
 if __name__ == '__main__':
-    testHello()
+    #testHello()
+    testEmpleados()
