@@ -1,9 +1,9 @@
 class Time:
 
-    def __init__(self, hh=0, mm=0, ss=0):
-        self.h = hh
-        self.m = mm
-        self.s = ss
+    def __init__(self, h=0, m=0, s=0):
+        self.h = h
+        self.m = m
+        self.s = s
 
     def __add__(self, other):
         if not isinstance(other, Time):
@@ -56,8 +56,8 @@ class DateTime(Date, Time):
 class DateTime2(Date, Time):
 
     def __init__(self, d=1, m=1, y=1970, hh=0, mm=0, ss=0):
-        super().__init__(d, m, y)
-        super().__init__(hh, mm, ss)
+        super(Date, self).__init__(d, m, y)
+        super(Time, self).__init__(hh, mm, ss)
 
     """
     def __str__(self):
