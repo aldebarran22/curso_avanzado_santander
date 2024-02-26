@@ -76,6 +76,22 @@ Varios tipos de métodos:
 - m. de clase: cls (ref a la clase)
 - m. estáticos: no tiene ni self, ni cls
 
+----------------------------------------------------
+import abc
+
+class MiClass(abc.ABC):
+
+	@abc.abstractmethod
+	def abstracto1(self):
+		pass
+
+class Clase2(MiClass):
+
+	def abstracto1(self):
+		print(...)
+
+
+
 
 
 
