@@ -26,11 +26,14 @@ class Date:
         else:
             return False
 
-class DateTime(Date, Time):
+class DateTime(Time, Date):
 
     def __init__(self,d=1,m=1,y=1970,hh=0,mm=0,ss=0):
         Date.__init__(self,d,m,y)
         Time.__init__(self,hh,mm,ss)
+
+    def __str__(self):
+        return Date.__str__(self)+" "+Time.__str__(self)
         
 
 if __name__ == "__main__":
@@ -38,3 +41,4 @@ if __name__ == "__main__":
     print(t)
 
     dt = DateTime(1, 5, 2024, 1, 2, 44)  # 01/05/2024 01:02:44
+    print(dt)
