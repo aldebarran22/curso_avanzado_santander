@@ -69,7 +69,20 @@ def testPersona():
     print(p1.__dict__)
 
     
+def crearObjetos():
+    p1 = Persona("Ana", 33, 1.8)
+    print('La clase:',p1.__class__.__name__)
 
+    # Crear un objeto con el class:
+    p2 = p1.__class__("Juan",23,1.8)
+    print(p2)
+
+    # Crear un objeto con una cadena:
+    cad = "{}({},{},{})".format("Persona", "'Sara'",44,1.88)
+    print(cad)
+    p3 = eval(cad)
+    print(p3)
 
 if __name__ == "__main__":
-    testPersona()
+    #testPersona()
+    crearObjetos()
