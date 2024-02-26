@@ -4,7 +4,7 @@ Implementación de las clases Categoria y Producto
 import sqlite3 as dbapi
 from os.path import isfile
 
-path = "empresa3.db"
+path = "../BBDD/empresa3.db"
 
 class Empleado:
 
@@ -210,6 +210,22 @@ class BaseDatos:
         finally:
             if cur: cur.close()
 
+    def getEmpleados(self):
+        """Recuperar una lista de empleados"""
+        cur = None
+        try:
+            cur = self.con.cursor()
+            sql = "select * from empleados"
+            cur.execute(sql)
+            for t in cur.fetchall():
+                print(t)
+
+        except Exception as e:
+            raise e
+        finally:
+            if cur: cur.close()
+
+
     
     def __del__(self):
         if hasattr(self, "con"):
@@ -308,8 +324,16 @@ def testDelete():
     bd = BaseDatos(path)
     bd.delete(3)
 
+def testEmpleados():
+    try:
+        bd = BaseDatos(path)
+        L = bd.getEmpleados()
+    except Exception as e:
+        print(e)
+
 if __name__ == '__main__':
-    testDelete()
+    #testDelete()
+    testEmpleados()
     
 
 
