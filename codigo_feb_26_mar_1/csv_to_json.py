@@ -27,3 +27,8 @@ def jsonToCSV(L):
 
 if __name__ == "__main__":
     txt = cargaFich("../ficheros/Empleados.txt")
+
+    col1 = "id;nombre;cargo".split(";")
+    col2 = "1;Davolio;Representante de ventas".split(";")
+    d = dict(zip(col1, col2))
+    print(d)
