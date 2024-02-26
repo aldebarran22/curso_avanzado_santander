@@ -19,18 +19,28 @@ class Persona:
         Persona.contador += 1
 
     def __str__(self):
-        return self.nombre+" "+str(self.edad)+" "+str(self.altura)
+        return self.nombre + " " + str(self.edad) + " " + str(self.altura)
+
+    """
+    def metodo(self):
+        print("contador:",self.contador)
+    """
+
+    @staticmethod
+    def getContador():
+        return Persona.contador
 
     def __del__(self):
         print("Se elimina a ", self.nombre)
         Persona.contador -= 1
 
-if __name__ == '__main__':
-    p1 = Persona("Ana",33, 1.8)
-    p2 = Persona("Marcos",36, 1.7)
-    del(p2)
-    print('continua...')
+
+if __name__ == "__main__":
+    print("num personas: ", Persona.getContador())
+    p1 = Persona("Ana", 33, 1.8)
+    p2 = Persona("Marcos", 36, 1.7)
+    del p2
+    print("Num personas:", p1.contador, Persona.contador)
     print(p1)
     print(str(p1))
     print(p1.__str__())
-
