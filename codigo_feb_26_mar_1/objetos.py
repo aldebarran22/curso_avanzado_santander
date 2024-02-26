@@ -42,8 +42,16 @@ class Persona:
 
 
 class Grupo:
-    pass
+    
+    def __init__(self, etiqueta, *personas):
+        self.etiqueta = etiqueta
+        self.lista = list()
+        self.lista.extend(personas)
 
+    def __str__(self):
+        resul = self.etiqueta+"\n"    
+        resul += "\n".join([str(obj) for obj in self.lista])
+        return resul
 
 def testGrupo():
     grupo1 = Grupo("Viaje1")
@@ -51,6 +59,7 @@ def testGrupo():
     p2 = Persona("Marcos", 36, 1.7)
     grupo2 = Grupo("Viaje2", p1, p2)
     grupo3 = Grupo("Viaje3", p2)
+    print(grupo2)
 
 
 def testPersona():
