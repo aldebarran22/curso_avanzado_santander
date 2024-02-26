@@ -25,3 +25,8 @@ class Cat(donotSwim, donotFly):
     def __init__(self):
         print("A cat.")
         super().__init__("Cat")
+
+
+cat = Cat()
+print("")
+bat = donotSwim("Bat")
