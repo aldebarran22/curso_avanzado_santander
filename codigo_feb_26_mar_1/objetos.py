@@ -26,6 +26,12 @@ class Persona:
 
     def __lt__(self, other):
         return self.edad < other.edad
+    
+    def hablarCon(self, otro=None):
+        if not otro:
+            print('La persona está hablando sola')
+        else:
+            print(self.nombre,"habla con",otro.nombre)
 
     """
     def metodo(self):
@@ -39,6 +45,23 @@ class Persona:
     def __del__(self):
         # print("Se elimina a ", self.nombre)
         Persona.contador -= 1
+ 
+class Guia(Persona):
+
+    def __init__(self,nombre="", edad=0, altura=0.0, ambito='',idiomas=[]):
+        # opcion1: con el nombre de la clase Padre
+        Persona.__init__(self,nombre,edad,altura) 
+        # opcion2: con la función super()
+        #super().__init__(nombre,edad,altura)   
+
+        # Att. propios del Guia
+        self.ambito = ambito
+        self.idiomas = idiomas
+
+    def hablarCon(self, otro=None):
+        # Comprobar si coinciden en algún
+        pass
+
 
 
 class Grupo:
