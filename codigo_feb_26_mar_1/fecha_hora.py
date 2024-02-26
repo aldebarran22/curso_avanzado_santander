@@ -5,6 +5,22 @@ class Time:
         self.m = mm
         self.s = ss
 
+    def __add__(self, other):
+        if not isinstance(self, Time) and not isinstance(other, Time):
+            raise TypeError('Se requieren dos instancias de Time')    
+        else:
+            nuevo = Time(self.h+other.h, self.m+other.m, self.s+other.s)
+            nuevo.ajustar()
+            return nuevo
+        
+    def ajustar(self):
+        minutos = self.s // 60
+        self.s %= 60
+        self.m += minutos
+        horas = self.m // 60
+        self.m %= 60
+        self.h += horas
+
     def __str__(self):
         return "%02d:%02d:%02d" % (self.h, self.m, self.s)
 
@@ -26,19 +42,26 @@ class Date:
         else:
             return False
 
-class DateTime(Time, Date):
 
-    def __init__(self,d=1,m=1,y=1970,hh=0,mm=0,ss=0):
-        Date.__init__(self,d,m,y)
-        Time.__init__(self,hh,mm,ss)
+class DateTime(Date, Time):
+
+    def __init__(self, d=1, m=1, y=1970, hh=0, mm=0, ss=0):
+        Date.__init__(self, d, m, y)
+        Time.__init__(self, hh, mm, ss)
 
     def __str__(self):
-        return Date.__str__(self)+" "+Time.__str__(self)
-        
+        return Date.__str__(self) + " " + Time.__str__(self)
+
 
 if __name__ == "__main__":
     t = Time(1, 2, 44)
     print(t)
+
+    t2 = Time(10, 12, 34)
+    print(t2)
+
+    resul = t + t2 # resul = t.__add__(t2)
+    print(resul)
 
     dt = DateTime(1, 5, 2024, 1, 2, 44)  # 01/05/2024 01:02:44
     print(dt)
