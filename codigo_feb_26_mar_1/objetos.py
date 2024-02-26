@@ -23,6 +23,10 @@ class Persona:
 
     def __repr__(self):
         return str(self)
+    
+    def __lt__(self, other):
+        return self.edad < other.edad
+
     """
     def metodo(self):
         print("contador:",self.contador)
@@ -47,4 +51,7 @@ if __name__ == "__main__":
     #print(str(p1))
     #print(p1.__str__())
     L = [p1, p2, Persona("Pedro",44,1.9)]
+    L.sort(key=lambda obj : obj.altura, reverse=True)
+    print(L)
+    L.sort()
     print(L)
