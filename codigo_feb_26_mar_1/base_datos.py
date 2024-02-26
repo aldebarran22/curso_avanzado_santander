@@ -217,9 +217,12 @@ class BaseDatos:
             cur = self.con.cursor()
             sql = "select * from empleados"
             cur.execute(sql)
-            for t in cur.fetchall():
-                print(t)
-
+            L = []
+            for t  in cur.fetchall():
+                L.append(Empleado(*t))
+                print(t[-1])
+            return L
+                
         except Exception as e:
             raise e
         finally:
@@ -328,6 +331,7 @@ def testEmpleados():
     try:
         bd = BaseDatos(path)
         L = bd.getEmpleados()
+        print(L)
     except Exception as e:
         print(e)
 
