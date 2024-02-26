@@ -53,6 +53,18 @@ class DateTime(Date, Time):
         return Date.__str__(self) + " " + Time.__str__(self)
 
 
+class DateTime2(Date, Time):
+
+    def __init__(self, d=1, m=1, y=1970, hh=0, mm=0, ss=0):
+        super().__init__(d, m, y)
+        super().__init__(hh, mm, ss)
+
+    """
+    def __str__(self):
+        return Date.__str__(self) + " " + Time.__str__(self)
+    """
+
+
 if __name__ == "__main__":
     t = Time(1, 2, 44)
     print(t)
@@ -73,3 +85,6 @@ if __name__ == "__main__":
 
     dt = DateTime(1, 5, 2024, 1, 2, 44)  # 01/05/2024 01:02:44
     print(dt)
+
+    dt2 = DateTime2(1, 5, 2024, 1, 2, 44)  # 01/05/2024 01:02:44
+    print(dt2.__dict__)
