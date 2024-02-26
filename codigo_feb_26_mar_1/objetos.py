@@ -70,7 +70,7 @@ class Guia(Persona):
                 raise ValueError('No tienen idiomas en comun')
             else:
                 print("Pueden hablar en: ", " o ".join(comunes))
-                
+
 
 
 
@@ -86,6 +86,11 @@ class Grupo:
         resul = self.etiqueta+"\n"    
         resul += "\n".join([str(obj) for obj in self.lista])
         return resul
+
+def testGuia():
+    p1 = Guia("Ana", 33, 1.8, 'N',['inglés','francés'])
+    p2 = Guia("Marcos", 36, 1.7, 'I',['español','italiano','alemán'])
+    p1.hablarCon(p2)
 
 def testGrupo():
     grupo1 = Grupo("Viaje1")
@@ -143,4 +148,5 @@ def crearObjetos():
 if __name__ == "__main__":
     # testPersona()
     # crearObjetos()
-    testGrupo()
+    # testGrupo()
+    testGuia()
