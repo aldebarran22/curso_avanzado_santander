@@ -60,9 +60,16 @@ if __name__ == "__main__":
     t2 = Time(10, 12, 34)
     print(t2)
 
-    resul = "03:07:10" + t  # error en str
-    resul = t + "03:07:10" # error en Time
-    print(resul)
+    try:
+        resul = "03:07:10" + t  # error en str
+    except Exception as e:
+        print(e.__class__.__name__, e)
+
+    try:
+        resul = t + "03:07:10"  # error en Time
+        print(resul)
+    except Exception as e:
+        print(e.__class__.__name__, e)
 
     dt = DateTime(1, 5, 2024, 1, 2, 44)  # 01/05/2024 01:02:44
     print(dt)
