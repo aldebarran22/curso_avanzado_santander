@@ -6,13 +6,13 @@ class Time:
         self.s = ss
 
     def __add__(self, other):
-        if not isinstance(self, Time) and not isinstance(other, Time):
-            raise TypeError('Se requieren dos instancias de Time')    
+        if not isinstance(other, Time):
+            raise TypeError("Se requieren dos instancias de Time")
         else:
-            nuevo = Time(self.h+other.h, self.m+other.m, self.s+other.s)
+            nuevo = Time(self.h + other.h, self.m + other.m, self.s + other.s)
             nuevo.ajustar()
             return nuevo
-        
+
     def ajustar(self):
         minutos = self.s // 60
         self.s %= 60
@@ -60,7 +60,8 @@ if __name__ == "__main__":
     t2 = Time(10, 12, 34)
     print(t2)
 
-    resul = t + t2 # resul = t.__add__(t2)
+    resul = "03:07:10" + t  # error en str
+    resul = t + "03:07:10" # error en Time
     print(resul)
 
     dt = DateTime(1, 5, 2024, 1, 2, 44)  # 01/05/2024 01:02:44
