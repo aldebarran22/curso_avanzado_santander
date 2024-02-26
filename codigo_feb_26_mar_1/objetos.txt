@@ -1,0 +1,39 @@
+Personas
+
+características físicas:
+peso, altura, color de pelo, color de ojos --> atributos
+
+funcionalidades:
+correr(), dormir(), saltar() .... --> métodos
+
+una persona --> objeto (instancia)
+
+class Persona:
+   def correr(self):
+	print(self.nombre,'está corriendo...')
+
+objeto en curso: self
+
+constructor: __init__
+p1 = Persona(....)
+p1.correr()
+
+p3.correr()
+
+Relaciones entre clases:
+- Herencia: clases con propiedades en común.
+	Persona-Empleado: administrador, programador, jefe de proyecto 
+	Persona-Guia
+- Composición: Un objeto se desglosa, cada parte es un objeto
+de otra clase. Ordenador: disco, ram, 
+Coche: Motor, chasis
+
+- Asociación: Cuando objetos se relacionan en un instante dado.
+ No hay herencia, no composición
+c = Coche()
+s = SurtidorGas()
+c.repostar(s)
+
+
+
+

@@ -215,8 +215,10 @@ class BaseDatos:
         cur = None
         try:
             cur = self.con.cursor()
+            
             sql = "select * from empleados"
             cur.execute(sql)
+            print(cur.description)
             L = []
             for t  in cur.fetchall():
                 L.append(Empleado(*t))
