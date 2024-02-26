@@ -40,6 +40,19 @@ class Persona:
         # print("Se elimina a ", self.nombre)
         Persona.contador -= 1
 
+
+class Grupo:
+    pass
+
+
+def testGrupo():
+    grupo1 = Grupo("Viaje1")
+    p1 = Persona("Ana", 33, 1.8)
+    p2 = Persona("Marcos", 36, 1.7)
+    grupo2 = Grupo("Viaje2", p1, p2)
+    grupo3 = Grupo("Viaje3", p2)
+
+
 def testPersona():
     print("num personas: ", Persona.getContador())
     p1 = Persona("Ana", 33, 1.8)
@@ -54,7 +67,7 @@ def testPersona():
     print(L)
     L.sort()  # Utiliza el operador < __lt__  (less than)
     print(L)
-    #if p1.__lt__(p2):
+    # if p1.__lt__(p2):
     if p1 < p2:
         print(p1.nombre, "es menor que", p2.nombre)
     else:
@@ -63,26 +76,28 @@ def testPersona():
     # Convertir a json
     Ljson = [obj.__dict__ for obj in L]
     print(Ljson)
-    p1.__dict__['tno'] = 914456677
+    p1.__dict__["tno"] = 914456677
     print(p1.tno)
     p1.movil = 656445533
     print(p1.__dict__)
 
-    
+
 def crearObjetos():
     p1 = Persona("Ana", 33, 1.8)
-    print('La clase:',p1.__class__.__name__)
+    print("La clase:", p1.__class__.__name__)
 
     # Crear un objeto con el class:
-    p2 = p1.__class__("Juan",23,1.8)
+    p2 = p1.__class__("Juan", 23, 1.8)
     print(p2)
 
     # Crear un objeto con una cadena:
-    cad = "{}({},{},{})".format("Persona", "'Sara'",44,1.88)
+    cad = "{}({},{},{})".format("Persona", "'Sara'", 44, 1.88)
     print(cad)
     p3 = eval(cad)
     print(p3)
 
+
 if __name__ == "__main__":
-    #testPersona()
-    crearObjetos()
+    # testPersona()
+    # crearObjetos()
+    testGrupo()
