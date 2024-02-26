@@ -60,7 +60,18 @@ class Guia(Persona):
 
     def hablarCon(self, otro=None):
         # Comprobar si coinciden en algún
-        pass
+        if not otro:
+            super().hablarCon()
+        else:
+            c1 = set(self.idiomas)
+            c2 = set(otro.idiomas)
+            comunes = c1 & c2
+            if len(comunes)==0:
+                raise ValueError('No tienen idiomas en comun')
+            else:
+                print("Pueden hablar en: ", " o ".join(comunes))
+                
+
 
 
 
