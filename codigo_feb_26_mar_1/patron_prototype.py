@@ -162,6 +162,7 @@ def testFactoria(factoria):
         obj1.radio = 7.5
         print("NUEVO:", obj1)
         obj2 = f.getPrototipo("circulo")
+        obj3 = f.getPrototipo("esfera")
         print("-" * 10)
         f.print()
     except Exception as e:
