@@ -119,14 +119,32 @@ class Factoria2:
         """
         Definir la estructura de prototipos y los inicializa a vacío
         """
-        pass
+        self.prototipos = {c.__name__.lower(): None for c in Prototipo.__subclasses__()}
 
     def getPrototipo(self, nombre):
         """
         Devuelve un clone del prototipo seleccionado, pero si no existe
         lo crea, y después lo clona
         """
-        pass
+        clave = nombre.lower()
+        # Si la clave no esta es un error
+        if clave not in self.prototipos:
+            raise ValueError(f"{nombre} no existe en la factoria")
+
+        else:
+            # La clave existe, ¿está creado el objeto?
+            if not self.prototipos[clave]:
+
+                # hay que crear el objeto. Localizar la clase
+                clase = nombre.capitalize()
+
+                # Comprobar si la clase existe en globals()
+                # if clase in globals().copy():
+                clasePrototipo = globals()[clase]
+                objeto = clasePrototipo()
+                self.prototipos[clave] = objeto
+
+        return self.prototipos[clave].clone()
 
     def print(self):
         """Imprimir el catalogo de prototipos"""
@@ -143,6 +161,7 @@ def testFactoria(factoria):
         obj1.color = "red"
         obj1.radio = 7.5
         print("NUEVO:", obj1)
+        obj2 = f.getPrototipo("circulo")
         print("-" * 10)
         f.print()
     except Exception as e:
