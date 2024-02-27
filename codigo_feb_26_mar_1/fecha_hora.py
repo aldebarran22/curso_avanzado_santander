@@ -106,9 +106,7 @@ class DateTime2(Date2, Time2):
 
     def __init__(self, d=1, m=1, y=1970, hh=0, mm=0, ss=0):
         super().__init__(dd=d, mm=m, yy=y, h=hh,m=mm,s=ss)
-      
-
-    
+          
     def __str__(self):
         return Date2.__str__(self) + " " + Time2.__str__(self)
     
