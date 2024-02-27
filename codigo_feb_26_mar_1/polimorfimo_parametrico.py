@@ -16,6 +16,10 @@ class Clase:
 def _(arg):
 	print('un objeto de Clase')
 	
+@func.register(list)
+@func.register(set)
+def _(arg):
+	print(f'La colección tiene {len(arg)} elementos')
 	
 if __name__ == '__main__':
 	func('hola')
@@ -23,3 +27,5 @@ if __name__ == '__main__':
 	func(8.99)
 	a = Clase()
 	func(a)
+	func([1,2,3,4])
+	func({1,2,3,4})
