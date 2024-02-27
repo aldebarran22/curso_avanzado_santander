@@ -88,7 +88,9 @@ class Factoria1:
         """
         Definir la estructura de prototipos e inicializarlos
         """
-        pass
+        self.prototipos = dict()
+        L = Prototipo.__subclasses__()
+        print(L)
 
     def getPrototipo(self, nombre):
         """
@@ -143,4 +145,4 @@ def testFactoria(factoria):
 
 if __name__ == "__main__":
     # testFactoria(Factoria1)
-    testFactoria(Factoria2)
+    testFactoria(Factoria1)
