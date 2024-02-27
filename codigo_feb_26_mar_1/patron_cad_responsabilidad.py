@@ -75,6 +75,6 @@ class ManejadorWhatsApp(Manejador):
 
 
 if __name__ == "__main__":
-    peticion = Peticion("sms", "contenido del mensaje")
+    peticion = Peticion("video", "contenido del mensaje")
     cad = ManejadorEmail(ManejadorSMS(ManejadorWhatsApp()))
     cad.procesarPeticion(peticion)
