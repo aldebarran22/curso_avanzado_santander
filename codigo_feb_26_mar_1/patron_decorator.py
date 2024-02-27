@@ -56,3 +56,9 @@ if __name__ == "__main__":
     v2 = BordeDecorator(BordeDecorator(Ventana("Ventana con 2 Bordes")))
     v2.dibujar()
     print()
+
+    v3 = BordeDecorator(
+        BotonCerrarDecorator(Ventana("Ventana con Borde y boton cerrar"))
+    )
+    v3.dibujar()
+    print()
