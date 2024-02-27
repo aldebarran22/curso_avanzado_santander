@@ -5,6 +5,7 @@ de los alg. de ordenación
 
 import abc
 from datetime import datetime
+from random import randint
 
 
 class Estrategia(abc.ABC):
@@ -44,3 +45,20 @@ class EstrategiaPython(Estrategia):
 
     def ordenar(self, unaLista):
         unaLista.sort()
+
+
+class Contexto:
+
+    def __init__(self, claseEstrategia, n):
+        self.clase = claseEstrategia
+        self.n = n
+
+    def crono(self):
+        L = [randint(0, 100000) for i in range(self.n)]
+        for c in self.clase.__subclasses__():
+            print(c.__name__)
+
+
+if __name__ == "__main__":
+    contexto = Contexto(Estrategia, 1000)
+    contexto.crono()
