@@ -4,25 +4,41 @@ Utilidad para i18n
 """
 
 
-def cargaFichero(idioma):
-    fich = None
-    try:
-        path = f"idiomas/{idioma}.txt"
-        print(f"Cargar el fichero: {path}")
-        fich = open(path, "r")
-        palabras = dict()
-        for linea in fich:
-            linea = linea.rstrip()
-            k, _, v = linea.partition("=")
-            palabras[k] = v
-        return palabras
-    
-    except  Exception as e:
-        print(e)
-    finally:
-        if fich:fich.close()
-    
+class i18n:
+
+    __palabras = None  # El dicc de claves
+    __idioma = None     # El idioma actual
+
+    @staticmethod
+    def getInstance(idioma="es"):
+        if i18n.__idioma != idioma:
+            # Se crea la primera o cuando el idioma
+            # Para saber el idioma que tenemos
+            i18n.__idioma = idioma
+            i18n.__cargaFichero()
+
+        return i18n.__palabras
+
+    @staticmethod
+    def __cargaFichero():
+        fich = None
+        try:
+            path = f"idiomas/{i18n.__idioma}.txt"
+            print(f"Cargar el fichero: {path}")
+            fich = open(path, "r")
+            i18n.__palabras = dict()
+            for linea in fich:
+                linea = linea.rstrip()
+                k, _, v = linea.partition("=")
+                i18n.__palabras[k] = v
+            return i18n.__palabras
+
+        except Exception as e:
+            print(e)
+        finally:
+            if fich:
+                fich.close()
+
 
 if __name__ == "__main__":
-    d = cargaFichero("fr")
-    print(d)
+    pass
