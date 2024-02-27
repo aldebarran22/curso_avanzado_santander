@@ -52,10 +52,42 @@ class Adaptador1(Vector2D, Vector3D):
 	
 	def __init__(self, x=0, y=0):
 		Vector3D.__init__(self, x, y)
+
+	def getAbcisa(self): 
+		return Vector3D.getX(self)
+	
+	
+	def getOrdenada(self):
+		pass
+		
+	
+	def prod(self, v):
+		pass
+		
+	
+	def magnitud(self):
+		# La norma del vector
+		pass
 	
 class Adaptador2(Vector2D):
 	# Por composición
 
 	def __init__(self, x=0, y=0):
 		self.v3 = Vector3D(x,y)
+
+	def getAbcisa(self): 
+		return self.v3.getX()
+	
+	
+	def getOrdenada(self):
+		pass
+		
+	
+	def prod(self, v):
+		pass
+		
+	
+	def magnitud(self):
+		# La norma del vector
+		pass
 
