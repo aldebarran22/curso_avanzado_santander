@@ -56,8 +56,12 @@ class Contexto:
     def crono(self):
         L = [randint(0, 100000) for i in range(self.n)]
         for c in self.clase.__subclasses__():
-            print(c.__name__)
-
+            Lcopia = L.copy()
+            objeto = c()
+            t1 = datetime.now()
+            objeto.ordenar(Lcopia)
+            t2 = datetime.now()
+            print(c.__name__, t2-t1)
 
 if __name__ == "__main__":
     contexto = Contexto(Estrategia, 1000)
