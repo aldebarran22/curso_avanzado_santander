@@ -10,7 +10,12 @@ from FactoriaSamsung import FactoriaSamsung
 
 
 def menu(L):
-    pass
+    print("Menú")
+    for pos, c in enumerate(L):
+        print(pos+1, c.__name__)
+    op = int(input("Seleccione op:"))
+    return L[op-1]()
+
 
 
 if __name__ == "__main__":
@@ -22,11 +27,12 @@ if __name__ == "__main__":
             exit()
         else:
             nombreFact += "()"
+            print("Creando: ", nombreFact)
             factoria = eval(nombreFact)
 
     else:
         # lanzar el menu:
-        factoria = menu(L)
+        factoria = menu(Factoria.__subclasses__())
 
     telefono = factoria.createTno()
     tableta = factoria.createTablet()
