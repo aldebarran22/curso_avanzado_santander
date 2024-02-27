@@ -1,6 +1,7 @@
 import math, abc
 
 class Vector3D:
+	# La clase que tenemos que NO se puede modificar!
 	
 	def __init__(self,x=0,y=0,z=0):
 		self.__x = x
@@ -27,6 +28,7 @@ class Vector3D:
 		
 		
 class Vector2D(abc.ABC):
+	# CLase que tenemos que implementar!
 	
 	@abc.abstractmethod
 	def getAbcisa(self): 
@@ -44,3 +46,16 @@ class Vector2D(abc.ABC):
 	def magnitud(self):
 		# La norma del vector
 		pass
+
+class Adaptador1(Vector2D, Vector3D):
+	# Herencia múltiple
+	
+	def __init__(self, x=0, y=0):
+		Vector3D.__init__(self, x, y)
+	
+class Adaptador2(Vector2D):
+	# Por composición
+
+	def __init__(self, x=0, y=0):
+		self.v3 = Vector3D(x,y)
+
