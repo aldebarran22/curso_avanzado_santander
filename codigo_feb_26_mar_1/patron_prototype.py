@@ -88,8 +88,7 @@ class Factoria1:
         """
         Definir la estructura de prototipos e inicializarlos
         """
-        self.prototipos = {c.__name__.lower():c() for c in Prototipo.__subclasses__()}
-        
+        self.prototipos = {c.__name__.lower(): c() for c in Prototipo.__subclasses__()}
 
     def getPrototipo(self, nombre):
         """
@@ -100,7 +99,6 @@ class Factoria1:
             raise ValueError(f"{nombre} no existe en la factoria")
         else:
             return self.prototipos[clave].clone()
-
 
     def print(self):
         """Imprimir el catalogo de prototipos"""
@@ -132,7 +130,9 @@ class Factoria2:
 
     def print(self):
         """Imprimir el catalogo de prototipos"""
-        pass
+        print("Prototipos:")
+        for nombre, objeto in self.prototipos.items():
+            print(nombre, objeto)
 
 
 def testFactoria(factoria):
@@ -142,7 +142,7 @@ def testFactoria(factoria):
         obj1 = f.getPrototipo("CIRCULO")
         obj1.color = "red"
         obj1.radio = 7.5
-        print(obj1)
+        print("NUEVO:", obj1)
         print("-" * 10)
         f.print()
     except Exception as e:
@@ -151,4 +151,4 @@ def testFactoria(factoria):
 
 if __name__ == "__main__":
     # testFactoria(Factoria1)
-    testFactoria(Factoria1)
+    testFactoria(Factoria2)
