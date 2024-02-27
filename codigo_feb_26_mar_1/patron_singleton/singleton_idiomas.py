@@ -39,6 +39,13 @@ class i18n:
             if fich:
                 fich.close()
 
+def pruebas():
+    print(i18n.getInstance('en')['galeria_de_fotos'])
 
 if __name__ == "__main__":
-    pass
+    print(i18n.getInstance()['twitter'])
+    print(i18n.getInstance()['facebook'])
+    print(i18n.getInstance('en')['instagram'])
+    print(i18n.getInstance('en')['facebook'])
+
+    pruebas()
