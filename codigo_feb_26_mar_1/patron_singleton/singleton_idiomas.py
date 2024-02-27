@@ -7,11 +7,15 @@ def cargaFichero(idioma):
     path = f"idiomas/{idioma}.txt"
     print(f'Cargar el fichero: {path}')
     fich = open(path, "r")
+    palabras = dict()
     for linea in fich:
         linea = linea.rstrip()
-        print(linea)
+        k, _, v = linea.partition("=")
+        palabras[k]=v
     fich.close()
+    return palabras
 
 if __name__ == "__main__":
-    cargaFichero("en")
+    d = cargaFichero("en")
+    print(d)
 
