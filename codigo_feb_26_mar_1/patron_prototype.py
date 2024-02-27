@@ -95,7 +95,12 @@ class Factoria1:
         """
         Devuelve un clon del prototipo seleccionado
         """
-        pass
+        clave = nombre.lower()
+        if clave not in self.prototipos:
+            raise ValueError(f"{nombre} no existe en la factoria")
+        else:
+            return self.prototipos[clave].clone()
+
 
     def print(self):
         """Imprimir el catalogo de prototipos"""
