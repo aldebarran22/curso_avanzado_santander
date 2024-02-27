@@ -36,5 +36,35 @@ class ManejadorEmail(Manejador):
             # Que procese el siguiente objeto la petición
             self.siguiente.procesarPeticion(peticion)
 
+class ManejadorSMS(Manejador):
+
+    def __init__(self,siguiente=None):
+        Manejador.__init__(self, siguiente)
+
+    def procesarPeticion(self, peticion):
+        if peticion.destino == 'sms':
+            print('La peticion se envía por sms', peticion.contenido)
+
+        elif not self.siguiente:
+            print('Fin de cadena, no se puede trasmitir la petición')
+        else:
+            # Que procese el siguiente objeto la petición
+            self.siguiente.procesarPeticion(peticion)
+
+class ManejadorWhatsApp(Manejador):
+
+    def __init__(self,siguiente=None):
+        Manejador.__init__(self, siguiente)
+
+    def procesarPeticion(self, peticion):
+        if peticion.destino == 'WhatsApp':
+            print('La peticion se envía por WhatsApp', peticion.contenido)
+
+        elif not self.siguiente:
+            print('Fin de cadena, no se puede trasmitir la petición')
+        else:
+            # Que procese el siguiente objeto la petición
+            self.siguiente.procesarPeticion(peticion)
+
 if __name__ == '__main__':
     peticion = Peticion('sms', 'contenido del mensaje')
