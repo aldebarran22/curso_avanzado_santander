@@ -33,6 +33,10 @@ class Circulo(Prototipo):
     def __str__(self):
         return super().__str__() + " radio: " + str(self.radio)
 
+    def clone(self):
+        # El objeto se clona
+        return copy.deepcopy(self)
+
 
 class Rectangulo(Prototipo):
     def __init__(self, etiqueta="rectangulo", color="black", ancho=5.0, alto=10.0):
@@ -48,6 +52,10 @@ class Rectangulo(Prototipo):
             + " alto: "
             + str(self.alto)
         )
+
+    def clone(self):
+        # El objeto se clona
+        return copy.deepcopy(self)
 
 
 class Triangulo(Prototipo):
@@ -65,6 +73,10 @@ class Triangulo(Prototipo):
             + str(self.altura)
         )
 
+    def clone(self):
+        # El objeto se clona
+        return copy.deepcopy(self)
+
 
 class Factoria1:
     """
@@ -80,7 +92,7 @@ class Factoria1:
 
     def getPrototipo(self, nombre):
         """
-        Devuelve un clone del prototipo seleccionado
+        Devuelve un clon del prototipo seleccionado
         """
         pass
 
@@ -93,7 +105,7 @@ class Factoria2:
     """
     Al instanciar la factoria se NO crea los prototipos
     Y cada vez que se solicita un prototipo, se comprueba
-    si ya existe, si no se crea y luego siempre se clona.
+    si ya existe, si no, se crea y luego siempre se clona.
     Crea los prototipos bajo demanda
     """
 
