@@ -88,9 +88,8 @@ class Factoria1:
         """
         Definir la estructura de prototipos e inicializarlos
         """
-        self.prototipos = dict()
-        L = Prototipo.__subclasses__()
-        print(L)
+        self.prototipos = {c.__name__.lower():c() for c in Prototipo.__subclasses__()}
+        
 
     def getPrototipo(self, nombre):
         """
@@ -100,7 +99,9 @@ class Factoria1:
 
     def print(self):
         """Imprimir el catalogo de prototipos"""
-        pass
+        print("Prototipos:")
+        for nombre, objeto in self.prototipos.items():
+            print(nombre, objeto)
 
 
 class Factoria2:
