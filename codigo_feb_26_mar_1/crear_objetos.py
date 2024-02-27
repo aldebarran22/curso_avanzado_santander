@@ -26,6 +26,7 @@ class Punto:
 def make_object(Class, *args, **kwargs):
     # print args
     # print kwargs
+    print("*args", *args)
     return Class(*args, **kwargs)
 
 
@@ -78,7 +79,7 @@ print(p1.__class__)
 p7 = p1.__class__(8, 99)
 print("p7:", p7)
 
-print(globals())
+#print(globals())
 
 
 def suma(a, b):
