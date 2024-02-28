@@ -46,10 +46,15 @@ def sumarRangoAños(ini, fin):
 
     def sumarDF(df1, df2):
         resul = df1.add(df2, fill_value=0)
-        resul.sort_values(by="cuenta", ascending=False, inplace=True)
         return resul
-    
-    pass
+
+    L = [cargarAño(y) for y in range(ini, fin + 1)]
+    dfTotal = reduce(sumarDF, L)
+    dfTotal.sort_values(by="cuenta", ascending=False, inplace=True)
+    dfTotal.reset_index(inplace=True)
+    resul = dfTotal.loc[:10]
+    print(resul)
+
 
 """
 def suma(n1, n2):
