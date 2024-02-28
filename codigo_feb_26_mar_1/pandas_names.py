@@ -11,9 +11,9 @@ path = (
 
 def cargarAño(año):
     fichero = f"yob{año}.txt"
-    cols = ['nombre','sexo','cuenta']
+    cols = ["nombre", "sexo", "cuenta"]
     df = pd.read_csv(path + fichero, header=None, names=cols)
-    df.set_index(['nombre','sexo'], inplace=True)
+    df.set_index(["nombre", "sexo"], inplace=True)
     return df
 
 
@@ -25,6 +25,7 @@ def sumarDosAños(año1, año2):
 
 
 if __name__ == "__main__":
-    df = cargarAño(2007)
-    print(df.head(10))
-    # sumarDosAños(2007, 2008)
+    # df = cargarAño(2007)
+    # print(df.head(10))
+    # print(df.loc['Madison','F'])
+    sumarDosAños(2007, 2008)
