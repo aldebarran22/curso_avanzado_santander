@@ -11,7 +11,9 @@ path = (
 
 def cargarAño(año):
     fichero = f"yob{año}.txt"
-    df = pd.read_csv(path + fichero)
+    cols = ['nombre','sexo','cuenta']
+    df = pd.read_csv(path + fichero, header=None, names=cols)
+    df.set_index(['nombre','sexo'], inplace=True)
     return df
 
 
