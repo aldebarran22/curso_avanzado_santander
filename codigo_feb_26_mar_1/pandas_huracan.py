@@ -19,10 +19,19 @@ def limpiarDF(pathFich):
     df["Pressure"] = pd.to_numeric(
         df.Pressure.str.replace(" mb", ""), downcast="integer"
     )
+    # Versión < 2.0
+    """
     df["DateTime"] = pd.to_datetime(
         "2005 " + df.Date + " " + df.Time.str.replace(" GMT", ""),
         infer_datetime_format=True,
     )
+    """
+    # Versión >= 2
+    df["DateTime"] = pd.to_datetime(
+        "2005 " + df.Date + " " + df.Time.str.replace(" GMT", ""),
+        format="%Y %b %d %H:%M",
+    )
+
     df.info()
 
 
