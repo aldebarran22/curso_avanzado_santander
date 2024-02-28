@@ -3,6 +3,7 @@ Ficheros names de EEUU
 """
 
 import pandas as pd
+from functools import reduce
 
 path = (
     "D:/OneDrive/Escritorio/python_avanzado_santander/practicas/avanzado2/pandas/names/"
@@ -42,8 +43,22 @@ def exportarHTML(df):
 
 def sumarRangoAños(ini, fin):
     # Sumar el rango de años y obtener el top ten:
+
+    def sumarDF(df1, df2):
+        resul = df1.add(df2, fill_value=0)
+        resul.sort_values(by="cuenta", ascending=False, inplace=True)
+        return resul
+    
     pass
 
+"""
+def suma(n1, n2):
+    print(n1, n2)
+    return n1+n2
+L = [3,5,6,6,4,3,1,2,3]
+print(reduce(suma, L))
+exit()
+"""
 
 if __name__ == "__main__":
     # df = cargarAño(2007)
