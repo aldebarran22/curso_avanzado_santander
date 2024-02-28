@@ -56,6 +56,14 @@ def sumarRangoAños(ini, fin):
     return resul
 
 
+def concatenarRangoAños(ini, fin):
+    # Concatena el rango de años y exportar:
+    L = [cargarAño(y).reset_index(inplace=True) for y in range(ini, fin + 1)]
+    dfTotal = pd.concat(L, ignore_index=True)
+    df.sort_values(by=["sexo", "cuenta"], ascending=False, inplace=True)
+    df.to_csv("../ficheros/concatenar.csv", sep=";")
+
+
 """
 def suma(n1, n2):
     print(n1, n2)
@@ -69,9 +77,11 @@ if __name__ == "__main__":
     # df = cargarAño(2007)
     # print(df.head(10))
     # print(df.loc['Madison','F'])
-    
+
     # df = sumarDosAñosOK(2007, 2008)
     # exportarHTML(df)
 
-    df = sumarRangoAños(2000, 2005)
-    print(df)
+    # df = sumarRangoAños(2000, 2005)
+    # print(df)
+
+    concatenarRangoAños(2000, 2005)
