@@ -37,7 +37,12 @@ def exportarHTML(df):
     # Resetear indices:
     df.reset_index(inplace=True)
     # print(df.head(10))
-    df.to_html("../ficheros/pedidos.html", index=True)
+    df.to_html("../ficheros/pedidos.html", index=False)
+
+
+def sumarRangoAños(ini, fin):
+    # Sumar el rango de años y obtener el top ten:
+    pass
 
 
 if __name__ == "__main__":
