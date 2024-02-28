@@ -53,7 +53,7 @@ def sumarRangoAños(ini, fin):
     dfTotal.sort_values(by="cuenta", ascending=False, inplace=True)
     dfTotal.reset_index(inplace=True)
     resul = dfTotal.loc[:10]
-    print(resul)
+    return resul
 
 
 """
@@ -69,5 +69,9 @@ if __name__ == "__main__":
     # df = cargarAño(2007)
     # print(df.head(10))
     # print(df.loc['Madison','F'])
-    df = sumarDosAñosOK(2007, 2008)
-    exportarHTML(df)
+    
+    # df = sumarDosAñosOK(2007, 2008)
+    # exportarHTML(df)
+
+    df = sumarRangoAños(2000, 2005)
+    print(df)
