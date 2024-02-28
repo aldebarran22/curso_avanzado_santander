@@ -11,7 +11,10 @@ path = (
 
 def limpiarDF(pathFich):
     df = pd.read_csv(pathFich, sep=";")
+    df.columns = [col.rstrip() for col in df.columns]
+    df['Lat'] = pd.to_numeric(df.Lat.str[:-1], downcast="float")
     df.info()
+
 
 if __name__ == '__main__':
     limpiarDF(path+"IRMA.csv")
