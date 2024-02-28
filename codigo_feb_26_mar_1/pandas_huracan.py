@@ -4,6 +4,7 @@ correlación entre el viento y la presión
 """
 
 import pandas as pd
+import numpy as np
 
 path = (
     "D:/OneDrive/Escritorio/python_avanzado_santander/practicas/avanzado2/pandas/csv/"
@@ -32,7 +33,9 @@ def limpiarDF(pathFich):
         format="%Y %b %d %H:%M",
     )
 
-    df.info()
+    # df.info()
+    df.drop(columns=["Date", "Time"], inplace=True)
+    print(df.head())
 
 
 if __name__ == "__main__":
