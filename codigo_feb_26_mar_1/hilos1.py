@@ -27,9 +27,8 @@ if __name__ == "__main__":
         hilo = Hilo(f"Hilo-{i+1}", randint(5, 10))
         hilo.start()
         L.append(hilo)
-        hilo.join()
 
-    # for hilo in L:
-    #    hilo.join()
+    for hilo in L:
+        hilo.join()
 
     print("Thread-Main termina!")
