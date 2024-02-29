@@ -15,7 +15,13 @@ def serializarDF(path_df, path_pickle):
     df.to_pickle(path_pickle, protocol=5)
 
 
+def deserializarDF(path_pickle):
+    df = pd.read_pickle(path_pickle)
+    print(df.head())
+
+
 if __name__ == "__main__":
     path_df = "../../practicas/avanzado2/pandas/merge/Pedidos.txt"
     path_pickle = "../ficheros/pedidos.bin"
     serializarDF(path_df, path_pickle)
+    deserializarDF(path_pickle)
