@@ -26,6 +26,7 @@ def deserializarShelve(path_shelve, n):
     print("k-2: ", Shelf.get("K-2"))
     print("k-1: ", Shelf["K-1"])
     print("k-3: ", Shelf["K-3"])
+    print("Existe clave K-4: ", "K-4" in Shelf)
     Shelf.close()
 
 
