@@ -28,8 +28,9 @@ class BaseDatos:
 if __name__ == "__main__":
     bd = BaseDatos("../BBDD/empresa3.db")
     sql = """select c.nombre as categoria,
-    count(p.id) as numproductos from categorias c  inner join 
+    count(p.id) as numproductos from categorias c inner join 
     productos p on c.id = p.idcategoria group by c.nombre
     order by 2 desc"""
     df = bd.getDF(sql)
+    df.to_json("../ficheros/categorias.json", indent=4, orient="records")
     print(df)
