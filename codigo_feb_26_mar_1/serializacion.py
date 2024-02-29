@@ -1,0 +1,21 @@
+"""
+Serialización con pickle, shelve y
+pandas (read_pickle, to_pickle)
+"""
+
+import pandas as pd
+from pandas import DataFrame
+import pickle
+import shelve
+from fecha_hora import DateTime, Date, Time
+
+
+def serializarDF(path_df, path_pickle):
+    df = pd.read_csv(path_df, sep=";")
+    df.to_pickle(path_pickle, protocol=5)
+
+
+if __name__ == "__main__":
+    path_df = "../../practicas/avanzado2/pandas/merge/Pedidos.txt"
+    path_pickle = "../ficheros/pedidos.bin"
+    serializarDF(path_df, path_pickle)
