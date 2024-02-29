@@ -21,6 +21,14 @@ def serializarShelve(path_shelve, *objetos):
     return n
 
 
+def deserializarShelve(path_shelve, n):
+    Shelf = shelve.open(path_shelve, protocol=5)
+    print("k-2: ", Shelf.get("K-2"))
+    print("k-1: ", Shelf["K-1"])
+    print("k-3: ", Shelf["K-3"])
+    Shelf.close()
+
+
 def serializarDF(path_df, path_pickle):
     df = pd.read_csv(path_df, sep=";")
     df.to_pickle(path_pickle, protocol=5)
@@ -54,4 +62,5 @@ if __name__ == "__main__":
     deserializarDF(path_pickle)
     serializar_pickle(path_df, path_pickle2)
     deserializar_pickle(path_pickle2)
-    n = serializarShelve(path_shelve, Date(1,5,2000), Time(13,55,3), DateTime())
+    n = serializarShelve(path_shelve, Date(1, 5, 2000), Time(13, 55, 3), DateTime())
+    deserializarShelve(path_shelve, n)
