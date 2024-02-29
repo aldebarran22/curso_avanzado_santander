@@ -24,12 +24,13 @@ class Productor(Thread):
 
 
 class Consumidor(Thread):
-    def __init__(self, buffer):
-        Thread.__init__(self)
+    def __init__(self, buffer,  num_muestras, nombre):
+        Thread.__init__(self, name=nombre)
         self.buffer = buffer
+        self.num_muestras = num_muestras
 
     def run(self):
-		pass
+        pass
 
 
 class TBuffer:
