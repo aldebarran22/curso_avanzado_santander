@@ -6,16 +6,30 @@ import pandas as pd
 from os.path import isfile
 import sqlite3 as dbapi
 
+
 class BaseDatos:
-     
+
     def __init__(self, path):
-        
+
         if not isfile(path):
-            raise FileNotFoundError("No se encuentra el fichero: "+path)
+            raise FileNotFoundError("No se encuentra el fichero: " + path)
         else:
             self.con = dbapi.connect(path)
-            #print('Base de datos abierta!')
+            # print('Base de datos abierta!')
+
+    def getDF(self, sql):
+        return pd.read_sql(sql, self.con)
 
     def __del__(self):
         if hasattr(self, "con"):
             self.con.close()
+
+
+if __name__ == "__main__":
+    bd = BaseDatos("../BBDD/empresa3.db")
+    sql = """select c.nombre as categoria,
+    count(p.id) as numproductos from categorias c  inner join 
+    productos p on c.id = p.idcategoria group by c.nombre
+    order by 2 desc"""
+    df = bd.getDF(sql)
+    print(df)
