@@ -39,13 +39,17 @@ def limpiarDF(pathFich):
 
     # Calcular la correlación entre el viento y la presión: con numpy
     t = np.corrcoef(df.Wind, df.Pressure)
-    print("Correlación:", round(t[1][0] * 100, 2),'%')
+    print("Correlación:", round(t[1][0] * 100, 2), "%")
 
     # Utilizando el objeto Series:
-    print("Correlación:", round(df.Wind.corr(df.Pressure)*100,2),'%')
+    print("Correlación:", round(df.Wind.corr(df.Pressure) * 100, 2), "%")
 
-    #print(df.corr())
+    df.info()
 
+    # Devuelve un DF con las cols de tipo numérico:
+    df2 = df.select_dtypes(include=["int16", "float32"])
+    print(df2.head())
+    print(df2.corr())  # Cruza todas las cols del DF
 
 
 if __name__ == "__main__":
