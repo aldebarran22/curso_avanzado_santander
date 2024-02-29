@@ -39,4 +39,8 @@ if __name__ == "__main__":
     sql = """select c.nombre as categoria from categorias c 
     inner join productos p on c.id = p.idcategoria order by p.id"""
     df2 = bd.getDF(sql)
-    print(df2.head(15))
+    print("Con repetidos: ", df2.shape)
+    #print(df2.head(15))
+    df3 = df2.drop_duplicates()
+    print("Sin repetidos: ",df3.shape)
+
