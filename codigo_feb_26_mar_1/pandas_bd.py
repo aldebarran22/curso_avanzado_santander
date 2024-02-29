@@ -35,4 +35,8 @@ if __name__ == "__main__":
     df.to_json("../ficheros/categorias.json", indent=4, orient="records")
     df = bd.getDF("select * from pedidos")
     df.to_json("../ficheros/pedidos.json", indent=4, orient="records")
-    print(df)
+
+    sql = """select c.nombre as categoria from categorias c 
+    inner join productos p on c.id = p.idcategoria order by p.id"""
+    df2 = bd.getDF(sql)
+    print(df2.head(15))
