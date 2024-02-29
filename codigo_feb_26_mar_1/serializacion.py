@@ -17,6 +17,7 @@ def serializarShelve(path_shelve, *objetos):
         clave = f"K-{n}"
         Shelf[clave] = obj
         n += 1
+    Shelf.close()
     return n
 
 
@@ -48,7 +49,9 @@ if __name__ == "__main__":
     path_df = "../../practicas/avanzado2/pandas/merge/Pedidos.txt"
     path_pickle = "../ficheros/pedidos.bin"
     path_pickle2 = "../ficheros/pedidos2.bin"
+    path_shelve = "../ficheros/pedidos3"
     serializarDF(path_df, path_pickle)
     deserializarDF(path_pickle)
     serializar_pickle(path_df, path_pickle2)
     deserializar_pickle(path_pickle2)
+    n = serializarShelve(path_shelve, Date(1,5,2000), Time(13,55,3), DateTime())
