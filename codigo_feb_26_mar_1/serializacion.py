@@ -10,6 +10,16 @@ import shelve
 from fecha_hora import DateTime, Date, Time
 
 
+def serializarShelve(path_shelve, *objetos):
+    Shelf = shelve.open(path_shelve, protocol=5)
+    n = 1
+    for obj in objetos:
+        clave = f"K-{n}"
+        Shelf[clave] = obj
+        n += 1
+    return n
+
+
 def serializarDF(path_df, path_pickle):
     df = pd.read_csv(path_df, sep=";")
     df.to_pickle(path_pickle, protocol=5)
