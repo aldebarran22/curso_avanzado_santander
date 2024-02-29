@@ -33,4 +33,6 @@ if __name__ == "__main__":
     order by 2 desc"""
     df = bd.getDF(sql)
     df.to_json("../ficheros/categorias.json", indent=4, orient="records")
+    df = bd.getDF("select * from pedidos")
+    df.to_json("../ficheros/pedidos.json", indent=4, orient="records")
     print(df)
