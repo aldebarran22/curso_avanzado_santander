@@ -22,8 +22,15 @@ def deserializarDF(path_pickle):
 
 def serializar_pickle(path_df, path_pickle2):
     df = pd.read_csv(path_df, sep=";")
-    fich = open(path_pickle2,"wb")
+    fich = open(path_pickle2, "wb")
     pickle.dump(df, fich)
+    fich.close()
+
+
+def deserializar_pickle(path_pickle2):
+    fich = open(path_pickle2, "rb")
+    df = pickle.load(fich)
+    print(df.head())
     fich.close()
 
 
@@ -33,3 +40,5 @@ if __name__ == "__main__":
     path_pickle2 = "../ficheros/pedidos2.bin"
     serializarDF(path_df, path_pickle)
     deserializarDF(path_pickle)
+    serializar_pickle(path_df, path_pickle2)
+    deserializar_pickle(path_pickle2)
