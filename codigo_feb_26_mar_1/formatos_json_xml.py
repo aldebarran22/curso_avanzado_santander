@@ -8,6 +8,7 @@ from base_datos import Empleado, Producto, Categoria
 from base_datos import BaseDatos, path
 import json
 from xml.etree.ElementTree import Element, SubElement, Comment, tostring
+from xml.etree import ElementTree as ET
 
 
 def exportarJSON(L, pathFich):
@@ -62,9 +63,10 @@ def exportarXML(L, pathFich):
             existencias = SubElement(producto, "existencias")
             existencias.text = str(prod.exis)
 
-
-
-        print(tostring(top))
+        # print(tostring(top))
+        tree = ET.ElementTree()
+        tree._setroot(top)
+        tree.write(pathFich)
 
     except Exception as e:
         print(e)
@@ -81,4 +83,5 @@ if __name__ == "__main__":
     L2 = importarJSON("../ficheros/productos.json")
     print(L2[:3])
 
+    L = bd.select()
     exportarXML(L, "../ficheros/productos.xml")
