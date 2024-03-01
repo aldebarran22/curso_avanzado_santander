@@ -79,7 +79,10 @@ def getNombreProductos(pathFich):
     with open(pathFich, "rt"):
         tree = ET.parse(pathFich)
     root = tree.getroot()
-    print(tostring(root))
+    #print(tostring(root))
+
+    for nodo in root.findall(".//producto/nombre"):
+        print(nodo.text)
 
 
 if __name__ == "__main__":
