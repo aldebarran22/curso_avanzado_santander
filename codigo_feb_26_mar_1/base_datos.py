@@ -81,10 +81,12 @@ class Producto:
 
     @staticmethod
     def create(d):
+        # De json a objeto
         cat = Categoria.create(d['cat'])
         return Producto(d['id'],d['nombre'],cat,d['precio'],d['exis'])
 
     def to_json(self):
+        # De obj a formato json
         d = self.__dict__
         d['cat'] = self.cat.__dict__
         return d

@@ -21,8 +21,23 @@ def exportarJSON(L, pathFich):
         if fich:
             fich.close()
 
-
+def importarJSON(pathFich):
+    fich = None
+    try:
+        fich = open(pathFich, "r")
+        Ljson = json.load(fich)
+        L = [Producto.create(dicc) for dicc in Ljson]
+        return L
+        
+    except Exception as e:
+        print(e)
+    finally:
+        if fich:
+            fich.close()
 if __name__ == "__main__":
     bd = BaseDatos(path)
     L = bd.select()
     exportarJSON(L, "../ficheros/productos.json")
+
+    L2 = importarJSON("../ficheros/productos.json")
+    print(L2[:3])
