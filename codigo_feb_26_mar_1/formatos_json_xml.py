@@ -58,6 +58,7 @@ def exportarXML(L, pathFich):
 
             categoria = SubElement(producto, "categoria")
             nombreCat = SubElement(categoria, "nombre")
+            nombreCat.text = prod.cat.nombre
             categoria.set("idcat", str(prod.cat.id))
 
             existencias = SubElement(producto, "existencias")
