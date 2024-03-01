@@ -47,12 +47,22 @@ def exportarXML(L, pathFich):
 
         for prod in L:
             producto = SubElement(top, "producto")
+            producto.set("id", str(prod.id))
 
             nombre = SubElement(producto, "nombre")
             nombre.text = prod.nombre
 
             precio = SubElement(producto, "precio")
             precio.text = str(prod.precio)
+
+            categoria = SubElement(producto, "categoria")
+            nombreCat = SubElement(categoria, "nombre")
+            categoria.set("idcat", str(prod.cat.id))
+
+            existencias = SubElement(producto, "existencias")
+            existencias.text = str(prod.exis)
+
+
 
         print(tostring(top))
 
