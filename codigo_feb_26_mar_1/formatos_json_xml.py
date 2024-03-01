@@ -90,18 +90,30 @@ def getNombreProductos(pathFich):
 
 
 def getNombreProductosSAX(pathFich):
+    # Devolver una lista de diccionarios con nombre y precio:
     eventos = ["start", "end"]
+    L = []
     for evento, nodo in iterparse(pathFich, eventos):
-        if evento == 'start':
-        
-            if nodo.tag == 'producto':
+        if evento == "start":
+
+            if nodo.tag == "producto":
+                d = dict()
                 flag = True
 
-            if nodo.tag == 'nombre' and flag:
-                print("nombre: ", nodo.text)
+            if nodo.tag == "nombre" and flag:
+                d["nombre"] = nodo.text
 
-            if nodo.tag == 'categoria':
+            if nodo.tag == "precio":
+                d["precio"] = float(nodo.text)
+
+            if nodo.tag == "categoria":
                 flag = False
+
+        elif evento == "end":
+            if nodo.tag == "producto":
+                L.append(d)
+
+    return L
 
 
 if __name__ == "__main__":
