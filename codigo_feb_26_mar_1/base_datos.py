@@ -176,8 +176,8 @@ class BaseDatos:
                 cur.close()
 
     def create(self, p):
-        sql = "insert into productos(id, nombre, idcategoria, precio, existencias) values(?,?,?,?,?)"
-        return self.__ejecutar(sql, p.getTupla())
+        sql = "insert into productos(nombre, idcategoria, precio, existencias) values(?,?,?,?)"
+        return self.__ejecutar(sql, p.getTupla()[1:])
 
     def createEmpleado(self, e):
         sql = "insert into empleados(id,nombre,cargo) values(?,?,?)"
