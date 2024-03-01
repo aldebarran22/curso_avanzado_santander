@@ -11,7 +11,7 @@ num_muestras = 10
 tam_buffer = 5
 
 num_productores = 2
-num_consumidores = 1
+num_consumidores = 2
 
 
 class Productor(Thread):
@@ -23,12 +23,14 @@ class Productor(Thread):
     def run(self):
         for i in range(self.num_muestras):
             numero = randint(1, 10)
+            print(self.getName(), "genera", numero)
             # Comprobar si hay sitio en el buffer
             self.buf.sem_huecos.acquire()
             with self.buf.mutex:
-                print(self.getName(), " => ", numero)
+                print(self.getName(), " ==> ", numero)
                 self.buf.buffer[self.buf.ind_p] = numero
                 print(self.buf.buffer)
+                print()
                 self.buf.ind_p = (self.buf.ind_p + 1) % tam_buffer
             # Avisar al consumidor: ya tienes un item:
             self.buf.sem_items.release()
@@ -50,9 +52,11 @@ class Consumidor(Thread):
                 print(self.getName(), " <== ", numero)
                 self.buf.buffer[self.buf.ind_c] = -1
                 print(self.buf.buffer)
+                print()
                 self.buf.ind_c = (self.buf.ind_c + 1) % tam_buffer
             # Avisar al productor: hay un hueco nuevo
             self.buf.sem_huecos.release()
+            print(self.getName(), "consume", numero)
             sleep(randint(2, 4))
 
 
