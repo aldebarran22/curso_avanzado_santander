@@ -7,6 +7,7 @@ Búsquedas en documentos XML (Xpath)
 from base_datos import Empleado, Producto, Categoria
 from base_datos import BaseDatos, path
 import json
+from xml.etree.ElementTree import Element, SubElement, Comment, tostring
 
 
 def exportarJSON(L, pathFich):
@@ -21,6 +22,7 @@ def exportarJSON(L, pathFich):
         if fich:
             fich.close()
 
+
 def importarJSON(pathFich):
     fich = None
     try:
@@ -28,12 +30,32 @@ def importarJSON(pathFich):
         Ljson = json.load(fich)
         L = [Producto.create(dicc) for dicc in Ljson]
         return L
-        
+
     except Exception as e:
         print(e)
     finally:
         if fich:
             fich.close()
+
+
+def exportarXML(L, pathFich):
+    fich = None
+    try:
+        top = Element("productos")
+        comment = Comment("productos de la bd")
+        for prod in L:
+            producto = SubElement(top, "producto")
+            top.append(comment)
+
+        print(tostring(top))
+
+    except Exception as e:
+        print(e)
+    finally:
+        if fich:
+            fich.close()
+
+
 if __name__ == "__main__":
     bd = BaseDatos(path)
     L = bd.select()
@@ -41,3 +63,5 @@ if __name__ == "__main__":
 
     L2 = importarJSON("../ficheros/productos.json")
     print(L2[:3])
+
+    exportarXML(L, "../ficheros/productos.xml")
