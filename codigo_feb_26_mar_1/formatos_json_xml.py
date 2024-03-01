@@ -75,6 +75,12 @@ def exportarXML(L, pathFich):
         if fich:
             fich.close()
 
+def getNombreProductos(pathFich):
+    with open(pathFich, "rt"):
+        tree = ET.parse(pathFich)
+    root = tree.getroot()
+    print(tostring(root))
+
 
 if __name__ == "__main__":
     bd = BaseDatos(path)
@@ -86,3 +92,5 @@ if __name__ == "__main__":
 
     L = bd.select()
     exportarXML(L, "../ficheros/productos.xml")
+
+    getNombreProductos("../ficheros/productos.xml")
