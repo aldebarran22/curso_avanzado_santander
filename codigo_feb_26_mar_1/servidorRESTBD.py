@@ -21,17 +21,24 @@ api = Api(app)
 
 class RecursoProductos(Resource):
 
-    def get(self):
+    def get(self, id=None):
         try:
             bd = BaseDatos(path)
-            L = bd.select()
-            return [p.to_json() for p in L]
+            if not id:
+                L = bd.select()
+                return [p.to_json() for p in L]
+            else:
+                prod = bd.read(id)
+                return prod.to_json()
         except Exception as e:
             abort(404, message=str(e))
 
 
 # GET: http://localhost:5000/productos
-api.add_resource(RecursoProductos, "/productos", "/productos/")
+# GET: http://localhost:5000/productos/
+# GET: http://localhost:5000/productos/id
+api.add_resource(RecursoProductos, "/productos", "/productos/", "/productos/<int:id>")
+
 
 if __name__ == "__main__":
     # Poner el servidor en marcha:
