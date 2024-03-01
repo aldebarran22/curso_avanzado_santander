@@ -27,9 +27,9 @@ class Productor(Thread):
             self.buf.sem_huecos.acquire()
             with self.buf.mutex:
                 print(self.getName(), " => ", numero)
-                self.buf.buffer[self.buf.index_p] = numero
+                self.buf.buffer[self.buf.ind_p] = numero
                 print(self.buf.buffer)
-                self.buf.index_p = (self.buf.index_p + 1) % tam_buffer
+                self.buf.ind_p = (self.buf.ind_p + 1) % tam_buffer
             # Avisar al consumidor: ya tienes un item:
             self.buf.sem_items.release()
             sleep(randint(1, 3))
@@ -46,15 +46,14 @@ class Consumidor(Thread):
             # Comprobar si hay un item:
             self.buf.sem_items.acquire()
             with self.buf.mutex:
-                numero = self.buf.buffer[self.buf.index_c]
-                print(self.getName()," <== ", numero)
-                self.buf.buffer[self.buf.index_c] = -1
+                numero = self.buf.buffer[self.buf.ind_c]
+                print(self.getName(), " <== ", numero)
+                self.buf.buffer[self.buf.ind_c] = -1
                 print(self.buf.buffer)
-                self.buf.index_c = (self.buf.index_c+1) % tam_buffer
+                self.buf.ind_c = (self.buf.ind_c + 1) % tam_buffer
             # Avisar al productor: hay un hueco nuevo
             self.buf.sem_huecos.release()
-            sleep(randint(2,4))
-            
+            sleep(randint(2, 4))
 
 
 class TBuffer:
