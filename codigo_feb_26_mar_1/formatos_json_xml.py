@@ -128,4 +128,5 @@ if __name__ == "__main__":
     exportarXML(L, "../ficheros/productos.xml")
 
     getNombreProductos("../ficheros/productos.xml")
-    getNombreProductosSAX("../ficheros/productos.xml")
+    R = getNombreProductosSAX("../ficheros/productos.xml")
+    print(R[:3])
