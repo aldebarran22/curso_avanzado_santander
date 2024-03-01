@@ -3,16 +3,26 @@ Generar ficheros en json y XML (dom)
 Parsear documentos XML (SAX)
 Búsquedas en documentos XML (Xpath)
 """
+
 from base_datos import Empleado, Producto, Categoria
 from base_datos import BaseDatos, path
 import json
 
-def exportarJSON(L, pathFich):
-    pass
 
-if __name__ == '__main__':
+def exportarJSON(L, pathFich):
+    fich = None
+    try:
+        fich = open(pathFich, "w")
+        Ljson = [obj.to_json() for obj in L]
+        json.dump(Ljson, fich, indent=4)
+    except Exception as e:
+        print(e)
+    finally:
+        if fich:
+            fich.close()
+
+
+if __name__ == "__main__":
     bd = BaseDatos(path)
     L = bd.select()
-    print(L)
-
-
+    exportarJSON(L, "../ficheros/productos.json")
