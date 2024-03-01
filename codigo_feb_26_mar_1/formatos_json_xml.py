@@ -92,8 +92,16 @@ def getNombreProductos(pathFich):
 def getNombreProductosSAX(pathFich):
     eventos = ["start", "end"]
     for evento, nodo in iterparse(pathFich, eventos):
-        if nodo.tag == 'nombre':
-            print("nombre: ", nodo.text)
+        if evento == 'start':
+        
+            if nodo.tag == 'producto':
+                flag = True
+
+            if nodo.tag == 'nombre' and flag:
+                print("nombre: ", nodo.text)
+
+            if nodo.tag == 'categoria':
+                flag = False
 
 
 if __name__ == "__main__":
