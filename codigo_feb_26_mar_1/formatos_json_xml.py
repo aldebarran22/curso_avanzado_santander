@@ -7,7 +7,7 @@ Búsquedas en documentos XML (Xpath)
 from base_datos import Empleado, Producto, Categoria
 from base_datos import BaseDatos, path
 import json
-from xml.etree.ElementTree import Element, SubElement, Comment, tostring
+from xml.etree.ElementTree import iterparse, Element, SubElement, Comment, tostring
 from xml.etree import ElementTree as ET
 
 
@@ -75,14 +75,25 @@ def exportarXML(L, pathFich):
         if fich:
             fich.close()
 
+
 def getNombreProductos(pathFich):
     with open(pathFich, "rt"):
         tree = ET.parse(pathFich)
     root = tree.getroot()
-    #print(tostring(root))
+    # print(tostring(root))
 
     for nodo in root.findall(".//producto/nombre"):
         print(nodo.text)
+
+    for nodo in root.findall(".//producto"):
+        print(nodo.get("id"))
+
+
+def getNombreProductosSAX(pathFich):
+    eventos = ["start", "end"]
+    for evento, nodo in iterparse(pathFich, eventos):
+        if nodo.tag == 'nombre':
+            print("nombre: ", nodo.text)
 
 
 if __name__ == "__main__":
@@ -97,3 +108,4 @@ if __name__ == "__main__":
     exportarXML(L, "../ficheros/productos.xml")
 
     getNombreProductos("../ficheros/productos.xml")
+    getNombreProductosSAX("../ficheros/productos.xml")
