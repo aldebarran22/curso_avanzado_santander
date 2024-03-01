@@ -12,7 +12,7 @@ from base_datos import Empleado, Producto, Categoria
 from base_datos import BaseDatos, path
 
 from flask import Flask
-from flask_restful import Resource, Api, abort, reqparse
+from flask_restful import Resource, Api, abort, reqparse, request
 
 # Instanciar la aplicación:
 app = Flask(__name__)
@@ -33,11 +33,12 @@ parse_prod.add_argument("precio", type=float)
 
 
 class RecursoProductos(Resource):
-    
+
     def post(self):
         try:
             bd = BaseDatos(path)
-            args = parse_prod.parse_args()
+            args = request.json
+            # args = parse_prod.parse_args()
             producto = Producto.create(args)
             n = bd.create(producto)
             return {"create": n}

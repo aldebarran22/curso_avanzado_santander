@@ -32,8 +32,8 @@ def testDeleteProducto(id):
 
 
 def testCreateProducto():
-    cat = Categoria(1)
-    prod = Producto(0, "Red Bull", cat, 1.6, 100)
+    cat = Categoria(1, None)
+    prod = Producto(0, "Red Bull2", cat, 1.6, 100)
     dicc = prod.to_json()
     url = "http://localhost:5000/productos"
     data = json.dumps(dicc)
