@@ -43,9 +43,16 @@ def exportarXML(L, pathFich):
     try:
         top = Element("productos")
         comment = Comment("productos de la bd")
+        top.append(comment)
+
         for prod in L:
             producto = SubElement(top, "producto")
-            top.append(comment)
+
+            nombre = SubElement(producto, "nombre")
+            nombre.text = prod.nombre
+
+            precio = SubElement(producto, "precio")
+            precio.text = str(prod.precio)
 
         print(tostring(top))
 
