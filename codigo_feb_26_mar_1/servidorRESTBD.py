@@ -21,6 +21,14 @@ api = Api(app)
 
 class RecursoProductos(Resource):
 
+    def delete(self, id):
+        try:
+            bd = BaseDatos(path)
+            n = bd.delete(id)
+            return {"delete":n}
+        except Exception as e:
+            abort(404, message=str(e))
+
     def get(self, id=None):
         try:
             bd = BaseDatos(path)
