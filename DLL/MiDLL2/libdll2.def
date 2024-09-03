@@ -1,0 +1,4 @@
+EXPORTS
+    HelloWorld @1
+    resta @2
+    suma @3
