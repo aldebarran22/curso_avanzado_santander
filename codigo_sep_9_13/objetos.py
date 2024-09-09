@@ -31,9 +31,13 @@ class Producto:
     
     def __del__(self):
         print('Borrando ',self.nombre)
+   
     
-    
-if __name__ == "__main__":
+class Catalogo:
+    pass
+
+
+def testProducto():
     p1 = Producto('CocaCola',2.5)    
     print(p1)
 
@@ -65,6 +69,13 @@ if __name__ == "__main__":
 
     p3 = p1.__class__('Carne',20.9)
     print("p3:",p3)
+
+def testCatalogo():
+    pass
+
+if __name__ == "__main__":
+    # testProducto()
+    testCatalogo()
 
     
     
