@@ -57,7 +57,7 @@ if __name__ == "__main__":
 
     d = [p.__dict__ for p in L]
     print(d)
-    print(p1)
+    print(p1)   
 
     # Crear otro objeto a partir de la clase de p1:
     p2 = p1.__class__()
