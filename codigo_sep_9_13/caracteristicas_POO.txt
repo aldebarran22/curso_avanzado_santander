@@ -19,3 +19,7 @@ objeto.metodo_instancia(self)
 Sintaxis función
 funcion(instancia)
 
+Python orientado a objetos: dinámico
+
+
+

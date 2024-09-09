@@ -29,6 +29,9 @@ class Producto:
         """
         return self.precio < other.precio
     
+    def __del__(self):
+        print('Borrando ',self.nombre)
+    
     
 if __name__ == "__main__":
     p1 = Producto('CocaCola',2.5)    
@@ -55,6 +58,13 @@ if __name__ == "__main__":
     d = [p.__dict__ for p in L]
     print(d)
     print(p1)
+
+    # Crear otro objeto a partir de la clase de p1:
+    p2 = p1.__class__()
+    print("p2:",p2)
+
+    p3 = p1.__class__('Carne',20.9)
+    print("p3:",p3)
 
     
     
