@@ -13,7 +13,7 @@ def cargaIdioma(idioma):
             k, _, v = linea.partition('=')
             d[k] = v
 
-        print(d)
+        return d
 
     except Exception as e:
         print(e.__class__.__name__,e)
@@ -22,4 +22,5 @@ def cargaIdioma(idioma):
         if fich: fich.close()
 
 if __name__ == '__main__':    
-    cargaIdioma("es")
+    d = cargaIdioma("es")
+    print(d)
