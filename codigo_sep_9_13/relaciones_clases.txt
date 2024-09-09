@@ -1,0 +1,19 @@
+Relaciones entre clases:
+1- Herencia: tenemos clases que tienen un conocimiento común.
+   Empleado: Administrador, Programador ...
+
+   H Simple
+   H Múltiple
+
+2- Composición: Una clase se puede desglosar en partes que son objetos de otras clases.
+   Atributos que son objetos de otras clases.	
+   Coche: motor, chasis, ruedas
+
+3- Asociación: dos objetos independientes que interactúan en el tiempo en un instante.
+
+   Coche y SurtidorGas
+
+   coche.repostar(surtidor)
+
+
+ 
