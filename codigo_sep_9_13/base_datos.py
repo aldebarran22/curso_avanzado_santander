@@ -15,7 +15,13 @@ class BaseDatos:
         self.conexion = dbapi.connect(path)
 
     def __del__(self):
-        self.conexion.close()
+        if hasattr(self, 'conexion'):
+            print('cerrando conexión')
+            self.conexion.close()
 
 if __name__ == '__main__':
-    bd = BaseDatos("../BBDD/empresa3.db")
+    try:
+        bd = BaseDatos("../BBDD/empresa3.db")
+
+    except Exception as e:
+        print(e)
