@@ -13,9 +13,15 @@ class Producto:
     def __repr__(self):
         return str(self)
     
+    """
     def __str__(self):
         return self.nombre+" "+str(self.precio)
-    
+    """
+
+    def __str__(self):
+        return ",".join([str(v) for v in self.__dict__.values()])
+
+
     def __lt__(self, other):
         """
         if p1 < p2:  -> if p1.__lt__(p2):
@@ -40,6 +46,15 @@ if __name__ == "__main__":
         print(p1,"menor que",L[0])
     else:
         print(L[0],"menor que",p1)
+
+    # Atributos dinámicos:
+    p1.iva = 0.21
+    p1.__dict__['categoria'] = "Bebida"
+    print(p1.__dict__)
+
+    d = [p.__dict__ for p in L]
+    print(d)
+    print(p1)
 
     
     
