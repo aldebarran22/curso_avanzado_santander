@@ -68,4 +68,6 @@ if __name__ == '__main__':
     dt = DateTime(9,9,2024, 12,28,10) 
     # 09/09/2024 12:28:10
     print("Datetime: ",dt)
-    
+    print("sg: ",dt.s)
+    print(dt.__str__())
+    print(dt.__str__)
