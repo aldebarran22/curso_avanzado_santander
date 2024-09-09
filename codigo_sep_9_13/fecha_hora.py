@@ -25,7 +25,6 @@ class Time:
 
         self.h += horas
 
-
 class Date:
 
     def __init__(self, dd,mm,yy):
@@ -43,7 +42,14 @@ class Date:
         else:
             return False
 
- 
+
+class DateTime(Date,Time):
+
+    def __init__(self, dd=1, mm=1, yy=1970, h=0, m=0, s=0):
+        Date.__init__(self,dd,mm,yy)
+        Time.__init__(self,h,m,s)
+
+
 if __name__ == '__main__':
     t1 = Time(12,3,56)
     t2 = Time(8,45,9)
@@ -52,3 +58,12 @@ if __name__ == '__main__':
     print(t1)
     print(t2)
     print(resul)
+
+    fecha = Date(9,9,2024)
+    print(fecha)
+
+    
+    dt = DateTime(9,9,2024, 12,28,10) 
+    # 09/09/2024 12:28:10
+    print("Datetime: ",dt)
+    
