@@ -34,7 +34,20 @@ class Producto:
    
     
 class Catalogo:
-    pass
+    
+    def __init__(self, *args):
+        self.lista = []
+        self.lista.extend(args)
+
+    def __len__(self):
+        return len(self.lista)
+    
+    def __iter__(self):
+        return self
+    
+    def __next__(self):
+        pass
+
 
 
 def testProducto():
@@ -75,7 +88,7 @@ def testCatalogo():
     p2 = Producto('Fanta Limón',1.7)
     p3 = Producto('cerveza',2.25)
     
-    tienda = Catalogo(p1,p2,p3)
+    tienda = Catalogo(p1,p2,p3) # Catalogo(p1,p2)
     print('Tenemos: ', len(tienda), 'productos')
     for p in tienda:
         print(p)
