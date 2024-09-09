@@ -21,11 +21,18 @@ csv  = """idpedido;cliente;idempleado;idempresa;importe;pais
 10978;MAISD;9;2;32,82;Belgica
 11004;MAISD;3;1;44,84;Belgica
 11035;SUPRD;2;2;0,17;Belgica
-11038;SUPRD;1;2;29,59;Belgica
-"""
+11038;SUPRD;1;2;29,59;Belgica"""
 
-def csvToJson():
-    pass
+def csvToJson(sep=';'):
+    L = csv.split("\n")
+    cabs = L[0].split(sep)
+    resul = list()
+    for i in L[1:]:
+        d = dict(zip(cabs, i.split(sep)))
+        resul.append(d)
+    return resul
+    
 
 if __name__ == '__main__':
-    csvToJson()
+    resul = csvToJson()
+    print(resul)
