@@ -14,7 +14,7 @@ def singleton(refresh=False):
     print("Singleton creado")    
     return singleton.instancia
 
-# Asocia un atributo a una función
+# Asocia un atributo a una funcion
 singleton.instancia=""
 
 

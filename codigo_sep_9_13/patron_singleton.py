@@ -21,6 +21,25 @@ def cargaIdioma(idioma):
     finally:
         if fich: fich.close()
 
+class Singleton:
+
+    __palabras = None
+    __idioma = None
+
+    @staticmethod
+    def getInstance(idioma="es"):
+        
+        if Singleton.__palabras is None:
+            # Cargar fichero
+            pass
+
+        return Singleton.__palabras
+
+
+
 if __name__ == '__main__':    
     d = cargaIdioma("es")
     print(d)
+
+    Singleton.getInstance()["inicio"]
+
