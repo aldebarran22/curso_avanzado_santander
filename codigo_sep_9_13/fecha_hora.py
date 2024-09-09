@@ -7,13 +7,11 @@ class Time:
         self.m = m
         self.s = s
 
-   
-   
     def __str__(self):        
         return '%02d:%02d:%02d' % (self.h,self.m,self.s)
-
-
-   
+    
+    def __add__(self,other):
+        pass
 
 class Date:
 
@@ -33,4 +31,11 @@ class Date:
             return False
 
  
+if __name__ == '__main__':
+    t1 = Time(12,3,56)
+    t2 = Time(8,45,9)
 
+    resul = t1 + t2 # resul = t1.__add__(t2)
+    print(t1)
+    print(t2)
+    print(resul)
