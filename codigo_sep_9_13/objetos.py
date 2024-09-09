@@ -36,4 +36,11 @@ if __name__ == "__main__":
     L.sort()
     print(L)
 
+    if p1 < L[0]:
+        print(p1,"menor que",L[0])
+    else:
+        print(L[0],"menor que",p1)
+
+    
+    
 
