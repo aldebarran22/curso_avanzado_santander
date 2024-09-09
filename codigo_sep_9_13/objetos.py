@@ -71,7 +71,14 @@ def testProducto():
     print("p3:",p3)
 
 def testCatalogo():
-    pass
+    p1 = Producto('CocaCola',2.5)  
+    p2 = Producto('Fanta Limón',1.7)
+    p3 = Producto('cerveza',2.25)
+    
+    tienda = Catalogo(p1,p2,p3)
+    print('Tenemos: ', len(tienda), 'productos')
+    for p in tienda:
+        print(p)
 
 if __name__ == "__main__":
     # testProducto()
