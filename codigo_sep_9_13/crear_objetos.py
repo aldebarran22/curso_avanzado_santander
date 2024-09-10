@@ -32,3 +32,12 @@ if __name__=='__main__':
     print(sentencia)
     p2 = eval(sentencia)
     print("p2",p2, p2.__class__.__name__)
+
+    # Crear un objeto a partir de la clase de otro
+    p3 = p1.__class__(1,5)
+    print("p3",p3, p3.__class__.__name__)
+
+    # Crear un objeto a través de una función
+    # que recibe la clase y los parámetros:
+    p4 = crearObjeto(Punto,1,5)
+    print("p4",p4,p4.__class__.__name__)
