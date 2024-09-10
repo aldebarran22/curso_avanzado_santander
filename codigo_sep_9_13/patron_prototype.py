@@ -111,12 +111,20 @@ class Factoria2:
 
     def __init__(self):
         """Definir la estructura de prototipos pero no inicializa"""
-        pass
+        self.prototipos = dict()
 
     def getPrototipo(self, nombre):
         """Devuelve un clon del prototipo seleccionado, pero si no existe
         lo crea, y después lo clona"""
-        pass
+        if nombre.lower() not in self.prototipos:
+            if nombre.capitalize() in globals():
+                clase = globals()[nombre.capitalize()]
+                self.prototipos[nombre.lower] = clase()
+            else:
+                raise ValueError(f"Prototipo {nombre} no existe ...")
+        
+        return self.prototipos[nombre.lower()].clone()
+            
 
     def print(self):
         """Imprime los objetos de la factoria"""        
