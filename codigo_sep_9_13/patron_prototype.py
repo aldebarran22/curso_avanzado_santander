@@ -11,6 +11,7 @@ b) La factoría crea los prototipos bajo demanda.
 import abc
 import copy
 
+
 class Prototipo(abc.ABC):
     def __init__(self, etiqueta="", color="black"):
         self.etiqueta = etiqueta
@@ -78,12 +79,16 @@ class Triangulo(Prototipo):
 
 
 class Factoria1:
-    """Mantiene el catálogo de prototipos. 
+    """Mantiene el catálogo de prototipos.
     La factoría crea todos los prototipos al principio"""
 
-    def __init__(self) -> None:
+    def __init__(self):
         """Definir la estructura de prototipos e inicializarlos"""
-        pass
+        self.prototipos = dict()
+
+        # Utilizamos las subclases de prototipo y cargamos el dict
+        # con clave: nombre de la clase y el valor una instancia.
+        Prototipo.__subclasses__()
 
     def getPrototipo(self, nombre):
         """Devuelve un clon del prototipo seleccionado.
@@ -94,8 +99,9 @@ class Factoria1:
         """Imprime los objetos de la factoria"""
         pass
 
+
 class Factoria2:
-    """Mantiene el catálogo de prototipos. 
+    """Mantiene el catálogo de prototipos.
     La factoría crea los prototipos bajo demanda"""
 
     def __init__(self) -> None:
@@ -110,6 +116,3 @@ class Factoria2:
     def print(self):
         """Imprime los objetos de la factoria"""
         pass
-
-        
-
