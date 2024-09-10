@@ -1,7 +1,8 @@
 """
 Formas de crear y copiar objetos en Python
 """
-
+import copy
+import sys
 
 class Punto:
 
@@ -44,3 +45,13 @@ if __name__=='__main__':
     # que recibe la clase y los parámetros:
     p4 = crearObjeto(Punto,x=1,y=5)
     print("p4",p4,p4.__class__.__name__)
+
+    # Copiar el objeto con copy:
+    p5 = copy.deepcopy(p4)
+    print("p5",p5,p5.__class__.__name__)
+
+    p6 = globals()["Punto"](1,5)
+    print("p6",p6,p6.__class__.__name__)
+
+    p7 = getattr(sys.modules[__name__],"Punto")(1,5)
+    print("p7",p7,p7.__class__.__name__)
