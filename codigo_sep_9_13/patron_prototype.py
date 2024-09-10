@@ -119,7 +119,7 @@ class Factoria2:
         if nombre.lower() not in self.prototipos:
             if nombre.capitalize() in globals():
                 clase = globals()[nombre.capitalize()]
-                self.prototipos[nombre.lower] = clase()
+                self.prototipos[nombre.lower()] = clase()
             else:
                 raise ValueError(f"Prototipo {nombre} no existe ...")
         
@@ -142,4 +142,4 @@ def test(clase):
     fact.print()
 
 if __name__ == '__main__':
-    test(Factoria1)
+    test(Factoria2)
