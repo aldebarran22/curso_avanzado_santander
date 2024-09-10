@@ -1,31 +1,47 @@
-def ordenamientoBurbuja(unaLista):
-    for numPasada in range(len(unaLista)-1,0,-1):
-        for i in range(numPasada):
-            if unaLista[i]>unaLista[i+1]:
-                temp = unaLista[i]
-                unaLista[i] = unaLista[i+1]
-                unaLista[i+1] = temp
+"""
+Patrón estrategia con una variación para cronometrar cual es
+la estrategia más rápida para ordenar una lista de N números
+aleatorios
+"""
 
-unaLista = [54,26,93,17,77,31,44,55,20]
-ordenamientoBurbuja(unaLista)
-print(unaLista)
+import abc
 
-###############################################################################################
-def ordenamientoPorInsercion(unaLista):
-   for indice in range(1,len(unaLista)):
+class Estrategia(abc.ABC):
 
-     valorActual = unaLista[indice]
-     posicion = indice
+    @abc.abstractmethod
+    def ordenar(self,unaLista):
+        pass
+        
+class EstrategiaBurbuja(Estrategia):
 
-     while posicion>0 and unaLista[posicion-1]>valorActual:
-         unaLista[posicion]=unaLista[posicion-1]
-         posicion = posicion-1
+    def ordenar(self,unaLista):
+        for numPasada in range(len(unaLista)-1,0,-1):
+            for i in range(numPasada):
+                if unaLista[i]>unaLista[i+1]:
+                    temp = unaLista[i]
+                    unaLista[i] = unaLista[i+1]
+                    unaLista[i+1] = temp
 
-     unaLista[posicion]=valorActual
+class EstrategiaPython(Estrategia):
+    def ordenar(self,unaLista):
+        unaLista.sort()
 
-unaLista = [54,26,93,17,77,31,44,55,20]
-ordenamientoPorInsercion(unaLista)
-print(unaLista)
+
+class EstrategiaInsDirecta(Estrategia):
+
+    def ordenar(self,unaLista):
+        for indice in range(1,len(unaLista)):
+
+            valorActual = unaLista[indice]
+            posicion = indice
+
+            while posicion>0 and unaLista[posicion-1]>valorActual:
+                unaLista[posicion]=unaLista[posicion-1]
+                posicion = posicion-1
+
+            unaLista[posicion]=valorActual
+
+
 
 
 
