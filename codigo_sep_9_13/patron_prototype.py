@@ -132,12 +132,14 @@ class Factoria2:
         for k,v in self.prototipos.items():
             print(k, v)
 
-
-if __name__ == '__main__':
-    fact1 = Factoria1()
-    fact1.print()
-    obj = fact1.getPrototipo("circulo")
+def test(clase):
+    fact = clase()
+    fact.print()
+    obj = fact.getPrototipo("circulo")
     obj.radio = 10
     obj.color = "orange"
     print("obj clonado: ",obj)
-    fact1.print()
+    fact.print()
+
+if __name__ == '__main__':
+    test(Factoria1)
