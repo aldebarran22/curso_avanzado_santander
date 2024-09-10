@@ -109,8 +109,8 @@ class Factoria2:
     """Mantiene el catálogo de prototipos.
     La factoría crea los prototipos bajo demanda"""
 
-    def __init__(self) -> None:
-        """Definir la estructura de prototipos e inicializarlos"""
+    def __init__(self):
+        """Definir la estructura de prototipos pero no inicializa"""
         pass
 
     def getPrototipo(self, nombre):
@@ -119,8 +119,10 @@ class Factoria2:
         pass
 
     def print(self):
-        """Imprime los objetos de la factoria"""
-        pass
+        """Imprime los objetos de la factoria"""        
+        print("Factoria2:")
+        for k,v in self.prototipos.items():
+            print(k, v)
 
 
 if __name__ == '__main__':
