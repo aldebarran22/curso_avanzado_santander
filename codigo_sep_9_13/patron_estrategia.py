@@ -61,7 +61,7 @@ class Contexto:
             
 
 if __name__ == '__main__':
-    contexto = Contexto(1000, Estrategia)
+    contexto = Contexto(20000, Estrategia)
     contexto.test()
 
 
