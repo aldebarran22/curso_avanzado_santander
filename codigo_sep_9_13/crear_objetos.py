@@ -20,6 +20,9 @@ class Punto:
     def setY(self, y):
         self.__y = y
 
+def crearObjeto(clase, *args, **kwargs):
+    return clase(*args, **kwargs)
+
 if __name__=='__main__':
 
     # Llamar al constructor de la clase:
@@ -39,5 +42,5 @@ if __name__=='__main__':
 
     # Crear un objeto a través de una función
     # que recibe la clase y los parámetros:
-    p4 = crearObjeto(Punto,1,5)
+    p4 = crearObjeto(Punto,x=1,y=5)
     print("p4",p4,p4.__class__.__name__)
