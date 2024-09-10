@@ -16,7 +16,7 @@ def cargaIdioma(idioma):
         return d
 
     except Exception as e:
-        print(e.__class__.__name__,e)
+        print(e.__class__.__name__,e)       
     
     finally:
         if fich: fich.close()
@@ -31,11 +31,9 @@ class Singleton:
         
         if Singleton.__palabras is None:
             # Cargar fichero
-            pass
-
+            print(f'Cargamos el fichero de {idioma}')
+            
         return Singleton.__palabras
-
-
 
 if __name__ == '__main__':    
     d = cargaIdioma("es")
