@@ -67,7 +67,7 @@ class ProcesadorWhatsApp(Procesador):
 
 
 if __name__=='__main__':
-    peticion = Peticion("SMS", "Contenido del mensaje a enviar")
+    peticion = Peticion("message", "Contenido del mensaje a enviar")
 
     cad = ProcesadorSMS(ProcesadorEmail(ProcesadorWhatsApp()))
     cad.procesarPeticion(peticion)
