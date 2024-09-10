@@ -19,3 +19,16 @@ class Punto:
 
     def setY(self, y):
         self.__y = y
+
+if __name__=='__main__':
+
+    # Llamar al constructor de la clase:
+    p1 = Punto(1,5)
+    print("p1",p1, p1.__class__.__name__)
+
+    # Crear el obj. a partir de str:
+    nombreClase = "Punto"
+    sentencia = "{}({},{})".format(nombreClase, 1,5)
+    print(sentencia)
+    p2 = eval(sentencia)
+    print("p2",p2, p2.__class__.__name__)
