@@ -1,6 +1,8 @@
 import math, abc
 
 class Vector3D:
+	"""Esta clase tiene cierto parecido a lo que necesitamos, pero
+	no la podemos modificar"""
 	
 	def __init__(self,x=0,y=0,z=0):
 		self.__x = x
@@ -27,6 +29,7 @@ class Vector3D:
 		
 		
 class Vector2D(abc.ABC):
+	"""Clase que tenemos que implementar"""
 	
 	@abc.abstractmethod
 	def getAbcisa(self): 
@@ -44,3 +47,44 @@ class Vector2D(abc.ABC):
 	def magnitud(self):
 		# La norma del vector
 		pass
+
+
+class VectorPlano1(Vector2D, Vector3D):
+	"""Solución H.Múltiple"""
+	
+	def getAbcisa(self): 
+		pass
+	
+	
+	def getOrdenada(self):
+		pass
+		
+	
+	def prod(self, v):
+		pass
+		
+	
+	def magnitud(self):
+		# La norma del vector
+		pass
+
+class VectorPlano2(Vector2D):
+	"""Solución por composición"""
+	
+	def getAbcisa(self): 
+		pass
+	
+	
+	def getOrdenada(self):
+		pass
+		
+	
+	def prod(self, v):
+		pass
+		
+	
+	def magnitud(self):
+		# La norma del vector
+		pass
+
+
