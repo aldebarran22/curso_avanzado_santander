@@ -30,15 +30,25 @@ class VentanaDecorator(IVentana):
 
 
 class DecoratorBorde(VentanaDecorator):
-    pass
+
+    def dibujar(self):
+        print(" | ", end="")
+        self.ventana.dibujar()
+        print(" | ", end="")
 
 
 class DecoratorBotonAyuda(VentanaDecorator):
-    pass
+    
+    def dibujar(self):
+        print(" [?] ", end="")
+        self.ventana.dibujar()
 
 
 class DecoratorBotonCerrar(VentanaDecorator):
-    pass
+    
+    def dibujar(self):
+        print(" [x] ", end="")
+        self.ventana.dibujar()
 
 
 if __name__ == "__main__":
