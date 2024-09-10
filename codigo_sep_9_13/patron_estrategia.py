@@ -57,11 +57,11 @@ class Contexto:
             t1 = datetime.now()
             obj.ordenar(copiaL)
             t2 = datetime.now()
-            print(obj.__name__,t2-t1)
+            print(clase.__name__,t2-t1)
             
 
 if __name__ == '__main__':
-    contexto = Contexto(10000, Estrategia)
+    contexto = Contexto(1000, Estrategia)
     contexto.test()
 
 
