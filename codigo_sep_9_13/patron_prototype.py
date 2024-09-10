@@ -84,20 +84,25 @@ class Factoria1:
 
     def __init__(self):
         """Definir la estructura de prototipos e inicializarlos"""
-        self.prototipos = dict()
-
+        
         # Utilizamos las subclases de prototipo y cargamos el dict
         # con clave: nombre de la clase y el valor una instancia.
-        Prototipo.__subclasses__()
+        self.prototipos = {c.__name__.lower() : c() for c in Prototipo.__subclasses__()}
 
     def getPrototipo(self, nombre):
         """Devuelve un clon del prototipo seleccionado.
         Ya estaba creado previamente"""
-        pass
+        if nombre.lower() in self.prototipos:
+            return self.prototipos[nombre.lower()].clone()
+        else:
+            raise ValueError(f"Prototipo {nombre} no existe ...")
 
     def print(self):
         """Imprime los objetos de la factoria"""
-        pass
+        print("Factoria1:")
+        for k,v in self.prototipos.items():
+            print(k, v)
+
 
 
 class Factoria2:
@@ -116,3 +121,13 @@ class Factoria2:
     def print(self):
         """Imprime los objetos de la factoria"""
         pass
+
+
+if __name__ == '__main__':
+    fact1 = Factoria1()
+    fact1.print()
+    obj = fact1.getPrototipo("circulo")
+    obj.radio = 10
+    obj.color = "orange"
+    print("obj clonado: ",obj)
+    fact1.print()
