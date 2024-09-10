@@ -39,3 +39,12 @@ class ProcesadorWhatsApp(Procesador):
 
     def procesarPeticion(self, peticion):
         pass
+
+
+if __name__=='__main__':
+    peticion = Peticion("SMS", "Contenido del mensaje a enviar")
+
+    cad = ProcesadorSMS(ProcesadorEmail(ProcesadorWhatsApp()))
+    cad.procesarPeticion(peticion)
+
+
