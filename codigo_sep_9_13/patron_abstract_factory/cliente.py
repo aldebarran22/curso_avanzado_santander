@@ -15,11 +15,16 @@ def crearFactoria(claseFactoria):
     for pos, clase in enumerate(L):
         print(pos+1, clase.__name__)
     op = int(input("Opción:"))
-    
+    return L[op-1]()
 
 if __name__ == '__main__':
     
-    factorias = [c.__name__ for c in Factoria.__subclasses__()]
-    print(factorias)
+    #factorias = [c.__name__ for c in Factoria.__subclasses__()]
+    #print(factorias)
 
     fact = crearFactoria(Factoria)
+    telefono = fact.createTno()
+    tableta = fact.createTablet()
+
+    telefono.llamar()
+    tableta.internet()
