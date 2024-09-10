@@ -9,6 +9,7 @@ b) La factoría crea los prototipos bajo demanda.
 """
 
 import abc
+import copy
 
 class Prototipo(abc.ABC):
     def __init__(self, etiqueta="", color="black"):
@@ -33,7 +34,7 @@ class Circulo(Prototipo):
 
     def clone(self):
         # El objeto se clona
-        pass
+        return copy.deepcopy(self)
 
 
 class Rectangulo(Prototipo):
@@ -53,7 +54,7 @@ class Rectangulo(Prototipo):
 
     def clone(self):
         # El objeto se clona
-        pass
+        return copy.deepcopy(self)
 
 
 class Triangulo(Prototipo):
@@ -73,5 +74,42 @@ class Triangulo(Prototipo):
 
     def clone(self):
         # El objeto se clona
+        return copy.deepcopy(self)
+
+
+class Factoria1:
+    """Mantiene el catálogo de prototipos. 
+    La factoría crea todos los prototipos al principio"""
+
+    def __init__(self) -> None:
+        """Definir la estructura de prototipos e inicializarlos"""
         pass
+
+    def getPrototipo(self, nombre):
+        """Devuelve un clon del prototipo seleccionado.
+        Ya estaba creado previamente"""
+        pass
+
+    def print(self):
+        """Imprime los objetos de la factoria"""
+        pass
+
+class Factoria2:
+    """Mantiene el catálogo de prototipos. 
+    La factoría crea los prototipos bajo demanda"""
+
+    def __init__(self) -> None:
+        """Definir la estructura de prototipos e inicializarlos"""
+        pass
+
+    def getPrototipo(self, nombre):
+        """Devuelve un clon del prototipo seleccionado, pero si no existe
+        lo crea, y después lo clona"""
+        pass
+
+    def print(self):
+        """Imprime los objetos de la factoria"""
+        pass
+
+        
 
