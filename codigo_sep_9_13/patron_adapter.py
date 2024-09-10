@@ -51,13 +51,16 @@ class Vector2D(abc.ABC):
 
 class VectorPlano1(Vector2D, Vector3D):
 	"""Solución H.Múltiple"""
+
+	def __init__(self, x=0, y=0):
+		Vector3D.__init__(self,x,y)
 	
 	def getAbcisa(self): 
-		pass
+		Vector3D.getX(self)
 	
 	
 	def getOrdenada(self):
-		pass
+		Vector3D.getY(self)
 		
 	
 	def prod(self, v):
@@ -71,12 +74,15 @@ class VectorPlano1(Vector2D, Vector3D):
 class VectorPlano2(Vector2D):
 	"""Solución por composición"""
 	
+	def __init__(self, x=0, y=0):
+		self.v3 = Vector3D(x,y)
+
 	def getAbcisa(self): 
-		pass
+		self.v3.getX()
 	
 	
 	def getOrdenada(self):
-		pass
+		self.v3.getY()
 		
 	
 	def prod(self, v):
