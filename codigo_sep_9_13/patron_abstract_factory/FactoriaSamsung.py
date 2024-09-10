@@ -1,7 +1,7 @@
 """
-Implementa una factoria concreta.
+Implementa una factoria concreta Samsung.
 Se encarga de crear los productos concretos que 
-pertenecen a la familia.
+pertenecen a la familia: S20 y GalaxyA
 """
 
 from Factoria import Factoria
