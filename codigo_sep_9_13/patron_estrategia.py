@@ -5,6 +5,8 @@ aleatorios
 """
 
 import abc
+from random import randint
+from datetime import datetime
 
 class Estrategia(abc.ABC):
 
@@ -40,6 +42,27 @@ class EstrategiaInsDirecta(Estrategia):
                 posicion = posicion-1
 
             unaLista[posicion]=valorActual
+
+class Contexto:
+
+    def __init__(self, n, estrategia):
+        self.n = n
+        self.estrategia = estrategia
+        self.L = [randint(1,100000) for _ in range(self.n)]
+
+    def test(self):
+        for clase in self.estrategia.__subclasses__():
+            copiaL = self.L.copy()
+            obj = clase()
+            t1 = datetime.now()
+            obj.ordenar(copiaL)
+            t2 = datetime.now()
+            print(obj.__name__,t2-t1)
+            
+
+if __name__ == '__main__':
+    contexto = Contexto(10000, Estrategia)
+    contexto.test()
 
 
 
