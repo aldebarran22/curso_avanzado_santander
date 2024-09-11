@@ -5,9 +5,7 @@ Ficheros names de EEUU
 import pandas as pd
 from functools import reduce
 
-path = (
-    "D:/OneDrive/Escritorio/python_avanzado_santander/practicas/avanzado2/pandas/names/"
-)
+path = "../ficheros_curso/names/"
 
 
 def cargarAño(año):
@@ -82,7 +80,7 @@ if __name__ == "__main__":
     # df = sumarDosAñosOK(2007, 2008)
     # exportarHTML(df)
 
-    # df = sumarRangoAños(2000, 2005)
-    # print(df)
+    df = sumarRangoAños(2000, 2005)
+    print(df)
 
     concatenarRangoAños(2000, 2005)
