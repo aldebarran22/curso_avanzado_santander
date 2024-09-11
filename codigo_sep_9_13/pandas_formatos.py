@@ -13,7 +13,7 @@ def cambiarFormatosCSVToJson(path, pathDestino, ext):
         if extFich == ext:
             #df = pd.read_csv()
             path_file = path+f"/{f}"
-            df = pd.read_csv(path_file, header=None, name=cabs)
+            df = pd.read_csv(path_file, header=None, names=cabs)
             path_file_destino = pathDestino + f"/{nombreFich}.json"
             df.to_json(path_file_destino, orient="records",indent=4)
             print('Creando: ',path_file_destino)
