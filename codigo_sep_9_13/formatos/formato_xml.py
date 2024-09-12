@@ -9,10 +9,13 @@ from xml.etree.ElementTree import iterparse, Element, SubElement, Comment, tostr
 from base_datos import path, BaseDatos, Categoria, Producto
 
 def importarXML_SAX(pathFile):
+    """Recuperar los nombres de las categorias"""
+    categorias = []
     eventos = ['start','end']
     for (evento, nodo) in iterparse(pathFile, eventos):
         print(evento, nodo)
 
+    print(categorias)
 
 def importarXML_XPath(pathFile):
     """Importar el fichero con el DOM e imprimir los nombres
