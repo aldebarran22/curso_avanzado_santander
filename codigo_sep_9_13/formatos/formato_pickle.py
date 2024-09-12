@@ -51,7 +51,16 @@ def serializarShelve(pathFile, *productos):
     Shelf.close()
 
 def deserializarShelve(pathFile, clave):
-    pass
+    Shelf = s.open(pathFile)
+    if clave not in Shelf:
+        print("Claves:",list(Shelf.keys()))
+        raise KeyError(f"La clave {clave} no existe")
+    else:
+        p = Shelf[clave]
+
+    Shelf.close()
+    return p
+
 
 if __name__ == '__main__':
     prod = cargarProducto(1)
@@ -60,10 +69,10 @@ if __name__ == '__main__':
     print(prod)
     print(prod2)
 
-    L = [cargarProducto(p) for p in [1,3,12,35,6]]
+    L = [cargarProducto(p) for p in [1,3,2,35,6]]
     serializarShelve("productos_shelve", *L)
     
     p3 = deserializarShelve("productos_shelve", "K-3")
     print(p3)
-    p5 = deserializarShelve("productos_shelve", "K-5")
+    p5 = deserializarShelve("productos_shelve", "K-7")
     print(p5)
