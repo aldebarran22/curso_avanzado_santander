@@ -5,8 +5,13 @@ las consultas XPath.
 """
 
 from xml.etree import ElementTree
-from xml.etree.ElementTree import Element, SubElement, Comment, tostring
+from xml.etree.ElementTree import iterparse, Element, SubElement, Comment, tostring
 from base_datos import path, BaseDatos, Categoria, Producto
+
+def importarXML_SAX(pathFile):
+    eventos = ['start','end']
+    for (evento, nodo) in iterparse(pathFile, eventos):
+        print(evento, nodo)
 
 
 def importarXML_XPath(pathFile):
@@ -70,4 +75,5 @@ def exportarXML(pathFile):
 if __name__ == '__main__':
     #exportarXML("productos.xml")
     #importarXML_Dom("productos.xml")
-    importarXML_XPath("productos.xml")
+    #importarXML_XPath("productos.xml")
+    importarXML_SAX("productos.xml")
