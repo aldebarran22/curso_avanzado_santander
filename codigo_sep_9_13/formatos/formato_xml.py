@@ -11,9 +11,18 @@ from base_datos import path, BaseDatos, Categoria, Producto
 def importarXML_SAX(pathFile):
     """Recuperar los nombres de las categorias"""
     categorias = []
+    cat = False
     eventos = ['start','end']
     for (evento, nodo) in iterparse(pathFile, eventos):
-        print(evento, nodo)
+        if nodo.tag == 'categoria':
+            cat = True
+
+        elif nodo.tag == 'productos':
+            cat = False
+
+        if cat:
+            if nodo.tag == 'nombre' and evento == 'start':
+                categorias.append(nodo.text)
 
     print(categorias)
 
