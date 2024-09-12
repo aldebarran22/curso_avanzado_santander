@@ -271,5 +271,15 @@ def cargarProducto():
         print(e.__class__.__name__, e)
 
 
+def cargaCategoria():
+    try:
+        bd = BaseDatos(path)
+        categoria = bd.select("Bebidas")
+        print(categoria)
+
+    except Exception as e:
+        print(e.__class__.__name__, e)
+
 if __name__ == "__main__":
-    cargarProducto()
+    #cargarProducto()
+    cargaCategoria()
