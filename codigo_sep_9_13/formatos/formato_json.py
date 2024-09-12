@@ -50,7 +50,17 @@ def cargaJson(pathFile):
     except Exception as e:
         print(e)
 
+ 
+def json2pandas_normalize(file_name): 
+    with open(file_name,'r') as f:
+        d = json.load(f)
+    df = pd.json_normalize(d)
+    print(df.head())
+ 
+ 
+
 if __name__ == "__main__":
     #exportarJson("productos.json")
     #importarJson("productos.json")
-    cargaJson("productos.json")
+    #cargaJson("productos.json")
+    json2pandas_normalize('productos.json')

@@ -137,6 +137,20 @@ class BaseDatos:
         # tprod = t[:2],cat+t[4:]
         prod = Producto(t[0], t[1], cat, t[4], t[5])
         return prod
+    
+    def selectCategorias(self):
+        cur = None
+        try:           
+            cur = self.con.cursor()
+            sql = "select id, nombre from categorias order by nombre"
+            cur.execute(sql)
+            return [Categoria(*t) for t in cur.fetchall()]
+
+        except Exception as e:
+            raise e
+        finally:
+            if cur:
+                cur.close()
 
     def select(self, cat=None):
         cur = None
