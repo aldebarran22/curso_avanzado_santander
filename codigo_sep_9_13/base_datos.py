@@ -256,3 +256,17 @@ class BaseDatos:
         if hasattr(self, "con"):
             self.con.close()
             # print('Base de datos cerrada!')
+
+
+def cargarProducto():
+    try:
+        bd = BaseDatos(path)
+        producto = bd.read(1)
+        print(producto)
+
+    except Exception as e:
+        print(e.__class__.__name__, e)
+
+
+if __name__ == "__main__":
+    cargarProducto()
