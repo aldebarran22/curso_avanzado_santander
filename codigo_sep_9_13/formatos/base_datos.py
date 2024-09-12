@@ -275,7 +275,7 @@ def cargaCategoria():
     try:
         bd = BaseDatos(path)
         categoria = bd.select("Bebidas")
-        print(categoria)
+        print(categoria)    
 
     except Exception as e:
         print(e.__class__.__name__, e)

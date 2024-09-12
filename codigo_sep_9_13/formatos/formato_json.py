@@ -30,6 +30,11 @@ def importarJson(pathFile):
         categorias = json.load(fich)
         print(categorias[:3])
 
+        # Conversión de diccionarios a objetos:
+        objetos = [Producto.create(d) for d in categorias]
+        print()
+        print(objetos[:3])
+
     except Exception as e:
         print(e.__class__.__name__, e)
 
