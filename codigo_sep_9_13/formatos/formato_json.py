@@ -4,6 +4,7 @@ Generar un fichero json a partir de la BD.
 
 import json
 from base_datos import path, BaseDatos, Categoria, Producto
+import pandas as pd
 
 
 def exportarJson(pathFile, categoria=None):   
@@ -41,7 +42,15 @@ def importarJson(pathFile):
     finally:
         if fich: fich.close()
 
+def cargaJson(pathFile):
+    try:
+        df = pd.read_json(pathFile,orient="records")
+        print(df.head())
+
+    except Exception as e:
+        print(e)
 
 if __name__ == "__main__":
     #exportarJson("productos.json")
-    importarJson("productos.json")
+    #importarJson("productos.json")
+    cargaJson("productos.json")
