@@ -5,9 +5,10 @@ Created on 12-sep-2024
 '''
 
 from java.util import Random
+from es.curso.clases import Direccion, Usuario
 
 
-if __name__ == '__main__':
+def generarNumeros():
     r = Random()
     L = list()
     
@@ -15,3 +16,15 @@ if __name__ == '__main__':
         L.append(r.nextInt())
         
     print(L)
+    
+    
+def testJava():
+    dir = Direccion("Gran Via", 28001, 34)
+    user = Usuario("Jose", 23, dir)
+    print(user)
+    print(user.nombre)
+    
+
+if __name__ == '__main__':
+    #generarNumeros()
+    testJava()
