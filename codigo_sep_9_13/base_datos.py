@@ -263,6 +263,9 @@ def cargarProducto():
         bd = BaseDatos(path)
         producto = bd.read(1)
         print(producto)
+        print(producto.to_json())
+
+        #p2 = bd.read(100)
 
     except Exception as e:
         print(e.__class__.__name__, e)
