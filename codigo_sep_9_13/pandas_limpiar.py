@@ -4,6 +4,7 @@ fichero.
 """
 
 import pandas as pd
+import numpy as np
 
 
 def cargaFichero(path):
@@ -28,4 +29,8 @@ if __name__ == '__main__':
     path = "../ficheros_curso/csv/MARIA.csv"
     df = cargaFichero(path)
     df.info()
-    print(df.head())    
+    print(df.head())
+
+    # Correlación del viento y la presión    
+    c = np.corrcoef(df.Wind, df.Pressure)
+    print("Indice de correlación: ", round(c[1][0]*100,2),'%')
