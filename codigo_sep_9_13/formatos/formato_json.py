@@ -3,11 +3,17 @@ Generar un fichero json a partir de la BD.
 """
 
 import json
-from base_datos import BaseDatos, Categoria, Producto
+from base_datos import path, BaseDatos, Categoria, Producto
 
 
-def exportarJson():
-    pass
+def exportarJson():    
+    try:
+        bd = BaseDatos(path)
+        categoria = bd.select()
+        print(categoria)
+
+    except Exception as e:
+        print(e.__class__.__name__, e)
 
 
 def importarJson():
