@@ -15,3 +15,19 @@ def cargarProducto(id):
     except Exception as e:
         print(e.__class__.__name__, e)
 
+def serializar(pathFile, producto):
+    fich = None
+    try:
+        fich = open(pathFile, 'wb')
+        p.dump(producto, fich)
+
+    except Exception as e:
+        print(e.__class__.__name__, e)
+
+    finally:
+        if fich: fich.close()
+
+if __name__ == '__main__':
+    prod = cargarProducto(1)
+    serializar("producto.dat", prod)
+    
