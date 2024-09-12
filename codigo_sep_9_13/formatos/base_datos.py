@@ -5,7 +5,7 @@ Implementación de las clases Categoria y Producto
 import sqlite3 as dbapi
 from os.path import isfile
 
-path = "../BBDD/empresa3.db"
+path = "../../BBDD/empresa3.db"
 
 
 class Empleado:
