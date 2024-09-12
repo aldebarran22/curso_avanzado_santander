@@ -27,7 +27,23 @@ def serializar(pathFile, producto):
     finally:
         if fich: fich.close()
 
+def deserializar(pathFile):
+    fich = None
+    try:
+        fich = open(pathFile, 'rb')
+        producto = p.load(fich)
+        return producto
+
+    except Exception as e:
+        print(e.__class__.__name__, e)
+
+    finally:
+        if fich: fich.close()
+
 if __name__ == '__main__':
     prod = cargarProducto(1)
     serializar("producto.dat", prod)
+    prod2 = deserializar("producto.dat")
+    print(prod)
+    print(prod2)
     
