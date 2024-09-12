@@ -50,6 +50,9 @@ def serializarShelve(pathFile, *productos):
         k += 1
     Shelf.close()
 
+def deserializarShelve(pathFile, clave):
+    pass
+
 if __name__ == '__main__':
     prod = cargarProducto(1)
     serializar("producto.dat", prod)
@@ -60,4 +63,7 @@ if __name__ == '__main__':
     L = [cargarProducto(p) for p in [1,3,12,35,6]]
     serializarShelve("productos_shelve", *L)
     
-    
+    p3 = deserializarShelve("productos_shelve", "K-3")
+    print(p3)
+    p5 = deserializarShelve("productos_shelve", "K-5")
+    print(p5)
