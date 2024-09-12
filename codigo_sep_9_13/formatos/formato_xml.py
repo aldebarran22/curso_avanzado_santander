@@ -16,9 +16,19 @@ def exportarXML(pathFile):
         comentario = Comment("Categorias y productos de la BD")
         raiz.append(comentario)
         for cat in categorias:
-            categoria = SubElement(raiz, "categoria")
-            nombreCategoria = SubElement(categoria, "nombre")
+            nodoCategoria = SubElement(raiz, "categoria")
+            nombreCategoria = SubElement(nodoCategoria, "nombre")
             nombreCategoria.text = cat.nombre
+
+            # Recuperar los productos de cada categoría:
+            productos = bd.select(cat.nombre)
+            nodoProductos = SubElement(nodoCategoria, "productos")
+
+            for prod in productos:
+                nodoProducto = SubElement(nodoProductos,"producto")
+                nombreProducto = SubElement(nodoProducto, "nombre")
+                nombreProducto.text = prod.nombre
+                
 
         print(tostring(raiz))
 
