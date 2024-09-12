@@ -15,7 +15,7 @@ def importarXML_XPath(pathFile):
     with open(pathFile, "rt") as f:
         tree = ElementTree.parse(f)
         raiz = tree.getroot()
-        for t in raiz.findall(".//nombre"):
+        for t in raiz.findall(".//categoria/nombre"):
             print(t.text)
 
 def importarXML_Dom(pathFile):
