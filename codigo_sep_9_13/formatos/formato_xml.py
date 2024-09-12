@@ -8,6 +8,16 @@ from xml.etree import ElementTree
 from xml.etree.ElementTree import Element, SubElement, Comment, tostring
 from base_datos import path, BaseDatos, Categoria, Producto
 
+def importarXML_Dom(pathFile):
+    """Importar el fichero con el DOM e imprimir los nombres
+    de las categorias"""
+    with open(pathFile, "rt") as f:
+        tree = ElementTree.parse(f)
+        raiz = tree.getroot()
+        categorias = raiz.getchildren()
+        for c in categorias:
+            print(c.getchildren()[0].text)
+
 def exportarXML(pathFile):
     try:
         bd = BaseDatos(path)
@@ -48,4 +58,5 @@ def exportarXML(pathFile):
         print(e)
 
 if __name__ == '__main__':
-    exportarXML("productos.xml")
+    #exportarXML("productos.xml")
+    importarXML_Dom("productos.xml")
