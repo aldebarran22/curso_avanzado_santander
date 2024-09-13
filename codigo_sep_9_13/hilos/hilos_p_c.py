@@ -78,7 +78,7 @@ class Consumidor(Thread):
             # Consumir el item:
             print(self.name, "CONSUME", item)
 
-            sleep(1, 3)
+            sleep(randint(1, 3))
 
         print(self.name, "TERMINA!")
 
