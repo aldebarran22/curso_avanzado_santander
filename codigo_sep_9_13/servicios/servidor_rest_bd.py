@@ -26,6 +26,15 @@ class RecursoProducto(Resource):
         except Exception as e:
             abort(404, message=str(e))
 
+    def delete(self, id):
+        try:
+            bd = BaseDatos(path)
+            n = bd.delete(id)
+            return {"delete":n}        
+
+        except Exception as e:
+            abort(404, message=str(e))
+
 # Definir el mapeo entre el recurso y la petición:
 # Tipos de peticiones que atiende este recurso:
 # http://localhost:5000/productos -> listar todos
