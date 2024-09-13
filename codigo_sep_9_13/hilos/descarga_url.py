@@ -7,9 +7,18 @@ from threading import Thread
 from queue import Queue
 import logging
 
-# Establecer el nivel de configuración de logging:
+# Establecer el nivel de configuración de logging en CONSOLA
 # debug, info, warn, error, critical
-logging.basicConfig(level=logging.DEBUG)
+# logging.basicConfig(level=logging.DEBUG)
+
+# Configuración a un fichero externo: FICHERO
+logging.basicConfig(
+    format="%(asctime)s:%(levelname)s:%(message)s",
+    datefmt="%d/%m/%Y %H:%M:%S",
+    filename="hilos.log",
+    filemode="w",
+    level=logging.DEBUG,
+)
 
 ficheros = 100
 num_hilos = 5
