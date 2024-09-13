@@ -4,7 +4,7 @@ Servidor REST + Base de datos
 
 from base_datos import BaseDatos, Categoria, Producto, path
 from flask import Flask
-from flask_restful import Resource, Api, abort
+from flask_restful import Resource, Api, abort, request
 
 app = Flask(__name__)
 api = Api(app)
@@ -34,6 +34,22 @@ class RecursoProducto(Resource):
 
         except Exception as e:
             abort(404, message=str(e))
+
+    def post(self):
+        try:
+            bd = BaseDatos(path)
+            # Recuperamos los parámetros de la petición
+            # en formato json
+            args = request.json
+
+            # Crear el objeto producto a partir del diccionario
+            producto = Producto.create(args)
+            n = bd.create(producto)
+            return {"create", n}
+        
+        except Exception as e:
+            abort(404, message=str(e))
+
 
 # Definir el mapeo entre el recurso y la petición:
 # Tipos de peticiones que atiende este recurso:
