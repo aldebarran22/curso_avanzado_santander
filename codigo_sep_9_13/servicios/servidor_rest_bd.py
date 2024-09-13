@@ -55,19 +55,32 @@ class RecursoProducto(Resource):
             bd = BaseDatos(path)
             # Recuperamos los parámetros de la petición
             # en formato json
-            # args = request.json
-            print(request.json)
-            args = parse_prod.parse_args()
+            args = request.json
+            # args = parse_prod.parse_args()
 
             # Crear el objeto producto a partir del diccionario
             producto = Producto.create(args)
-            print(producto)
             n = bd.create(producto)
             return {"create": n}
         
         except Exception as e:
             abort(404, message=str(e))
 
+    def put(self):
+        try:
+            bd = BaseDatos(path)
+            # Recuperamos los parámetros de la petición
+            # en formato json
+            args = request.json
+            # args = parse_prod.parse_args()
+
+            # Crear el objeto producto a partir del diccionario
+            producto = Producto.create(args)
+            n = bd.update(producto)
+            return {"update": n}
+        
+        except Exception as e:
+            abort(404, message=str(e))
 
 # Definir el mapeo entre el recurso y la petición:
 # Tipos de peticiones que atiende este recurso:
