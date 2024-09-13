@@ -6,15 +6,18 @@ from base_datos import Producto, Categoria
 import requests
 import json
 
+
 def testProductos():
     url = "http://localhost:5000/productos"
     resp = requests.get(url)
     print(resp.json())
 
+
 def testProducto(id):
     url = f"http://localhost:5000/productos/{id}"
     resp = requests.get(url)
     print(resp.json())
+
 
 def testSaveFileProductos():
     fich = None
@@ -29,9 +32,18 @@ def testSaveFileProductos():
     except Exception as e:
         print(e)
     finally:
-        if fich: fich.close()
+        if fich:
+            fich.close()
 
-if __name__ == '__main__':
-    #testProducto(1)
-    #testProductos()
-    testSaveFileProductos()
+
+def testDelete(id):
+    url = f"http://localhost:5000/productos/{id}"
+    resp = requests.delete(url)
+    print(resp.json())
+
+
+if __name__ == "__main__":
+    # testProducto(1)
+    # testProductos()
+    # testSaveFileProductos()
+    testDelete(83)
