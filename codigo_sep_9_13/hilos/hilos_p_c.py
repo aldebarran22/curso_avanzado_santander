@@ -2,6 +2,7 @@
 Implementación del productor-consumidor en Python
 Solución M productores-N consumidores
 """
+
 from threading import Thread, Lock, Semaphore
 from random import randint
 from time import sleep
@@ -20,7 +21,7 @@ class Productor(Thread):
         self.num_muestras = num_muestras
 
     def run(self):
-       pass
+        pass
 
 
 class Consumidor(Thread):
@@ -28,7 +29,6 @@ class Consumidor(Thread):
         Thread.__init__(self)
         self.buffer = buffer
         self.num_muestras = num_muestras
-
 
     def run(self):
         pass
@@ -56,5 +56,23 @@ if __name__ == "__main__":
     buf = TBuffer()
 
     # Crear la lista de productores y de consumidores:
-    
-   
+    productores = []
+    consumidores = []
+
+    for i in range(num_productores):
+        nombre = f"P-{i+1}"
+        prod = Productor(buf, num_muestras_prod, nombre)
+        prod.start()
+        productores.append(prod)
+
+    for i in range(num_consumidores):
+        nombre = f"C-{i+1}"
+        con = Consumidor(buf, num_muestras_con, nombre)
+        con.start()
+        consumidores.append(con)
+
+    for p in productores:
+        p.join()
+
+    for c in consumidores:
+        c.join()
