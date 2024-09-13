@@ -39,6 +39,7 @@ class Download(Thread):
 			print(self.name, url, numero)	
 			self.q.put(numero)
 
+
 if __name__=='__main__':
 
 	if ficheros % num_hilos != 0:
@@ -47,7 +48,7 @@ if __name__=='__main__':
 
 	L = []
 	numFich = ficheros // num_hilos
-	q = Queue(numFich)
+	q = Queue(ficheros)
 	limites = [(i*numFich,(i*numFich)+numFich)  for i in range(num_hilos)]
 	for i in range(num_hilos):
 		hilo = Download(*limites[i], q)
@@ -57,6 +58,8 @@ if __name__=='__main__':
 	for h in L:
 		h.join()
 
-	lista = list(q)
+	lista = []
+	while not q.empty():
+		lista.append(q.get())
 	lista.sort()
-	print(lista[:10])
+	print(lista[:5], lista[-5:])
