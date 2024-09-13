@@ -55,7 +55,32 @@ class Consumidor(Thread):
         self.num_muestras = num_muestras
 
     def run(self):
-        pass
+        for i in range(self.num_muestras):
+
+            # Comprobar si tenemos un item:
+            self.buffer.sem_items.acquire()
+
+            # Modificar el buffer:
+            with self.buffer.mutex:
+
+                # Recuperar el item:
+                item = self.buffer.buffer[self.ind_c]
+
+                # Vaciar la casilla:
+                self.buffer.buffer[self.ind_c] = -1
+
+                # Modificar el indice:
+                self.buffer.ind_c = (self.buffer.ind_c + 1) % tam_buffer
+
+            # Avisar del nuevo hueco:
+            self.buffer.sem_huecos.release()
+
+            # Consumir el item:
+            print(self.name, "CONSUME", item)
+
+            sleep(1, 3)
+
+        print(self.name, "TERMINA!")
 
 
 class TBuffer:
