@@ -16,5 +16,22 @@ def testProducto(id):
     resp = requests.get(url)
     print(resp.json())
 
+def testSaveFileProductos():
+    fich = None
+    try:
+        url = "http://localhost:5000/productos"
+        resp = requests.get(url)
+        dicc = resp.json()
+
+        fich = open("productos.json", "w")
+        json.dump(dicc, fich, indent=4)
+
+    except Exception as e:
+        print(e)
+    finally:
+        if fich: fich.close()
+
 if __name__ == '__main__':
-    testProducto(1)
+    #testProducto(1)
+    #testProductos()
+    testSaveFileProductos()
