@@ -33,4 +33,7 @@ class RecursoProducto(Resource):
 # http://localhost:5000/productos/id -> un producto (id)
 api.add_resource(RecursoProducto, "/productos", "/productos/","/productos/<int:id>")
 
+if __name__=='__main__':
+    app.run(debug=True)
+
 
