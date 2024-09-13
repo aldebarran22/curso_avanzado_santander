@@ -64,10 +64,10 @@ class Consumidor(Thread):
             with self.buffer.mutex:
 
                 # Recuperar el item:
-                item = self.buffer.buffer[self.ind_c]
+                item = self.buffer.buffer[self.buffer.ind_c]
 
                 # Vaciar la casilla:
-                self.buffer.buffer[self.ind_c] = -1
+                self.buffer.buffer[self.buffer.ind_c] = -1
 
                 # Modificar el indice:
                 self.buffer.ind_c = (self.buffer.ind_c + 1) % tam_buffer
