@@ -4,10 +4,25 @@ Servidor REST + Base de datos
 
 from base_datos import BaseDatos, Categoria, Producto, path
 from flask import Flask
-from flask_restful import Resource, Api, abort, request
+from flask_restful import Resource, Api, abort, request, reqparse
+
 
 app = Flask(__name__)
 api = Api(app)
+
+
+# Parsear la categoria:
+parse_cat = reqparse.RequestParser()
+parse_cat.add_argument("id", type=int)
+parse_cat.add_argument("nombre", type=str)
+
+# Parsear el producto:
+parse_prod = reqparse.RequestParser()
+parse_prod.add_argument("id", type=int)
+parse_prod.add_argument("nombre", type=str)
+parse_prod.add_argument("cat", type=dict)
+parse_prod.add_argument("exis", type=int)
+parse_prod.add_argument("precio", type=float)
 
 class RecursoProducto(Resource):
 
@@ -40,12 +55,15 @@ class RecursoProducto(Resource):
             bd = BaseDatos(path)
             # Recuperamos los parámetros de la petición
             # en formato json
-            args = request.json
+            # args = request.json
+            print(request.json)
+            args = parse_prod.parse_args()
 
             # Crear el objeto producto a partir del diccionario
             producto = Producto.create(args)
+            print(producto)
             n = bd.create(producto)
-            return {"create", n}
+            return {"create": n}
         
         except Exception as e:
             abort(404, message=str(e))

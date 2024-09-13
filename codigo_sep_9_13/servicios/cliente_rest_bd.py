@@ -43,21 +43,27 @@ def testDelete(id):
 
 
 def testPost():
-    url = "http://localhost:5000/productos"
-    prod = Producto(0, "Red Bull 2", Categoria(1), 1.6, 200)
-    # Convertir el objeto a json
-    dicc = prod.to_json() # un diccionario
-    # Convertir el diccionario a una cadena de json
-    data = json.dumps(dicc)
-    # Indicar el tipo mime en las cabeceras.
-    headers = {"Content-Type": "application/json"}
-    resp = requests.post(url, data=data, headers=headers)
-    print(resp.json())
+    try:
+        url = "http://localhost:5000/productos"
+        prod = Producto(0, "Red Bull 2", Categoria(1,'bebidas'), 1.6, 200)
+        # Convertir el objeto a json
+        dicc = prod.to_json()  # un diccionario
+        # Convertir el diccionario a una cadena de json
+        data = json.dumps(dicc)
+
+        print("\nData: ", data)
+
+        # Indicar el tipo mime en las cabeceras.
+        headers = {"Content-Type": "application/json"}
+        resp = requests.post(url, data=data, headers=headers)
+        print(resp.text)
+    except Exception as e:
+        print(e)
 
 
 if __name__ == "__main__":
     # testProducto(1)
     # testProductos()
     # testSaveFileProductos()
-    #testDelete(83)
+    # testDelete(83)
     testPost()
