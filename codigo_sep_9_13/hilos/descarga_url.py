@@ -5,6 +5,7 @@ Codigo de ejemplo para descargar una URL
 import urllib.request as urllib2
 from threading import Thread
 from queue import Queue
+import logging
 
 ficheros = 100
 num_hilos = 5
@@ -33,10 +34,11 @@ class Download(Thread):
 		self.q = q
 
 	def run(self):
+		logging.info(f"{self.name} Descarga de {self.ini} a {self.fin}")
 		for i in range(self.ini, self.fin):
 			url = f"http://localhost:8000/fich{i}.txt"			
 			numero = descargaURL(url)
-			print(self.name, url, numero)	
+			logging.info(f"{self.name} {url} {numero}")	
 			self.q.put(numero)
 
 
