@@ -2,7 +2,7 @@
 Threads: 
 """
 
-from threading import Thread
+from threading import Thread, active_count, enumerate
 from random import randint
 from time import sleep
 
@@ -39,6 +39,9 @@ if __name__ == "__main__":
 
     m.start()
     r.start()
+
+    print("num: hilos: ", active_count())
+    print("hilos: ", enumerate())
 
     # main espera a que terminen los hilos
     m.join()
