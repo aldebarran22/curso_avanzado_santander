@@ -40,4 +40,8 @@ if __name__ == "__main__":
     m.start()
     r.start()
 
+    # main espera a que terminen los hilos
+    m.join()
+    r.join()
+
     print("main termina ...")
