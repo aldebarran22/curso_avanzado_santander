@@ -3,6 +3,7 @@ Distintas formas de crear objetos en Python
 """
 
 from copy import deepcopy
+import sys
 
 class Punto:
 
@@ -51,5 +52,9 @@ if __name__=='__main__':
     #print(globals())
     p7 = globals()['Punto'](1,2)
     print(p7)
+
+    # A partir de la sys.modules
+    p8 = getattr(sys.modules[__name__],"Punto")(1,2)
+    print(p8)
 
 
