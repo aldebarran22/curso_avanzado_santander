@@ -22,6 +22,9 @@ class Producto:
         # repr()
         return str(self)
 
+    def __lt__(self, other):
+        return self.precio < other.precio
+
 def testProducto():
     prod = Producto(1,"CocaCola",1, 2.5, 100)
     print(prod.__dict__)
@@ -41,7 +44,9 @@ def testListaProductos():
     prod3 = Producto(3,"Pepsi",1, 2.15, 100)
     L = [prod, prod3, prod2]
     print(L)
-    L.sort(key=lambda obj : obj.precio)
+    L.sort(key=lambda obj : obj.nombre)
+    print(L)
+    L.sort()
     print(L)
 
 
