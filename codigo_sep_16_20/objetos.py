@@ -37,7 +37,8 @@ class Tienda:
 
     def __init__(self, *productos):
         self.catalogo = []
-        self.catalogo.extends(productos)
+        self.catalogo.extend(productos)
+        self.indice = -1
 
     def __len__(self):
         return len(self.catalogo)
@@ -46,9 +47,13 @@ class Tienda:
         return self
 
     def __next__(self):
-        pass
-
-
+        if self.indice == len(self.catalogo):
+            self.indice=-1
+            raise StopIteration
+        else:
+            obj = self.catalogo[self.indice]
+            self.indice+=1
+            return obj
 
 
 def testProducto():
@@ -100,7 +105,7 @@ def testIterable():
     prod3 = Producto(3,"Pepsi",1, 2.15, 100)
     L = [prod, prod3, prod2]
 
-    for i in prod:
+    for i in L:
         print(i)
 
 def testTienda():
@@ -116,7 +121,8 @@ if __name__=='__main__':
     #testProducto()
     #testListaProductos()
     #tuplaConNombre()
-    testIterable()
+    #testIterable()
+    testTienda()
 
 
 
