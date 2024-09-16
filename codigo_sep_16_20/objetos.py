@@ -15,7 +15,12 @@ class Producto:
         self.exis=exis
 
     def __str__(self):
+        # str()
         return " ".join([str(i) for i in self.__dict__.values()])
+
+    def __repr__(self):
+        # repr()
+        return str(self)
 
 def testProducto():
     prod = Producto(1,"CocaCola",1, 2.5, 100)
@@ -30,8 +35,18 @@ def testProducto():
     print(p2)
     print(prod)
 
+def testListaProductos():
+    prod = Producto(1,"CocaCola",1, 2.5, 100)
+    prod2 = Producto(2,"Fanta ",1, 1.5, 130)
+    prod3 = Producto(3,"Pepsi",1, 2.15, 100)
+    L = [prod, prod3, prod2]
+    print(L)
+    L.sort(key=lambda obj : obj.precio)
+    print(L)
+
 
 if __name__=='__main__':
-    testProducto()
+    #testProducto()
+    testListaProductos()
 
 
