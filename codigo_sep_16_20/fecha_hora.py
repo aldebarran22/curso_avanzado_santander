@@ -12,6 +12,8 @@ class Time:
     def __str__(self):        
         return '%02d:%02d:%02d' % (self.h,self.m,self.s)
 
+    def __add__(self, other):
+        pass
 
 
 class Date:
@@ -30,3 +32,13 @@ class Date:
             return True    
         else:
             return False
+
+if __name__=='__main__':
+    t1 = Time(1,34,5)
+    print(t1)
+
+    t2 = Time(3,54,55)
+    print(t2)
+
+    suma = t1 + t2
+    print(suma)
