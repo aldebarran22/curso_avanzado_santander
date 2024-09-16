@@ -42,6 +42,13 @@ class Tienda:
     def __len__(self):
         return len(self.catalogo)
 
+    def __iter__(self):
+        return self
+
+    def __next__(self):
+        pass
+
+
 
 
 def testProducto():
