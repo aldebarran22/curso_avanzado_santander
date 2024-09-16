@@ -13,7 +13,20 @@ class Time:
         return '%02d:%02d:%02d' % (self.h,self.m,self.s)
 
     def __add__(self, other):
-        pass
+        nuevo = Time(self.h+other.h, self.m+other.m, self.s+other.s)
+        nuevo.__ajustar()
+        return nuevo
+
+    def __ajustar(self):
+        minutos = self.s // 60
+        self.s %= 60
+
+        self.m += minutos
+        self.m %= 60
+        horas = self.m // 60
+        self.h += horas
+
+        self.h %= 24
 
 
 class Date:
