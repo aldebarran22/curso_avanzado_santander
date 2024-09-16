@@ -46,8 +46,15 @@ class SingletonIdioma:
 
 
 
+def funcion():
+    print('en funcion')
+    print(SingletonIdioma.getInstance()["nombre"])
+
+
 if __name__=='__main__':
     print(SingletonIdioma.getInstance()["inicio"]) # Carga en la primera llamada.
     print(SingletonIdioma.getInstance()["volver"]) # Utilizan el anterior no carga de nuevo.
     print(SingletonIdioma.getInstance()["nombre"])
+
+    funcion()
 
