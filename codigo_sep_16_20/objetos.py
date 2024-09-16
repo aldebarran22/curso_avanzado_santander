@@ -26,7 +26,8 @@ class Producto:
         return self.precio < other.precio
 
     def __del__(self):
-        print("Borrando ", self.nombre)
+        pass
+        #print("Borrando ", self.nombre)
 
 def testProducto():
     prod = Producto(1,"CocaCola",1, 2.5, 100)
@@ -52,9 +53,23 @@ def testListaProductos():
     L.sort()
     print(L)
 
+    print(prod.__class__)
+    print(prod.__class__.__name__)
+
+    # Crear una instancia:
+    p3 = prod.__class__(nombre="nuevo")
+    print(p3)
+
+    if prod < prod2: # if prod.__lt__(prod2)
+        print("El menor es: ", prod)
+    else:
+        print("El menor es:", prod2)
+
+
 
 if __name__=='__main__':
     #testProducto()
     testListaProductos()
+
 
 
