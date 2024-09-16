@@ -117,6 +117,11 @@ def testTienda():
     for p in t:
         print(p)
 
+    print('Segunda vez')
+    for p in t:
+        print(p)
+
+
 if __name__=='__main__':
     #testProducto()
     #testListaProductos()
