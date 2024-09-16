@@ -25,6 +25,9 @@ class Producto:
     def __lt__(self, other):
         return self.precio < other.precio
 
+    def __del__(self):
+        print("Borrando ", self.nombre)
+
 def testProducto():
     prod = Producto(1,"CocaCola",1, 2.5, 100)
     print(prod.__dict__)
