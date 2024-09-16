@@ -17,7 +17,7 @@ def cargaIdioma(idioma):
             fila = fila.rstrip()
             k, _, v = fila.partition("=")
             d[k]=v
-            
+
         return d
 
     except Exception as e:        
@@ -33,3 +33,9 @@ if __name__=='__main__':
         print(d)
     except Exception as e:
         print(e)
+
+"""
+print(SingletonIdioma.getInstance()["inicio"]) # Carga en la primera llamada.
+print(SingletonIdioma.getInstance()["volver"]) # Utilizan el anterior no carga de nuevo.
+print(SingletonIdioma.getInstance()["nombre"])
+"""
