@@ -2,6 +2,8 @@
 Distintas formas de crear objetos en Python
 """
 
+from copy import deepcopy
+
 class Punto:
 
     # Atributos de la clase
@@ -13,6 +15,10 @@ class Punto:
 
     def __str__(self):
         return f"[{self.x},{self.y}]"
+
+
+def create(clase, *args, **kwargs):
+    return clase(*args, **kwargs)
 
 
 if __name__=='__main__':
@@ -31,6 +37,19 @@ if __name__=='__main__':
     p3 = eval(cad)
     print(p3)
 
-    # 
+    # A partir de la función create
+    p4 = create(Punto, 1,2)
+    p5 = create(Punto, x=1,y=2)
+    print(p4)
+    print(p5)
+
+    # Clonar un objeto:
+    p6 = deepcopy(p1)
+    print(p6)
+
+    # Con la función globals:
+    #print(globals())
+    p7 = globals()['Punto'](1,2)
+    print(p7)
 
 
