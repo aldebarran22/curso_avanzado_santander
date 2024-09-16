@@ -81,3 +81,7 @@ if __name__=='__main__':
 
     dt2 = DateTime2()
     print(dt2)
+
+    # Las subclases de DateTime:
+    L = Date.__subclasses__()
+    print(L)

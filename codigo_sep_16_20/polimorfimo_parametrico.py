@@ -18,6 +18,7 @@ def _(arg):
 	
 @func.register(list)
 @func.register(set)
+@func.register(str)
 def _(arg):
 	print('Elementos de la colección: ', len(arg))
 	
@@ -29,3 +30,4 @@ if __name__ == '__main__':
 	func(a)
 	func([1,2,3,4,5])
 	func({1,2,3,4,5})
+	func((1,2,3,4,5))
