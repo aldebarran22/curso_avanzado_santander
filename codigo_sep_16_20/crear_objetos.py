@@ -15,5 +15,22 @@ class Punto:
         return f"[{self.x},{self.y}]"
 
 
+if __name__=='__main__':
+
+    # Llamando al constructor:
+    p1 = Punto(1,2)
+    print(p1)
+
+    # Utilizando el class del objeto:
+    p2 = p1.__class__(1,2)
+    print(p2)
+
+    # Crear un objeto a partir de una cadena: Punto(1,2)
+    cad = "{}({},{})".format("Punto",1,2)
+    print(cad)
+    p3 = eval(cad)
+    print(p3)
+
+    # 
 
 
