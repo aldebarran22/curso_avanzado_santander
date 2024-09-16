@@ -13,6 +13,7 @@ def cargaIdioma(idioma):
 
         fich = open(path, "r")
         for fila in fich:
+            fila = fila.rstrip()
             print(fila)
 
     except Exception as e:
