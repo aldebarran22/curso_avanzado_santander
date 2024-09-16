@@ -21,9 +21,9 @@ class Time:
         minutos = self.s // 60
         self.s %= 60
 
-        self.m += minutos
-        self.m %= 60
+        self.m += minutos        
         horas = self.m // 60
+        self.m %= 60
         self.h += horas
 
         self.h %= 24

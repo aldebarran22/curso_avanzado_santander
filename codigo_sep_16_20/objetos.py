@@ -3,6 +3,10 @@ POO en python
 """
 
 import copy
+from collections import namedtuple
+
+CuentaBancaria = namedtuple('CuentaBancaria',['entidad','sucursal','dc','cuenta'])
+
 
 class Producto:
     """Implementación de la clase producto"""
@@ -66,10 +70,16 @@ def testListaProductos():
         print("El menor es:", prod2)
 
 
+def tuplaConNombre():
+    cc1 = CuentaBancaria(1000,3434,99,12345678)
+    print(cc1)
+    print('entidad:',cc1.entidad)
 
 if __name__=='__main__':
     #testProducto()
-    testListaProductos()
+    #testListaProductos()
+    tuplaConNombre()
+
 
 
 
