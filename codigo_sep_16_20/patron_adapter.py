@@ -59,7 +59,9 @@ class VectorPlano1(Vector3D, Vector2D):
         Vector3D.__init__(self,x,y)
       
     def getAbcisa(self):
-        pass
+        return Vector3D.getX(self)
+        # return self.getX()
+        
  
     def getOrdenada(self):
         pass
@@ -78,7 +80,7 @@ class VectorPlano2(Vector2D):
         self.v3 = Vector3D(x,y)
 
     def getAbcisa(self):
-        pass
+        return self.v3.getX()
  
     def getOrdenada(self):
         pass
