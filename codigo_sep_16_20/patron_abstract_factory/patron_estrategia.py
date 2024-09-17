@@ -1,30 +1,35 @@
+"""
+Patrón estrategia
+"""
+
+import abc
+class Estrategia(abc.ABC):
+
+    @abc.abstractmethod
+    def ordenar(self,unaLista):
+        pass
+
+class EstrategiaBurbuja(Estrategia):
+
+    def ordenar(self, unaLista):
+        for numPasada in range(len(unaLista)-1,0,-1):
+            for i in range(numPasada):
+                if unaLista[i]>unaLista[i+1]:
+                    temp = unaLista[i]
+                    unaLista[i] = unaLista[i+1]
+                    unaLista[i+1] = temp
 
 
-def ordenamientoBurbuja(unaLista):
-    for numPasada in range(len(unaLista)-1,0,-1):
-        for i in range(numPasada):
-            if unaLista[i]>unaLista[i+1]:
-                temp = unaLista[i]
-                unaLista[i] = unaLista[i+1]
-                unaLista[i+1] = temp
+class EstrategiaInsDirecta(Estrategia):
+    def ordenar(self, unaLista):
+        for indice in range(1,len(unaLista)):
 
-unaLista = [54,26,93,17,77,31,44,55,20]
-ordenamientoBurbuja(unaLista)
-print(unaLista)
+            valorActual = unaLista[indice]
+            posicion = indice
 
-###############################################################################################
-def ordenamientoPorInsercion(unaLista):
-   for indice in range(1,len(unaLista)):
+            while posicion>0 and unaLista[posicion-1]>valorActual:
+                unaLista[posicion]=unaLista[posicion-1]
+                posicion = posicion-1
 
-     valorActual = unaLista[indice]
-     posicion = indice
+            unaLista[posicion]=valorActual
 
-     while posicion>0 and unaLista[posicion-1]>valorActual:
-         unaLista[posicion]=unaLista[posicion-1]
-         posicion = posicion-1
-
-     unaLista[posicion]=valorActual
-
-unaLista = [54,26,93,17,77,31,44,55,20]
-ordenamientoPorInsercion(unaLista)
-print(unaLista)
