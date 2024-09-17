@@ -70,6 +70,8 @@ class Factoria1:
     prototipos se crean al inicio"""
 
     def __init__(self):
+        """Inicializar el dicc con la clave (nombre clase) y
+        el valor el objeto"""
         pass
 
     def getPrototipo(self):
