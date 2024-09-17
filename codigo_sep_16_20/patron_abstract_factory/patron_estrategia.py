@@ -57,3 +57,7 @@ class Contexto:
             t2 = datetime.now()
             print(e.__name__, t2-t1)
 
+
+if __name__ == '__main__':
+    contexto = Contexto(Estrategia, 10000)
+    contexto.cronometrar()
