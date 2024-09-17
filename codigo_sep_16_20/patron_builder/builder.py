@@ -13,7 +13,7 @@ class Builder(abc.ABC):
         pass
 
     @abc.abstractmethod
-    def createDetalle(self, L):
+    def createDetalle(self, L, etiqueta=None):
         pass
 
     @abc.abstractmethod
@@ -30,11 +30,12 @@ class BuilderXML(Builder):
         self.cabs = L
         return ""
 
-    def createDetalle(self, L):
+    def createDetalle(self, L, etiqueta=None):
         linea = ""
         for pos, i in enumerate(L):
             linea += f"<{self.cabs[pos]}>"+ str(i) + f"</{self.cabs[pos]}>"        
-        return linea
+        
+        return f"<{etiqueta}>"+linea+f"</{etiqueta}>"
 
     def crearFichero(self, texto, path):
         pass
@@ -49,7 +50,7 @@ class BuilderHTML(Builder):
         cabeceras = "".join(["<th>"+col+"</th>" for col in L])
         return "<tr>"+ cabeceras +"</tr>"
 
-    def createDetalle(self, L):
+    def createDetalle(self, L, etiqueta=None):
         """
         El formato: <tr><td>col1</td><td> ... </td></tr>
         """
@@ -92,7 +93,7 @@ class Director:
                     tabla += self.builder.createCab(L)
                     cabs = False                    
                 else:
-                    tabla += self.builder.createDetalle(L)
+                    tabla += self.builder.createDetalle(L, self.nombre[:-1])
             print(tabla)
                 
         except Exception as e:
