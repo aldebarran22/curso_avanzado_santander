@@ -43,7 +43,11 @@ class BuilderHTML(Builder):
         return "<tr>"+ cabeceras +"</tr>"
 
     def createDetalle(self, L):
-        pass
+        """
+        El formato: <tr><td>col1</td><td> ... </td></tr>
+        """
+        detalle = "".join(["<td>"+col+"</td>" for col in L])
+        return "<tr>"+ detalle +"</tr>"
 
     def crearFichero(self, texto, path):
         pass
@@ -66,10 +70,11 @@ class Director:
                 L = linea.split(sep)
                 if cabs:
                     tabla += self.builder.createCab(L)
-                    cabs = False
-                    print(tabla)
+                    cabs = False                    
+                else:
+                    tabla += self.builder.createDetalle(L)
+            print(tabla)
                 
-
         except Exception as e:
             print(e)
 
