@@ -43,10 +43,17 @@ class EstrategiaPython(Estrategia):
 
 class Contexto:
 
-    def __init__(self, algoritmo, n=1000):
-        self.algoritmo = algoritmo
+    def __init__(self, estrategia, n=1000):
+        self.estrategia = estrategia
         self.n = n
         self.unaLista = [randint(0,100000) for _ in range(n)]
 
-    def cronometrar(self):
-        pass
+    def cronometrar(self):        
+        for e in self.estrategia.__subclasses__():
+            aux = self.unaLista.copy()
+            algoritmo = e()
+            t1 = datetime.now()
+            algoritmo.ordenar(aux)
+            t2 = datetime.now()
+            print(e.__name__, t2-t1)
+
