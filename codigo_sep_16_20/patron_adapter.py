@@ -61,17 +61,17 @@ class VectorPlano1(Vector3D, Vector2D):
     def getAbcisa(self):
         return Vector3D.getX(self)
         # return self.getX()
-        
- 
+         
     def getOrdenada(self):
-        pass
+        return Vector3D.getY(self)
    
     def prod(self, v):
-        pass
+        auxV3 = Vector3D(v.x, v.y)
+        return Vector3D.productoEscalar(auxV3)
    
     def magnitud(self):
         # La norma del vector
-        pass
+        return Vector3D.norma(self)
 
 class VectorPlano2(Vector2D):
     """Solucion por composicion"""
@@ -83,13 +83,14 @@ class VectorPlano2(Vector2D):
         return self.v3.getX()
  
     def getOrdenada(self):
-        pass
-   
+        return self.v3.getY()
+    
     def prod(self, v):
-        pass
+        auxV3 = Vector3D(v.x, v.y)
+        return self.v3.productoEscalar(auxV3)
    
     def magnitud(self):
         # La norma del vector
-        pass
+        return self.v3.norma()
 
 
