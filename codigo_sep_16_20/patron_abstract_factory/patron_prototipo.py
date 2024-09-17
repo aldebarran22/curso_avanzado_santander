@@ -106,7 +106,6 @@ class Factoria2:
         return self.prototipos[clave].clone()
 
 
-
     def print(self):
         print("Prototipos:")
         for k, v in self.prototipos.items():
@@ -114,15 +113,20 @@ class Factoria2:
 
 
 def testFactoria(clase):
-    fact = clase()
-    fact.print()
-    f1 = fact.getPrototipo("circulo")
-    f1.radio *= 2
-    f1.color = "white"
-    print("f1: ", f1)
-    fact.print()
-
+    try:
+        fact = clase()
+        fact.print()
+        f1 = fact.getPrototipo("circulo3")
+        f1.radio *= 2
+        f1.color = "white"
+        print("f1: ", f1)
+        fact.print()
+    except ValueError as e:
+        print(e)
 
 if __name__ == "__main__":
     #testFactoria(Factoria1)
     testFactoria(Factoria2)
+
+    print(issubclass(list, Prototipo))
+    print(issubclass(Circulo, Prototipo))
