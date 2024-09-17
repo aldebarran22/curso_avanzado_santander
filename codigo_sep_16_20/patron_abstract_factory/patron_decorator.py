@@ -19,4 +19,12 @@ class Ventana(IVentana):
         print(self.titulo, end="")
 
 
-        
+class VentanaDecorator(IVentana):
+
+    def __init__(self, ventana):
+        self.ventana = ventana
+
+class BordeDecorator(VentanaDecorator):
+
+    def dibujar(self):
+        print(" | " + self.ventana.dibujar() + " | ", end=" ")
