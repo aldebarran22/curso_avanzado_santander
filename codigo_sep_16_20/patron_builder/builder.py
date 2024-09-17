@@ -23,11 +23,17 @@ class Builder(abc.ABC):
 
 class BuilderXML(Builder):
 
+    def __init__(self):
+        self.cabs = None
+
     def createCab(self, L):
+        self.cabs = L
         return ""
 
     def createDetalle(self, L):
-        pass
+        print(self.cabs)
+        print(L)
+        return ""
 
     def crearFichero(self, texto, path):
         pass
@@ -98,6 +104,6 @@ class Director:
 
 if __name__ == "__main__":
 
-    builder = BuilderHTML()
+    builder = BuilderXML()
     director = Director(builder)
     director.convertirFichero("patron_builder/Empleados.txt")
