@@ -11,14 +11,47 @@ class Manejador(abc.ABC):
         self.sig = sig
 
     @abc.abstractmethod
-    def gestionarPeticion(self):
+    def gestionarPeticion(self, peticion):
         pass
 
 class ManejadorSMS(Manejador):
-    pass
+    
+    def gestionarPeticion(self, peticion):
+        if (peticion.tipo == 'SMS'):
+            print('SMS : '+peticion.contenido)
+
+        elif self.sig != None:
+            print('SMS transmite al siguiente')
+            self.sig.gestionarPeticion(peticion)
+
+        else:
+            print('SMS : es el contenido')
+
+class ManejadorEmail(Manejador):
+    
+    def gestionarPeticion(self, peticion):
+        if (peticion.tipo == 'Email'):
+            print('Email : '+peticion.contenido)
+
+        elif self.sig != None:
+            print('Email transmite al siguiente')
+            self.sig.gestionarPeticion(peticion)
+
+        else:
+            print('Email no se puede gestionar la petición')
 
 class ManejadorWhatsApp(Manejador):
-    pass
+    
+       def gestionarPeticion(self, peticion):
+            if (peticion.tipo == 'WhatsApp'):
+                print('WhatsApp : '+peticion.contenido)
+
+            elif self.sig != None:
+                print('WhatsApp transmite al siguiente')
+                self.sig.gestionarPeticion(peticion)
+
+            else:
+                print('WhatsApp : no se puede gestionar la petición')
 
 class ManejadorEmail(Manejador):
     pass
