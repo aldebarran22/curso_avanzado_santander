@@ -24,7 +24,7 @@ class Builder(abc.ABC):
 class BuilderXML(Builder):
 
     def createCab(self, L):
-        pass
+        return ""
 
     def createDetalle(self, L):
         pass
@@ -36,7 +36,11 @@ class BuilderXML(Builder):
 class BuilderHTML(Builder):
 
     def createCab(self, L):
-        pass
+        """
+        El formato: <tr><th>col1</th><th> ... </th></tr>
+        """
+        cabeceras = "".join(["<th>"+col+"</th>" for col in L])
+        return "<tr>"+ cabeceras +"</tr>"
 
     def createDetalle(self, L):
         pass
@@ -53,11 +57,19 @@ class Director:
     def convertirFichero(self, path, sep=";"):
         f = None
         nombre = path.partition(".")[0]
+        cabs = True
+        tabla = ""
         try:
             f = open(path)
             for linea in f:
                 linea = linea.rstrip()
-                print(linea)
+                L = linea.split(sep)
+                if cabs:
+                    tabla += self.builder.createCab(L)
+                    cabs = False
+                    print(tabla)
+                
+
         except Exception as e:
             print(e)
 
@@ -68,6 +80,6 @@ class Director:
 
 if __name__ == "__main__":
 
-    builder = BuilderXML()
+    builder = BuilderHTML()
     director = Director(builder)
     director.convertirFichero("Empleados.txt")
