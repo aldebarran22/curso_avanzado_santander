@@ -38,7 +38,8 @@ class BuilderXML(Builder):
         return f"<{etiqueta}>"+linea+f"</{etiqueta}>"
 
     def crearFichero(self, texto, path):
-        pass
+        pathFinal = path + ".xml"
+        print(pathFinal)
 
 
 class BuilderHTML(Builder):
@@ -58,7 +59,8 @@ class BuilderHTML(Builder):
         return "<tr>"+ detalle +"</tr>"
 
     def crearFichero(self, texto, path):
-        pass
+        pathFinal = path + ".html"
+        print(pathFinal)
 
 
 class Director:
@@ -71,12 +73,15 @@ class Director:
     def __analizarPath(self, path):
         if "/" not in path:
             self.nombre = path.partition(".")[0]
-            self.directorios = "./"
+            self.directorios = "."
         else:
             L = path.split("/")
             fichero = L[-1]
             self.directorios = L[:-1]
             self.nombre = fichero.partition(".")[0]
+
+    def __getPathDestino(self):
+        return "/".join(self.directorios)+"/"+self.nombre
 
 
     def convertirFichero(self, path, sep=";"):
@@ -94,7 +99,8 @@ class Director:
                     cabs = False                    
                 else:
                     tabla += self.builder.createDetalle(L, self.nombre[:-1])
-            print(tabla)
+            
+            self.builder.crearFichero(tabla, self.__getPathDestino())
                 
         except Exception as e:
             print(e)
