@@ -14,6 +14,15 @@ class Manejador(abc.ABC):
     def gestionarPeticion(self):
         pass
 
+class ManejadorSMS(Manejador):
+    pass
+
+class ManejadorWhatsApp(Manejador):
+    pass
+
+class ManejadorEmail(Manejador):
+    pass
+
 if __name__ == '__main__':
     Peticion = namedtuple('Peticion',['tipo','contenido'])
     ped = Peticion("SMS", "Contenido del mensaje")
