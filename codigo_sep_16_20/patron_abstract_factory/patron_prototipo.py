@@ -92,7 +92,7 @@ class Factoria2:
     prototipos se crean bajo de demanda"""
 
     def __init__(self):
-        pass
+        self.prototipos = {c.__name__.lower:None for c in Prototipo.__subclasses__()}
 
     def getPrototipo(self):
         pass
@@ -113,4 +113,4 @@ def testFactoria(clase):
 
 if __name__ == "__main__":
     testFactoria(Factoria1)
-    testFactoria(Factoria2)
+    #testFactoria(Factoria2)
