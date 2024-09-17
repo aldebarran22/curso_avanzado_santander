@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<empleados>
-	<empleado>
+<Empleados>
+	<Empleado>
 		<id>
 			1
 		</id>
@@ -10,8 +10,8 @@
 		<cargo>
 			Representante de ventas
 		</cargo>
-	</empleado>
-	<empleado>
+	</Empleado>
+	<Empleado>
 		<id>
 			2
 		</id>
@@ -21,8 +21,8 @@
 		<cargo>
 			Vicepresidente comercial
 		</cargo>
-	</empleado>
-	<empleado>
+	</Empleado>
+	<Empleado>
 		<id>
 			3
 		</id>
@@ -32,8 +32,8 @@
 		<cargo>
 			Representante de ventas
 		</cargo>
-	</empleado>
-	<empleado>
+	</Empleado>
+	<Empleado>
 		<id>
 			4
 		</id>
@@ -43,8 +43,8 @@
 		<cargo>
 			Representante de ventas
 		</cargo>
-	</empleado>
-	<empleado>
+	</Empleado>
+	<Empleado>
 		<id>
 			5
 		</id>
@@ -54,8 +54,8 @@
 		<cargo>
 			Gerente de ventas
 		</cargo>
-	</empleado>
-	<empleado>
+	</Empleado>
+	<Empleado>
 		<id>
 			6
 		</id>
@@ -65,8 +65,8 @@
 		<cargo>
 			Representante de ventas
 		</cargo>
-	</empleado>
-	<empleado>
+	</Empleado>
+	<Empleado>
 		<id>
 			7
 		</id>
@@ -76,8 +76,8 @@
 		<cargo>
 			Representante de ventas
 		</cargo>
-	</empleado>
-	<empleado>
+	</Empleado>
+	<Empleado>
 		<id>
 			8
 		</id>
@@ -87,8 +87,8 @@
 		<cargo>
 			Coordinador ventas interno
 		</cargo>
-	</empleado>
-	<empleado>
+	</Empleado>
+	<Empleado>
 		<id>
 			9
 		</id>
@@ -98,7 +98,5 @@
 		<cargo>
 			Representante de ventas
 		</cargo>
-	</empleado>
-	<empleado>
-	</empleado>
-</empleados>
+	</Empleado>
+</Empleados>

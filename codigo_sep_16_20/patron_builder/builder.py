@@ -126,6 +126,6 @@ class Director:
 
 if __name__ == "__main__":
 
-    builder = BuilderHTML()
+    builder = BuilderXML()
     director = Director(builder)
     director.convertirFichero("patron_builder/Empleados.txt")
