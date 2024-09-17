@@ -72,9 +72,9 @@ class Factoria1:
     def __init__(self):
         """Inicializar el dicc con la clave (nombre clase) y
         el valor el objeto"""
-        pass
+        self.prototipos = {c.__name__.lower():c() for c in Prototipo.__subclasses__()}
 
-    def getPrototipo(self):
+    def getPrototipo(self, clave):
         pass
 
     def print(self):
