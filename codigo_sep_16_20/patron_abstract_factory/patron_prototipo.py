@@ -92,13 +92,25 @@ class Factoria2:
     prototipos se crean bajo de demanda"""
 
     def __init__(self):
-        self.prototipos = {c.__name__.lower:None for c in Prototipo.__subclasses__()}
+        self.prototipos = {c.__name__.lower():None for c in Prototipo.__subclasses__()}
 
-    def getPrototipo(self):
-        pass
+    def getPrototipo(self, clave):
+        clave = clave.lower()
+        if clave not in self.prototipos:
+            raise ValueError(f"La clave: {clave} no se encuentra")
+        
+        if self.prototipos[clave] is None:
+            clase = clave.capitalize()+"()"
+            self.prototipos[clave] = eval(clase)
+
+        return self.prototipos[clave].clone()
+
+
 
     def print(self):
-        pass
+        print("Prototipos:")
+        for k, v in self.prototipos.items():
+            print(k, v)
 
 
 def testFactoria(clase):
@@ -112,5 +124,5 @@ def testFactoria(clase):
 
 
 if __name__ == "__main__":
-    testFactoria(Factoria1)
-    #testFactoria(Factoria2)
+    #testFactoria(Factoria1)
+    testFactoria(Factoria2)
