@@ -31,9 +31,10 @@ class BuilderXML(Builder):
         return ""
 
     def createDetalle(self, L):
-        print(self.cabs)
-        print(L)
-        return ""
+        linea = ""
+        for pos, i in enumerate(L):
+            linea += f"<{self.cabs[pos]}>"+ str(i) + f"</{self.cabs[pos]}>"        
+        return linea
 
     def crearFichero(self, texto, path):
         pass
