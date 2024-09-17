@@ -50,3 +50,37 @@ class Vector2D(abc.ABC):
     def magnitud(self):
         # La norma del vector
         pass
+
+
+class VectorPlano1(Vector3D, Vector2D):
+    """Solución por herencia multiple"""
+      
+    def getAbcisa(self):
+        pass
+ 
+    def getOrdenada(self):
+        pass
+   
+    def prod(self, v):
+        pass
+   
+    def magnitud(self):
+        # La norma del vector
+        pass
+
+class VectorPlano2(Vector2D):
+    """Solucion por composicion"""
+    def getAbcisa(self):
+        pass
+ 
+    def getOrdenada(self):
+        pass
+   
+    def prod(self, v):
+        pass
+   
+    def magnitud(self):
+        # La norma del vector
+        pass
+
+
