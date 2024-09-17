@@ -57,10 +57,23 @@ class Director:
 
     def __init__(self, builder):
         self.builder = builder
+        self.nombre=""
+        self.directorios=""
+
+    def __analizarPath(self, path):
+        if "/" not in path:
+            self.nombre = path.partition(".")[0]
+            self.directorios = "./"
+        else:
+            L = path.split("/")
+            fichero = L[-1]
+            self.directorios = L[:-1]
+            self.nombre = fichero.partition(".")[0]
+
 
     def convertirFichero(self, path, sep=";"):
         f = None
-        nombre = path.partition(".")[0]
+        self.__analizarPath(path)
         cabs = True
         tabla = ""
         try:
@@ -87,4 +100,4 @@ if __name__ == "__main__":
 
     builder = BuilderHTML()
     director = Director(builder)
-    director.convertirFichero("Empleados.txt")
+    director.convertirFichero("patron_builder/Empleados.txt")
