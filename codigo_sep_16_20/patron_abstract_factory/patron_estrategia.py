@@ -3,6 +3,8 @@ Patrón estrategia
 """
 
 import abc
+from datetime import datetime
+from random import randint
 class Estrategia(abc.ABC):
 
     @abc.abstractmethod
@@ -33,3 +35,18 @@ class EstrategiaInsDirecta(Estrategia):
 
             unaLista[posicion]=valorActual
 
+class EstrategiaPython(Estrategia):
+
+    def ordenar(self, unaLista):
+        unaLista.sort()
+
+
+class Contexto:
+
+    def __init__(self, algoritmo, n=1000):
+        self.algoritmo = algoritmo
+        self.n = n
+        self.unaLista = [randint(0,100000) for _ in range(n)]
+
+    def cronometrar(self):
+        pass
