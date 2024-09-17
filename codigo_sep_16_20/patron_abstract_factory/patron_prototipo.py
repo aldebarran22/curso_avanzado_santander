@@ -72,13 +72,19 @@ class Factoria1:
     def __init__(self):
         """Inicializar el dicc con la clave (nombre clase) y
         el valor el objeto"""
-        self.prototipos = {c.__name__.lower():c() for c in Prototipo.__subclasses__()}
+        self.prototipos = {c.__name__.lower(): c() for c in Prototipo.__subclasses__()}
 
     def getPrototipo(self, clave):
-        pass
+        clave = clave.lower()
+        if clave not in self.prototipos:
+            raise ValueError(f"La clave: {clave} no se encuentra")
+        else:
+            return self.prototipos[clave].clone()
 
     def print(self):
-        pass
+        print("Prototipos:")
+        for k, v in self.prototipos.items():
+            print(k, v)
 
 
 class Factoria2:
@@ -95,5 +101,16 @@ class Factoria2:
         pass
 
 
+def testFactoria(clase):
+    fact = clase()
+    fact.print()
+    f1 = fact.getPrototipo("circulo")
+    f1.radio *= 2
+    f1.color = "white"
+    print("f1: ", f1)
+    fact.print()
+
+
 if __name__ == "__main__":
-    pass
+    testFactoria(Factoria1)
+    testFactoria(Factoria2)
