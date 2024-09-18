@@ -21,4 +21,6 @@ if __name__ == "__main__":
     # print(df.head())
 
     suma = sumarAños(2000, 2001)
-    print(suma.head())
+    #print(suma.head())
+    print(suma.loc['Madison'])
+    print(suma.loc['Madison','F']['cuenta'])
