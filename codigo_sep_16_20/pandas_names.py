@@ -1,6 +1,7 @@
 import pandas as pd
 from functools import reduce
 
+
 def cargaDF(año):
     path = f"../ficheros_curso/names/yob{año}.txt"
     print(path)
@@ -9,7 +10,7 @@ def cargaDF(año):
     return df
 
 
-def sumarAños(año1, año2):   
+def sumarAños(año1, año2):
     df1 = cargaDF(año1)
     df2 = cargaDF(año2)
     # suma = df1 + df2
@@ -36,13 +37,15 @@ if __name__ == "__main__":
     """
 
     # Sumar una lista con los dataframes
+    """
     L = [cargaDF(y) for y in range(2000, 2006)]
     total = reduce(sumarDF, L)
     total.sort_values("cuenta", ascending=False, inplace=True)
     print(total.head(10))
+    """
 
     # Concatenar y exportar la lista anterior:
-    L = [df.reset_index(inplace=True) for df in L]
+    L = [cargaDF(y).reset_index() for y in range(2000, 2006)]    
     todo = pd.concat(L, ignore_index=True)
     todo.sort_values("nombre", inplace=True)
     todo.to_html("../ficheros/names.html")
