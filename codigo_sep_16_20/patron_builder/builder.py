@@ -77,7 +77,7 @@ class BuilderHTML(Builder):
         fich_plantilla = None
         fOut = None
         try:
-            fich_plantilla = open("plantilla.html","r")
+            fich_plantilla = open("patron_builder/plantilla.html","r")
             html = fich_plantilla.read()
             tabla = f"<table>{texto}</table>"
             html.replace("<body></body>", f"<body>{tabla}</body>")
@@ -142,6 +142,6 @@ class Director:
 
 if __name__ == "__main__":
 
-    builder = BuilderXML()
+    builder = BuilderHTML()
     director = Director(builder)
     director.convertirFichero("patron_builder/Pedidos.txt")
