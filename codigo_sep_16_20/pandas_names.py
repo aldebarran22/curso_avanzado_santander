@@ -45,7 +45,8 @@ if __name__ == "__main__":
     """
 
     # Concatenar y exportar la lista anterior:
-    L = [cargaDF(y).reset_index() for y in range(2000, 2006)]    
+    # reset_index lo hacemos con una copia.
+    L = [cargaDF(y).reset_index() for y in range(2000, 2006)]
     todo = pd.concat(L, ignore_index=True)
     todo.sort_values("nombre", inplace=True)
     todo.to_html("../ficheros/names.html")
