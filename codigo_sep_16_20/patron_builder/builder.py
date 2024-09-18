@@ -74,8 +74,24 @@ class BuilderHTML(Builder):
         return "<tr>" + detalle + "</tr>"
 
     def crearFichero(self, texto, path):
-        pathFinal = path + ".html"
-        print(pathFinal)
+        fich_plantilla = None
+        fOut = None
+        try:
+            fich_plantilla = open("plantilla.html","r")
+            html = fich_plantilla.read()
+            tabla = f"<table>{texto}</table>"
+            html.replace("<body></body>", f"<body>{tabla}</body>")
+            pathFinal = path + ".html"
+            fOut = open(pathFinal, "w")
+            fOut.write(html)
+            print(f"Se ha generado el fichero: {pathFinal}")
+
+        except Exception as e:
+            print(e)
+
+        finally:
+            if fOut: fOut.close()
+            if fich_plantilla: fich_plantilla.close()
 
 
 class Director:
