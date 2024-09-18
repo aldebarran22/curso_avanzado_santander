@@ -35,7 +35,14 @@ if __name__ == "__main__":
     print(suma.head())
     """
 
+    # Sumar una lista con los dataframes
     L = [cargaDF(y) for y in range(2000, 2006)]
     total = reduce(sumarDF, L)
     total.sort_values("cuenta", ascending=False, inplace=True)
     print(total.head(10))
+
+    # Concatenar y exportar la lista anterior:
+    L = [df.reset_index(inplace=True) for df in L]
+    todo = pd.concat(L, ignore_index=True)
+    todo.sort_values("nombre", inplace=True)
+    todo.to_html("../ficheros/names.html")
