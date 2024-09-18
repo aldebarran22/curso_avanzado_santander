@@ -80,7 +80,7 @@ class BuilderHTML(Builder):
             fich_plantilla = open("patron_builder/plantilla.html","r")
             html = fich_plantilla.read()
             tabla = f"<table>{texto}</table>"
-            html.replace("<body></body>", f"<body>{tabla}</body>")
+            html = html.replace("<body></body>", f"<body>{tabla}</body>")
             pathFinal = path + ".html"
             fOut = open(pathFinal, "w")
             fOut.write(html)
