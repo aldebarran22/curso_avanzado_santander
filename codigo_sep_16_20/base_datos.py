@@ -30,5 +30,6 @@ if __name__=='__main__':
         bd  = BaseDatos("../BBDD/empresa3.db")
         df = bd.getDataFrame(sql)
         print(df.head())
+        df.to_json("../ficheros/productos.json", indent=4, orient="records")
     except Exception as e:
         print(e.__class__.__name__, e)
