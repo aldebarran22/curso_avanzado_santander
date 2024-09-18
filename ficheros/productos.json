@@ -1,0 +1,576 @@
+[
+    {
+        "idprod":1,
+        "nombre":"Te Dharamsala",
+        "categoria":"Bebidas",
+        "precio":18.0,
+        "existencias":390
+    },
+    {
+        "idprod":2,
+        "nombre":"Cerveza tibetana Barley",
+        "categoria":"Bebidas",
+        "precio":23.0946,
+        "existencias":17
+    },
+    {
+        "idprod":3,
+        "nombre":"Sirope de regaliz",
+        "categoria":"Comidas",
+        "precio":12.1551,
+        "existencias":13
+    },
+    {
+        "idprod":4,
+        "nombre":"Especias Cajun del chef Anton",
+        "categoria":"Comidas",
+        "precio":22.0,
+        "existencias":53
+    },
+    {
+        "idprod":5,
+        "nombre":"Mezcla Gumbo del chef Anton",
+        "categoria":"Comidas",
+        "precio":25.9511,
+        "existencias":0
+    },
+    {
+        "idprod":6,
+        "nombre":"Mermelada de grosellas de la a",
+        "categoria":"Comidas",
+        "precio":25.0,
+        "existencias":120
+    },
+    {
+        "idprod":7,
+        "nombre":"Peras secas organicas del tio ",
+        "categoria":"Frutas\/Verduras",
+        "precio":36.4652,
+        "existencias":15
+    },
+    {
+        "idprod":8,
+        "nombre":"Salsa de arandanos Northwoods",
+        "categoria":"Comidas",
+        "precio":48.6203,
+        "existencias":6
+    },
+    {
+        "idprod":9,
+        "nombre":"Buey Mishi Kobe",
+        "categoria":"Carnes",
+        "precio":117.904,
+        "existencias":29
+    },
+    {
+        "idprod":10,
+        "nombre":"Pez espada",
+        "categoria":"Pescado\/Marisco",
+        "precio":37.6807,
+        "existencias":31
+    },
+    {
+        "idprod":11,
+        "nombre":"Queso Cabrales",
+        "categoria":"Lacteos",
+        "precio":25.5256,
+        "existencias":22
+    },
+    {
+        "idprod":13,
+        "nombre":"Algas Konbu",
+        "categoria":"Pescado\/Marisco",
+        "precio":7.29304,
+        "existencias":24
+    },
+    {
+        "idprod":14,
+        "nombre":"Cuajada de judias",
+        "categoria":"Frutas\/Verduras",
+        "precio":28.2605,
+        "existencias":35
+    },
+    {
+        "idprod":15,
+        "nombre":"Salsa de soja baja en sodio",
+        "categoria":"Comidas",
+        "precio":18.8403,
+        "existencias":39
+    },
+    {
+        "idprod":16,
+        "nombre":"Postre de merengue Pavlova",
+        "categoria":"Reposteria",
+        "precio":21.2106,
+        "existencias":29
+    },
+    {
+        "idprod":17,
+        "nombre":"Cordero Alice Springs",
+        "categoria":"Carnes",
+        "precio":47.4047,
+        "existencias":0
+    },
+    {
+        "idprod":18,
+        "nombre":"Langostinos tigre Carnarvon",
+        "categoria":"Pescado\/Marisco",
+        "precio":75.9691,
+        "existencias":42
+    },
+    {
+        "idprod":19,
+        "nombre":"Pastas de te de chocolate",
+        "categoria":"Reposteria",
+        "precio":11.1827,
+        "existencias":25
+    },
+    {
+        "idprod":20,
+        "nombre":"Mermelada de Sir Rodney's",
+        "categoria":"Reposteria",
+        "precio":98.456,
+        "existencias":40
+    },
+    {
+        "idprod":21,
+        "nombre":"Bollos de Sir Rodney's",
+        "categoria":"Reposteria",
+        "precio":12.1551,
+        "existencias":3
+    },
+    {
+        "idprod":22,
+        "nombre":"Pan de centeno crujiente estil",
+        "categoria":"Cereales",
+        "precio":21.0,
+        "existencias":104
+    },
+    {
+        "idprod":23,
+        "nombre":"Pan fino",
+        "categoria":"Cereales",
+        "precio":9.0,
+        "existencias":61
+    },
+    {
+        "idprod":24,
+        "nombre":"Refresco Guarana Fantastica",
+        "categoria":"Bebidas",
+        "precio":5.46978,
+        "existencias":20
+    },
+    {
+        "idprod":25,
+        "nombre":"Crema de chocolate y nueces Nu",
+        "categoria":"Reposteria",
+        "precio":14.0,
+        "existencias":76
+    },
+    {
+        "idprod":26,
+        "nombre":"Ositos de goma Gumbar",
+        "categoria":"Reposteria",
+        "precio":37.9603,
+        "existencias":15
+    },
+    {
+        "idprod":27,
+        "nombre":"Chocolate Schoggi",
+        "categoria":"Reposteria",
+        "precio":53.3607,
+        "existencias":49
+    },
+    {
+        "idprod":28,
+        "nombre":"Col fermentada Rossle",
+        "categoria":"Frutas\/Verduras",
+        "precio":55.4271,
+        "existencias":26
+    },
+    {
+        "idprod":29,
+        "nombre":"Salchicha Thuringer",
+        "categoria":"Carnes",
+        "precio":150.468,
+        "existencias":0
+    },
+    {
+        "idprod":30,
+        "nombre":"Arenque blanco del noroeste",
+        "categoria":"Pescado\/Marisco",
+        "precio":31.4695,
+        "existencias":10
+    },
+    {
+        "idprod":31,
+        "nombre":"Queso gorgonzola Telino",
+        "categoria":"Lacteos",
+        "precio":15.1938,
+        "existencias":0
+    },
+    {
+        "idprod":32,
+        "nombre":"Queso Mascarpone Fabioli",
+        "categoria":"Lacteos",
+        "precio":38.8962,
+        "existencias":9
+    },
+    {
+        "idprod":33,
+        "nombre":"Queso de cabra",
+        "categoria":"Lacteos",
+        "precio":2.5,
+        "existencias":112
+    },
+    {
+        "idprod":34,
+        "nombre":"Cerveza Sasquatch",
+        "categoria":"Bebidas",
+        "precio":14.0,
+        "existencias":111
+    },
+    {
+        "idprod":35,
+        "nombre":"Cerveza negra Steeleye",
+        "categoria":"Bebidas",
+        "precio":21.8791,
+        "existencias":20
+    },
+    {
+        "idprod":36,
+        "nombre":"Escabeche de arenque",
+        "categoria":"Pescado\/Marisco",
+        "precio":19.0,
+        "existencias":112
+    },
+    {
+        "idprod":37,
+        "nombre":"Salmon ahumado Gravad",
+        "categoria":"Pescado\/Marisco",
+        "precio":31.6032,
+        "existencias":11
+    },
+    {
+        "idprod":38,
+        "nombre":"Vino Cote de Blaye",
+        "categoria":"Bebidas",
+        "precio":320.286,
+        "existencias":17
+    },
+    {
+        "idprod":39,
+        "nombre":"Licor verde Chartreuse",
+        "categoria":"Bebidas",
+        "precio":18.0,
+        "existencias":69
+    },
+    {
+        "idprod":40,
+        "nombre":"Carne de cangrejo de Boston",
+        "categoria":"Pescado\/Marisco",
+        "precio":18.4,
+        "existencias":123
+    },
+    {
+        "idprod":41,
+        "nombre":"Crema de almejas estilo Nueva ",
+        "categoria":"Pescado\/Marisco",
+        "precio":9.65,
+        "existencias":85
+    },
+    {
+        "idprod":42,
+        "nombre":"Tallarines de Singapur",
+        "categoria":"Cereales",
+        "precio":17.0171,
+        "existencias":26
+    },
+    {
+        "idprod":43,
+        "nombre":"Cafe de Malasia",
+        "categoria":"Bebidas",
+        "precio":46.0,
+        "existencias":250
+    },
+    {
+        "idprod":44,
+        "nombre":"Azucar negra Malacca",
+        "categoria":"Comidas",
+        "precio":23.6416,
+        "existencias":27
+    },
+    {
+        "idprod":45,
+        "nombre":"Arenque ahumado",
+        "categoria":"Pescado\/Marisco",
+        "precio":11.5473,
+        "existencias":5
+    },
+    {
+        "idprod":46,
+        "nombre":"Arenque salado",
+        "categoria":"Pescado\/Marisco",
+        "precio":12.0,
+        "existencias":950
+    },
+    {
+        "idprod":47,
+        "nombre":"Galletas Zaanse",
+        "categoria":"Reposteria",
+        "precio":11.5473,
+        "existencias":36
+    },
+    {
+        "idprod":48,
+        "nombre":"Chocolate holandes",
+        "categoria":"Reposteria",
+        "precio":15.4977,
+        "existencias":15
+    },
+    {
+        "idprod":49,
+        "nombre":"Regaliz",
+        "categoria":"Reposteria",
+        "precio":24.3101,
+        "existencias":10
+    },
+    {
+        "idprod":50,
+        "nombre":"Chocolate blanco",
+        "categoria":"Reposteria",
+        "precio":16.25,
+        "existencias":65
+    },
+    {
+        "idprod":51,
+        "nombre":"Manzanas secas Manjimup",
+        "categoria":"Frutas\/Verduras",
+        "precio":64.4218,
+        "existencias":20
+    },
+    {
+        "idprod":52,
+        "nombre":"Cereales para Filo",
+        "categoria":"Cereales",
+        "precio":8.50854,
+        "existencias":38
+    },
+    {
+        "idprod":53,
+        "nombre":"Empanada de carne",
+        "categoria":"Carnes",
+        "precio":39.8686,
+        "existencias":0
+    },
+    {
+        "idprod":54,
+        "nombre":"Empanada de cerdo",
+        "categoria":"Carnes",
+        "precio":9.05552,
+        "existencias":21
+    },
+    {
+        "idprod":55,
+        "nombre":"Pate chino",
+        "categoria":"Carnes",
+        "precio":24.0,
+        "existencias":115
+    },
+    {
+        "idprod":56,
+        "nombre":"Gnocchi de la abuela Alicia",
+        "categoria":"Cereales",
+        "precio":46.1892,
+        "existencias":21
+    },
+    {
+        "idprod":57,
+        "nombre":"Raviolis Angelo",
+        "categoria":"Cereales",
+        "precio":23.7024,
+        "existencias":36
+    },
+    {
+        "idprod":58,
+        "nombre":"Caracoles de Borgonya",
+        "categoria":"Pescado\/Marisco",
+        "precio":13.25,
+        "existencias":62
+    },
+    {
+        "idprod":59,
+        "nombre":"Raclet de queso Courdavault",
+        "categoria":"Lacteos",
+        "precio":55.0,
+        "existencias":79
+    },
+    {
+        "idprod":60,
+        "nombre":"Camembert Pierrot",
+        "categoria":"Lacteos",
+        "precio":41.3272,
+        "existencias":19
+    },
+    {
+        "idprod":61,
+        "nombre":"Sirope de arce",
+        "categoria":"Comidas",
+        "precio":28.5,
+        "existencias":113
+    },
+    {
+        "idprod":62,
+        "nombre":"Tarta de azucar",
+        "categoria":"Reposteria",
+        "precio":59.9245,
+        "existencias":17
+    },
+    {
+        "idprod":63,
+        "nombre":"Sandwich de vegetales",
+        "categoria":"Comidas",
+        "precio":53.3607,
+        "existencias":24
+    },
+    {
+        "idprod":64,
+        "nombre":"Bollos de pan de Wimmer",
+        "categoria":"Cereales",
+        "precio":40.4156,
+        "existencias":22
+    },
+    {
+        "idprod":65,
+        "nombre":"Salsa de pimiento picante de L",
+        "categoria":"Comidas",
+        "precio":21.05,
+        "existencias":76
+    },
+    {
+        "idprod":66,
+        "nombre":"Especias picantes de Luisiana",
+        "categoria":"Comidas",
+        "precio":20.6636,
+        "existencias":4
+    },
+    {
+        "idprod":67,
+        "nombre":"Cerveza Laughing Lumberjack",
+        "categoria":"Bebidas",
+        "precio":14.0,
+        "existencias":52
+    },
+    {
+        "idprod":68,
+        "nombre":"Barras de pan de Escocia",
+        "categoria":"Reposteria",
+        "precio":15.1938,
+        "existencias":6
+    },
+    {
+        "idprod":69,
+        "nombre":"Queso Gudbrandsdals",
+        "categoria":"Lacteos",
+        "precio":43.7582,
+        "existencias":26
+    },
+    {
+        "idprod":70,
+        "nombre":"Cerveza Outback",
+        "categoria":"Bebidas",
+        "precio":18.2326,
+        "existencias":15
+    },
+    {
+        "idprod":71,
+        "nombre":"Crema de queso Flotemys",
+        "categoria":"Lacteos",
+        "precio":26.1334,
+        "existencias":26
+    },
+    {
+        "idprod":72,
+        "nombre":"Queso Mozzarella Giovanni",
+        "categoria":"Lacteos",
+        "precio":42.2996,
+        "existencias":14
+    },
+    {
+        "idprod":73,
+        "nombre":"Caviar rojo",
+        "categoria":"Pescado\/Marisco",
+        "precio":15.0,
+        "existencias":101
+    },
+    {
+        "idprod":74,
+        "nombre":"Queso de soja Longlife",
+        "categoria":"Frutas\/Verduras",
+        "precio":12.1551,
+        "existencias":4
+    },
+    {
+        "idprod":75,
+        "nombre":"Cerveza Klosterbier Rhonbrau",
+        "categoria":"Bebidas",
+        "precio":7.75,
+        "existencias":125
+    },
+    {
+        "idprod":76,
+        "nombre":"Licor Cloudberry",
+        "categoria":"Bebidas",
+        "precio":18.0,
+        "existencias":57
+    },
+    {
+        "idprod":77,
+        "nombre":"Salsa verde original Frankfurt",
+        "categoria":"Comidas",
+        "precio":15.8016,
+        "existencias":32
+    },
+    {
+        "idprod":78,
+        "nombre":"Fanta",
+        "categoria":"Bebidas",
+        "precio":1.82326,
+        "existencias":15
+    },
+    {
+        "idprod":79,
+        "nombre":"Coca Cola",
+        "categoria":"Bebidas",
+        "precio":1.5,
+        "existencias":2500
+    },
+    {
+        "idprod":80,
+        "nombre":"Azafr\u00e1n Rojo",
+        "categoria":"Comidas",
+        "precio":250.0,
+        "existencias":150
+    },
+    {
+        "idprod":81,
+        "nombre":"Pepsi",
+        "categoria":"Bebidas",
+        "precio":1.5,
+        "existencias":250
+    },
+    {
+        "idprod":82,
+        "nombre":"Fanta lima",
+        "categoria":"Bebidas",
+        "precio":1.82326,
+        "existencias":15
+    },
+    {
+        "idprod":90,
+        "nombre":"Red Bull 2",
+        "categoria":"Bebidas",
+        "precio":2.5,
+        "existencias":500
+    }
+]
