@@ -2,8 +2,8 @@
 import pandas as pd
 
 def cargaDF(año):
-    path = f"../ficheros/names/yob{año}.txt"
-    return pd.read_csv(path)
+    path = f"../ficheros_curso/names/yob{año}.txt"
+    return pd.read_csv(path, header=None, names=['nombre','sexo','cuenta'])
 
 def sumarAños(año1, año2):
     df1 = cargaDF(año1)
