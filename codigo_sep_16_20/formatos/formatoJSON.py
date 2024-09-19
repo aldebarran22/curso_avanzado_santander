@@ -3,6 +3,7 @@ Generar ficheros de json con la librería json
 """
 
 import json
+import pandas as pd
 from base_datos import Categoria, Producto, path, BaseDatos
 
 
@@ -29,8 +30,9 @@ def cargarProductos(pathFile):
     try:
         fich = open(pathFile, "r")
         L = json.load(fich)
-        print(L[:3])
-        
+        productos = [Producto.create(d) for d in L]
+        print(productos[:3])
+
     except Exception as e:
         print(e)
 
@@ -38,6 +40,11 @@ def cargarProductos(pathFile):
         if fich:
             fich.close()
 
+def cargarJsonDF(pathFile):
+    df = pd.read_json(pathFile, orient="records")
+    print(df.head())
+
 if __name__ == "__main__":
     #extraerProductos("Bebidas")
-    cargarProductos("productos.json")
+    #cargarProductos("productos.json")
+    cargarJsonDF("productos.json")
