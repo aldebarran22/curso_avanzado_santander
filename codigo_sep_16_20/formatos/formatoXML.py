@@ -12,6 +12,10 @@ def exportarXML():
         listaCat = bd.selectCategorias()
 
         for cat in listaCat:
+            categoria = SubElement(raiz, "categoria",{"idcat":str(cat.id)})
+            nombreCat = SubElement(categoria, "nombre")
+            nombreCat.text = cat.nombre
+            
             listaProd = bd.select(cat.nombre)
 
             for prod in listaProd:
