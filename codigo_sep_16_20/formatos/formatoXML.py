@@ -3,7 +3,7 @@ Generar ficheros XML con Python. Lib xml
 """
 
 from base_datos import Categoria, Producto, path, BaseDatos
-from xml.etree.ElementTree import Element, SubElement, Comment, tostring
+from xml.etree.ElementTree import iterparse, Element, SubElement, Comment, tostring
 from xml.etree import ElementTree
 
 def exportarXML():
@@ -48,13 +48,34 @@ def pruebaXPath():
     raiz = tree.getroot()
 
     # Consulta xpath:
+    """
     for nodo in raiz.findall(".//producto/nombre"):
         print(nodo.text)
-
+    """
     # Consulta xpath:
-    for nodo in raiz.findall(".//producto"):
-        print(nodo.firstChild.text)
+    for nodo in raiz.findall(".//nombre"):
+        print(nodo.text)
+
+def parsearSAX():
+    # Extraer los nombres de las categorias
+    eventos = ['start', 'end']
+    categorias = []
+    for (evento, nodo) in iterparse("categorias.xml", eventos):
+
+        if evento == 'start':
+            if nodo.tag == 'categoria':
+                flag = True
+
+            if nodo.tag == 'nombre' and flag:
+                categorias.append(nodo.text)
+
+            if nodo.tag == 'producto':
+                flag = False
+
+    print(categorias)
+
 
 if __name__ == "__main__":
     #exportarXML()
-    pruebaXPath()
+    #pruebaXPath()
+    parsearSAX()
