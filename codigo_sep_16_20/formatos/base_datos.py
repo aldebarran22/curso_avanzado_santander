@@ -23,7 +23,8 @@ class Empleado:
 
     @staticmethod
     def create(d):
-        return Empleado(d["id"], d["nombre"], d["cargo"])
+        return Empleado(**d)
+        #return Empleado(d["id"], d["nombre"], d["cargo"])
 
     def __str__(self):
         return str(self.id) + " " + self.nombre + " " + self.cargo
@@ -44,7 +45,7 @@ class Categoria:
     @staticmethod
     def create(d):
         """Crear la categoria a partir de un dict"""
-        return Categoria(d["id"], d["nombre"])
+        return Categoria(**d)
 
     @staticmethod
     def getNumInstancias():
@@ -294,6 +295,17 @@ def cargaCategoria():
     except Exception as e:
         print(e.__class__.__name__, e)
 
+def nuevoProducto():
+    try:
+        prod = Producto(0, "Red Bull II", Categoria(1), 2.35, 250)
+        bd = BaseDatos(path)
+        n = bd.create(prod)
+        print('Nuevo producto: ', n)
+
+    except Exception as e:
+        print(e)
+
 if __name__ == "__main__":
     #cargarProducto()
-    cargaCategoria()
+    #cargaCategoria()
+    nuevoProducto()
