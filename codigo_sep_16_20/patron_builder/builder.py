@@ -177,4 +177,4 @@ if __name__ == "__main__":
     builder = BuilderJSON()
     director = Director(builder)
     #director.convertirFichero("patron_builder/Pedidos.txt")
-    director.convertirFichero("Pedidos.txt")
+    director.convertirFichero("Empresas.txt")
