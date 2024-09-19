@@ -24,6 +24,20 @@ def extraerProductos(cat=None):
         if fich:
             fich.close()
 
+def cargarProductos(pathFile):
+    fich = None
+    try:
+        fich = open(pathFile, "r")
+        L = json.load(fich)
+        print(L[:3])
+        
+    except Exception as e:
+        print(e)
+
+    finally:
+        if fich:
+            fich.close()
 
 if __name__ == "__main__":
-    extraerProductos("Bebidas")
+    #extraerProductos("Bebidas")
+    cargarProductos("productos.json")
