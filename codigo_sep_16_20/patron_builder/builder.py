@@ -4,6 +4,7 @@ Conversor de formato CSV a HTML o XML
 """
 
 import abc
+import json
 
 
 class Builder(abc.ABC):
@@ -19,6 +20,37 @@ class Builder(abc.ABC):
     @abc.abstractmethod
     def crearFichero(self, texto, path):
         pass
+
+
+class BuilderJSON(Builder):
+
+    def __init__(self):
+        self.lista = []
+        self.cabs = None
+   
+    def createCab(self, L):
+        self.cabs = L
+        return ""
+   
+    def createDetalle(self, L, etiqueta=None):
+        dicc = dict(zip(self.cabs, L))
+        self.lista.append(dicc)
+        return ""
+  
+    def crearFichero(self, texto, path):
+        pathFinal = path + ".json"
+        fout = None
+        try:
+            fout = open(pathFinal, "w")
+            json.dump(self.lista, fout, indent=4)
+            print(f"se ha generado el fichero: {pathFinal}")
+
+        except Exception as e:
+            raise e
+
+        finally:
+            if fout:
+                fout.close()
 
 
 class BuilderXML(Builder):
@@ -142,6 +174,7 @@ class Director:
 
 if __name__ == "__main__":
 
-    builder = BuilderHTML()
+    builder = BuilderJSON()
     director = Director(builder)
-    director.convertirFichero("patron_builder/Pedidos.txt")
+    #director.convertirFichero("patron_builder/Pedidos.txt")
+    director.convertirFichero("Pedidos.txt")
