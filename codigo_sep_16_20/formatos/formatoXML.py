@@ -42,5 +42,12 @@ def exportarXML():
         print(e)
 
 
+def pruebaXPath():
+    with open("categorias.xml",'rt') as f:
+        tree = ElementTree.parse(f)
+    raiz = tree.getroot()
+    print(tostring(raiz))
+
 if __name__ == "__main__":
-    exportarXML()
+    #exportarXML()
+    pruebaXPath()
