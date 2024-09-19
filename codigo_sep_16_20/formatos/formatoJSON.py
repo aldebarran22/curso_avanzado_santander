@@ -6,12 +6,13 @@ import json
 from base_datos import Categoria, Producto, path, BaseDatos
 
 
-def extraerProductos():
+def extraerProductos(cat=None):
     fich = None
     try:
+        pathFile = "productos.json" if cat is None else f"productos_{cat}.json"
         bd = BaseDatos(path)
-        fich = open("productos.json", "w")
-        productos = bd.select()
+        fich = open(pathFile, "w")
+        productos = bd.select(cat)
         L = [p.to_json() for p in productos]
         print("Fichero json generado")
         json.dump(L, fich, indent=4)
@@ -25,4 +26,4 @@ def extraerProductos():
 
 
 if __name__ == "__main__":
-    extraerProductos()
+    extraerProductos("Bebidas")

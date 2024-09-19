@@ -1,0 +1,182 @@
+[
+    {
+        "id": 1,
+        "nombre": "Te Dharamsala",
+        "cat": {
+            "id": 1,
+            "nombre": "Bebidas"
+        },
+        "precio": 18.0,
+        "exis": 390
+    },
+    {
+        "id": 2,
+        "nombre": "Cerveza tibetana Barley",
+        "cat": {
+            "id": 1,
+            "nombre": "Bebidas"
+        },
+        "precio": 23.09,
+        "exis": 17
+    },
+    {
+        "id": 24,
+        "nombre": "Refresco Guarana Fantastica",
+        "cat": {
+            "id": 1,
+            "nombre": "Bebidas"
+        },
+        "precio": 5.47,
+        "exis": 20
+    },
+    {
+        "id": 34,
+        "nombre": "Cerveza Sasquatch",
+        "cat": {
+            "id": 1,
+            "nombre": "Bebidas"
+        },
+        "precio": 14.0,
+        "exis": 111
+    },
+    {
+        "id": 35,
+        "nombre": "Cerveza negra Steeleye",
+        "cat": {
+            "id": 1,
+            "nombre": "Bebidas"
+        },
+        "precio": 21.88,
+        "exis": 20
+    },
+    {
+        "id": 38,
+        "nombre": "Vino Cote de Blaye",
+        "cat": {
+            "id": 1,
+            "nombre": "Bebidas"
+        },
+        "precio": 320.29,
+        "exis": 17
+    },
+    {
+        "id": 39,
+        "nombre": "Licor verde Chartreuse",
+        "cat": {
+            "id": 1,
+            "nombre": "Bebidas"
+        },
+        "precio": 18.0,
+        "exis": 69
+    },
+    {
+        "id": 43,
+        "nombre": "Cafe de Malasia",
+        "cat": {
+            "id": 1,
+            "nombre": "Bebidas"
+        },
+        "precio": 46.0,
+        "exis": 250
+    },
+    {
+        "id": 67,
+        "nombre": "Cerveza Laughing Lumberjack",
+        "cat": {
+            "id": 1,
+            "nombre": "Bebidas"
+        },
+        "precio": 14.0,
+        "exis": 52
+    },
+    {
+        "id": 70,
+        "nombre": "Cerveza Outback",
+        "cat": {
+            "id": 1,
+            "nombre": "Bebidas"
+        },
+        "precio": 18.23,
+        "exis": 15
+    },
+    {
+        "id": 75,
+        "nombre": "Cerveza Klosterbier Rhonbrau",
+        "cat": {
+            "id": 1,
+            "nombre": "Bebidas"
+        },
+        "precio": 7.75,
+        "exis": 125
+    },
+    {
+        "id": 76,
+        "nombre": "Licor Cloudberry",
+        "cat": {
+            "id": 1,
+            "nombre": "Bebidas"
+        },
+        "precio": 18.0,
+        "exis": 57
+    },
+    {
+        "id": 78,
+        "nombre": "Fanta",
+        "cat": {
+            "id": 1,
+            "nombre": "Bebidas"
+        },
+        "precio": 1.82,
+        "exis": 15
+    },
+    {
+        "id": 79,
+        "nombre": "Coca Cola",
+        "cat": {
+            "id": 1,
+            "nombre": "Bebidas"
+        },
+        "precio": 1.5,
+        "exis": 2500
+    },
+    {
+        "id": 81,
+        "nombre": "Pepsi",
+        "cat": {
+            "id": 1,
+            "nombre": "Bebidas"
+        },
+        "precio": 1.5,
+        "exis": 250
+    },
+    {
+        "id": 82,
+        "nombre": "Fanta lima",
+        "cat": {
+            "id": 1,
+            "nombre": "Bebidas"
+        },
+        "precio": 1.82,
+        "exis": 15
+    },
+    {
+        "id": 90,
+        "nombre": "Red Bull 2",
+        "cat": {
+            "id": 1,
+            "nombre": "Bebidas"
+        },
+        "precio": 2.5,
+        "exis": 500
+    },
+    {
+        "id": 100,
+        "nombre": "Red Bull II",
+        "cat": {
+            "id": 1,
+            "nombre": "Bebidas"
+        },
+        "precio": 2.35,
+        "exis": 250
+    }
+]
