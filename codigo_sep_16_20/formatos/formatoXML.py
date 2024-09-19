@@ -22,6 +22,14 @@ def exportarXML():
             for prod in listaProd:
                 producto = SubElement(productos, "producto", {"idprod":str(prod.id)})
         
+                nombreProd = SubElement(producto, "nombre")
+                nombreProd.text = prod.nombre
+
+                precioProd = SubElement(producto, "precio")
+                precioProd.text = str(prod.precio)
+
+                exisProd = SubElement(producto, "existencias")
+                exisProd.text = str(prod.exis)
         
         print(tostring(raiz))
             
