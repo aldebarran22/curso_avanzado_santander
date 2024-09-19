@@ -46,7 +46,14 @@ def pruebaXPath():
     with open("categorias.xml",'rt') as f:
         tree = ElementTree.parse(f)
     raiz = tree.getroot()
-    print(tostring(raiz))
+
+    # Consulta xpath:
+    for nodo in raiz.findall(".//producto/nombre"):
+        print(nodo.text)
+
+    # Consulta xpath:
+    for nodo in raiz.findall(".//producto"):
+        print(nodo.firstChild.text)
 
 if __name__ == "__main__":
     #exportarXML()
