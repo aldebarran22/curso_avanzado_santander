@@ -44,7 +44,14 @@ def cargarJsonDF(pathFile):
     df = pd.read_json(pathFile, orient="records")
     print(df.head())
 
+def cargarJsonNormalizadoDF(pathFile):
+    with open(pathFile, "r") as f:
+        d = json.load(f)
+        df = pd.json_normalize(d)   
+        print(df.head())
+
 if __name__ == "__main__":
     #extraerProductos("Bebidas")
     #cargarProductos("productos.json")
     cargarJsonDF("productos.json")
+    cargarJsonNormalizadoDF("productos.json")
