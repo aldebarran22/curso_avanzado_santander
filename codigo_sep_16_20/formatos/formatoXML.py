@@ -4,6 +4,7 @@ Generar ficheros XML con Python. Lib xml
 
 from base_datos import Categoria, Producto, path, BaseDatos
 from xml.etree.ElementTree import Element, SubElement, Comment, tostring
+from xml.etree import ElementTree
 
 def exportarXML():
     try:
@@ -31,7 +32,11 @@ def exportarXML():
                 exisProd = SubElement(producto, "existencias")
                 exisProd.text = str(prod.exis)
         
-        print(tostring(raiz))
+        #print(tostring(raiz))
+       
+        tree = ElementTree.ElementTree()
+        tree._setroot(raiz)
+        tree.write('categorias.xml')
             
     except Exception as e:
         print(e)
