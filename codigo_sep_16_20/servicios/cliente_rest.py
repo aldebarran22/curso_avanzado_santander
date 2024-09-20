@@ -53,7 +53,7 @@ def testPut(id, precio, existencias):
 
         producto = Producto.create(dicc)
         producto.precio = precio
-        producto.existencias = existencias
+        producto.exis = existencias
 
         dicc = producto.to_json()
         cad = json.dumps(dicc)
@@ -68,4 +68,4 @@ def testPut(id, precio, existencias):
 
 
 if __name__ == "__main__":
-    testPost()
+    testPut(101, 1.05, 500)
