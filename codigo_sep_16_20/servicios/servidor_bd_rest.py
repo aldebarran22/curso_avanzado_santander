@@ -4,13 +4,26 @@ Servidor REST con la BD
 
 from base_datos import BaseDatos, path, Categoria, Producto
 from flask import Flask
-from flask_restful import Resource, Api, abort
+from flask_restful import Resource, Api, abort, request
 
 app = Flask(__name__)
 api = Api(app)
 
 
 class Servidor(Resource):
+
+    def post(self):
+        try:
+            bd = BaseDatos(path)
+            args = request.json
+
+            producto = Producto.create(args)
+            print(producto)
+            n = bd.create(producto)
+            return {"create":n}
+        
+        except Exception as e:
+            abort(404, message=str(e))
 
     def delete(self,id):
         try:
