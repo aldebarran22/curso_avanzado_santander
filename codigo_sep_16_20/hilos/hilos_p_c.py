@@ -44,7 +44,7 @@ class Productor(Thread):
 
 class Consumidor(Thread):
     def __init__(self, buffer, num_muestras, nombre):
-        Thread.__init__(self)
+        Thread.__init__(self, name=nombre)
         self.buffer = buffer
         self.num_muestras = num_muestras
 
@@ -71,7 +71,7 @@ class Consumidor(Thread):
             # Avisar de que hay un nuevo hueco:
             self.buffer.sem_huecos.release()
 
-            sleep(2,3)
+            sleep(randint(2,3))
 
 class TBuffer:
     def __init__(self):
