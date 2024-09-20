@@ -34,7 +34,7 @@ class Productor(Thread):
                 # Colocar el numero en el buffer e incrementar el índice
                 self.buffer.buffer[self.buffer.ind_p] = numero
                 print(self.name, self.buffer.buffer, "<-", numero)
-                self.buffer.inc_d = (self.buffer.inc_d + 1) % tam_buffer
+                self.buffer.ind_p = (self.buffer.ind_p + 1) % tam_buffer
 
             # Avisar de que hay un nuevo item
             self.buffer.sem_items.release()
