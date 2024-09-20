@@ -9,9 +9,9 @@ from flask_restful import Resource , Api, abort
 app = Flask(__name__)
 api = Api(app)
 
-class Servidor(Resource, id=None):
+class Servidor(Resource):
 
-    def get(self):        
+    def get(self, id=None):        
         try:
             bd = BaseDatos(path)
             if id is None:
