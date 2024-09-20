@@ -52,7 +52,7 @@ class Consumidor(Thread):
         for i in range(self.num_muestras):
 
             # Comprobar si un item:
-            self.buffer.sem_item.acquire()
+            self.buffer.sem_items.acquire()
 
             # Modificar el buffer en exc. mutua:
             with self.buffer.mutex:
