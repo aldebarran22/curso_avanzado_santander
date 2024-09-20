@@ -45,6 +45,27 @@ def testPost():
     resp = requests.post(url, data=cad, headers=headers)
     print(resp.json())
 
+def testPut(id, precio, existencias):
+    try:
+        url = f"http://localhost:5000/productos/{id}"
+        resp = requests.get(url)
+        dicc = resp.json()
+
+        producto = Producto.create(dicc)
+        producto.precio = precio
+        producto.existencias = existencias
+
+        dicc = producto.to_json()
+        cad = json.dumps(dicc)
+        headers = {"Content-type":"application/json"}
+        url = "http://localhost:5000/productos"
+        resp = requests.put(url, data=cad, headers=headers)
+        print(resp.json())
+
+
+    except Exception as e:
+        print(e)
+
 
 if __name__ == "__main__":
     testPost()
