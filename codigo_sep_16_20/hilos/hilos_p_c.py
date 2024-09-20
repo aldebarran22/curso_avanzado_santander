@@ -7,6 +7,7 @@ from threading import Thread, Lock, Semaphore
 from random import randint
 from time import sleep
 
+
 num_muestras = 15
 tam_buffer = 5
 
@@ -19,6 +20,7 @@ class Productor(Thread):
         Thread.__init__(self, name=nombre)
         self.buffer = buffer
         self.num_muestras = num_muestras
+       
 
     def run(self):
         for i in range(self.num_muestras):
