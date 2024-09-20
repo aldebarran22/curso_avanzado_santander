@@ -18,9 +18,22 @@ def serializarPickle(pathFile, objeto):
     finally:
         if fich: fich.close()
 
+def deserializarPickle(pathFile):
+    fich = None
+    try:
+        fich = open(pathFile, "rb")
+        objeto = pickle.load(fich)
+        return objeto
+    
+    except Exception as e:
+        print(e)
+    finally:
+        if fich: fich.close()
 
 if __name__ == '__main__':
     bd = BaseDatos(path)
     prod = bd.read(1)
     print(prod)
     serializarPickle("pickle_producto.bin", prod)
+    prod2 = deserializarPickle("pickle_producto.bin")
+    print(prod2)
