@@ -8,8 +8,7 @@ app = Flask(__name__)
 api = Api(app)
 
 class HelloWorld(Resource):
-    def  get(self):
-        print("prueba")
+    def  get(self):        
         return {"hello": "world"}
     
 api.add_resource(HelloWorld ,"/")
