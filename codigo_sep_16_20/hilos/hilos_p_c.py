@@ -7,11 +7,11 @@ from threading import Thread, Lock, Semaphore
 from random import randint
 from time import sleep
 
-num_muestras = 10
+num_muestras = 15
 tam_buffer = 5
 
-num_productores = 2
-num_consumidores = 1
+num_productores = 1
+num_consumidores = 3
 
 
 class Productor(Thread):
@@ -66,12 +66,13 @@ class Consumidor(Thread):
                 print(self.name, self.buffer.buffer, "->", numero)
 
                 # Actualizar el indice
-                self.buffer.ind_c = (self.buffer.ind_c+1) % tam_buffer
+                self.buffer.ind_c = (self.buffer.ind_c + 1) % tam_buffer
 
             # Avisar de que hay un nuevo hueco:
             self.buffer.sem_huecos.release()
 
-            sleep(randint(2,3))
+            sleep(randint(2, 3))
+
 
 class TBuffer:
     def __init__(self):
