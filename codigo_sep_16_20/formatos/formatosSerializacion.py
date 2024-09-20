@@ -37,16 +37,43 @@ def serializarShelve(pathFile, *objetos):
         Shelf[clave] = obj
     Shelf.close()
 
+def deserializarShelve(pathFile, clave):
+    Shelf = None
+    try:
+        Shelf = shelve.open(pathFile)
+        if clave in Shelf:
+            obj = Shelf[clave]            
+            return obj
+        else:
+            claves = "Claves disponibles: " + ",".join(Shelf.keys())
+            raise KeyError(claves)
+        
+    except Exception as e:
+        print(e)
+
+    finally:
+        if Shelf: Shelf.close()
+
 
 if __name__ == '__main__':
-    bd = BaseDatos(path)
-    prod = bd.read(1)
-    print(prod)
-    serializarPickle("pickle_producto.bin", prod)
-    prod2 = deserializarPickle("pickle_producto.bin")
-    print(prod2)
+    try:
+        bd = BaseDatos(path)
+        prod = bd.read(1)
+        print(prod)
+        serializarPickle("pickle_producto.bin", prod)
+        prod2 = deserializarPickle("pickle_producto.bin")
+        print(prod2)
 
-    cat = bd.readCategoria(2)
-    serializarShelve("serializar_shelve", cat, prod, ["item1","item2"])
-    
+        cat = bd.readCategoria("Bebidas")
+        serializarShelve("serializar_shelve", cat, prod, ["item1","item2"])
+
+        obj1 = deserializarShelve("serializar_shelve","CLAVE-2")
+        print(obj1)
+
+        obj2 = deserializarShelve("serializar_shelve","CLAVE-5")
+        print(obj2)
+
+    except  Exception as e:
+        print(e)
+
 
