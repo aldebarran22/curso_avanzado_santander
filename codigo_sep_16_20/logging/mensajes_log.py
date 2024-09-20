@@ -55,7 +55,13 @@ def mensajesConFormato():
     logger.critical("mensaje critical")
 
 
+def testPrint():
+    fich = open("../ficheros/print.txt", "w")
+    print("mensaje de prueba", file=fich)
+    fich.close()
+
 if __name__ == "__main__":
-    mensajesConsola()
+    # mensajesConsola()
     # mensajesFichero()
     # mensajesConFormato()
+    testPrint()
