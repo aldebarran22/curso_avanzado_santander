@@ -18,6 +18,7 @@ class ThreadRandom(Thread):
     def run(self):
         for i in range(self.n):
             num = randint(1, 10)
+            print(self.name,"==>",num)
             self.L.append(num)
             sleep(randint(1, 3))
         print("Termina: ", self.name)
