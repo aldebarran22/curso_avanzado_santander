@@ -49,7 +49,7 @@ def deserializarShelve(pathFile, clave):
             raise KeyError(claves)
         
     except Exception as e:
-        print(e)
+        raise e
 
     finally:
         if Shelf: Shelf.close()
