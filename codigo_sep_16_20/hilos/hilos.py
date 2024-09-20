@@ -18,7 +18,7 @@ class ThreadRandom(Thread):
     def run(self):
         for i in range(self.n):
             num = randint(1, 10)
-            print(self.name,"==>",num)
+            print(self.name, "==>", num)
             self.L.append(num)
             sleep(randint(1, 3))
         print("Termina: ", self.name)
@@ -29,6 +29,10 @@ if __name__ == "__main__":
     n_hilos = 3
     for i in range(n_hilos):
         nombre = f"Hilo-{i+1}"
-        hilo = ThreadRandom(nombre, randint(5, 15))
+        hilo = ThreadRandom(nombre, randint(5, 10))
         hilo.start()
+        hilos.append(hilo)
+
+    for hilo in hilos:
+        hilo.join()
     print("Termina main")
