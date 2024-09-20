@@ -1,19 +1,23 @@
 
 
-from threading import Thread
+from threading import Thread, Lock
 
 contador = 0
 N = 1000000
+mutex = Lock()
 
 def sumar():
     global contador
     for i in range(N):
+        mutex.acquire()
         contador+=1
+        mutex.release()
 
 def restar():
     global contador
     for i in range(N):
-        contador-=1
+        with mutex:
+            contador-=1
 
 h1 = Thread(target=sumar)
 h1.start()
