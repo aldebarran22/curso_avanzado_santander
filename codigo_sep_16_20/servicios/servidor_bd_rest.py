@@ -16,7 +16,10 @@ class Servidor(Resource):
         try:
             bd = BaseDatos(path) 
             n = bd.delete(id)
-            return {"delete":n}
+            if n == 0:
+                raise ValueError(f"No se encuentra el id: {id}")
+            else:
+                return {"delete":n}
         
         except Exception as e:
             abort(404, message=str(e))
