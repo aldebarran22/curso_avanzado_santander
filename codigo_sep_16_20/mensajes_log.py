@@ -6,7 +6,11 @@ import logging
 
 
 def mensajesConsola():
-    logging.basicConfig(level=logging.ERROR)
+    logging.basicConfig(
+        level=logging.ERROR,
+        format="%(asctime)s - %(name)s - %(levelname)s - %(message)s",
+        datefmt="%d/%m/%Y %H:%M:%S",
+    )
     logging.debug("mensaje debug")
     logging.info("mensaje info")
     logging.warning("mensaje warning")
@@ -33,12 +37,12 @@ def mensajesConFormato():
     # El nivel de mensajes del logger:
     logger.setLevel(logging.DEBUG)
 
-     # Crear el handler: puede ser a consola o a fichero:
+    # Crear el handler: puede ser a consola o a fichero:
     handler = logging.StreamHandler()
 
     # Configurar el formato de los mensajes de salida
     formato = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
-   
+
     # Establecer los mensajes del logger:
     handler.setFormatter(formato)
 
@@ -52,6 +56,6 @@ def mensajesConFormato():
 
 
 if __name__ == "__main__":
-    # mensajesConsola()
+    mensajesConsola()
     # mensajesFichero()
-    mensajesConFormato()
+    # mensajesConFormato()
