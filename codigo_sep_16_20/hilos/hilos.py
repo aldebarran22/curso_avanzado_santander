@@ -3,7 +3,7 @@ Implementación de hilos con la clase Thread y
 problemas al esperar un hilo: join
 """
 
-from threading import Thread
+from threading import Thread, enumerate, activeCount
 from random import randint
 from time import sleep
 
@@ -33,6 +33,10 @@ if __name__ == "__main__":
         hilo.start()
         hilos.append(hilo)
 
+    print("HILOS: ", enumerate())
+    print("ACTIVOS: ", activeCount())
+
     for hilo in hilos:
         hilo.join()
+
     print("Termina main")
