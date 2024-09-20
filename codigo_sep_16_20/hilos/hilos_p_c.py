@@ -2,6 +2,7 @@
 Implementación del productor-consumidor en Python
 Solución M productores-N consumidores
 """
+
 from threading import Thread, Lock, Semaphore
 from random import randint
 from time import sleep
@@ -20,25 +21,25 @@ class Productor(Thread):
         self.num_muestras = num_muestras
 
     def run(self):
-       for i in range(self.num_muestras):
-                  
-           # Generar un item:
-           numero = randint(1,20)
+        for i in range(self.num_muestras):
 
-           # Comprobar si tiene hueco
-           self.buffer.sem_huecos.acquire()
-           
-           # Si tiene hueco, escribe el num. en exclusión mutua
-           with self.buffer.mutex:
+            # Generar un item:
+            numero = randint(1, 20)
+
+            # Comprobar si tiene hueco
+            self.buffer.sem_huecos.acquire()
+
+            # Si tiene hueco, escribe el num. en exclusión mutua
+            with self.buffer.mutex:
                 # Colocar el numero en el buffer e incrementar el índice
-                self.buffer.buffer[self.buffer.inc_p] = numero
-                print(self.name,self.buffer.buffer,"<-",numero)
-                self.buffer.inc_p = (self.buffer.inc_p + 1) % tam_buffer        
+                self.buffer.buffer[self.buffer.ind_p] = numero
+                print(self.name, self.buffer.buffer, "<-", numero)
+                self.buffer.inc_d = (self.buffer.inc_d + 1) % tam_buffer
 
-           # Avisar de que hay un nuevo item
-           self.buffer.sem_items.release()
+            # Avisar de que hay un nuevo item
+            self.buffer.sem_items.release()
 
-           sleep(randint(2,4))
+            sleep(randint(2, 4))
 
 
 class Consumidor(Thread):
@@ -46,7 +47,6 @@ class Consumidor(Thread):
         Thread.__init__(self)
         self.buffer = buffer
         self.num_muestras = num_muestras
-
 
     def run(self):
         pass
@@ -94,6 +94,3 @@ if __name__ == "__main__":
 
     for c in consumidores:
         c.join()
-
-
-   
