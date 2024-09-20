@@ -12,6 +12,20 @@ api = Api(app)
 
 class Servidor(Resource):
 
+    def put(self):
+        try:
+            bd = BaseDatos(path)
+            args = request.json
+
+            producto = Producto.create(args)
+            print(producto)
+            n = bd.update(producto)
+            return {"update":n}
+        
+        except Exception as e:
+            abort(404, message=str(e))
+
+
     def post(self):
         try:
             bd = BaseDatos(path)
