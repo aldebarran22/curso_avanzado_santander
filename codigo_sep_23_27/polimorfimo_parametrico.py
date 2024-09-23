@@ -15,6 +15,7 @@ def _(arg):
 	print('Viene la cadena ', arg, ' de long: ', len(arg))
 	
 @func.register(list)
+@func.register(set)
 def _(arg):
 	for i in arg:
 		print(i)
