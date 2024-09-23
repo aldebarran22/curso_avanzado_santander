@@ -11,11 +11,19 @@ csv="""id;nombre;cargo
 8;Callahan;Coordinador ventas interno
 9;Dodsworth;Representante de ventas"""
 
-def tojson(formato_csv):
-    pass
+def tojson(formato_csv, sep=';'):
+    L = formato_csv.split("\n")
+    cabs = L[0].split(sep)
+    resul = []
+    for i in L[1:]:
+        datos = i.split(sep)
+        d = dict(zip(cabs, datos))
+        resul.append(d)
+    return resul
 
 def tocsv(formato_json):
     pass
 
 if __name__ == '__main__':
-    pass
+    d = tojson(csv)
+    print(d)
