@@ -7,10 +7,14 @@ de idioma
 def cargarFichero(idioma):
     path = f"idiomas/{idioma}.txt"
     fich = None
+    dicc = dict()
     try:
         fich = open(path, "r")
         for linea in fich:
-            print(linea)
+            linea = linea.rstrip()
+            k, _, v = linea.partition('=')
+            dicc[k] = v
+        return dicc
 
     except Exception as e:
         print(e)
@@ -19,4 +23,5 @@ def cargarFichero(idioma):
             fich.close()
 
 if __name__=='__main__':
-    cargarFichero("es")            
+    dicc = cargarFichero("es")            
+    print(dicc)
