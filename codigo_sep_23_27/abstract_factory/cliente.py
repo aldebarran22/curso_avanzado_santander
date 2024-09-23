@@ -38,7 +38,12 @@ if __name__ == "__main__":
         else:
             fact = seleccionarParam(sys.argv[1])
 
-        print(fact.__class__)
+        #print(fact.__class__)
+        telefono = fact.createTno()
+        tableta = fact.createTablet()
+
+        telefono.llamar()
+        tableta.internet()
 
     except Exception as e:
         print(e.__class__.__name__, e)
