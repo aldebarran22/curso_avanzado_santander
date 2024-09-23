@@ -36,19 +36,31 @@ class Date:
         return "%02d/%02d/%04d" % (self.dd,self.mm,self.yy)
 
    
-class DateTime(Date, Time):
+class DateTime(Time, Date):
     """Solución por herencia múltiple"""
 
     def __init__(self, dd=1, mm=1, yy=1970, h=0, m=0, s=0):
         Date.__init__(self, dd, mm, yy)
         Time.__init__(self, h,m,s)
 
+    def __str__(self):
+        return Date.__str__(self) + " " + Time.__str__(self)
+
 class DateTime2:
     """Solución por composición"""
 
     def __init__(self, dd=1, mm=1, yy=1970, h=0, m=0, s=0):
-        pass
+        self.fecha = Date(dd,mm,yy)
+        self.hora = Time(h,m,s)
 
+    def __str__(self):
+        return str(self.fecha) + " " + str(self.hora)
+
+def test(clase):
+    dt = clase(9,9,2024, 12,28,10) 
+    # 09/09/2024 12:28:10
+    print(clase.__class__.__name__,dt)
+    print(dt.__str__())   
 
 if __name__ == '__main__':
     t1 = Time(12,3,56)
@@ -62,12 +74,8 @@ if __name__ == '__main__':
     fecha = Date(9,9,2024)
     print(fecha)
 
+    test(DateTime)
+    test(DateTime2)
+   
+   
     
-    """
-    dt = DateTime(9,9,2024, 12,28,10) 
-    # 09/09/2024 12:28:10
-    print("Datetime: ",dt)
-    print("sg: ",dt.s)
-    print(dt.__str__())
-    print(dt.__str__)
-    """
