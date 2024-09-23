@@ -1,0 +1,29 @@
+POO en Python
+
+- Herencia Simple y múltiple.
+- Dinámico: T.ejecución modificar objetos.
+  __dict__ --> dinámico (por defecto)
+  __slot__ --> estático 
+
+- Clases abstractas: modulo abc
+- El objeto en curso: self
+- Permite sobrecarga de operadores.
+  - op. aritmético
+  - op. relaciones
+  - sobrecarga de f.especiales
+
+- tiene clase object
+- polimorfismo paramétrico
+
+- 3 tipos de métodos:
+  - de instancia: self
+  - de clase: cls
+  - static: no cls, no self
+
+- 2 tipos att:
+  - de instancia
+  - de clase
+
+Acceso a miembros de la clase
+publico
+__privado
