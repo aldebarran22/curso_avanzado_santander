@@ -16,6 +16,9 @@ class Producto:
     
     def __repr__(self):
         return str(self)
+    
+    def __lt__(self,other):
+        return self.precio < other.precio
 
 
 def testProducto():
@@ -33,7 +36,8 @@ def testProducto():
     print(L)
     L.sort(key=lambda obj : obj.nombre)
     print(L)
-    #L.sort()
+    L.sort(reverse=True)
+    print(L)
 
 if __name__ == '__main__':
     testProducto()
