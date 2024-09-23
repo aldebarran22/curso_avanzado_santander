@@ -13,6 +13,9 @@ class Producto:
 
     def __str__(self):
         return " ".join(k + "=" + str(v) for k, v in self.__dict__.items())
+    
+    def __repr__(self):
+        return str(self)
 
 
 def testProducto():
@@ -20,6 +23,17 @@ def testProducto():
     p1.__dict__['iva']=round(p1.precio * 0.21,2)
     p1.descuento = 0.05
     print(p1) # p1.__str__()
+
+    # Crear un objeto a partir de la clase de otro:
+    p2 = p1.__class__(nombre="Vino",precio=12.5)
+    print(p2)
+    print(p2.__class__.__name__)
+
+    L = [p1, p2, Producto(3, "Fanta", 2.3, 400)]
+    print(L)
+    L.sort(key=lambda obj : obj.nombre)
+    print(L)
+    #L.sort()
 
 if __name__ == '__main__':
     testProducto()
