@@ -71,3 +71,10 @@ if __name__ == "__main__":
     cir1 = Circulo("circulo1", 12, 5.8)
     print(cir1.area())
 
+    # Los nombres de las clases hija:
+    L = [c.__name__ for c in Figura.__subclasses__()]
+    print(L)
+
+    print("instancia de figura: ", isinstance(cir1, Figura))
+    print("instancia de circulo: ", isinstance(cir1, Circulo))
+    print('circulo subclase de figura: ', issubclass(Circulo, Figura))
