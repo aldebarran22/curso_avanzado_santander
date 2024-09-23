@@ -47,6 +47,9 @@ class Rectangulo(Figura):
             + str(self.alto)
         )
     
+    def area(self):
+        return self.ancho * self.alto
+    
 class Triangulo(Figura):
     def __init__(self, etiqueta="triangulo", color=0, base=2.5, altura=8.0):
         Figura.__init__(self, etiqueta, color)
@@ -61,6 +64,9 @@ class Triangulo(Figura):
             + " altura: "
             + str(self.altura)
         )
+    
+    def area(self):
+        return (self.base * self.altura) / 2
 
 if __name__ == "__main__":
     try:
@@ -73,6 +79,10 @@ if __name__ == "__main__":
 
     # Los nombres de las clases hija:
     L = [c.__name__ for c in Figura.__subclasses__()]
+    print(L)
+
+    # Crea un objeto de cada subclase
+    L = [c() for c in Figura.__subclasses__()]
     print(L)
 
     print("instancia de figura: ", isinstance(cir1, Figura))
