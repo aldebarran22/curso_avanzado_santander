@@ -1,5 +1,7 @@
 """Distintas formas de crear objetos en Python"""
 
+import sys
+
 class Punto:
 
     # Atributos de la clase
@@ -35,4 +37,10 @@ if __name__ == '__main__':
     print(p4)
     print(p5)
 
+    #print(globals())
+    p6 = globals()["Punto"](1,2)
+    print(p6)
 
+    print(sys.modules[__name__])
+    p7 = getattr(sys.modules[__name__], "Punto")(1,2)
+    print(p7)
