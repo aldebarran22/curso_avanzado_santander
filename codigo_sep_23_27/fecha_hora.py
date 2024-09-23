@@ -10,9 +10,10 @@ class Time:
     def __str__(self):        
         return '%02d:%02d:%02d' % (self.h,self.m,self.s)
     
+    def __add__(self,other):
+        return Time(self.h+other.h,self.m+other.m,self.s+other.s)
+    
   
-  
-
 class Date:
 
     def __init__(self, dd,mm,yy):
@@ -24,9 +25,6 @@ class Date:
         return "%02d/%02d/%04d" % (self.dd,self.mm,self.yy)
 
    
-
-
-
 if __name__ == '__main__':
     t1 = Time(12,3,56)
     t2 = Time(8,45,9)
@@ -40,9 +38,11 @@ if __name__ == '__main__':
     print(fecha)
 
     
+    """
     dt = DateTime(9,9,2024, 12,28,10) 
     # 09/09/2024 12:28:10
     print("Datetime: ",dt)
     print("sg: ",dt.s)
     print(dt.__str__())
     print(dt.__str__)
+    """
