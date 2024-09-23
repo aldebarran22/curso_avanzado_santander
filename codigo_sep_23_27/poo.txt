@@ -27,3 +27,13 @@ POO en Python
 Acceso a miembros de la clase
 publico
 __privado
+
+
+
+Relaciones entre clases:
+- Herencia: Cuando las clases tienen cosas en común
+- Composición: Un objeto  se desglosa en partes
+- Asociación: 
+   Coche
+   Surtidor
+   coche.repostar(surtidor)

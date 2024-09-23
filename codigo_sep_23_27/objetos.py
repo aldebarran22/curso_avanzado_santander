@@ -1,7 +1,6 @@
 """
 POO en python
 """
-
 class Producto:
     """Implementación de la clase producto"""
 
@@ -20,6 +19,34 @@ class Producto:
     def __lt__(self,other):
         return self.precio < other.precio
 
+class Tienda:
+
+    def __init__(self, *listaProductos):
+        self.productos = []
+        self.productos.extend(listaProductos)
+        self.__index = 0
+
+    def __len__(self):
+        return len(self.productos)
+
+    def __iter__(self):
+        return self
+    
+    def __next__(self):
+        if self.__index == len(self.productos):
+            raise StopIteration
+        else:
+            p = self.productos[self.__index]
+            self.__index+=1
+            return p
+
+def testTienda():
+    p1 = Producto(10, "CocaCola",1.5, 100)
+    p2 = Producto(3, "Fanta", 2.3, 400)
+    tienda = Tienda(p1, p2)
+    print(len(tienda),'productos')
+    for p in tienda:
+        print(p)
 
 def testProducto():
     p1 = Producto(10, "CocaCola",1.5, 100)
@@ -39,5 +66,8 @@ def testProducto():
     L.sort(reverse=True)
     print(L)
 
+
+
 if __name__ == '__main__':
-    testProducto()
+    #testProducto()
+    testTienda()
