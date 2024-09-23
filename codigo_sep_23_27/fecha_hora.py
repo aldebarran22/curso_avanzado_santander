@@ -76,6 +76,12 @@ if __name__ == '__main__':
 
     test(DateTime)
     test(DateTime2)
+
+    try:
+        L = [1,2,3,5,4]
+        print(L[10])
+    except Exception as e:
+        print(e.__class__.__name__, e)
    
    
     
