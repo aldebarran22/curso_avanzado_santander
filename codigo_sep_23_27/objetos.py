@@ -34,6 +34,7 @@ class Tienda:
     
     def __next__(self):
         if self.__index == len(self.productos):
+            self.__index = 0
             raise StopIteration
         else:
             p = self.productos[self.__index]
@@ -45,6 +46,9 @@ def testTienda():
     p2 = Producto(3, "Fanta", 2.3, 400)
     tienda = Tienda(p1, p2)
     print(len(tienda),'productos')
+    for p in tienda:
+        print(p)
+
     for p in tienda:
         print(p)
 
