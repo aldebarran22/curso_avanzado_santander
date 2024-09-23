@@ -59,7 +59,7 @@ class DateTime2:
 def test(clase):
     dt = clase(9,9,2024, 12,28,10) 
     # 09/09/2024 12:28:10
-    print(clase.__class__.__name__,dt)
+    print(clase.__name__,dt)
     print(dt.__str__())   
 
 if __name__ == '__main__':
