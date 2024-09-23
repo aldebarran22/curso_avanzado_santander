@@ -40,8 +40,5 @@ class SingletonIdioma:
             if fich:
                 fich.close()
 
-if __name__=='__main__':
-   print(SingletonIdioma.getInstance()["inicio"])
-   print(SingletonIdioma.getInstance()["hombres"])
-   print(SingletonIdioma.getInstance()["mujeres"])
-   print(SingletonIdioma.getInstance()["instagram"])
+#if __name__=='__main__':
+   
