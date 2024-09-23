@@ -21,9 +21,14 @@ def tojson(formato_csv, sep=';'):
         resul.append(d)
     return resul
 
-def tocsv(formato_json):
-    pass
+def tocsv(formato_json, sep=';'):
+    cabs = sep.join(formato_json[0].keys())
+    L = [cabs]
+    for i in formato_json:
+        L.append(sep.join(i.values()))
+    return "\n".join(L)
 
 if __name__ == '__main__':
     d = tojson(csv)
-    print(d)
+    csv2 = tocsv(d)
+    print(csv == csv2)
