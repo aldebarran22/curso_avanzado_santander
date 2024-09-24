@@ -133,3 +133,6 @@ if __name__ == '__main__':
     builder = BuilderXML()
     director = Director(builder)
     director.convertirFichero("Pedidos.txt")
+
+    # python builder.py -xml Pedidos.txt
+    # python builder.py -html Pedidos.txt
