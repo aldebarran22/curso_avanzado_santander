@@ -60,11 +60,12 @@ class VectorPlano(Vector3D, Vector2D):
 		return Vector3D.getY(self)
 			
 	def prod(self, v):
-		pass
+		aux = Vector3D(v.x, v.y, 0)
+		return Vector3D.productoEscalar(self, aux)
 			
 	def magnitud(self):
 		# La norma del vector
-		pass
+		return Vector3D.norma(self)
 
 class VectorPlano2(Vector2D):
 	"""Solución por composición"""
@@ -79,8 +80,9 @@ class VectorPlano2(Vector2D):
 		return self.v3.getY()
 			
 	def prod(self, v):
-		pass
+		aux = Vector3D(v.x, v.y, 0)
+		return self.v3.productoEscalar(aux)
 			
 	def magnitud(self):
 		# La norma del vector
-		pass
+		return self.v3.norma()
