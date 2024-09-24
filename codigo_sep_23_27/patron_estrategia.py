@@ -44,3 +44,23 @@ class EstrategiaInsDirecta(Estrategia):
                 posicion = posicion - 1
 
             unaLista[posicion] = valorActual
+
+class Contexto:
+
+    def __init__(self, claseEstrategia, n=10000):
+        self.claseEstrategia = claseEstrategia
+        self.L = [randint(1,10000) for _ in range(n)]
+        
+    def cronometrar(self):
+        for c in self.claseEstrategia.__subclasses__():
+            obj = c()
+            copia = self.L.copy()
+            t1 = datetime.now()
+            obj.ordenar(copia)
+            t2 = datetime.now()
+            intervalo = t2 - t1
+            print(obj.__class__.__name__, intervalo)
+
+if __name__ == '__main__':
+    contexto = Contexto(Estrategia)            
+    contexto.cronometrar()
