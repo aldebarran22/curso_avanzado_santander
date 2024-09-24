@@ -24,6 +24,7 @@ class GestorWhatsApp(Gestor):
 
         elif self.sig != None:
             print('GestorWhatsApp: envía la petición al sig.')
+            self.sig.gestionarPeticion(peticion)
 
         else:
             print('Fin de cadena, no se procesar la petición')
@@ -37,6 +38,7 @@ class GestorSMS(Gestor):
 
         elif self.sig != None:
             print('GestorSMS: envía la petición al sig.')
+            self.sig.gestionarPeticion(peticion)
 
         else:
             print('Fin de cadena, no se procesar la petición')
@@ -49,6 +51,7 @@ class GestorEmail(Gestor):
 
         elif self.sig != None:
             print('GestorEmail: envía la petición al sig.')
+            self.sig.gestionarPeticion(peticion)
 
         else:
             print('Fin de cadena, no se procesar la petición') 
