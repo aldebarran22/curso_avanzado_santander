@@ -29,7 +29,7 @@ class Figura(abc.ABC):
 
 class Circulo(Figura):
 
-    def __init__(self, etiqueta="", color=0, radio=5):
+    def __init__(self, etiqueta="circulo", color=0, radio=5):
         super().__init__(etiqueta, color)
         self.radio = radio
 
@@ -117,10 +117,13 @@ class Factoria1(FactoriaPrototipos):
             raise KeyError(f"La clave {key} no se encuentra en los prototipos")
         else:
             # Clonar el prototipo:
-            pass
+            return self.prototipos[k].clonar()
 
     def print(self):
-        pass
+        print("Factoria1:")
+        for k, v in self.prototipos.items():
+            print(k,v)
+        print()
 
 
 class Factoria2(FactoriaPrototipos):
@@ -151,5 +154,5 @@ def testFactoria(clase):
 
 if __name__ == "__main__":
     testFactoria(Factoria1)
-    testFactoria(Factoria2)
+    #testFactoria(Factoria2)
 
