@@ -32,8 +32,27 @@ class BuilderHTML(Builder):
     def createDetalle(self, L, etiqueta=None):
         detalle = "".join([f"<td>{col}</td>" for col in L])
         return f"<tr>{detalle}</tr>"
-
    
+    def crearFichero(self, texto, path):
+        return ""
+    
+class BuilderXML(Builder):
+
+    def __init__(self):
+        self.cabs = ""
+        self.etiqueta = ""
+
+    def createCab(self, L):
+        self.cabs = L
+        return ""
+
+    def createDetalle(self, L, etiqueta=None):
+        linea = ""
+        self.etiqueta = etiqueta
+        for pos, i in enumerate(L):
+            linea += f"<{self.etiqueta}>{i}</{self.etiqueta}>"
+        return linea
+
     def crearFichero(self, texto, path):
         return ""
 
@@ -43,11 +62,13 @@ class Director:
 
     def __init__(self, builder):
         self.builder = builder
+        self.nombre = ""
 
     def convertirFichero(self, path, sep=';'):
         f = None
         cabs = True
         tabla = ""
+        self.nombre = path.partition(".")[0][:-1].lower()
         try:
             f = open(path,"r")
             for linea in f:
@@ -58,7 +79,7 @@ class Director:
                     tabla += self.builder.createCab(L)
                     cabs = False
                 else:
-                    tabla += self.builder.createDetalle(L)
+                    tabla += self.builder.createDetalle(L, self.nombre)
 
             # crear el fichero:
             print(tabla)
@@ -71,6 +92,6 @@ class Director:
 
 if __name__ == '__main__':
     # Seleccionar un builder según el formato destino
-    builder = BuilderHTML()
+    builder = BuilderXML()
     director = Director(builder)
-    director.convertirFichero("Pedidos.txt")
+    director.convertirFichero("Empresas.txt")
