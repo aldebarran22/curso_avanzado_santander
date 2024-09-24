@@ -58,7 +58,7 @@ class GestorEmail(Gestor):
 
 if __name__ == "__main__":
     Peticion = namedtuple("Peticion", ['canal','contenido'])
-    peticion = Peticion('sms', 'mensaje a enviar')
+    peticion = Peticion('voz-ip', 'mensaje a enviar')
     #peticion.canal = "email"
     print(peticion.canal)
     print(peticion)
