@@ -24,6 +24,25 @@ class Builder(abc.ABC):
     def crearFichero(self, texto, path):
         pass
 
+
+class BuilderJSON(Builder):
+
+    def __init__(self):
+        self.cabs = None
+        self.diccionarios = []
+    
+    def createCab(self, L):
+        self.cabs = L
+        return ""
+   
+    def createDetalle(self, L, etiqueta=None):
+        dicc = dict(zip(self.cabs, L))
+        self.diccionarios.append(dicc)
+        return ""
+   
+    def crearFichero(self, texto, path):
+        print(self.diccionarios)
+
 class BuilderHTML(Builder):
     def createCab(self, L):
         cabeceras = "".join([f"<th>{col}</th>" for col in L])
@@ -130,7 +149,7 @@ class Director:
 
 if __name__ == '__main__':
     # Seleccionar un builder según el formato destino
-    builder = BuilderXML()
+    builder = BuilderJSON()
     director = Director(builder)
     director.convertirFichero("Pedidos.txt")
 
