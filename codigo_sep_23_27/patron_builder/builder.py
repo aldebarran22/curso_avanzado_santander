@@ -25,7 +25,17 @@ class Builder(abc.ABC):
         pass
 
 class BuilderHTML(Builder):
-    pass
+    def createCab(self, L):
+        cabeceras = "".join([f"<th>{col}</th>" for col in L])
+        return f"<tr>{cabeceras}</tr>"
+   
+    def createDetalle(self, L, etiqueta=None):
+        detalle = "".join([f"<td>{col}</td>" for col in L])
+        return f"<tr>{detalle}</tr>"
+
+   
+    def crearFichero(self, texto, path):
+        return ""
 
 class Director:
     """Define el proceso de creación del 
@@ -51,6 +61,7 @@ class Director:
                     tabla += self.builder.createDetalle(L)
 
             # crear el fichero:
+            print(tabla)
 
         except Exception as e:
             print(e)
@@ -62,4 +73,4 @@ if __name__ == '__main__':
     # Seleccionar un builder según el formato destino
     builder = BuilderHTML()
     director = Director(builder)
-    director.convertirFichero("")
+    director.convertirFichero("Pedidos.txt")
