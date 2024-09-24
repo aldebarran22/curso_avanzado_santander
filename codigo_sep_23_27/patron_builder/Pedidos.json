@@ -1,0 +1,6642 @@
+[
+    {
+        "idpedido": "10248",
+        "cliente": "WILMK",
+        "idempleado": "5",
+        "idempresa": "3",
+        "importe": "32.38",
+        "pais": "Finlandia"
+    },
+    {
+        "idpedido": "10249",
+        "cliente": "TOMSP",
+        "idempleado": "6",
+        "idempresa": "1",
+        "importe": "11.61",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10250",
+        "cliente": "HANAR",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "65.83",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10251",
+        "cliente": "VICTE",
+        "idempleado": "3",
+        "idempresa": "1",
+        "importe": "41.34",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10252",
+        "cliente": "SUPRD",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "51.30",
+        "pais": "Belgica"
+    },
+    {
+        "idpedido": "10253",
+        "cliente": "HANAR",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "58.17",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10254",
+        "cliente": "CHOPS",
+        "idempleado": "5",
+        "idempresa": "2",
+        "importe": "22.98",
+        "pais": "Suiza"
+    },
+    {
+        "idpedido": "10255",
+        "cliente": "RICSU",
+        "idempleado": "9",
+        "idempresa": "3",
+        "importe": "148.33",
+        "pais": "Suiza"
+    },
+    {
+        "idpedido": "10256",
+        "cliente": "WELLI",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "13.97",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10257",
+        "cliente": "HILAA",
+        "idempleado": "4",
+        "idempresa": "3",
+        "importe": "81.91",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "10258",
+        "cliente": "ERNSH",
+        "idempleado": "1",
+        "idempresa": "1",
+        "importe": "140.51",
+        "pais": "Austria"
+    },
+    {
+        "idpedido": "10259",
+        "cliente": "CENTC",
+        "idempleado": "4",
+        "idempresa": "3",
+        "importe": "3.25",
+        "pais": "Mexico"
+    },
+    {
+        "idpedido": "10260",
+        "cliente": "OTTIK",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "55.09",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10261",
+        "cliente": "QUEDE",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "3.05",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10262",
+        "cliente": "RATTC",
+        "idempleado": "8",
+        "idempresa": "3",
+        "importe": "48.29",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10263",
+        "cliente": "ERNSH",
+        "idempleado": "9",
+        "idempresa": "3",
+        "importe": "146.06",
+        "pais": "Austria"
+    },
+    {
+        "idpedido": "10264",
+        "cliente": "FOLKO",
+        "idempleado": "6",
+        "idempresa": "3",
+        "importe": "3.67",
+        "pais": "Suecia"
+    },
+    {
+        "idpedido": "10265",
+        "cliente": "BLONP",
+        "idempleado": "2",
+        "idempresa": "1",
+        "importe": "55.28",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10266",
+        "cliente": "WARTH",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "25.73",
+        "pais": "Finlandia"
+    },
+    {
+        "idpedido": "10267",
+        "cliente": "FRANK",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "208.58",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10268",
+        "cliente": "GROSR",
+        "idempleado": "8",
+        "idempresa": "3",
+        "importe": "66.29",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "10269",
+        "cliente": "WHITC",
+        "idempleado": "5",
+        "idempresa": "1",
+        "importe": "4.56",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10270",
+        "cliente": "WARTH",
+        "idempleado": "1",
+        "idempresa": "1",
+        "importe": "136.54",
+        "pais": "Finlandia"
+    },
+    {
+        "idpedido": "10271",
+        "cliente": "SPLIR",
+        "idempleado": "6",
+        "idempresa": "2",
+        "importe": "4.54",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10272",
+        "cliente": "RATTC",
+        "idempleado": "6",
+        "idempresa": "2",
+        "importe": "98.03",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10273",
+        "cliente": "QUICK",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "76.07",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10274",
+        "cliente": "VINET",
+        "idempleado": "6",
+        "idempresa": "1",
+        "importe": "6.01",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10275",
+        "cliente": "MAGAA",
+        "idempleado": "1",
+        "idempresa": "1",
+        "importe": "26.93",
+        "pais": "Italia"
+    },
+    {
+        "idpedido": "10276",
+        "cliente": "TORTU",
+        "idempleado": "8",
+        "idempresa": "3",
+        "importe": "13.84",
+        "pais": "Mexico"
+    },
+    {
+        "idpedido": "10277",
+        "cliente": "MORGK",
+        "idempleado": "2",
+        "idempresa": "3",
+        "importe": "125.77",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10278",
+        "cliente": "BERGS",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "92.69",
+        "pais": "Suecia"
+    },
+    {
+        "idpedido": "10279",
+        "cliente": "LEHMS",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "25.83",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10280",
+        "cliente": "BERGS",
+        "idempleado": "2",
+        "idempresa": "1",
+        "importe": "8.98",
+        "pais": "Suecia"
+    },
+    {
+        "idpedido": "10281",
+        "cliente": "ROMEY",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "2.94",
+        "pais": "Espanya"
+    },
+    {
+        "idpedido": "10282",
+        "cliente": "ROMEY",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "12.69",
+        "pais": "Espanya"
+    },
+    {
+        "idpedido": "10283",
+        "cliente": "LILAS",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "84.81",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "10284",
+        "cliente": "LEHMS",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "76.56",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10285",
+        "cliente": "QUICK",
+        "idempleado": "1",
+        "idempresa": "2",
+        "importe": "76.83",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10286",
+        "cliente": "QUICK",
+        "idempleado": "8",
+        "idempresa": "3",
+        "importe": "229.24",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10287",
+        "cliente": "RICAR",
+        "idempleado": "8",
+        "idempresa": "3",
+        "importe": "12.76",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10288",
+        "cliente": "REGGC",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "7.45",
+        "pais": "Italia"
+    },
+    {
+        "idpedido": "10289",
+        "cliente": "BSBEV",
+        "idempleado": "7",
+        "idempresa": "3",
+        "importe": "22.77",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10290",
+        "cliente": "COMMI",
+        "idempleado": "8",
+        "idempresa": "1",
+        "importe": "79.70",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10291",
+        "cliente": "QUEDE",
+        "idempleado": "6",
+        "idempresa": "2",
+        "importe": "6.40",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10292",
+        "cliente": "TRADH",
+        "idempleado": "1",
+        "idempresa": "2",
+        "importe": "1.35",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10293",
+        "cliente": "TORTU",
+        "idempleado": "1",
+        "idempresa": "3",
+        "importe": "21.18",
+        "pais": "Mexico"
+    },
+    {
+        "idpedido": "10294",
+        "cliente": "RATTC",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "147.26",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10295",
+        "cliente": "VINET",
+        "idempleado": "2",
+        "idempresa": "2",
+        "importe": "1.15",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10296",
+        "cliente": "LILAS",
+        "idempleado": "6",
+        "idempresa": "1",
+        "importe": "0.12",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "10297",
+        "cliente": "BLONP",
+        "idempleado": "5",
+        "idempresa": "2",
+        "importe": "5.74",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10298",
+        "cliente": "HUNGO",
+        "idempleado": "6",
+        "idempresa": "2",
+        "importe": "168.22",
+        "pais": "Irlanda"
+    },
+    {
+        "idpedido": "10299",
+        "cliente": "RICAR",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "29.76",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10300",
+        "cliente": "MAGAA",
+        "idempleado": "2",
+        "idempresa": "2",
+        "importe": "17.68",
+        "pais": "Italia"
+    },
+    {
+        "idpedido": "10301",
+        "cliente": "WANDK",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "45.08",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10302",
+        "cliente": "SUPRD",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "6.27",
+        "pais": "Belgica"
+    },
+    {
+        "idpedido": "10303",
+        "cliente": "GODOS",
+        "idempleado": "7",
+        "idempresa": "2",
+        "importe": "107.83",
+        "pais": "Espanya"
+    },
+    {
+        "idpedido": "10304",
+        "cliente": "TORTU",
+        "idempleado": "1",
+        "idempresa": "2",
+        "importe": "63.79",
+        "pais": "Mexico"
+    },
+    {
+        "idpedido": "10305",
+        "cliente": "OLDWO",
+        "idempleado": "8",
+        "idempresa": "3",
+        "importe": "257.62",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10306",
+        "cliente": "ROMEY",
+        "idempleado": "1",
+        "idempresa": "3",
+        "importe": "7.56",
+        "pais": "Espanya"
+    },
+    {
+        "idpedido": "10307",
+        "cliente": "LONEP",
+        "idempleado": "2",
+        "idempresa": "2",
+        "importe": "0.56",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10308",
+        "cliente": "ANATR",
+        "idempleado": "7",
+        "idempresa": "3",
+        "importe": "1.61",
+        "pais": "Mexico"
+    },
+    {
+        "idpedido": "10309",
+        "cliente": "HUNGO",
+        "idempleado": "3",
+        "idempresa": "1",
+        "importe": "47.30",
+        "pais": "Irlanda"
+    },
+    {
+        "idpedido": "10310",
+        "cliente": "THEBI",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "17.52",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10311",
+        "cliente": "DUMON",
+        "idempleado": "1",
+        "idempresa": "3",
+        "importe": "24.69",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10312",
+        "cliente": "WANDK",
+        "idempleado": "2",
+        "idempresa": "2",
+        "importe": "40.26",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10313",
+        "cliente": "QUICK",
+        "idempleado": "2",
+        "idempresa": "2",
+        "importe": "1.96",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10314",
+        "cliente": "RATTC",
+        "idempleado": "1",
+        "idempresa": "2",
+        "importe": "74.16",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10315",
+        "cliente": "ISLAT",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "41.76",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10316",
+        "cliente": "RATTC",
+        "idempleado": "1",
+        "idempresa": "3",
+        "importe": "150.15",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10317",
+        "cliente": "LONEP",
+        "idempleado": "6",
+        "idempresa": "1",
+        "importe": "12.69",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10318",
+        "cliente": "ISLAT",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "4.73",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10319",
+        "cliente": "TORTU",
+        "idempleado": "7",
+        "idempresa": "3",
+        "importe": "64.50",
+        "pais": "Mexico"
+    },
+    {
+        "idpedido": "10320",
+        "cliente": "WARTH",
+        "idempleado": "5",
+        "idempresa": "3",
+        "importe": "34.57",
+        "pais": "Finlandia"
+    },
+    {
+        "idpedido": "10321",
+        "cliente": "ISLAT",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "3.43",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10322",
+        "cliente": "PERIC",
+        "idempleado": "7",
+        "idempresa": "3",
+        "importe": "0.40",
+        "pais": "Mexico"
+    },
+    {
+        "idpedido": "10323",
+        "cliente": "KOENE",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "4.88",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10324",
+        "cliente": "SAVEA",
+        "idempleado": "9",
+        "idempresa": "1",
+        "importe": "214.27",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10325",
+        "cliente": "KOENE",
+        "idempleado": "1",
+        "idempresa": "3",
+        "importe": "64.86",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10326",
+        "cliente": "BOLID",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "77.92",
+        "pais": "Espanya"
+    },
+    {
+        "idpedido": "10327",
+        "cliente": "FOLKO",
+        "idempleado": "2",
+        "idempresa": "1",
+        "importe": "63.36",
+        "pais": "Suecia"
+    },
+    {
+        "idpedido": "10328",
+        "cliente": "FURIB",
+        "idempleado": "4",
+        "idempresa": "3",
+        "importe": "87.03",
+        "pais": "Portugal"
+    },
+    {
+        "idpedido": "10329",
+        "cliente": "SPLIR",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "191.67",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10330",
+        "cliente": "LILAS",
+        "idempleado": "3",
+        "idempresa": "1",
+        "importe": "12.75",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "10331",
+        "cliente": "BONAP",
+        "idempleado": "9",
+        "idempresa": "1",
+        "importe": "10.19",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10332",
+        "cliente": "MEREP",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "52.84",
+        "pais": "Canada"
+    },
+    {
+        "idpedido": "10333",
+        "cliente": "WARTH",
+        "idempleado": "5",
+        "idempresa": "3",
+        "importe": "0.59",
+        "pais": "Finlandia"
+    },
+    {
+        "idpedido": "10334",
+        "cliente": "VICTE",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "8.56",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10335",
+        "cliente": "HUNGO",
+        "idempleado": "7",
+        "idempresa": "2",
+        "importe": "42.11",
+        "pais": "Irlanda"
+    },
+    {
+        "idpedido": "10336",
+        "cliente": "PRINI",
+        "idempleado": "7",
+        "idempresa": "2",
+        "importe": "15.51",
+        "pais": "Portugal"
+    },
+    {
+        "idpedido": "10337",
+        "cliente": "FRANK",
+        "idempleado": "4",
+        "idempresa": "3",
+        "importe": "108.26",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10338",
+        "cliente": "OLDWO",
+        "idempleado": "4",
+        "idempresa": "3",
+        "importe": "84.21",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10339",
+        "cliente": "MEREP",
+        "idempleado": "2",
+        "idempresa": "2",
+        "importe": "15.66",
+        "pais": "Canada"
+    },
+    {
+        "idpedido": "10340",
+        "cliente": "BONAP",
+        "idempleado": "1",
+        "idempresa": "3",
+        "importe": "166.31",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10341",
+        "cliente": "SIMOB",
+        "idempleado": "7",
+        "idempresa": "3",
+        "importe": "26.78",
+        "pais": "Dinamarca"
+    },
+    {
+        "idpedido": "10342",
+        "cliente": "FRANK",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "54.83",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10343",
+        "cliente": "LEHMS",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "110.37",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10344",
+        "cliente": "WHITC",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "23.29",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10345",
+        "cliente": "QUICK",
+        "idempleado": "2",
+        "idempresa": "2",
+        "importe": "249.06",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10346",
+        "cliente": "RATTC",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "142.08",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10347",
+        "cliente": "FAMIA",
+        "idempleado": "4",
+        "idempresa": "3",
+        "importe": "3.10",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10348",
+        "cliente": "WANDK",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "0.78",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10349",
+        "cliente": "SPLIR",
+        "idempleado": "7",
+        "idempresa": "1",
+        "importe": "8.63",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10350",
+        "cliente": "LAMAI",
+        "idempleado": "6",
+        "idempresa": "2",
+        "importe": "64.19",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10351",
+        "cliente": "ERNSH",
+        "idempleado": "1",
+        "idempresa": "1",
+        "importe": "162.33",
+        "pais": "Austria"
+    },
+    {
+        "idpedido": "10352",
+        "cliente": "FURIB",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "1.30",
+        "pais": "Portugal"
+    },
+    {
+        "idpedido": "10353",
+        "cliente": "PICCO",
+        "idempleado": "7",
+        "idempresa": "3",
+        "importe": "360.63",
+        "pais": "Austria"
+    },
+    {
+        "idpedido": "10354",
+        "cliente": "PERIC",
+        "idempleado": "8",
+        "idempresa": "3",
+        "importe": "53.80",
+        "pais": "Mexico"
+    },
+    {
+        "idpedido": "10355",
+        "cliente": "AROUT",
+        "idempleado": "6",
+        "idempresa": "1",
+        "importe": "41.95",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10356",
+        "cliente": "WANDK",
+        "idempleado": "6",
+        "idempresa": "2",
+        "importe": "36.71",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10357",
+        "cliente": "LILAS",
+        "idempleado": "1",
+        "idempresa": "3",
+        "importe": "34.88",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "10358",
+        "cliente": "LAMAI",
+        "idempleado": "5",
+        "idempresa": "1",
+        "importe": "19.64",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10359",
+        "cliente": "SEVES",
+        "idempleado": "5",
+        "idempresa": "3",
+        "importe": "288.43",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10360",
+        "cliente": "BLONP",
+        "idempleado": "4",
+        "idempresa": "3",
+        "importe": "131.70",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10361",
+        "cliente": "QUICK",
+        "idempleado": "1",
+        "idempresa": "2",
+        "importe": "183.17",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10362",
+        "cliente": "BONAP",
+        "idempleado": "3",
+        "idempresa": "1",
+        "importe": "96.04",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10363",
+        "cliente": "DRACD",
+        "idempleado": "4",
+        "idempresa": "3",
+        "importe": "30.54",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10364",
+        "cliente": "EASTC",
+        "idempleado": "1",
+        "idempresa": "1",
+        "importe": "71.97",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10365",
+        "cliente": "ANTON",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "22.00",
+        "pais": "Mexico"
+    },
+    {
+        "idpedido": "10366",
+        "cliente": "GALED",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "10.14",
+        "pais": "Espanya"
+    },
+    {
+        "idpedido": "10367",
+        "cliente": "VAFFE",
+        "idempleado": "7",
+        "idempresa": "3",
+        "importe": "13.55",
+        "pais": "Dinamarca"
+    },
+    {
+        "idpedido": "10368",
+        "cliente": "ERNSH",
+        "idempleado": "2",
+        "idempresa": "2",
+        "importe": "101.95",
+        "pais": "Austria"
+    },
+    {
+        "idpedido": "10369",
+        "cliente": "SPLIR",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "195.68",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10370",
+        "cliente": "CHOPS",
+        "idempleado": "6",
+        "idempresa": "2",
+        "importe": "1.17",
+        "pais": "Suiza"
+    },
+    {
+        "idpedido": "10371",
+        "cliente": "LAMAI",
+        "idempleado": "1",
+        "idempresa": "1",
+        "importe": "0.45",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10372",
+        "cliente": "QUEEN",
+        "idempleado": "5",
+        "idempresa": "2",
+        "importe": "890.78",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10373",
+        "cliente": "HUNGO",
+        "idempleado": "4",
+        "idempresa": "3",
+        "importe": "124.12",
+        "pais": "Irlanda"
+    },
+    {
+        "idpedido": "10374",
+        "cliente": "WOLZA",
+        "idempleado": "1",
+        "idempresa": "3",
+        "importe": "3.94",
+        "pais": "Polonia"
+    },
+    {
+        "idpedido": "10375",
+        "cliente": "HUNGC",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "20.12",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10376",
+        "cliente": "MEREP",
+        "idempleado": "1",
+        "idempresa": "2",
+        "importe": "20.39",
+        "pais": "Canada"
+    },
+    {
+        "idpedido": "10377",
+        "cliente": "SEVES",
+        "idempleado": "1",
+        "idempresa": "3",
+        "importe": "22.21",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10378",
+        "cliente": "FOLKO",
+        "idempleado": "5",
+        "idempresa": "3",
+        "importe": "5.44",
+        "pais": "Suecia"
+    },
+    {
+        "idpedido": "10379",
+        "cliente": "QUEDE",
+        "idempleado": "2",
+        "idempresa": "1",
+        "importe": "45.03",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10380",
+        "cliente": "HUNGO",
+        "idempleado": "8",
+        "idempresa": "3",
+        "importe": "35.03",
+        "pais": "Irlanda"
+    },
+    {
+        "idpedido": "10381",
+        "cliente": "LILAS",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "7.99",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "10382",
+        "cliente": "ERNSH",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "94.77",
+        "pais": "Austria"
+    },
+    {
+        "idpedido": "10383",
+        "cliente": "AROUT",
+        "idempleado": "8",
+        "idempresa": "3",
+        "importe": "34.24",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10384",
+        "cliente": "BERGS",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "168.64",
+        "pais": "Suecia"
+    },
+    {
+        "idpedido": "10385",
+        "cliente": "SPLIR",
+        "idempleado": "1",
+        "idempresa": "2",
+        "importe": "30.96",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10386",
+        "cliente": "FAMIA",
+        "idempleado": "9",
+        "idempresa": "3",
+        "importe": "13.99",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10387",
+        "cliente": "SANTG",
+        "idempleado": "1",
+        "idempresa": "2",
+        "importe": "93.63",
+        "pais": "Noruega"
+    },
+    {
+        "idpedido": "10388",
+        "cliente": "SEVES",
+        "idempleado": "2",
+        "idempresa": "1",
+        "importe": "34.86",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10389",
+        "cliente": "BOTTM",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "47.42",
+        "pais": "Canada"
+    },
+    {
+        "idpedido": "10390",
+        "cliente": "ERNSH",
+        "idempleado": "6",
+        "idempresa": "1",
+        "importe": "126.38",
+        "pais": "Austria"
+    },
+    {
+        "idpedido": "10391",
+        "cliente": "DRACD",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "5.45",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10392",
+        "cliente": "PICCO",
+        "idempleado": "2",
+        "idempresa": "3",
+        "importe": "122.46",
+        "pais": "Austria"
+    },
+    {
+        "idpedido": "10393",
+        "cliente": "SAVEA",
+        "idempleado": "1",
+        "idempresa": "3",
+        "importe": "126.56",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10394",
+        "cliente": "HUNGC",
+        "idempleado": "1",
+        "idempresa": "3",
+        "importe": "30.34",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10395",
+        "cliente": "HILAA",
+        "idempleado": "6",
+        "idempresa": "1",
+        "importe": "184.41",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "10396",
+        "cliente": "FRANK",
+        "idempleado": "1",
+        "idempresa": "3",
+        "importe": "135.35",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10397",
+        "cliente": "PRINI",
+        "idempleado": "5",
+        "idempresa": "1",
+        "importe": "60.26",
+        "pais": "Portugal"
+    },
+    {
+        "idpedido": "10398",
+        "cliente": "SAVEA",
+        "idempleado": "2",
+        "idempresa": "3",
+        "importe": "89.16",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10399",
+        "cliente": "VAFFE",
+        "idempleado": "8",
+        "idempresa": "3",
+        "importe": "27.36",
+        "pais": "Dinamarca"
+    },
+    {
+        "idpedido": "10400",
+        "cliente": "EASTC",
+        "idempleado": "1",
+        "idempresa": "3",
+        "importe": "83.93",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10401",
+        "cliente": "RATTC",
+        "idempleado": "1",
+        "idempresa": "1",
+        "importe": "12.51",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10402",
+        "cliente": "ERNSH",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "67.88",
+        "pais": "Austria"
+    },
+    {
+        "idpedido": "10403",
+        "cliente": "ERNSH",
+        "idempleado": "4",
+        "idempresa": "3",
+        "importe": "73.79",
+        "pais": "Austria"
+    },
+    {
+        "idpedido": "10404",
+        "cliente": "MAGAA",
+        "idempleado": "2",
+        "idempresa": "1",
+        "importe": "155.97",
+        "pais": "Italia"
+    },
+    {
+        "idpedido": "10405",
+        "cliente": "LINOD",
+        "idempleado": "1",
+        "idempresa": "1",
+        "importe": "34.82",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "10406",
+        "cliente": "QUEEN",
+        "idempleado": "7",
+        "idempresa": "1",
+        "importe": "108.04",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10407",
+        "cliente": "OTTIK",
+        "idempleado": "2",
+        "idempresa": "2",
+        "importe": "91.48",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10408",
+        "cliente": "FOLIG",
+        "idempleado": "8",
+        "idempresa": "1",
+        "importe": "11.26",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10409",
+        "cliente": "OCEAN",
+        "idempleado": "3",
+        "idempresa": "1",
+        "importe": "29.83",
+        "pais": "Argentina"
+    },
+    {
+        "idpedido": "10410",
+        "cliente": "BOTTM",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "2.40",
+        "pais": "Canada"
+    },
+    {
+        "idpedido": "10411",
+        "cliente": "BOTTM",
+        "idempleado": "9",
+        "idempresa": "3",
+        "importe": "23.65",
+        "pais": "Canada"
+    },
+    {
+        "idpedido": "10412",
+        "cliente": "WARTH",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "3.77",
+        "pais": "Finlandia"
+    },
+    {
+        "idpedido": "10413",
+        "cliente": "LAMAI",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "95.66",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10414",
+        "cliente": "FAMIA",
+        "idempleado": "2",
+        "idempresa": "3",
+        "importe": "21.48",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10415",
+        "cliente": "HUNGC",
+        "idempleado": "3",
+        "idempresa": "1",
+        "importe": "0.20",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10416",
+        "cliente": "WARTH",
+        "idempleado": "8",
+        "idempresa": "3",
+        "importe": "22.72",
+        "pais": "Finlandia"
+    },
+    {
+        "idpedido": "10417",
+        "cliente": "SIMOB",
+        "idempleado": "4",
+        "idempresa": "3",
+        "importe": "70.29",
+        "pais": "Dinamarca"
+    },
+    {
+        "idpedido": "10418",
+        "cliente": "QUICK",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "17.55",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10419",
+        "cliente": "RICSU",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "137.35",
+        "pais": "Suiza"
+    },
+    {
+        "idpedido": "10420",
+        "cliente": "WELLI",
+        "idempleado": "3",
+        "idempresa": "1",
+        "importe": "44.12",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10421",
+        "cliente": "QUEDE",
+        "idempleado": "8",
+        "idempresa": "1",
+        "importe": "99.23",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10422",
+        "cliente": "FRANS",
+        "idempleado": "2",
+        "idempresa": "1",
+        "importe": "3.02",
+        "pais": "Italia"
+    },
+    {
+        "idpedido": "10423",
+        "cliente": "GOURL",
+        "idempleado": "6",
+        "idempresa": "3",
+        "importe": "24.50",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10424",
+        "cliente": "MEREP",
+        "idempleado": "7",
+        "idempresa": "2",
+        "importe": "370.61",
+        "pais": "Canada"
+    },
+    {
+        "idpedido": "10425",
+        "cliente": "LAMAI",
+        "idempleado": "6",
+        "idempresa": "2",
+        "importe": "7.93",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10426",
+        "cliente": "GALED",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "18.69",
+        "pais": "Espanya"
+    },
+    {
+        "idpedido": "10427",
+        "cliente": "PICCO",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "31.29",
+        "pais": "Austria"
+    },
+    {
+        "idpedido": "10428",
+        "cliente": "REGGC",
+        "idempleado": "7",
+        "idempresa": "1",
+        "importe": "11.09",
+        "pais": "Italia"
+    },
+    {
+        "idpedido": "10429",
+        "cliente": "HUNGO",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "56.63",
+        "pais": "Irlanda"
+    },
+    {
+        "idpedido": "10430",
+        "cliente": "ERNSH",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "458.78",
+        "pais": "Austria"
+    },
+    {
+        "idpedido": "10431",
+        "cliente": "BOTTM",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "44.17",
+        "pais": "Canada"
+    },
+    {
+        "idpedido": "10432",
+        "cliente": "SPLIR",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "4.34",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10433",
+        "cliente": "PRINI",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "73.83",
+        "pais": "Portugal"
+    },
+    {
+        "idpedido": "10434",
+        "cliente": "FOLKO",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "17.92",
+        "pais": "Suecia"
+    },
+    {
+        "idpedido": "10435",
+        "cliente": "CONSH",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "9.21",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10436",
+        "cliente": "BLONP",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "156.66",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10437",
+        "cliente": "WARTH",
+        "idempleado": "8",
+        "idempresa": "1",
+        "importe": "19.97",
+        "pais": "Finlandia"
+    },
+    {
+        "idpedido": "10438",
+        "cliente": "TOMSP",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "8.24",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10439",
+        "cliente": "MEREP",
+        "idempleado": "6",
+        "idempresa": "3",
+        "importe": "4.07",
+        "pais": "Canada"
+    },
+    {
+        "idpedido": "10440",
+        "cliente": "SAVEA",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "86.53",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10441",
+        "cliente": "OLDWO",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "73.02",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10442",
+        "cliente": "ERNSH",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "47.94",
+        "pais": "Austria"
+    },
+    {
+        "idpedido": "10443",
+        "cliente": "REGGC",
+        "idempleado": "8",
+        "idempresa": "1",
+        "importe": "13.95",
+        "pais": "Italia"
+    },
+    {
+        "idpedido": "10444",
+        "cliente": "BERGS",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "3.50",
+        "pais": "Suecia"
+    },
+    {
+        "idpedido": "10445",
+        "cliente": "BERGS",
+        "idempleado": "3",
+        "idempresa": "1",
+        "importe": "9.30",
+        "pais": "Suecia"
+    },
+    {
+        "idpedido": "10446",
+        "cliente": "TOMSP",
+        "idempleado": "6",
+        "idempresa": "1",
+        "importe": "14.68",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10447",
+        "cliente": "RICAR",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "68.66",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10448",
+        "cliente": "RANCH",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "38.82",
+        "pais": "Argentina"
+    },
+    {
+        "idpedido": "10449",
+        "cliente": "BLONP",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "53.30",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10450",
+        "cliente": "VICTE",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "7.23",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10451",
+        "cliente": "QUICK",
+        "idempleado": "4",
+        "idempresa": "3",
+        "importe": "189.09",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10452",
+        "cliente": "SAVEA",
+        "idempleado": "8",
+        "idempresa": "1",
+        "importe": "140.26",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10453",
+        "cliente": "AROUT",
+        "idempleado": "1",
+        "idempresa": "2",
+        "importe": "25.36",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10454",
+        "cliente": "LAMAI",
+        "idempleado": "4",
+        "idempresa": "3",
+        "importe": "2.74",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10455",
+        "cliente": "WARTH",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "180.45",
+        "pais": "Finlandia"
+    },
+    {
+        "idpedido": "10456",
+        "cliente": "KOENE",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "8.12",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10457",
+        "cliente": "KOENE",
+        "idempleado": "2",
+        "idempresa": "1",
+        "importe": "11.57",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10458",
+        "cliente": "SUPRD",
+        "idempleado": "7",
+        "idempresa": "3",
+        "importe": "147.06",
+        "pais": "Belgica"
+    },
+    {
+        "idpedido": "10459",
+        "cliente": "VICTE",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "25.09",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10460",
+        "cliente": "FOLKO",
+        "idempleado": "8",
+        "idempresa": "1",
+        "importe": "16.27",
+        "pais": "Suecia"
+    },
+    {
+        "idpedido": "10461",
+        "cliente": "LILAS",
+        "idempleado": "1",
+        "idempresa": "3",
+        "importe": "148.61",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "10462",
+        "cliente": "CONSH",
+        "idempleado": "2",
+        "idempresa": "1",
+        "importe": "6.17",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10463",
+        "cliente": "SUPRD",
+        "idempleado": "5",
+        "idempresa": "3",
+        "importe": "14.78",
+        "pais": "Belgica"
+    },
+    {
+        "idpedido": "10464",
+        "cliente": "FURIB",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "89.00",
+        "pais": "Portugal"
+    },
+    {
+        "idpedido": "10465",
+        "cliente": "VAFFE",
+        "idempleado": "1",
+        "idempresa": "3",
+        "importe": "145.04",
+        "pais": "Dinamarca"
+    },
+    {
+        "idpedido": "10466",
+        "cliente": "COMMI",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "11.93",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10467",
+        "cliente": "MAGAA",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "4.93",
+        "pais": "Italia"
+    },
+    {
+        "idpedido": "10468",
+        "cliente": "KOENE",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "44.12",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10469",
+        "cliente": "WHITC",
+        "idempleado": "1",
+        "idempresa": "1",
+        "importe": "60.18",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10470",
+        "cliente": "BONAP",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "64.56",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10471",
+        "cliente": "BSBEV",
+        "idempleado": "2",
+        "idempresa": "3",
+        "importe": "45.59",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10472",
+        "cliente": "SEVES",
+        "idempleado": "8",
+        "idempresa": "1",
+        "importe": "4.20",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10473",
+        "cliente": "ISLAT",
+        "idempleado": "1",
+        "idempresa": "3",
+        "importe": "16.37",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10474",
+        "cliente": "PERIC",
+        "idempleado": "5",
+        "idempresa": "2",
+        "importe": "83.49",
+        "pais": "Mexico"
+    },
+    {
+        "idpedido": "10475",
+        "cliente": "SUPRD",
+        "idempleado": "9",
+        "idempresa": "1",
+        "importe": "68.52",
+        "pais": "Belgica"
+    },
+    {
+        "idpedido": "10476",
+        "cliente": "HILAA",
+        "idempleado": "8",
+        "idempresa": "3",
+        "importe": "4.41",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "10477",
+        "cliente": "PRINI",
+        "idempleado": "5",
+        "idempresa": "2",
+        "importe": "13.02",
+        "pais": "Portugal"
+    },
+    {
+        "idpedido": "10478",
+        "cliente": "VICTE",
+        "idempleado": "2",
+        "idempresa": "3",
+        "importe": "4.81",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10479",
+        "cliente": "RATTC",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "708.95",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10480",
+        "cliente": "FOLIG",
+        "idempleado": "6",
+        "idempresa": "2",
+        "importe": "1.35",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10481",
+        "cliente": "RICAR",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "64.33",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10482",
+        "cliente": "LAZYK",
+        "idempleado": "1",
+        "idempresa": "3",
+        "importe": "7.48",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10483",
+        "cliente": "WHITC",
+        "idempleado": "7",
+        "idempresa": "2",
+        "importe": "15.28",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10484",
+        "cliente": "BSBEV",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "6.88",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10485",
+        "cliente": "LINOD",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "64.45",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "10486",
+        "cliente": "HILAA",
+        "idempleado": "1",
+        "idempresa": "2",
+        "importe": "30.53",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "10487",
+        "cliente": "QUEEN",
+        "idempleado": "2",
+        "idempresa": "2",
+        "importe": "71.07",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10488",
+        "cliente": "FRANK",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "4.93",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10489",
+        "cliente": "PICCO",
+        "idempleado": "6",
+        "idempresa": "2",
+        "importe": "5.29",
+        "pais": "Austria"
+    },
+    {
+        "idpedido": "10490",
+        "cliente": "HILAA",
+        "idempleado": "7",
+        "idempresa": "2",
+        "importe": "210.19",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "10491",
+        "cliente": "FURIB",
+        "idempleado": "8",
+        "idempresa": "3",
+        "importe": "16.96",
+        "pais": "Portugal"
+    },
+    {
+        "idpedido": "10492",
+        "cliente": "BOTTM",
+        "idempleado": "3",
+        "idempresa": "1",
+        "importe": "62.89",
+        "pais": "Canada"
+    },
+    {
+        "idpedido": "10493",
+        "cliente": "LAMAI",
+        "idempleado": "4",
+        "idempresa": "3",
+        "importe": "10.64",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10494",
+        "cliente": "COMMI",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "65.99",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10495",
+        "cliente": "LAUGB",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "4.65",
+        "pais": "Canada"
+    },
+    {
+        "idpedido": "10496",
+        "cliente": "TRADH",
+        "idempleado": "7",
+        "idempresa": "2",
+        "importe": "46.77",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10497",
+        "cliente": "LEHMS",
+        "idempleado": "7",
+        "idempresa": "1",
+        "importe": "36.21",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10498",
+        "cliente": "HILAA",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "29.75",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "10499",
+        "cliente": "LILAS",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "102.02",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "10500",
+        "cliente": "LAMAI",
+        "idempleado": "6",
+        "idempresa": "1",
+        "importe": "42.68",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10501",
+        "cliente": "BLAUS",
+        "idempleado": "9",
+        "idempresa": "3",
+        "importe": "8.85",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10502",
+        "cliente": "PERIC",
+        "idempleado": "2",
+        "idempresa": "1",
+        "importe": "69.32",
+        "pais": "Mexico"
+    },
+    {
+        "idpedido": "10503",
+        "cliente": "HUNGO",
+        "idempleado": "6",
+        "idempresa": "2",
+        "importe": "16.74",
+        "pais": "Irlanda"
+    },
+    {
+        "idpedido": "10504",
+        "cliente": "WHITC",
+        "idempleado": "4",
+        "idempresa": "3",
+        "importe": "59.13",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10505",
+        "cliente": "MEREP",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "7.13",
+        "pais": "Canada"
+    },
+    {
+        "idpedido": "10506",
+        "cliente": "KOENE",
+        "idempleado": "9",
+        "idempresa": "2",
+        "importe": "21.19",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10507",
+        "cliente": "ANTON",
+        "idempleado": "7",
+        "idempresa": "1",
+        "importe": "47.45",
+        "pais": "Mexico"
+    },
+    {
+        "idpedido": "10508",
+        "cliente": "OTTIK",
+        "idempleado": "1",
+        "idempresa": "2",
+        "importe": "4.99",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10509",
+        "cliente": "BLAUS",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "0.15",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10510",
+        "cliente": "SAVEA",
+        "idempleado": "6",
+        "idempresa": "3",
+        "importe": "367.63",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10511",
+        "cliente": "BONAP",
+        "idempleado": "4",
+        "idempresa": "3",
+        "importe": "350.64",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10512",
+        "cliente": "FAMIA",
+        "idempleado": "7",
+        "idempresa": "2",
+        "importe": "3.53",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10513",
+        "cliente": "WANDK",
+        "idempleado": "7",
+        "idempresa": "1",
+        "importe": "105.65",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10514",
+        "cliente": "ERNSH",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "789.95",
+        "pais": "Austria"
+    },
+    {
+        "idpedido": "10515",
+        "cliente": "QUICK",
+        "idempleado": "2",
+        "idempresa": "1",
+        "importe": "204.47",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10516",
+        "cliente": "HUNGO",
+        "idempleado": "2",
+        "idempresa": "3",
+        "importe": "62.78",
+        "pais": "Irlanda"
+    },
+    {
+        "idpedido": "10517",
+        "cliente": "NORTS",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "32.07",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10518",
+        "cliente": "TORTU",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "218.15",
+        "pais": "Mexico"
+    },
+    {
+        "idpedido": "10519",
+        "cliente": "CHOPS",
+        "idempleado": "6",
+        "idempresa": "3",
+        "importe": "91.76",
+        "pais": "Suiza"
+    },
+    {
+        "idpedido": "10520",
+        "cliente": "SANTG",
+        "idempleado": "7",
+        "idempresa": "1",
+        "importe": "13.37",
+        "pais": "Noruega"
+    },
+    {
+        "idpedido": "10521",
+        "cliente": "CACTU",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "17.22",
+        "pais": "Argentina"
+    },
+    {
+        "idpedido": "10522",
+        "cliente": "LEHMS",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "45.33",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10523",
+        "cliente": "SEVES",
+        "idempleado": "7",
+        "idempresa": "2",
+        "importe": "77.63",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10524",
+        "cliente": "BERGS",
+        "idempleado": "1",
+        "idempresa": "2",
+        "importe": "244.79",
+        "pais": "Suecia"
+    },
+    {
+        "idpedido": "10525",
+        "cliente": "BONAP",
+        "idempleado": "1",
+        "idempresa": "2",
+        "importe": "11.06",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10526",
+        "cliente": "WARTH",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "58.59",
+        "pais": "Finlandia"
+    },
+    {
+        "idpedido": "10527",
+        "cliente": "QUICK",
+        "idempleado": "7",
+        "idempresa": "1",
+        "importe": "41.90",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10528",
+        "cliente": "GREAL",
+        "idempleado": "6",
+        "idempresa": "2",
+        "importe": "3.35",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10529",
+        "cliente": "MAISD",
+        "idempleado": "5",
+        "idempresa": "2",
+        "importe": "66.69",
+        "pais": "Belgica"
+    },
+    {
+        "idpedido": "10530",
+        "cliente": "PICCO",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "339.22",
+        "pais": "Austria"
+    },
+    {
+        "idpedido": "10531",
+        "cliente": "OCEAN",
+        "idempleado": "7",
+        "idempresa": "1",
+        "importe": "8.12",
+        "pais": "Argentina"
+    },
+    {
+        "idpedido": "10532",
+        "cliente": "EASTC",
+        "idempleado": "7",
+        "idempresa": "3",
+        "importe": "74.46",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10533",
+        "cliente": "FOLKO",
+        "idempleado": "8",
+        "idempresa": "1",
+        "importe": "188.04",
+        "pais": "Suecia"
+    },
+    {
+        "idpedido": "10534",
+        "cliente": "LEHMS",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "27.94",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10535",
+        "cliente": "ANTON",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "15.64",
+        "pais": "Mexico"
+    },
+    {
+        "idpedido": "10536",
+        "cliente": "LEHMS",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "58.88",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10537",
+        "cliente": "RICSU",
+        "idempleado": "1",
+        "idempresa": "1",
+        "importe": "78.85",
+        "pais": "Suiza"
+    },
+    {
+        "idpedido": "10538",
+        "cliente": "BSBEV",
+        "idempleado": "9",
+        "idempresa": "3",
+        "importe": "4.87",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10539",
+        "cliente": "BSBEV",
+        "idempleado": "6",
+        "idempresa": "3",
+        "importe": "12.36",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10540",
+        "cliente": "QUICK",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "1007.64",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10541",
+        "cliente": "HANAR",
+        "idempleado": "2",
+        "idempresa": "1",
+        "importe": "68.65",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10542",
+        "cliente": "KOENE",
+        "idempleado": "1",
+        "idempresa": "3",
+        "importe": "10.95",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10543",
+        "cliente": "LILAS",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "48.17",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "10544",
+        "cliente": "LONEP",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "24.91",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10545",
+        "cliente": "LAZYK",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "11.92",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10546",
+        "cliente": "VICTE",
+        "idempleado": "1",
+        "idempresa": "3",
+        "importe": "194.72",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10547",
+        "cliente": "SEVES",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "178.43",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10548",
+        "cliente": "TOMSP",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "1.43",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10549",
+        "cliente": "QUICK",
+        "idempleado": "5",
+        "idempresa": "1",
+        "importe": "171.24",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10550",
+        "cliente": "GODOS",
+        "idempleado": "7",
+        "idempresa": "3",
+        "importe": "4.32",
+        "pais": "Espanya"
+    },
+    {
+        "idpedido": "10551",
+        "cliente": "FURIB",
+        "idempleado": "4",
+        "idempresa": "3",
+        "importe": "72.95",
+        "pais": "Portugal"
+    },
+    {
+        "idpedido": "10552",
+        "cliente": "HILAA",
+        "idempleado": "2",
+        "idempresa": "1",
+        "importe": "83.22",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "10553",
+        "cliente": "WARTH",
+        "idempleado": "2",
+        "idempresa": "2",
+        "importe": "149.49",
+        "pais": "Finlandia"
+    },
+    {
+        "idpedido": "10554",
+        "cliente": "OTTIK",
+        "idempleado": "4",
+        "idempresa": "3",
+        "importe": "120.97",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10555",
+        "cliente": "SAVEA",
+        "idempleado": "6",
+        "idempresa": "3",
+        "importe": "252.49",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10556",
+        "cliente": "SIMOB",
+        "idempleado": "2",
+        "idempresa": "1",
+        "importe": "9.80",
+        "pais": "Dinamarca"
+    },
+    {
+        "idpedido": "10557",
+        "cliente": "LEHMS",
+        "idempleado": "9",
+        "idempresa": "2",
+        "importe": "96.72",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10558",
+        "cliente": "AROUT",
+        "idempleado": "1",
+        "idempresa": "2",
+        "importe": "72.97",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10559",
+        "cliente": "BLONP",
+        "idempleado": "6",
+        "idempresa": "1",
+        "importe": "8.05",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10560",
+        "cliente": "FRANK",
+        "idempleado": "8",
+        "idempresa": "1",
+        "importe": "36.65",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10561",
+        "cliente": "FOLKO",
+        "idempleado": "2",
+        "idempresa": "2",
+        "importe": "242.21",
+        "pais": "Suecia"
+    },
+    {
+        "idpedido": "10562",
+        "cliente": "REGGC",
+        "idempleado": "1",
+        "idempresa": "1",
+        "importe": "22.95",
+        "pais": "Italia"
+    },
+    {
+        "idpedido": "10563",
+        "cliente": "RICAR",
+        "idempleado": "2",
+        "idempresa": "2",
+        "importe": "60.43",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10564",
+        "cliente": "RATTC",
+        "idempleado": "4",
+        "idempresa": "3",
+        "importe": "13.75",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10565",
+        "cliente": "MEREP",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "7.15",
+        "pais": "Canada"
+    },
+    {
+        "idpedido": "10566",
+        "cliente": "BLONP",
+        "idempleado": "9",
+        "idempresa": "1",
+        "importe": "88.40",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10567",
+        "cliente": "HUNGO",
+        "idempleado": "1",
+        "idempresa": "1",
+        "importe": "33.97",
+        "pais": "Irlanda"
+    },
+    {
+        "idpedido": "10568",
+        "cliente": "GALED",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "6.54",
+        "pais": "Espanya"
+    },
+    {
+        "idpedido": "10569",
+        "cliente": "RATTC",
+        "idempleado": "5",
+        "idempresa": "1",
+        "importe": "58.98",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10570",
+        "cliente": "MEREP",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "188.99",
+        "pais": "Canada"
+    },
+    {
+        "idpedido": "10571",
+        "cliente": "ERNSH",
+        "idempleado": "8",
+        "idempresa": "3",
+        "importe": "26.06",
+        "pais": "Austria"
+    },
+    {
+        "idpedido": "10572",
+        "cliente": "BERGS",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "116.43",
+        "pais": "Suecia"
+    },
+    {
+        "idpedido": "10573",
+        "cliente": "ANTON",
+        "idempleado": "7",
+        "idempresa": "3",
+        "importe": "84.84",
+        "pais": "Mexico"
+    },
+    {
+        "idpedido": "10574",
+        "cliente": "TRAIH",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "37.60",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10575",
+        "cliente": "MORGK",
+        "idempleado": "5",
+        "idempresa": "1",
+        "importe": "127.34",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10576",
+        "cliente": "TORTU",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "18.56",
+        "pais": "Mexico"
+    },
+    {
+        "idpedido": "10577",
+        "cliente": "TRAIH",
+        "idempleado": "9",
+        "idempresa": "2",
+        "importe": "25.41",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10578",
+        "cliente": "BSBEV",
+        "idempleado": "4",
+        "idempresa": "3",
+        "importe": "29.60",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10579",
+        "cliente": "LETSS",
+        "idempleado": "1",
+        "idempresa": "2",
+        "importe": "13.73",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10580",
+        "cliente": "OTTIK",
+        "idempleado": "4",
+        "idempresa": "3",
+        "importe": "75.89",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10581",
+        "cliente": "FAMIA",
+        "idempleado": "3",
+        "idempresa": "1",
+        "importe": "3.01",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10582",
+        "cliente": "BLAUS",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "27.71",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10583",
+        "cliente": "WARTH",
+        "idempleado": "2",
+        "idempresa": "2",
+        "importe": "7.28",
+        "pais": "Finlandia"
+    },
+    {
+        "idpedido": "10584",
+        "cliente": "BLONP",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "59.14",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10585",
+        "cliente": "WELLI",
+        "idempleado": "7",
+        "idempresa": "1",
+        "importe": "13.41",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10586",
+        "cliente": "REGGC",
+        "idempleado": "9",
+        "idempresa": "1",
+        "importe": "0.48",
+        "pais": "Italia"
+    },
+    {
+        "idpedido": "10587",
+        "cliente": "QUEDE",
+        "idempleado": "1",
+        "idempresa": "1",
+        "importe": "62.52",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10588",
+        "cliente": "QUICK",
+        "idempleado": "2",
+        "idempresa": "3",
+        "importe": "194.67",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10589",
+        "cliente": "GREAL",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "4.42",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10590",
+        "cliente": "MEREP",
+        "idempleado": "4",
+        "idempresa": "3",
+        "importe": "44.77",
+        "pais": "Canada"
+    },
+    {
+        "idpedido": "10591",
+        "cliente": "VAFFE",
+        "idempleado": "1",
+        "idempresa": "1",
+        "importe": "55.92",
+        "pais": "Dinamarca"
+    },
+    {
+        "idpedido": "10592",
+        "cliente": "LEHMS",
+        "idempleado": "3",
+        "idempresa": "1",
+        "importe": "32.10",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10593",
+        "cliente": "LEHMS",
+        "idempleado": "7",
+        "idempresa": "2",
+        "importe": "174.20",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10594",
+        "cliente": "OLDWO",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "5.24",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10595",
+        "cliente": "ERNSH",
+        "idempleado": "2",
+        "idempresa": "1",
+        "importe": "96.78",
+        "pais": "Austria"
+    },
+    {
+        "idpedido": "10596",
+        "cliente": "WHITC",
+        "idempleado": "8",
+        "idempresa": "1",
+        "importe": "16.34",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10597",
+        "cliente": "PICCO",
+        "idempleado": "7",
+        "idempresa": "3",
+        "importe": "35.12",
+        "pais": "Austria"
+    },
+    {
+        "idpedido": "10598",
+        "cliente": "RATTC",
+        "idempleado": "1",
+        "idempresa": "3",
+        "importe": "44.42",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10599",
+        "cliente": "BSBEV",
+        "idempleado": "6",
+        "idempresa": "3",
+        "importe": "29.98",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10600",
+        "cliente": "HUNGC",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "45.13",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10601",
+        "cliente": "HILAA",
+        "idempleado": "7",
+        "idempresa": "1",
+        "importe": "58.30",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "10602",
+        "cliente": "VAFFE",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "2.92",
+        "pais": "Dinamarca"
+    },
+    {
+        "idpedido": "10603",
+        "cliente": "SAVEA",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "48.77",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10604",
+        "cliente": "FURIB",
+        "idempleado": "1",
+        "idempresa": "1",
+        "importe": "7.46",
+        "pais": "Portugal"
+    },
+    {
+        "idpedido": "10605",
+        "cliente": "MEREP",
+        "idempleado": "1",
+        "idempresa": "2",
+        "importe": "379.13",
+        "pais": "Canada"
+    },
+    {
+        "idpedido": "10606",
+        "cliente": "TRADH",
+        "idempleado": "4",
+        "idempresa": "3",
+        "importe": "79.40",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10607",
+        "cliente": "SAVEA",
+        "idempleado": "5",
+        "idempresa": "1",
+        "importe": "200.24",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10608",
+        "cliente": "TOMSP",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "27.79",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10609",
+        "cliente": "DUMON",
+        "idempleado": "7",
+        "idempresa": "2",
+        "importe": "1.85",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10610",
+        "cliente": "LAMAI",
+        "idempleado": "8",
+        "idempresa": "1",
+        "importe": "26.78",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10611",
+        "cliente": "WOLZA",
+        "idempleado": "6",
+        "idempresa": "2",
+        "importe": "80.65",
+        "pais": "Polonia"
+    },
+    {
+        "idpedido": "10612",
+        "cliente": "SAVEA",
+        "idempleado": "1",
+        "idempresa": "2",
+        "importe": "544.08",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10613",
+        "cliente": "HILAA",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "8.11",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "10614",
+        "cliente": "BLAUS",
+        "idempleado": "8",
+        "idempresa": "3",
+        "importe": "1.93",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10615",
+        "cliente": "WILMK",
+        "idempleado": "2",
+        "idempresa": "3",
+        "importe": "0.75",
+        "pais": "Finlandia"
+    },
+    {
+        "idpedido": "10616",
+        "cliente": "GREAL",
+        "idempleado": "1",
+        "idempresa": "2",
+        "importe": "116.53",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10617",
+        "cliente": "GREAL",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "18.53",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10618",
+        "cliente": "MEREP",
+        "idempleado": "1",
+        "idempresa": "1",
+        "importe": "154.68",
+        "pais": "Canada"
+    },
+    {
+        "idpedido": "10619",
+        "cliente": "MEREP",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "91.05",
+        "pais": "Canada"
+    },
+    {
+        "idpedido": "10620",
+        "cliente": "LAUGB",
+        "idempleado": "2",
+        "idempresa": "3",
+        "importe": "0.94",
+        "pais": "Canada"
+    },
+    {
+        "idpedido": "10621",
+        "cliente": "ISLAT",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "23.73",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10622",
+        "cliente": "RICAR",
+        "idempleado": "4",
+        "idempresa": "3",
+        "importe": "50.97",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10623",
+        "cliente": "FRANK",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "97.18",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10624",
+        "cliente": "THECR",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "94.80",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10625",
+        "cliente": "ANATR",
+        "idempleado": "3",
+        "idempresa": "1",
+        "importe": "43.90",
+        "pais": "Mexico"
+    },
+    {
+        "idpedido": "10626",
+        "cliente": "BERGS",
+        "idempleado": "1",
+        "idempresa": "2",
+        "importe": "138.69",
+        "pais": "Suecia"
+    },
+    {
+        "idpedido": "10627",
+        "cliente": "SAVEA",
+        "idempleado": "8",
+        "idempresa": "3",
+        "importe": "107.46",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10628",
+        "cliente": "BLONP",
+        "idempleado": "4",
+        "idempresa": "3",
+        "importe": "30.36",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10629",
+        "cliente": "GODOS",
+        "idempleado": "4",
+        "idempresa": "3",
+        "importe": "85.46",
+        "pais": "Espanya"
+    },
+    {
+        "idpedido": "10630",
+        "cliente": "KOENE",
+        "idempleado": "1",
+        "idempresa": "2",
+        "importe": "32.35",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10631",
+        "cliente": "LAMAI",
+        "idempleado": "8",
+        "idempresa": "1",
+        "importe": "0.87",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10632",
+        "cliente": "WANDK",
+        "idempleado": "8",
+        "idempresa": "1",
+        "importe": "41.38",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10633",
+        "cliente": "ERNSH",
+        "idempleado": "7",
+        "idempresa": "3",
+        "importe": "477.90",
+        "pais": "Austria"
+    },
+    {
+        "idpedido": "10634",
+        "cliente": "FOLIG",
+        "idempleado": "4",
+        "idempresa": "3",
+        "importe": "487.38",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10635",
+        "cliente": "MAGAA",
+        "idempleado": "8",
+        "idempresa": "3",
+        "importe": "47.46",
+        "pais": "Italia"
+    },
+    {
+        "idpedido": "10636",
+        "cliente": "WARTH",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "1.15",
+        "pais": "Finlandia"
+    },
+    {
+        "idpedido": "10637",
+        "cliente": "QUEEN",
+        "idempleado": "6",
+        "idempresa": "1",
+        "importe": "201.29",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10638",
+        "cliente": "LINOD",
+        "idempleado": "3",
+        "idempresa": "1",
+        "importe": "158.44",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "10639",
+        "cliente": "SANTG",
+        "idempleado": "7",
+        "idempresa": "3",
+        "importe": "38.64",
+        "pais": "Noruega"
+    },
+    {
+        "idpedido": "10640",
+        "cliente": "WANDK",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "23.55",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10641",
+        "cliente": "HILAA",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "179.61",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "10642",
+        "cliente": "SIMOB",
+        "idempleado": "7",
+        "idempresa": "3",
+        "importe": "41.89",
+        "pais": "Dinamarca"
+    },
+    {
+        "idpedido": "10643",
+        "cliente": "ALFKI",
+        "idempleado": "6",
+        "idempresa": "2",
+        "importe": "29.46",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10644",
+        "cliente": "WELLI",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "0.14",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10645",
+        "cliente": "HANAR",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "12.41",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10646",
+        "cliente": "HUNGO",
+        "idempleado": "9",
+        "idempresa": "3",
+        "importe": "142.33",
+        "pais": "Irlanda"
+    },
+    {
+        "idpedido": "10647",
+        "cliente": "QUEDE",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "45.54",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10648",
+        "cliente": "RICAR",
+        "idempleado": "5",
+        "idempresa": "2",
+        "importe": "14.25",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10649",
+        "cliente": "MAISD",
+        "idempleado": "5",
+        "idempresa": "3",
+        "importe": "6.20",
+        "pais": "Belgica"
+    },
+    {
+        "idpedido": "10650",
+        "cliente": "FAMIA",
+        "idempleado": "5",
+        "idempresa": "3",
+        "importe": "176.81",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10651",
+        "cliente": "WANDK",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "20.60",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10652",
+        "cliente": "GOURL",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "7.14",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10653",
+        "cliente": "FRANK",
+        "idempleado": "1",
+        "idempresa": "1",
+        "importe": "93.25",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10654",
+        "cliente": "BERGS",
+        "idempleado": "5",
+        "idempresa": "1",
+        "importe": "55.26",
+        "pais": "Suecia"
+    },
+    {
+        "idpedido": "10655",
+        "cliente": "REGGC",
+        "idempleado": "1",
+        "idempresa": "2",
+        "importe": "4.41",
+        "pais": "Italia"
+    },
+    {
+        "idpedido": "10656",
+        "cliente": "GREAL",
+        "idempleado": "6",
+        "idempresa": "1",
+        "importe": "57.15",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10657",
+        "cliente": "SAVEA",
+        "idempleado": "2",
+        "idempresa": "2",
+        "importe": "352.69",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10658",
+        "cliente": "QUICK",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "364.15",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10659",
+        "cliente": "QUEEN",
+        "idempleado": "7",
+        "idempresa": "2",
+        "importe": "105.81",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10660",
+        "cliente": "HUNGC",
+        "idempleado": "8",
+        "idempresa": "1",
+        "importe": "111.29",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10661",
+        "cliente": "HUNGO",
+        "idempleado": "7",
+        "idempresa": "3",
+        "importe": "17.55",
+        "pais": "Irlanda"
+    },
+    {
+        "idpedido": "10662",
+        "cliente": "LONEP",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "1.28",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10663",
+        "cliente": "BONAP",
+        "idempleado": "2",
+        "idempresa": "2",
+        "importe": "113.15",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10664",
+        "cliente": "FURIB",
+        "idempleado": "1",
+        "idempresa": "3",
+        "importe": "1.27",
+        "pais": "Portugal"
+    },
+    {
+        "idpedido": "10665",
+        "cliente": "LONEP",
+        "idempleado": "1",
+        "idempresa": "2",
+        "importe": "26.31",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10666",
+        "cliente": "RICSU",
+        "idempleado": "7",
+        "idempresa": "2",
+        "importe": "232.42",
+        "pais": "Suiza"
+    },
+    {
+        "idpedido": "10667",
+        "cliente": "ERNSH",
+        "idempleado": "7",
+        "idempresa": "1",
+        "importe": "78.09",
+        "pais": "Austria"
+    },
+    {
+        "idpedido": "10668",
+        "cliente": "WANDK",
+        "idempleado": "1",
+        "idempresa": "2",
+        "importe": "47.22",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10669",
+        "cliente": "SIMOB",
+        "idempleado": "2",
+        "idempresa": "1",
+        "importe": "24.39",
+        "pais": "Dinamarca"
+    },
+    {
+        "idpedido": "10670",
+        "cliente": "FRANK",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "203.48",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10671",
+        "cliente": "FRANR",
+        "idempleado": "1",
+        "idempresa": "1",
+        "importe": "30.34",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10672",
+        "cliente": "BERGS",
+        "idempleado": "9",
+        "idempresa": "2",
+        "importe": "95.75",
+        "pais": "Suecia"
+    },
+    {
+        "idpedido": "10673",
+        "cliente": "WILMK",
+        "idempleado": "2",
+        "idempresa": "1",
+        "importe": "22.76",
+        "pais": "Finlandia"
+    },
+    {
+        "idpedido": "10674",
+        "cliente": "ISLAT",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "0.90",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10675",
+        "cliente": "FRANK",
+        "idempleado": "5",
+        "idempresa": "2",
+        "importe": "31.85",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10676",
+        "cliente": "TORTU",
+        "idempleado": "2",
+        "idempresa": "2",
+        "importe": "2.01",
+        "pais": "Mexico"
+    },
+    {
+        "idpedido": "10677",
+        "cliente": "ANTON",
+        "idempleado": "1",
+        "idempresa": "3",
+        "importe": "4.03",
+        "pais": "Mexico"
+    },
+    {
+        "idpedido": "10678",
+        "cliente": "SAVEA",
+        "idempleado": "7",
+        "idempresa": "3",
+        "importe": "388.98",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10679",
+        "cliente": "BLONP",
+        "idempleado": "8",
+        "idempresa": "3",
+        "importe": "27.94",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10680",
+        "cliente": "OLDWO",
+        "idempleado": "1",
+        "idempresa": "1",
+        "importe": "26.61",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10681",
+        "cliente": "GREAL",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "76.13",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10682",
+        "cliente": "ANTON",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "36.13",
+        "pais": "Mexico"
+    },
+    {
+        "idpedido": "10683",
+        "cliente": "DUMON",
+        "idempleado": "2",
+        "idempresa": "1",
+        "importe": "4.40",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10684",
+        "cliente": "OTTIK",
+        "idempleado": "3",
+        "idempresa": "1",
+        "importe": "145.63",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10685",
+        "cliente": "GOURL",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "33.75",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10686",
+        "cliente": "PICCO",
+        "idempleado": "2",
+        "idempresa": "1",
+        "importe": "96.50",
+        "pais": "Austria"
+    },
+    {
+        "idpedido": "10687",
+        "cliente": "HUNGO",
+        "idempleado": "9",
+        "idempresa": "2",
+        "importe": "296.43",
+        "pais": "Irlanda"
+    },
+    {
+        "idpedido": "10688",
+        "cliente": "VAFFE",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "299.09",
+        "pais": "Dinamarca"
+    },
+    {
+        "idpedido": "10689",
+        "cliente": "BERGS",
+        "idempleado": "1",
+        "idempresa": "2",
+        "importe": "13.42",
+        "pais": "Suecia"
+    },
+    {
+        "idpedido": "10690",
+        "cliente": "HANAR",
+        "idempleado": "1",
+        "idempresa": "1",
+        "importe": "15.80",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10691",
+        "cliente": "QUICK",
+        "idempleado": "2",
+        "idempresa": "2",
+        "importe": "810.05",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10692",
+        "cliente": "ALFKI",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "61.02",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10693",
+        "cliente": "WHITC",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "139.34",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10694",
+        "cliente": "QUICK",
+        "idempleado": "8",
+        "idempresa": "3",
+        "importe": "398.36",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10695",
+        "cliente": "WILMK",
+        "idempleado": "7",
+        "idempresa": "1",
+        "importe": "16.72",
+        "pais": "Finlandia"
+    },
+    {
+        "idpedido": "10696",
+        "cliente": "WHITC",
+        "idempleado": "8",
+        "idempresa": "3",
+        "importe": "102.55",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10697",
+        "cliente": "LINOD",
+        "idempleado": "3",
+        "idempresa": "1",
+        "importe": "45.52",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "10698",
+        "cliente": "ERNSH",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "272.47",
+        "pais": "Austria"
+    },
+    {
+        "idpedido": "10699",
+        "cliente": "MORGK",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "0.58",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10700",
+        "cliente": "SAVEA",
+        "idempleado": "3",
+        "idempresa": "1",
+        "importe": "65.10",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10701",
+        "cliente": "HUNGO",
+        "idempleado": "6",
+        "idempresa": "3",
+        "importe": "220.31",
+        "pais": "Irlanda"
+    },
+    {
+        "idpedido": "10702",
+        "cliente": "ALFKI",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "23.94",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10703",
+        "cliente": "FOLKO",
+        "idempleado": "6",
+        "idempresa": "2",
+        "importe": "152.30",
+        "pais": "Suecia"
+    },
+    {
+        "idpedido": "10704",
+        "cliente": "QUEEN",
+        "idempleado": "6",
+        "idempresa": "1",
+        "importe": "4.78",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10705",
+        "cliente": "HILAA",
+        "idempleado": "9",
+        "idempresa": "2",
+        "importe": "3.52",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "10706",
+        "cliente": "OLDWO",
+        "idempleado": "8",
+        "idempresa": "3",
+        "importe": "135.63",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10707",
+        "cliente": "AROUT",
+        "idempleado": "4",
+        "idempresa": "3",
+        "importe": "21.74",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10708",
+        "cliente": "THEBI",
+        "idempleado": "6",
+        "idempresa": "2",
+        "importe": "2.96",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10709",
+        "cliente": "GOURL",
+        "idempleado": "1",
+        "idempresa": "3",
+        "importe": "210.80",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10710",
+        "cliente": "FRANS",
+        "idempleado": "1",
+        "idempresa": "1",
+        "importe": "4.98",
+        "pais": "Italia"
+    },
+    {
+        "idpedido": "10711",
+        "cliente": "SAVEA",
+        "idempleado": "5",
+        "idempresa": "2",
+        "importe": "52.41",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10712",
+        "cliente": "HUNGO",
+        "idempleado": "3",
+        "idempresa": "1",
+        "importe": "89.93",
+        "pais": "Irlanda"
+    },
+    {
+        "idpedido": "10713",
+        "cliente": "SAVEA",
+        "idempleado": "1",
+        "idempresa": "1",
+        "importe": "167.05",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10714",
+        "cliente": "SAVEA",
+        "idempleado": "5",
+        "idempresa": "3",
+        "importe": "24.49",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10715",
+        "cliente": "BONAP",
+        "idempleado": "3",
+        "idempresa": "1",
+        "importe": "63.20",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10716",
+        "cliente": "RANCH",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "22.57",
+        "pais": "Argentina"
+    },
+    {
+        "idpedido": "10717",
+        "cliente": "FRANK",
+        "idempleado": "1",
+        "idempresa": "2",
+        "importe": "59.25",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10718",
+        "cliente": "KOENE",
+        "idempleado": "1",
+        "idempresa": "3",
+        "importe": "170.88",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10719",
+        "cliente": "LETSS",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "51.44",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10720",
+        "cliente": "QUEDE",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "9.53",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10721",
+        "cliente": "QUICK",
+        "idempleado": "5",
+        "idempresa": "3",
+        "importe": "48.92",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10722",
+        "cliente": "SAVEA",
+        "idempleado": "8",
+        "idempresa": "1",
+        "importe": "74.58",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10723",
+        "cliente": "WHITC",
+        "idempleado": "3",
+        "idempresa": "1",
+        "importe": "21.72",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10724",
+        "cliente": "MEREP",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "57.75",
+        "pais": "Canada"
+    },
+    {
+        "idpedido": "10725",
+        "cliente": "FAMIA",
+        "idempleado": "4",
+        "idempresa": "3",
+        "importe": "10.83",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10726",
+        "cliente": "EASTC",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "16.56",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10727",
+        "cliente": "REGGC",
+        "idempleado": "2",
+        "idempresa": "1",
+        "importe": "89.90",
+        "pais": "Italia"
+    },
+    {
+        "idpedido": "10728",
+        "cliente": "QUEEN",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "58.33",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10729",
+        "cliente": "LINOD",
+        "idempleado": "8",
+        "idempresa": "3",
+        "importe": "141.06",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "10730",
+        "cliente": "BONAP",
+        "idempleado": "5",
+        "idempresa": "1",
+        "importe": "20.12",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10731",
+        "cliente": "CHOPS",
+        "idempleado": "7",
+        "idempresa": "1",
+        "importe": "96.65",
+        "pais": "Suiza"
+    },
+    {
+        "idpedido": "10732",
+        "cliente": "BONAP",
+        "idempleado": "3",
+        "idempresa": "1",
+        "importe": "16.97",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10733",
+        "cliente": "BERGS",
+        "idempleado": "1",
+        "idempresa": "3",
+        "importe": "110.11",
+        "pais": "Suecia"
+    },
+    {
+        "idpedido": "10734",
+        "cliente": "GOURL",
+        "idempleado": "2",
+        "idempresa": "3",
+        "importe": "1.63",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10735",
+        "cliente": "LETSS",
+        "idempleado": "6",
+        "idempresa": "2",
+        "importe": "45.97",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10736",
+        "cliente": "HUNGO",
+        "idempleado": "9",
+        "idempresa": "2",
+        "importe": "44.10",
+        "pais": "Irlanda"
+    },
+    {
+        "idpedido": "10737",
+        "cliente": "VINET",
+        "idempleado": "2",
+        "idempresa": "2",
+        "importe": "7.79",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10738",
+        "cliente": "SPECD",
+        "idempleado": "2",
+        "idempresa": "1",
+        "importe": "2.91",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10739",
+        "cliente": "VINET",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "11.08",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10740",
+        "cliente": "WHITC",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "81.88",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10741",
+        "cliente": "BERGS",
+        "idempleado": "4",
+        "idempresa": "3",
+        "importe": "10.96",
+        "pais": "Suecia"
+    },
+    {
+        "idpedido": "10742",
+        "cliente": "BOTTM",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "243.73",
+        "pais": "Canada"
+    },
+    {
+        "idpedido": "10743",
+        "cliente": "AROUT",
+        "idempleado": "1",
+        "idempresa": "2",
+        "importe": "23.72",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10744",
+        "cliente": "VAFFE",
+        "idempleado": "6",
+        "idempresa": "1",
+        "importe": "69.19",
+        "pais": "Dinamarca"
+    },
+    {
+        "idpedido": "10745",
+        "cliente": "QUICK",
+        "idempleado": "9",
+        "idempresa": "1",
+        "importe": "3.52",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10746",
+        "cliente": "CHOPS",
+        "idempleado": "1",
+        "idempresa": "3",
+        "importe": "31.43",
+        "pais": "Suiza"
+    },
+    {
+        "idpedido": "10747",
+        "cliente": "PICCO",
+        "idempleado": "6",
+        "idempresa": "1",
+        "importe": "117.33",
+        "pais": "Austria"
+    },
+    {
+        "idpedido": "10748",
+        "cliente": "SAVEA",
+        "idempleado": "3",
+        "idempresa": "1",
+        "importe": "232.55",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10749",
+        "cliente": "ISLAT",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "61.53",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10750",
+        "cliente": "WARTH",
+        "idempleado": "9",
+        "idempresa": "1",
+        "importe": "79.30",
+        "pais": "Finlandia"
+    },
+    {
+        "idpedido": "10751",
+        "cliente": "RICSU",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "130.79",
+        "pais": "Suiza"
+    },
+    {
+        "idpedido": "10752",
+        "cliente": "NORTS",
+        "idempleado": "2",
+        "idempresa": "3",
+        "importe": "1.39",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10753",
+        "cliente": "FRANS",
+        "idempleado": "3",
+        "idempresa": "1",
+        "importe": "7.70",
+        "pais": "Italia"
+    },
+    {
+        "idpedido": "10754",
+        "cliente": "MAGAA",
+        "idempleado": "6",
+        "idempresa": "3",
+        "importe": "2.38",
+        "pais": "Italia"
+    },
+    {
+        "idpedido": "10755",
+        "cliente": "BONAP",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "16.71",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10756",
+        "cliente": "SPLIR",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "73.21",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10757",
+        "cliente": "SAVEA",
+        "idempleado": "6",
+        "idempresa": "1",
+        "importe": "8.19",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10758",
+        "cliente": "RICSU",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "138.17",
+        "pais": "Suiza"
+    },
+    {
+        "idpedido": "10759",
+        "cliente": "ANATR",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "11.99",
+        "pais": "Mexico"
+    },
+    {
+        "idpedido": "10760",
+        "cliente": "MAISD",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "155.64",
+        "pais": "Belgica"
+    },
+    {
+        "idpedido": "10761",
+        "cliente": "RATTC",
+        "idempleado": "5",
+        "idempresa": "2",
+        "importe": "18.66",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10762",
+        "cliente": "FOLKO",
+        "idempleado": "3",
+        "idempresa": "1",
+        "importe": "328.74",
+        "pais": "Suecia"
+    },
+    {
+        "idpedido": "10763",
+        "cliente": "FOLIG",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "37.35",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10764",
+        "cliente": "ERNSH",
+        "idempleado": "6",
+        "idempresa": "3",
+        "importe": "145.45",
+        "pais": "Austria"
+    },
+    {
+        "idpedido": "10765",
+        "cliente": "QUICK",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "42.74",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10766",
+        "cliente": "OTTIK",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "157.55",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10767",
+        "cliente": "SUPRD",
+        "idempleado": "4",
+        "idempresa": "3",
+        "importe": "1.59",
+        "pais": "Belgica"
+    },
+    {
+        "idpedido": "10768",
+        "cliente": "AROUT",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "146.32",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10769",
+        "cliente": "VAFFE",
+        "idempleado": "3",
+        "idempresa": "1",
+        "importe": "65.06",
+        "pais": "Dinamarca"
+    },
+    {
+        "idpedido": "10770",
+        "cliente": "HANAR",
+        "idempleado": "8",
+        "idempresa": "3",
+        "importe": "5.32",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10771",
+        "cliente": "ERNSH",
+        "idempleado": "9",
+        "idempresa": "2",
+        "importe": "11.19",
+        "pais": "Austria"
+    },
+    {
+        "idpedido": "10772",
+        "cliente": "LEHMS",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "91.28",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10773",
+        "cliente": "ERNSH",
+        "idempleado": "1",
+        "idempresa": "3",
+        "importe": "96.43",
+        "pais": "Austria"
+    },
+    {
+        "idpedido": "10774",
+        "cliente": "FOLKO",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "48.20",
+        "pais": "Suecia"
+    },
+    {
+        "idpedido": "10775",
+        "cliente": "THECR",
+        "idempleado": "7",
+        "idempresa": "1",
+        "importe": "20.25",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10776",
+        "cliente": "ERNSH",
+        "idempleado": "1",
+        "idempresa": "3",
+        "importe": "351.53",
+        "pais": "Austria"
+    },
+    {
+        "idpedido": "10777",
+        "cliente": "GOURL",
+        "idempleado": "7",
+        "idempresa": "2",
+        "importe": "3.01",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10778",
+        "cliente": "BERGS",
+        "idempleado": "3",
+        "idempresa": "1",
+        "importe": "6.79",
+        "pais": "Suecia"
+    },
+    {
+        "idpedido": "10779",
+        "cliente": "MORGK",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "58.13",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10780",
+        "cliente": "LILAS",
+        "idempleado": "2",
+        "idempresa": "1",
+        "importe": "42.13",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "10781",
+        "cliente": "WARTH",
+        "idempleado": "2",
+        "idempresa": "3",
+        "importe": "73.16",
+        "pais": "Finlandia"
+    },
+    {
+        "idpedido": "10782",
+        "cliente": "CACTU",
+        "idempleado": "9",
+        "idempresa": "3",
+        "importe": "1.10",
+        "pais": "Argentina"
+    },
+    {
+        "idpedido": "10783",
+        "cliente": "HANAR",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "124.98",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10784",
+        "cliente": "MAGAA",
+        "idempleado": "4",
+        "idempresa": "3",
+        "importe": "70.09",
+        "pais": "Italia"
+    },
+    {
+        "idpedido": "10785",
+        "cliente": "GROSR",
+        "idempleado": "1",
+        "idempresa": "3",
+        "importe": "1.51",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "10786",
+        "cliente": "QUEEN",
+        "idempleado": "8",
+        "idempresa": "1",
+        "importe": "110.87",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10787",
+        "cliente": "LAMAI",
+        "idempleado": "2",
+        "idempresa": "1",
+        "importe": "249.93",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10788",
+        "cliente": "QUICK",
+        "idempleado": "1",
+        "idempresa": "2",
+        "importe": "42.70",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10789",
+        "cliente": "FOLIG",
+        "idempleado": "1",
+        "idempresa": "2",
+        "importe": "100.60",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10790",
+        "cliente": "GOURL",
+        "idempleado": "6",
+        "idempresa": "1",
+        "importe": "28.23",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10791",
+        "cliente": "FRANK",
+        "idempleado": "6",
+        "idempresa": "2",
+        "importe": "16.85",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10792",
+        "cliente": "WOLZA",
+        "idempleado": "1",
+        "idempresa": "3",
+        "importe": "23.79",
+        "pais": "Polonia"
+    },
+    {
+        "idpedido": "10793",
+        "cliente": "AROUT",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "4.52",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10794",
+        "cliente": "QUEDE",
+        "idempleado": "6",
+        "idempresa": "1",
+        "importe": "21.49",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10795",
+        "cliente": "ERNSH",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "126.66",
+        "pais": "Austria"
+    },
+    {
+        "idpedido": "10796",
+        "cliente": "HILAA",
+        "idempleado": "3",
+        "idempresa": "1",
+        "importe": "26.52",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "10797",
+        "cliente": "DRACD",
+        "idempleado": "7",
+        "idempresa": "2",
+        "importe": "33.35",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10798",
+        "cliente": "ISLAT",
+        "idempleado": "2",
+        "idempresa": "1",
+        "importe": "2.33",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10799",
+        "cliente": "KOENE",
+        "idempleado": "9",
+        "idempresa": "3",
+        "importe": "30.76",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10800",
+        "cliente": "SEVES",
+        "idempleado": "1",
+        "idempresa": "3",
+        "importe": "137.44",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10801",
+        "cliente": "BOLID",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "97.09",
+        "pais": "Espanya"
+    },
+    {
+        "idpedido": "10802",
+        "cliente": "SIMOB",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "257.26",
+        "pais": "Dinamarca"
+    },
+    {
+        "idpedido": "10803",
+        "cliente": "WELLI",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "55.23",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10804",
+        "cliente": "SEVES",
+        "idempleado": "6",
+        "idempresa": "2",
+        "importe": "27.33",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10805",
+        "cliente": "THEBI",
+        "idempleado": "2",
+        "idempresa": "3",
+        "importe": "237.34",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10806",
+        "cliente": "VICTE",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "22.11",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10807",
+        "cliente": "FRANS",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "1.36",
+        "pais": "Italia"
+    },
+    {
+        "idpedido": "10808",
+        "cliente": "OLDWO",
+        "idempleado": "2",
+        "idempresa": "3",
+        "importe": "45.53",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10809",
+        "cliente": "WELLI",
+        "idempleado": "7",
+        "idempresa": "1",
+        "importe": "4.87",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10810",
+        "cliente": "LAUGB",
+        "idempleado": "2",
+        "idempresa": "3",
+        "importe": "4.33",
+        "pais": "Canada"
+    },
+    {
+        "idpedido": "10811",
+        "cliente": "LINOD",
+        "idempleado": "8",
+        "idempresa": "1",
+        "importe": "31.22",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "10812",
+        "cliente": "REGGC",
+        "idempleado": "5",
+        "idempresa": "1",
+        "importe": "59.78",
+        "pais": "Italia"
+    },
+    {
+        "idpedido": "10813",
+        "cliente": "RICAR",
+        "idempleado": "1",
+        "idempresa": "1",
+        "importe": "47.38",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10814",
+        "cliente": "VICTE",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "130.94",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10815",
+        "cliente": "SAVEA",
+        "idempleado": "2",
+        "idempresa": "3",
+        "importe": "14.62",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10816",
+        "cliente": "GREAL",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "719.78",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10817",
+        "cliente": "KOENE",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "306.07",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10818",
+        "cliente": "MAGAA",
+        "idempleado": "7",
+        "idempresa": "3",
+        "importe": "65.48",
+        "pais": "Italia"
+    },
+    {
+        "idpedido": "10819",
+        "cliente": "CACTU",
+        "idempleado": "2",
+        "idempresa": "3",
+        "importe": "19.76",
+        "pais": "Argentina"
+    },
+    {
+        "idpedido": "10820",
+        "cliente": "RATTC",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "37.52",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10821",
+        "cliente": "SPLIR",
+        "idempleado": "1",
+        "idempresa": "1",
+        "importe": "36.68",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10822",
+        "cliente": "TRAIH",
+        "idempleado": "6",
+        "idempresa": "3",
+        "importe": "7.00",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10823",
+        "cliente": "LILAS",
+        "idempleado": "5",
+        "idempresa": "2",
+        "importe": "163.97",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "10824",
+        "cliente": "FOLKO",
+        "idempleado": "8",
+        "idempresa": "1",
+        "importe": "1.23",
+        "pais": "Suecia"
+    },
+    {
+        "idpedido": "10825",
+        "cliente": "DRACD",
+        "idempleado": "1",
+        "idempresa": "1",
+        "importe": "79.25",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10826",
+        "cliente": "BLONP",
+        "idempleado": "6",
+        "idempresa": "1",
+        "importe": "7.09",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10827",
+        "cliente": "BONAP",
+        "idempleado": "1",
+        "idempresa": "2",
+        "importe": "63.54",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10828",
+        "cliente": "RANCH",
+        "idempleado": "9",
+        "idempresa": "1",
+        "importe": "90.85",
+        "pais": "Argentina"
+    },
+    {
+        "idpedido": "10829",
+        "cliente": "ISLAT",
+        "idempleado": "9",
+        "idempresa": "1",
+        "importe": "154.72",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10830",
+        "cliente": "TRADH",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "81.83",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10831",
+        "cliente": "SANTG",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "72.19",
+        "pais": "Noruega"
+    },
+    {
+        "idpedido": "10832",
+        "cliente": "LAMAI",
+        "idempleado": "2",
+        "idempresa": "2",
+        "importe": "43.26",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10833",
+        "cliente": "OTTIK",
+        "idempleado": "6",
+        "idempresa": "2",
+        "importe": "71.49",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10834",
+        "cliente": "TRADH",
+        "idempleado": "1",
+        "idempresa": "3",
+        "importe": "29.78",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10835",
+        "cliente": "ALFKI",
+        "idempleado": "1",
+        "idempresa": "3",
+        "importe": "69.53",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10836",
+        "cliente": "ERNSH",
+        "idempleado": "7",
+        "idempresa": "1",
+        "importe": "411.88",
+        "pais": "Austria"
+    },
+    {
+        "idpedido": "10837",
+        "cliente": "BERGS",
+        "idempleado": "9",
+        "idempresa": "3",
+        "importe": "13.32",
+        "pais": "Suecia"
+    },
+    {
+        "idpedido": "10838",
+        "cliente": "LINOD",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "59.28",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "10839",
+        "cliente": "TRADH",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "35.43",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10840",
+        "cliente": "LINOD",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "2.71",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "10841",
+        "cliente": "SUPRD",
+        "idempleado": "5",
+        "idempresa": "2",
+        "importe": "424.30",
+        "pais": "Belgica"
+    },
+    {
+        "idpedido": "10842",
+        "cliente": "TORTU",
+        "idempleado": "1",
+        "idempresa": "3",
+        "importe": "54.42",
+        "pais": "Mexico"
+    },
+    {
+        "idpedido": "10843",
+        "cliente": "VICTE",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "9.26",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10844",
+        "cliente": "PICCO",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "25.22",
+        "pais": "Austria"
+    },
+    {
+        "idpedido": "10845",
+        "cliente": "QUICK",
+        "idempleado": "8",
+        "idempresa": "1",
+        "importe": "212.98",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10846",
+        "cliente": "SUPRD",
+        "idempleado": "2",
+        "idempresa": "3",
+        "importe": "56.46",
+        "pais": "Belgica"
+    },
+    {
+        "idpedido": "10847",
+        "cliente": "SAVEA",
+        "idempleado": "4",
+        "idempresa": "3",
+        "importe": "487.57",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10848",
+        "cliente": "CONSH",
+        "idempleado": "7",
+        "idempresa": "2",
+        "importe": "38.24",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10849",
+        "cliente": "KOENE",
+        "idempleado": "9",
+        "idempresa": "2",
+        "importe": "0.56",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10850",
+        "cliente": "VICTE",
+        "idempleado": "1",
+        "idempresa": "1",
+        "importe": "49.19",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10851",
+        "cliente": "RICAR",
+        "idempleado": "5",
+        "idempresa": "1",
+        "importe": "160.55",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10852",
+        "cliente": "RATTC",
+        "idempleado": "8",
+        "idempresa": "1",
+        "importe": "174.05",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10853",
+        "cliente": "BLAUS",
+        "idempleado": "9",
+        "idempresa": "2",
+        "importe": "53.83",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10854",
+        "cliente": "ERNSH",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "100.22",
+        "pais": "Austria"
+    },
+    {
+        "idpedido": "10855",
+        "cliente": "OLDWO",
+        "idempleado": "3",
+        "idempresa": "1",
+        "importe": "170.97",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10856",
+        "cliente": "ANTON",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "58.43",
+        "pais": "Mexico"
+    },
+    {
+        "idpedido": "10857",
+        "cliente": "BERGS",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "188.85",
+        "pais": "Suecia"
+    },
+    {
+        "idpedido": "10858",
+        "cliente": "LACOR",
+        "idempleado": "2",
+        "idempresa": "1",
+        "importe": "52.51",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10859",
+        "cliente": "FRANK",
+        "idempleado": "1",
+        "idempresa": "2",
+        "importe": "76.10",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10860",
+        "cliente": "FRANR",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "19.26",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10861",
+        "cliente": "WHITC",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "14.93",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10862",
+        "cliente": "LEHMS",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "53.23",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10863",
+        "cliente": "HILAA",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "30.26",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "10864",
+        "cliente": "AROUT",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "3.04",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10865",
+        "cliente": "QUICK",
+        "idempleado": "2",
+        "idempresa": "1",
+        "importe": "348.14",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10866",
+        "cliente": "BERGS",
+        "idempleado": "5",
+        "idempresa": "1",
+        "importe": "109.11",
+        "pais": "Suecia"
+    },
+    {
+        "idpedido": "10867",
+        "cliente": "LONEP",
+        "idempleado": "6",
+        "idempresa": "1",
+        "importe": "1.93",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10868",
+        "cliente": "QUEEN",
+        "idempleado": "7",
+        "idempresa": "2",
+        "importe": "191.27",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10869",
+        "cliente": "SEVES",
+        "idempleado": "5",
+        "idempresa": "1",
+        "importe": "143.28",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10870",
+        "cliente": "WHITC",
+        "idempleado": "5",
+        "idempresa": "3",
+        "importe": "12.04",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10871",
+        "cliente": "BONAP",
+        "idempleado": "9",
+        "idempresa": "2",
+        "importe": "112.27",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10872",
+        "cliente": "GODOS",
+        "idempleado": "5",
+        "idempresa": "2",
+        "importe": "175.32",
+        "pais": "Espanya"
+    },
+    {
+        "idpedido": "10873",
+        "cliente": "WILMK",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "0.82",
+        "pais": "Finlandia"
+    },
+    {
+        "idpedido": "10874",
+        "cliente": "GODOS",
+        "idempleado": "5",
+        "idempresa": "2",
+        "importe": "19.58",
+        "pais": "Espanya"
+    },
+    {
+        "idpedido": "10875",
+        "cliente": "BERGS",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "32.37",
+        "pais": "Suecia"
+    },
+    {
+        "idpedido": "10876",
+        "cliente": "BONAP",
+        "idempleado": "7",
+        "idempresa": "3",
+        "importe": "60.42",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10877",
+        "cliente": "RICAR",
+        "idempleado": "1",
+        "idempresa": "1",
+        "importe": "38.06",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10878",
+        "cliente": "QUICK",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "46.69",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10879",
+        "cliente": "WILMK",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "8.50",
+        "pais": "Finlandia"
+    },
+    {
+        "idpedido": "10880",
+        "cliente": "FOLKO",
+        "idempleado": "7",
+        "idempresa": "1",
+        "importe": "88.01",
+        "pais": "Suecia"
+    },
+    {
+        "idpedido": "10881",
+        "cliente": "CACTU",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "2.84",
+        "pais": "Argentina"
+    },
+    {
+        "idpedido": "10882",
+        "cliente": "SAVEA",
+        "idempleado": "4",
+        "idempresa": "3",
+        "importe": "23.10",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10883",
+        "cliente": "LONEP",
+        "idempleado": "8",
+        "idempresa": "3",
+        "importe": "0.53",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10884",
+        "cliente": "LETSS",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "90.97",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10885",
+        "cliente": "SUPRD",
+        "idempleado": "6",
+        "idempresa": "3",
+        "importe": "5.64",
+        "pais": "Belgica"
+    },
+    {
+        "idpedido": "10886",
+        "cliente": "HANAR",
+        "idempleado": "1",
+        "idempresa": "1",
+        "importe": "4.99",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10887",
+        "cliente": "GALED",
+        "idempleado": "8",
+        "idempresa": "3",
+        "importe": "1.25",
+        "pais": "Espanya"
+    },
+    {
+        "idpedido": "10888",
+        "cliente": "GODOS",
+        "idempleado": "1",
+        "idempresa": "2",
+        "importe": "51.87",
+        "pais": "Espanya"
+    },
+    {
+        "idpedido": "10889",
+        "cliente": "RATTC",
+        "idempleado": "9",
+        "idempresa": "3",
+        "importe": "280.61",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10890",
+        "cliente": "DUMON",
+        "idempleado": "7",
+        "idempresa": "1",
+        "importe": "32.76",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10891",
+        "cliente": "LEHMS",
+        "idempleado": "7",
+        "idempresa": "2",
+        "importe": "20.37",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10892",
+        "cliente": "MAISD",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "120.27",
+        "pais": "Belgica"
+    },
+    {
+        "idpedido": "10893",
+        "cliente": "KOENE",
+        "idempleado": "9",
+        "idempresa": "2",
+        "importe": "77.78",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10894",
+        "cliente": "SAVEA",
+        "idempleado": "1",
+        "idempresa": "1",
+        "importe": "116.13",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10895",
+        "cliente": "ERNSH",
+        "idempleado": "3",
+        "idempresa": "1",
+        "importe": "162.75",
+        "pais": "Austria"
+    },
+    {
+        "idpedido": "10896",
+        "cliente": "MAISD",
+        "idempleado": "7",
+        "idempresa": "3",
+        "importe": "32.45",
+        "pais": "Belgica"
+    },
+    {
+        "idpedido": "10897",
+        "cliente": "HUNGO",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "603.54",
+        "pais": "Irlanda"
+    },
+    {
+        "idpedido": "10898",
+        "cliente": "OCEAN",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "1.27",
+        "pais": "Argentina"
+    },
+    {
+        "idpedido": "10899",
+        "cliente": "LILAS",
+        "idempleado": "5",
+        "idempresa": "3",
+        "importe": "1.21",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "10900",
+        "cliente": "WELLI",
+        "idempleado": "1",
+        "idempresa": "2",
+        "importe": "1.66",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10901",
+        "cliente": "HILAA",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "62.09",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "10902",
+        "cliente": "FOLKO",
+        "idempleado": "1",
+        "idempresa": "1",
+        "importe": "44.15",
+        "pais": "Suecia"
+    },
+    {
+        "idpedido": "10903",
+        "cliente": "HANAR",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "36.71",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10904",
+        "cliente": "WHITC",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "162.95",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10905",
+        "cliente": "WELLI",
+        "idempleado": "9",
+        "idempresa": "2",
+        "importe": "13.72",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10906",
+        "cliente": "WOLZA",
+        "idempleado": "4",
+        "idempresa": "3",
+        "importe": "26.29",
+        "pais": "Polonia"
+    },
+    {
+        "idpedido": "10907",
+        "cliente": "SPECD",
+        "idempleado": "6",
+        "idempresa": "3",
+        "importe": "9.19",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10908",
+        "cliente": "REGGC",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "32.96",
+        "pais": "Italia"
+    },
+    {
+        "idpedido": "10909",
+        "cliente": "SANTG",
+        "idempleado": "1",
+        "idempresa": "2",
+        "importe": "53.05",
+        "pais": "Noruega"
+    },
+    {
+        "idpedido": "10910",
+        "cliente": "WILMK",
+        "idempleado": "1",
+        "idempresa": "3",
+        "importe": "38.11",
+        "pais": "Finlandia"
+    },
+    {
+        "idpedido": "10911",
+        "cliente": "GODOS",
+        "idempleado": "3",
+        "idempresa": "1",
+        "importe": "38.19",
+        "pais": "Espanya"
+    },
+    {
+        "idpedido": "10912",
+        "cliente": "HUNGO",
+        "idempleado": "2",
+        "idempresa": "2",
+        "importe": "580.91",
+        "pais": "Irlanda"
+    },
+    {
+        "idpedido": "10913",
+        "cliente": "QUEEN",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "33.05",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10914",
+        "cliente": "QUEEN",
+        "idempleado": "6",
+        "idempresa": "1",
+        "importe": "21.19",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10915",
+        "cliente": "TORTU",
+        "idempleado": "2",
+        "idempresa": "2",
+        "importe": "3.51",
+        "pais": "Mexico"
+    },
+    {
+        "idpedido": "10916",
+        "cliente": "RANCH",
+        "idempleado": "1",
+        "idempresa": "2",
+        "importe": "63.77",
+        "pais": "Argentina"
+    },
+    {
+        "idpedido": "10917",
+        "cliente": "ROMEY",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "8.29",
+        "pais": "Espanya"
+    },
+    {
+        "idpedido": "10918",
+        "cliente": "BOTTM",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "48.83",
+        "pais": "Canada"
+    },
+    {
+        "idpedido": "10919",
+        "cliente": "LINOD",
+        "idempleado": "2",
+        "idempresa": "2",
+        "importe": "19.80",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "10920",
+        "cliente": "AROUT",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "29.61",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10921",
+        "cliente": "VAFFE",
+        "idempleado": "1",
+        "idempresa": "1",
+        "importe": "176.48",
+        "pais": "Dinamarca"
+    },
+    {
+        "idpedido": "10922",
+        "cliente": "HANAR",
+        "idempleado": "5",
+        "idempresa": "3",
+        "importe": "62.74",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10923",
+        "cliente": "LAMAI",
+        "idempleado": "7",
+        "idempresa": "3",
+        "importe": "68.26",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10924",
+        "cliente": "BERGS",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "151.52",
+        "pais": "Suecia"
+    },
+    {
+        "idpedido": "10925",
+        "cliente": "HANAR",
+        "idempleado": "3",
+        "idempresa": "1",
+        "importe": "2.27",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10926",
+        "cliente": "ANATR",
+        "idempleado": "4",
+        "idempresa": "3",
+        "importe": "39.92",
+        "pais": "Mexico"
+    },
+    {
+        "idpedido": "10927",
+        "cliente": "LACOR",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "19.79",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10928",
+        "cliente": "GALED",
+        "idempleado": "1",
+        "idempresa": "1",
+        "importe": "1.36",
+        "pais": "Espanya"
+    },
+    {
+        "idpedido": "10929",
+        "cliente": "FRANK",
+        "idempleado": "6",
+        "idempresa": "1",
+        "importe": "33.93",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10930",
+        "cliente": "SUPRD",
+        "idempleado": "4",
+        "idempresa": "3",
+        "importe": "15.55",
+        "pais": "Belgica"
+    },
+    {
+        "idpedido": "10931",
+        "cliente": "RICSU",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "13.60",
+        "pais": "Suiza"
+    },
+    {
+        "idpedido": "10932",
+        "cliente": "BONAP",
+        "idempleado": "8",
+        "idempresa": "1",
+        "importe": "134.64",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10933",
+        "cliente": "ISLAT",
+        "idempleado": "6",
+        "idempresa": "3",
+        "importe": "54.15",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10934",
+        "cliente": "LEHMS",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "32.01",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10935",
+        "cliente": "WELLI",
+        "idempleado": "4",
+        "idempresa": "3",
+        "importe": "47.59",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10936",
+        "cliente": "GREAL",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "33.68",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10937",
+        "cliente": "CACTU",
+        "idempleado": "7",
+        "idempresa": "3",
+        "importe": "31.51",
+        "pais": "Argentina"
+    },
+    {
+        "idpedido": "10938",
+        "cliente": "QUICK",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "31.89",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10939",
+        "cliente": "MAGAA",
+        "idempleado": "2",
+        "idempresa": "2",
+        "importe": "76.33",
+        "pais": "Italia"
+    },
+    {
+        "idpedido": "10940",
+        "cliente": "BONAP",
+        "idempleado": "8",
+        "idempresa": "3",
+        "importe": "19.77",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10941",
+        "cliente": "SAVEA",
+        "idempleado": "7",
+        "idempresa": "2",
+        "importe": "400.81",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10942",
+        "cliente": "REGGC",
+        "idempleado": "9",
+        "idempresa": "3",
+        "importe": "17.95",
+        "pais": "Italia"
+    },
+    {
+        "idpedido": "10943",
+        "cliente": "BSBEV",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "2.17",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10944",
+        "cliente": "BOTTM",
+        "idempleado": "6",
+        "idempresa": "3",
+        "importe": "52.92",
+        "pais": "Canada"
+    },
+    {
+        "idpedido": "10945",
+        "cliente": "MORGK",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "10.22",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10946",
+        "cliente": "VAFFE",
+        "idempleado": "1",
+        "idempresa": "2",
+        "importe": "27.20",
+        "pais": "Dinamarca"
+    },
+    {
+        "idpedido": "10947",
+        "cliente": "BSBEV",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "3.26",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10948",
+        "cliente": "GODOS",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "23.39",
+        "pais": "Espanya"
+    },
+    {
+        "idpedido": "10949",
+        "cliente": "BOTTM",
+        "idempleado": "2",
+        "idempresa": "3",
+        "importe": "74.44",
+        "pais": "Canada"
+    },
+    {
+        "idpedido": "10950",
+        "cliente": "MAGAA",
+        "idempleado": "1",
+        "idempresa": "2",
+        "importe": "2.50",
+        "pais": "Italia"
+    },
+    {
+        "idpedido": "10951",
+        "cliente": "RICSU",
+        "idempleado": "9",
+        "idempresa": "2",
+        "importe": "30.85",
+        "pais": "Suiza"
+    },
+    {
+        "idpedido": "10952",
+        "cliente": "ALFKI",
+        "idempleado": "1",
+        "idempresa": "1",
+        "importe": "40.42",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10953",
+        "cliente": "AROUT",
+        "idempleado": "9",
+        "idempresa": "2",
+        "importe": "23.72",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10954",
+        "cliente": "LINOD",
+        "idempleado": "5",
+        "idempresa": "1",
+        "importe": "27.91",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "10955",
+        "cliente": "FOLKO",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "3.26",
+        "pais": "Suecia"
+    },
+    {
+        "idpedido": "10956",
+        "cliente": "BLAUS",
+        "idempleado": "6",
+        "idempresa": "2",
+        "importe": "44.65",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10957",
+        "cliente": "HILAA",
+        "idempleado": "8",
+        "idempresa": "3",
+        "importe": "105.36",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "10958",
+        "cliente": "OCEAN",
+        "idempleado": "7",
+        "idempresa": "2",
+        "importe": "49.56",
+        "pais": "Argentina"
+    },
+    {
+        "idpedido": "10959",
+        "cliente": "GOURL",
+        "idempleado": "6",
+        "idempresa": "2",
+        "importe": "4.98",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10960",
+        "cliente": "HILAA",
+        "idempleado": "3",
+        "idempresa": "1",
+        "importe": "2.08",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "10961",
+        "cliente": "QUEEN",
+        "idempleado": "8",
+        "idempresa": "1",
+        "importe": "104.47",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10962",
+        "cliente": "QUICK",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "275.79",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10963",
+        "cliente": "FURIB",
+        "idempleado": "9",
+        "idempresa": "3",
+        "importe": "2.70",
+        "pais": "Portugal"
+    },
+    {
+        "idpedido": "10964",
+        "cliente": "SPECD",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "87.38",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10965",
+        "cliente": "OLDWO",
+        "idempleado": "6",
+        "idempresa": "3",
+        "importe": "144.38",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10966",
+        "cliente": "CHOPS",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "27.19",
+        "pais": "Suiza"
+    },
+    {
+        "idpedido": "10967",
+        "cliente": "TOMSP",
+        "idempleado": "2",
+        "idempresa": "2",
+        "importe": "62.22",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10968",
+        "cliente": "ERNSH",
+        "idempleado": "1",
+        "idempresa": "3",
+        "importe": "74.60",
+        "pais": "Austria"
+    },
+    {
+        "idpedido": "10969",
+        "cliente": "COMMI",
+        "idempleado": "1",
+        "idempresa": "2",
+        "importe": "0.21",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10970",
+        "cliente": "BOLID",
+        "idempleado": "9",
+        "idempresa": "1",
+        "importe": "16.16",
+        "pais": "Espanya"
+    },
+    {
+        "idpedido": "10971",
+        "cliente": "FRANR",
+        "idempleado": "2",
+        "idempresa": "2",
+        "importe": "121.82",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10972",
+        "cliente": "LACOR",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "0.02",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10973",
+        "cliente": "LACOR",
+        "idempleado": "6",
+        "idempresa": "2",
+        "importe": "15.17",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "10974",
+        "cliente": "SPLIR",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "12.96",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10975",
+        "cliente": "BOTTM",
+        "idempleado": "1",
+        "idempresa": "3",
+        "importe": "32.27",
+        "pais": "Canada"
+    },
+    {
+        "idpedido": "10976",
+        "cliente": "HILAA",
+        "idempleado": "1",
+        "idempresa": "1",
+        "importe": "37.97",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "10977",
+        "cliente": "FOLKO",
+        "idempleado": "8",
+        "idempresa": "3",
+        "importe": "208.50",
+        "pais": "Suecia"
+    },
+    {
+        "idpedido": "10978",
+        "cliente": "MAISD",
+        "idempleado": "9",
+        "idempresa": "2",
+        "importe": "32.82",
+        "pais": "Belgica"
+    },
+    {
+        "idpedido": "10979",
+        "cliente": "ERNSH",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "353.07",
+        "pais": "Austria"
+    },
+    {
+        "idpedido": "10980",
+        "cliente": "FOLKO",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "1.26",
+        "pais": "Suecia"
+    },
+    {
+        "idpedido": "10981",
+        "cliente": "HANAR",
+        "idempleado": "1",
+        "idempresa": "2",
+        "importe": "193.37",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10982",
+        "cliente": "BOTTM",
+        "idempleado": "2",
+        "idempresa": "1",
+        "importe": "14.01",
+        "pais": "Canada"
+    },
+    {
+        "idpedido": "10983",
+        "cliente": "SAVEA",
+        "idempleado": "2",
+        "idempresa": "2",
+        "importe": "657.54",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10984",
+        "cliente": "SAVEA",
+        "idempleado": "1",
+        "idempresa": "3",
+        "importe": "211.22",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10985",
+        "cliente": "HUNGO",
+        "idempleado": "2",
+        "idempresa": "1",
+        "importe": "91.51",
+        "pais": "Irlanda"
+    },
+    {
+        "idpedido": "10986",
+        "cliente": "OCEAN",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "217.86",
+        "pais": "Argentina"
+    },
+    {
+        "idpedido": "10987",
+        "cliente": "EASTC",
+        "idempleado": "8",
+        "idempresa": "1",
+        "importe": "185.48",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "10988",
+        "cliente": "RATTC",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "61.14",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10989",
+        "cliente": "QUEDE",
+        "idempleado": "2",
+        "idempresa": "1",
+        "importe": "34.76",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "10990",
+        "cliente": "ERNSH",
+        "idempleado": "2",
+        "idempresa": "3",
+        "importe": "117.61",
+        "pais": "Austria"
+    },
+    {
+        "idpedido": "10991",
+        "cliente": "QUICK",
+        "idempleado": "1",
+        "idempresa": "1",
+        "importe": "38.51",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10992",
+        "cliente": "THEBI",
+        "idempleado": "1",
+        "idempresa": "3",
+        "importe": "4.27",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "10993",
+        "cliente": "FOLKO",
+        "idempleado": "7",
+        "idempresa": "3",
+        "importe": "8.81",
+        "pais": "Suecia"
+    },
+    {
+        "idpedido": "10994",
+        "cliente": "VAFFE",
+        "idempleado": "2",
+        "idempresa": "3",
+        "importe": "65.53",
+        "pais": "Dinamarca"
+    },
+    {
+        "idpedido": "10995",
+        "cliente": "PERIC",
+        "idempleado": "1",
+        "idempresa": "3",
+        "importe": "46.00",
+        "pais": "Mexico"
+    },
+    {
+        "idpedido": "10996",
+        "cliente": "QUICK",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "1.12",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "10997",
+        "cliente": "LILAS",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "73.91",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "10998",
+        "cliente": "WOLZA",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "20.31",
+        "pais": "Polonia"
+    },
+    {
+        "idpedido": "10999",
+        "cliente": "OTTIK",
+        "idempleado": "6",
+        "idempresa": "2",
+        "importe": "96.35",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "11000",
+        "cliente": "RATTC",
+        "idempleado": "2",
+        "idempresa": "3",
+        "importe": "55.12",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "11001",
+        "cliente": "FOLKO",
+        "idempleado": "2",
+        "idempresa": "2",
+        "importe": "197.30",
+        "pais": "Suecia"
+    },
+    {
+        "idpedido": "11002",
+        "cliente": "SAVEA",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "141.16",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "11003",
+        "cliente": "THECR",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "14.91",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "11004",
+        "cliente": "MAISD",
+        "idempleado": "3",
+        "idempresa": "1",
+        "importe": "44.84",
+        "pais": "Belgica"
+    },
+    {
+        "idpedido": "11005",
+        "cliente": "WILMK",
+        "idempleado": "2",
+        "idempresa": "1",
+        "importe": "0.75",
+        "pais": "Finlandia"
+    },
+    {
+        "idpedido": "11006",
+        "cliente": "GREAL",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "25.19",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "11007",
+        "cliente": "PRINI",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "202.24",
+        "pais": "Portugal"
+    },
+    {
+        "idpedido": "11008",
+        "cliente": "ERNSH",
+        "idempleado": "7",
+        "idempresa": "3",
+        "importe": "79.46",
+        "pais": "Austria"
+    },
+    {
+        "idpedido": "11009",
+        "cliente": "GODOS",
+        "idempleado": "2",
+        "idempresa": "1",
+        "importe": "59.11",
+        "pais": "Espanya"
+    },
+    {
+        "idpedido": "11010",
+        "cliente": "REGGC",
+        "idempleado": "2",
+        "idempresa": "2",
+        "importe": "28.71",
+        "pais": "Italia"
+    },
+    {
+        "idpedido": "11011",
+        "cliente": "ALFKI",
+        "idempleado": "3",
+        "idempresa": "1",
+        "importe": "1.21",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "11012",
+        "cliente": "FRANK",
+        "idempleado": "1",
+        "idempresa": "3",
+        "importe": "242.95",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "11013",
+        "cliente": "ROMEY",
+        "idempleado": "2",
+        "idempresa": "1",
+        "importe": "32.99",
+        "pais": "Espanya"
+    },
+    {
+        "idpedido": "11014",
+        "cliente": "LINOD",
+        "idempleado": "2",
+        "idempresa": "3",
+        "importe": "23.60",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "11015",
+        "cliente": "SANTG",
+        "idempleado": "2",
+        "idempresa": "2",
+        "importe": "4.62",
+        "pais": "Noruega"
+    },
+    {
+        "idpedido": "11016",
+        "cliente": "AROUT",
+        "idempleado": "9",
+        "idempresa": "2",
+        "importe": "33.80",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "11017",
+        "cliente": "ERNSH",
+        "idempleado": "9",
+        "idempresa": "2",
+        "importe": "754.26",
+        "pais": "Austria"
+    },
+    {
+        "idpedido": "11018",
+        "cliente": "LONEP",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "11.65",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "11019",
+        "cliente": "RANCH",
+        "idempleado": "6",
+        "idempresa": "3",
+        "importe": "3.17",
+        "pais": "Argentina"
+    },
+    {
+        "idpedido": "11020",
+        "cliente": "OTTIK",
+        "idempleado": "2",
+        "idempresa": "2",
+        "importe": "43.30",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "11021",
+        "cliente": "QUICK",
+        "idempleado": "3",
+        "idempresa": "1",
+        "importe": "297.18",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "11022",
+        "cliente": "HANAR",
+        "idempleado": "9",
+        "idempresa": "2",
+        "importe": "6.27",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "11023",
+        "cliente": "BSBEV",
+        "idempleado": "1",
+        "idempresa": "2",
+        "importe": "123.83",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "11024",
+        "cliente": "EASTC",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "74.36",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "11025",
+        "cliente": "WARTH",
+        "idempleado": "6",
+        "idempresa": "3",
+        "importe": "29.17",
+        "pais": "Finlandia"
+    },
+    {
+        "idpedido": "11026",
+        "cliente": "FRANS",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "47.09",
+        "pais": "Italia"
+    },
+    {
+        "idpedido": "11027",
+        "cliente": "BOTTM",
+        "idempleado": "1",
+        "idempresa": "1",
+        "importe": "52.52",
+        "pais": "Canada"
+    },
+    {
+        "idpedido": "11028",
+        "cliente": "KOENE",
+        "idempleado": "2",
+        "idempresa": "1",
+        "importe": "29.59",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "11029",
+        "cliente": "CHOPS",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "47.84",
+        "pais": "Suiza"
+    },
+    {
+        "idpedido": "11030",
+        "cliente": "SAVEA",
+        "idempleado": "7",
+        "idempresa": "2",
+        "importe": "830.75",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "11031",
+        "cliente": "SAVEA",
+        "idempleado": "6",
+        "idempresa": "2",
+        "importe": "227.22",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "11032",
+        "cliente": "WHITC",
+        "idempleado": "2",
+        "idempresa": "3",
+        "importe": "606.19",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "11033",
+        "cliente": "RICSU",
+        "idempleado": "7",
+        "idempresa": "3",
+        "importe": "84.74",
+        "pais": "Suiza"
+    },
+    {
+        "idpedido": "11034",
+        "cliente": "OLDWO",
+        "idempleado": "8",
+        "idempresa": "1",
+        "importe": "40.32",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "11035",
+        "cliente": "SUPRD",
+        "idempleado": "2",
+        "idempresa": "2",
+        "importe": "0.17",
+        "pais": "Belgica"
+    },
+    {
+        "idpedido": "11036",
+        "cliente": "DRACD",
+        "idempleado": "8",
+        "idempresa": "3",
+        "importe": "149.47",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "11037",
+        "cliente": "GODOS",
+        "idempleado": "7",
+        "idempresa": "1",
+        "importe": "3.20",
+        "pais": "Espanya"
+    },
+    {
+        "idpedido": "11038",
+        "cliente": "SUPRD",
+        "idempleado": "1",
+        "idempresa": "2",
+        "importe": "29.59",
+        "pais": "Belgica"
+    },
+    {
+        "idpedido": "11039",
+        "cliente": "LINOD",
+        "idempleado": "1",
+        "idempresa": "2",
+        "importe": "65.00",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "11040",
+        "cliente": "GREAL",
+        "idempleado": "4",
+        "idempresa": "3",
+        "importe": "18.84",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "11041",
+        "cliente": "CHOPS",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "48.22",
+        "pais": "Suiza"
+    },
+    {
+        "idpedido": "11042",
+        "cliente": "COMMI",
+        "idempleado": "2",
+        "idempresa": "1",
+        "importe": "29.99",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "11043",
+        "cliente": "SPECD",
+        "idempleado": "5",
+        "idempresa": "2",
+        "importe": "8.80",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "11044",
+        "cliente": "WOLZA",
+        "idempleado": "4",
+        "idempresa": "1",
+        "importe": "8.72",
+        "pais": "Polonia"
+    },
+    {
+        "idpedido": "11045",
+        "cliente": "BOTTM",
+        "idempleado": "6",
+        "idempresa": "2",
+        "importe": "70.58",
+        "pais": "Canada"
+    },
+    {
+        "idpedido": "11046",
+        "cliente": "WANDK",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "71.64",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "11047",
+        "cliente": "EASTC",
+        "idempleado": "7",
+        "idempresa": "3",
+        "importe": "46.62",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "11048",
+        "cliente": "BOTTM",
+        "idempleado": "7",
+        "idempresa": "3",
+        "importe": "24.12",
+        "pais": "Canada"
+    },
+    {
+        "idpedido": "11049",
+        "cliente": "GOURL",
+        "idempleado": "3",
+        "idempresa": "1",
+        "importe": "8.34",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "11050",
+        "cliente": "FOLKO",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "59.41",
+        "pais": "Suecia"
+    },
+    {
+        "idpedido": "11051",
+        "cliente": "LAMAI",
+        "idempleado": "7",
+        "idempresa": "3",
+        "importe": "2.79",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "11052",
+        "cliente": "HANAR",
+        "idempleado": "3",
+        "idempresa": "1",
+        "importe": "67.26",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "11053",
+        "cliente": "PICCO",
+        "idempleado": "2",
+        "idempresa": "2",
+        "importe": "53.05",
+        "pais": "Austria"
+    },
+    {
+        "idpedido": "11054",
+        "cliente": "CACTU",
+        "idempleado": "8",
+        "idempresa": "1",
+        "importe": "0.33",
+        "pais": "Argentina"
+    },
+    {
+        "idpedido": "11055",
+        "cliente": "HILAA",
+        "idempleado": "7",
+        "idempresa": "2",
+        "importe": "120.92",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "11056",
+        "cliente": "EASTC",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "278.96",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "11057",
+        "cliente": "NORTS",
+        "idempleado": "3",
+        "idempresa": "3",
+        "importe": "4.13",
+        "pais": "Reino Unido"
+    },
+    {
+        "idpedido": "11058",
+        "cliente": "BLAUS",
+        "idempleado": "9",
+        "idempresa": "3",
+        "importe": "31.14",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "11059",
+        "cliente": "RICAR",
+        "idempleado": "2",
+        "idempresa": "2",
+        "importe": "85.80",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "11060",
+        "cliente": "FRANS",
+        "idempleado": "2",
+        "idempresa": "2",
+        "importe": "10.98",
+        "pais": "Italia"
+    },
+    {
+        "idpedido": "11061",
+        "cliente": "GREAL",
+        "idempleado": "4",
+        "idempresa": "3",
+        "importe": "14.01",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "11062",
+        "cliente": "REGGC",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "29.93",
+        "pais": "Italia"
+    },
+    {
+        "idpedido": "11063",
+        "cliente": "HUNGO",
+        "idempleado": "3",
+        "idempresa": "2",
+        "importe": "81.73",
+        "pais": "Irlanda"
+    },
+    {
+        "idpedido": "11064",
+        "cliente": "SAVEA",
+        "idempleado": "1",
+        "idempresa": "1",
+        "importe": "30.09",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "11065",
+        "cliente": "LILAS",
+        "idempleado": "8",
+        "idempresa": "1",
+        "importe": "12.91",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "11066",
+        "cliente": "WHITC",
+        "idempleado": "7",
+        "idempresa": "2",
+        "importe": "44.72",
+        "pais": "Estados Unidos"
+    },
+    {
+        "idpedido": "11067",
+        "cliente": "DRACD",
+        "idempleado": "1",
+        "idempresa": "2",
+        "importe": "7.98",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "11068",
+        "cliente": "QUEEN",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "81.75",
+        "pais": "Brasil"
+    },
+    {
+        "idpedido": "11069",
+        "cliente": "TORTU",
+        "idempleado": "1",
+        "idempresa": "2",
+        "importe": "15.67",
+        "pais": "Mexico"
+    },
+    {
+        "idpedido": "11070",
+        "cliente": "LEHMS",
+        "idempleado": "2",
+        "idempresa": "1",
+        "importe": "136.00",
+        "pais": "Alemania"
+    },
+    {
+        "idpedido": "11071",
+        "cliente": "LILAS",
+        "idempleado": "1",
+        "idempresa": "1",
+        "importe": "0.93",
+        "pais": "Venezuela"
+    },
+    {
+        "idpedido": "11072",
+        "cliente": "ERNSH",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "258.64",
+        "pais": "Austria"
+    },
+    {
+        "idpedido": "11073",
+        "cliente": "PERIC",
+        "idempleado": "2",
+        "idempresa": "2",
+        "importe": "24.95",
+        "pais": "Mexico"
+    },
+    {
+        "idpedido": "11074",
+        "cliente": "SIMOB",
+        "idempleado": "7",
+        "idempresa": "2",
+        "importe": "18.44",
+        "pais": "Dinamarca"
+    },
+    {
+        "idpedido": "11075",
+        "cliente": "RICSU",
+        "idempleado": "8",
+        "idempresa": "2",
+        "importe": "6.19",
+        "pais": "Suiza"
+    },
+    {
+        "idpedido": "11076",
+        "cliente": "BONAP",
+        "idempleado": "4",
+        "idempresa": "2",
+        "importe": "38.28",
+        "pais": "Francia"
+    },
+    {
+        "idpedido": "11077",
+        "cliente": "RATTC",
+        "idempleado": "1",
+        "idempresa": "2",
+        "importe": "8.53",
+        "pais": "Estados Unidos"
+    }
+]
