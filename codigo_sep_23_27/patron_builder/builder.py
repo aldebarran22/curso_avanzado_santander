@@ -81,7 +81,16 @@ class BuilderXML(Builder):
         return linea
 
     def crearFichero(self, texto, path):
-        return ""
+        pathFile = path + ".xml"
+        xml = f"<{self.etiqueta+"s"}>{texto}</{self.etiqueta+"s"}>"
+        xml = "<?xml version='1'?>" + xml
+        try:
+            fich = open(pathFile, 'w')
+            fich.write(xml)
+        except Exception as e:
+            raise e
+        finally:
+            if fich: fich.close() 
 
 class Director:
     """Define el proceso de creación del 
