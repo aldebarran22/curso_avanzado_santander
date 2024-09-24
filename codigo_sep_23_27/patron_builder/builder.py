@@ -7,6 +7,7 @@ JSon -> BuilderJSon
 """
 
 import abc
+import json
 
 class Builder(abc.ABC):
     """Define las operaciones genéricas que hay que implementar
@@ -41,7 +42,14 @@ class BuilderJSON(Builder):
         return ""
    
     def crearFichero(self, texto, path):
-        print(self.diccionarios)
+        pathFile = path + ".json"
+        try:
+            fich = open(pathFile, 'w')
+            json.dump(self.diccionarios, fich, indent=4)            
+        except Exception as e:
+            raise e
+        finally:
+            if fich: fich.close() 
 
 class BuilderHTML(Builder):
     def createCab(self, L):
