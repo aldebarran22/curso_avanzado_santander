@@ -86,3 +86,11 @@ class VectorPlano2(Vector2D):
 	def magnitud(self):
 		# La norma del vector
 		return self.v3.norma()
+	
+
+if __name__ == '__main__':
+	v1 = VectorPlano(1,5)	
+	print(v1.magnitud())
+
+	v2 = VectorPlano2(1,5)	
+	print(v2.magnitud())
