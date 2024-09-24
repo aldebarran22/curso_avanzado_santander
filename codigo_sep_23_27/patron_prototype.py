@@ -130,10 +130,10 @@ class Factoria2(FactoriaPrototipos):
     """Extrategia: crear el objeto bajo demanda"""
 
     def __init__(self):
-        self.prototipos = dict()
+        self.prototipos = None
 
     def inicializarPrototipos(self):
-        pass
+        self.prototipos = {c.__name__.lower():None for c in Figura.__subclasses__()}
 
     def getPrototipo(self, key):
         pass
