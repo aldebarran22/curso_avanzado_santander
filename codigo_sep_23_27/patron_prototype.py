@@ -109,7 +109,7 @@ class Factoria1(FactoriaPrototipos):
         self.prototipos = None
 
     def inicializarPrototipos(self):
-        self.prototipos = {c.__name__.lower():c() for c in Figura.__subclasses__()}
+        self.prototipos = {c.__name__.lower(): c() for c in Figura.__subclasses__()}
 
     def getPrototipo(self, key):
         k = key.lower()
@@ -122,7 +122,7 @@ class Factoria1(FactoriaPrototipos):
     def print(self):
         print("Factoria1:")
         for k, v in self.prototipos.items():
-            print(k,v)
+            print(k, v)
         print()
 
 
@@ -133,23 +133,27 @@ class Factoria2(FactoriaPrototipos):
         self.prototipos = None
 
     def inicializarPrototipos(self):
-        self.prototipos = {c.__name__.lower():None for c in Figura.__subclasses__()}
+        self.prototipos = {c.__name__.lower(): None for c in Figura.__subclasses__()}
 
     def getPrototipo(self, key):
         k = key.lower()
         if k not in self.prototipos:
             raise KeyError(f"La clave {key} no se encuentra en los prototipos")
-        
+
         elif self.prototipos[k] is None:
             # Crear el prototipo:
             nombreClase = k.capitalize()
-            obj = eval(nombreClase+"()")
+            obj = eval(nombreClase + "()")
             self.prototipos[k] = obj
 
         return self.prototipos[k].clonar()
 
     def print(self):
-        pass
+        print("Factoria1:")
+        for k, v in self.prototipos.items():
+            print(k, v)
+        print()
+
 
 def testFactoria(clase):
     fact = clase()
@@ -161,8 +165,6 @@ def testFactoria(clase):
     fact.print()
 
 
-
 if __name__ == "__main__":
-    testFactoria(Factoria1)
-    #testFactoria(Factoria2)
-
+    #testFactoria(Factoria1)
+    testFactoria(Factoria2)
