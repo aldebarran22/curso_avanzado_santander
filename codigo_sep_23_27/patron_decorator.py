@@ -29,12 +29,15 @@ class VentanaDecorador(IVentana):
 class VentanaBorderDecorator(VentanaDecorador):
 
     def dibujar(self):
-        pass
+        print("|", end="")
+        self.ventana.dibujar()
+        print("|", end="")
 
 class VentanaAyudaDecorator(VentanaDecorador):
 
     def dibujar(self):
-        pass
+        print("[Botón]", end="")
+        self.ventana.dibujar()
 
 if __name__ == '__main__':
     v1 = Ventana("CLIENTES")
