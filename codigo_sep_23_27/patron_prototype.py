@@ -6,7 +6,7 @@ Factoria2 -> Los prototipos se crean bajo demanda.
 
 import abc
 import math
-
+import copy
 
 class Figura(abc.ABC):
 
@@ -37,6 +37,9 @@ class Circulo(Figura):
     def area(self):
         return math.pi * self.radio**2
     
+    def clonar(self):
+        return copy.deepcopy(self)
+    
 class Rectangulo(Figura):
     def __init__(self, etiqueta="rectangulo", color=0, ancho=5.0, alto=10.0):
         Figura.__init__(self, etiqueta, color)
@@ -55,6 +58,9 @@ class Rectangulo(Figura):
     def area(self):
         return self.ancho * self.alto
     
+    def clonar(self):
+        return copy.deepcopy(self)
+    
 class Triangulo(Figura):
     def __init__(self, etiqueta="triangulo", color=0, base=2.5, altura=8.0):
         Figura.__init__(self, etiqueta, color)
@@ -72,6 +78,9 @@ class Triangulo(Figura):
     
     def area(self):
         return (self.base * self.altura) / 2
+    
+    def clonar(self):
+        return copy.deepcopy(self)
     
 class FactoriaPrototipos(abc.ABC):
 
