@@ -77,8 +77,8 @@ class BuilderXML(Builder):
         linea = ""
         self.etiqueta = etiqueta
         for pos, i in enumerate(L):
-            linea += f"<{self.etiqueta}>{i}</{self.etiqueta}>"
-        return linea
+            linea += f"<{self.cabs[pos]}>{i}</{self.cabs[pos]}>"
+        return f"<{self.etiqueta}>{linea}</{self.etiqueta}>"
 
     def crearFichero(self, texto, path):
         pathFile = path + ".xml"
