@@ -50,11 +50,14 @@ class Vector2D(abc.ABC):
 class VectorPlano(Vector3D, Vector2D):
 	"""Solución por herencia múltiple"""
 	
+	def __init__(self, x=0, y=0):
+		Vector3D.__init__(self, x, y, 0)
+
 	def getAbcisa(self): 
-		pass
+		return Vector3D.getX(self)
 		
 	def getOrdenada(self):
-		pass
+		return Vector3D.getY(self)
 			
 	def prod(self, v):
 		pass
@@ -66,14 +69,14 @@ class VectorPlano(Vector3D, Vector2D):
 class VectorPlano2(Vector2D):
 	"""Solución por composición"""
 
-	def __init__(self):
-		self.v3 = Vector3D()
+	def __init__(self, x=0, y=0):
+		self.v3 = Vector3D(x,y,0)
 
 	def getAbcisa(self): 
-		pass
+		return self.v3.getX()
 		
 	def getOrdenada(self):
-		pass
+		return self.v3.getY()
 			
 	def prod(self, v):
 		pass
