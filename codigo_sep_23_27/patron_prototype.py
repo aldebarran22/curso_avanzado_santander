@@ -106,10 +106,10 @@ class Factoria1(FactoriaPrototipos):
     """Extrategia: crear todos los objetos al principio"""
 
     def __init__(self):
-        self.prototipos = dict()
+        self.prototipos = None
 
     def inicializarPrototipos(self):
-        pass
+        self.prototipos = {c.__name__.lower():c() for c in Figura.__subclasses__()}
 
     def getPrototipo(self, key):
         pass
@@ -148,11 +148,3 @@ if __name__ == "__main__":
     testFactoria(Factoria1)
     testFactoria(Factoria2)
 
-
-    # Los nombres de las clases hija:
-    L = [c.__name__ for c in Figura.__subclasses__()]
-    print(L)
-
-    # Crea un objeto de cada subclase
-    L = [c() for c in Figura.__subclasses__()]
-    print(L)
