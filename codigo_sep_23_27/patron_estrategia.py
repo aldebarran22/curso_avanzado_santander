@@ -15,6 +15,12 @@ class Estrategia(abc.ABC):
         pass
 
 
+class EstrategiaPython(Estrategia):
+
+    def ordenar(self, unaLista):
+        unaLista.sort()
+
+
 class EstrategiaBurbuja(Estrategia):
     def ordenar(self, unaLista):
         for numPasada in range(len(unaLista) - 1, 0, -1):
@@ -25,7 +31,7 @@ class EstrategiaBurbuja(Estrategia):
                     unaLista[i + 1] = temp
 
 
-class EstrategiaBurbuja(Estrategia):
+class EstrategiaInsDirecta(Estrategia):
 
     def ordenar(self, unaLista):
         for indice in range(1, len(unaLista)):
