@@ -4,7 +4,7 @@
 
 import abc
 
-class Director(object):
+class Director():
     
     """ Controls the construction process.
     Director has a builder associated with him. Director then
@@ -39,7 +39,7 @@ class Director(object):
         return car
 
 # The whole product
-class Car(object):
+class Car():
     
     """ The final product.
     A car is assembled by the `Director' class from
