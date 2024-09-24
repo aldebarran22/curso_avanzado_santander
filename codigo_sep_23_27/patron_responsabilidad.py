@@ -19,17 +19,39 @@ class Gestor(abc.ABC):
 class GestorWhatsApp(Gestor):
 
     def gestionarPeticion(self, peticion):
-        pass
+        if peticion.canal == "whatsapp":
+            print("Se envía la petición por WhatsApp")
+
+        elif self.sig != None:
+            print('GestorWhatsApp: envía la petición al sig.')
+
+        else:
+            print('Fin de cadena, no se procesar la petición')
+    
 
 class GestorSMS(Gestor):
 
     def gestionarPeticion(self, peticion):
-        pass
+        if peticion.canal == "sms":
+            print("Se envía la petición por sms")
+
+        elif self.sig != None:
+            print('GestorSMS: envía la petición al sig.')
+
+        else:
+            print('Fin de cadena, no se procesar la petición')
 
 class GestorEmail(Gestor):
 
     def gestionarPeticion(self, peticion):
-        pass    
+        if peticion.canal == "email":
+            print("Se envía la petición por Email")
+
+        elif self.sig != None:
+            print('GestorEmail: envía la petición al sig.')
+
+        else:
+            print('Fin de cadena, no se procesar la petición') 
 
 if __name__ == "__main__":
     Peticion = namedtuple("Peticion", ['canal','contenido'])
