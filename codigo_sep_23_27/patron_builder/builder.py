@@ -82,7 +82,7 @@ class BuilderXML(Builder):
 
     def crearFichero(self, texto, path):
         pathFile = path + ".xml"
-        xml = f"<{self.etiqueta+"s"}>{texto}</{self.etiqueta+"s"}>"
+        xml = f"<{self.etiqueta+'s'}>{texto}</{self.etiqueta+'s'}>"
         xml = "<?xml version='1'?>" + xml
         try:
             fich = open(pathFile, 'w')
@@ -130,6 +130,6 @@ class Director:
 
 if __name__ == '__main__':
     # Seleccionar un builder según el formato destino
-    builder = BuilderHTML()
+    builder = BuilderXML()
     director = Director(builder)
     director.convertirFichero("Empleados.txt")
