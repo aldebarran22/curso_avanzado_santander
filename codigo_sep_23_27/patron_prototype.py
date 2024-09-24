@@ -8,6 +8,7 @@ import abc
 import math
 import copy
 
+
 class Figura(abc.ABC):
 
     def __init__(self, etiqueta="", color=0):
@@ -20,11 +21,12 @@ class Figura(abc.ABC):
 
     def __str__(self):
         return self.etiqueta + " " + str(self.color)
-    
+
     @abc.abstractmethod
     def clonar(self):
         pass
-    
+
+
 class Circulo(Figura):
 
     def __init__(self, etiqueta="", color=0, radio=5):
@@ -36,10 +38,11 @@ class Circulo(Figura):
 
     def area(self):
         return math.pi * self.radio**2
-    
+
     def clonar(self):
         return copy.deepcopy(self)
-    
+
+
 class Rectangulo(Figura):
     def __init__(self, etiqueta="rectangulo", color=0, ancho=5.0, alto=10.0):
         Figura.__init__(self, etiqueta, color)
@@ -54,13 +57,14 @@ class Rectangulo(Figura):
             + " alto: "
             + str(self.alto)
         )
-    
+
     def area(self):
         return self.ancho * self.alto
-    
+
     def clonar(self):
         return copy.deepcopy(self)
-    
+
+
 class Triangulo(Figura):
     def __init__(self, etiqueta="triangulo", color=0, base=2.5, altura=8.0):
         Figura.__init__(self, etiqueta, color)
@@ -75,13 +79,14 @@ class Triangulo(Figura):
             + " altura: "
             + str(self.altura)
         )
-    
+
     def area(self):
         return (self.base * self.altura) / 2
-    
+
     def clonar(self):
         return copy.deepcopy(self)
-    
+
+
 class FactoriaPrototipos(abc.ABC):
 
     @abc.abstractmethod
@@ -95,10 +100,55 @@ class FactoriaPrototipos(abc.ABC):
     @abc.abstractmethod
     def print(self):
         pass
-        
+
+
+class Factoria1(FactoriaPrototipos):
+    """Extrategia: crear todos los objetos al principio"""
+
+    def __init__(self):
+        self.prototipos = dict()
+
+    def inicializarPrototipos(self):
+        pass
+
+    def getPrototipo(self, key):
+        pass
+
+    def print(self):
+        pass
+
+
+class Factoria2(FactoriaPrototipos):
+    """Extrategia: crear el objeto bajo demanda"""
+
+    def __init__(self):
+        self.prototipos = dict()
+
+    def inicializarPrototipos(self):
+        pass
+
+    def getPrototipo(self, key):
+        pass
+
+    def print(self):
+        pass
+
+def testFactoria(clase):
+    fact = clase()
+    fact.inicializarPrototipos()
+    fact.print()
+    obj = fact.getPrototipo("circulo")
+    obj.radio *= 2
+    print(obj)
+    fact.print()
+
+
 
 if __name__ == "__main__":
-  
+    testFactoria(Factoria1)
+    testFactoria(Factoria2)
+
+
     # Los nombres de las clases hija:
     L = [c.__name__ for c in Figura.__subclasses__()]
     print(L)
