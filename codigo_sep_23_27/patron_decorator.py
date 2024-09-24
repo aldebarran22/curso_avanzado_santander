@@ -42,9 +42,12 @@ class VentanaAyudaDecorator(VentanaDecorador):
 if __name__ == '__main__':
     v1 = Ventana("CLIENTES")
     v1.dibujar()
+    print()
 
     v2 = VentanaBorderDecorator(v1)
     v2.dibujar()
+    print()
 
     v3 = VentanaBorderDecorator(VentanaAyudaDecorator(Ventana("CLIENTES")))
     v3.dibujar()
+    print()
