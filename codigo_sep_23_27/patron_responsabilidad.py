@@ -62,3 +62,6 @@ if __name__ == "__main__":
     #peticion.canal = "email"
     print(peticion.canal)
     print(peticion)
+
+    cadena = GestorEmail(GestorSMS(GestorWhatsApp()))
+    cadena.gestionarPeticion(peticion)
