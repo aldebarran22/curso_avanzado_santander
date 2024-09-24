@@ -136,7 +136,17 @@ class Factoria2(FactoriaPrototipos):
         self.prototipos = {c.__name__.lower():None for c in Figura.__subclasses__()}
 
     def getPrototipo(self, key):
-        pass
+        k = key.lower()
+        if k not in self.prototipos:
+            raise KeyError(f"La clave {key} no se encuentra en los prototipos")
+        
+        elif self.prototipos[k] is None:
+            # Crear el prototipo:
+            nombreClase = k.capitalize()
+            obj = eval(nombreClase+"()")
+            self.prototipos[k] = obj
+
+        return self.prototipos[k].clonar()
 
     def print(self):
         pass
