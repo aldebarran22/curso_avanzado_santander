@@ -7,7 +7,7 @@ sms, whatsapp, email
 from collections import namedtuple
 import abc
 
-class Manejador(abc.ABC):
+class Gestor(abc.ABC):
 
     def __init__(self,sig=None):
         self.sig = sig
@@ -15,6 +15,21 @@ class Manejador(abc.ABC):
     @abc.abstractmethod
     def gestionarPeticion(self, peticion):
         pass
+
+class GestorWhatsApp(Gestor):
+
+    def gestionarPeticion(self, peticion):
+        pass
+
+class GestorSMS(Gestor):
+
+    def gestionarPeticion(self, peticion):
+        pass
+
+class GestorEmail(Gestor):
+
+    def gestionarPeticion(self, peticion):
+        pass    
 
 if __name__ == "__main__":
     Peticion = namedtuple("Peticion", ['canal','contenido'])
