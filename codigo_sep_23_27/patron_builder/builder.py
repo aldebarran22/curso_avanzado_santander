@@ -24,6 +24,9 @@ class Builder(abc.ABC):
     def crearFichero(self, texto, path):
         pass
 
+class BuilderHTML(Builder):
+    pass
+
 class Director:
     """Define el proceso de creación del 
     producto final, para ello utiliza un builder."""
@@ -48,8 +51,15 @@ class Director:
                     tabla += self.builder.createDetalle(L)
 
             # crear el fichero:
-            
+
         except Exception as e:
             print(e)
         finally:
             if f:f.close()
+
+
+if __name__ == '__main__':
+    # Seleccionar un builder según el formato destino
+    builder = BuilderHTML()
+    director = Director(builder)
+    director.convertirFichero("")
