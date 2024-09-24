@@ -62,5 +62,5 @@ class Contexto:
             print(obj.__class__.__name__, intervalo)
 
 if __name__ == '__main__':
-    contexto = Contexto(Estrategia)            
+    contexto = Contexto(Estrategia, 20000)            
     contexto.cronometrar()
