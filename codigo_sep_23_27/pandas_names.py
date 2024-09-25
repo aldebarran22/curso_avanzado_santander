@@ -28,8 +28,10 @@ def sumarLista(año_ini, año_fin):
     # Cargar en una lista el rango de años.    
     result = [cargaDF(year) for year in range(año_ini, año_fin+1)]    
     print([f.shape for f in result])
-    total = reduce(sumar2DF, result)
-    print(total.head())
+    todo = reduce(sumar2DF, result)
+    print(todo.head())
+    print(todo["total"]["Jacob","M"])
+    print(todo.loc["Jacob","M"]["total"])
 
 if __name__ == '__main__':
     #suma = sumar(2016, 2015)
