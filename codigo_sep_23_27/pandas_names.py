@@ -7,6 +7,7 @@ import pandas as pd
 def cargaDF(año):
     path = f"../ficheros_curso/names/yob{año}.txt"
     df = pd.read_csv(path, header=None, names=["nombre","sexo","total"])    
+    df.set_index(["nombre","sexo"], inplace=True)
     return df
 
 def sumar(año1, año2):
