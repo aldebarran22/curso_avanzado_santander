@@ -13,7 +13,9 @@ def cargaDF(año):
 def sumar(año1, año2):
     df1 = cargaDF(año1)
     df2 = cargaDF(año2)
-    suma = df1 + df2
+    #suma = df1 + df2
+    suma = df1.add(df2, fill_value=0)
+    suma.sort_values("total", ascending=False, inplace=True)
     return suma
 
 if __name__ == '__main__':
