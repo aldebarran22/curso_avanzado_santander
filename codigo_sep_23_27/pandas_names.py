@@ -11,7 +11,7 @@ def cargaDF(año):
     df.set_index(["nombre","sexo"], inplace=True)
     return df
 
-def sumar(año1, año2):
+def sumar(año1, año2):    
     df1 = cargaDF(año1)
     df2 = cargaDF(año2)
     #suma = df1 + df2
@@ -19,10 +19,16 @@ def sumar(año1, año2):
     suma.sort_values("total", ascending=False, inplace=True)
     return suma
 
+def sumar2DF(df1, df2):
+    suma = df1.add(df2, fill_value=0)
+    suma.sort_values("total", ascending=False, inplace=True)
+    return suma
+
 def sumarLista(año_ini, año_fin):
     # Cargar en una lista el rango de años.    
     result = [cargaDF(year) for year in range(año_ini, año_fin+1)]    
-    total = reduce(sumar, result)
+    print([f.shape for f in result])
+    total = reduce(sumar2DF, result)
     print(total.head())
 
 if __name__ == '__main__':
