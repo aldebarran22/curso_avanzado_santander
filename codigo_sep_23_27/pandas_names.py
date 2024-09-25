@@ -3,16 +3,13 @@ Estudios sobre los nacimientos en EEUU
 """
 
 import pandas as pd
+from functools import reduce
 
 def cargaDF(año):
     path = f"../ficheros_curso/names/yob{año}.txt"
     df = pd.read_csv(path, header=None, names=["nombre","sexo","total"])    
     df.set_index(["nombre","sexo"], inplace=True)
     return df
-
-def sumarLista(año_ini, año_fin):
-    # Cargar en una lista el rango de años.
-    pass
 
 def sumar(año1, año2):
     df1 = cargaDF(año1)
@@ -22,6 +19,14 @@ def sumar(año1, año2):
     suma.sort_values("total", ascending=False, inplace=True)
     return suma
 
+def sumarLista(año_ini, año_fin):
+    # Cargar en una lista el rango de años.    
+    result = [cargaDF(year) for year in range(año_ini, año_fin+1)]    
+    total = reduce(sumar, result)
+    print(total.head())
+
 if __name__ == '__main__':
-    suma = sumar(2016, 2015)
-    print(suma.head())
+    #suma = sumar(2016, 2015)
+    #print(suma.head())
+
+    sumarLista(2000, 2005)
