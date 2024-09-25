@@ -37,6 +37,7 @@ def concatenarLista(año_ini, año_fin):
     # Cargar en una lista el rango de años.    
     result = [cargaDF(year).reset_index() for year in range(año_ini, año_fin+1)]    
     todo = pd.concat(result)
+    todo.sort_values("nombre", inplace=True)
     todo.to_html("../ficheros/names.html")
 
 if __name__ == '__main__':
