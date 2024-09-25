@@ -10,6 +10,10 @@ def cargaDF(año):
     df.set_index(["nombre","sexo"], inplace=True)
     return df
 
+def sumarLista(año_ini, año_fin):
+    # Cargar en una lista el rango de años.
+    pass
+
 def sumar(año1, año2):
     df1 = cargaDF(año1)
     df2 = cargaDF(año2)
