@@ -29,7 +29,7 @@ if __name__ == "__main__":
         sql = """select p.id as idprod, c.nombre, p.nombre, 
         p.precio, p.existencias from productos p inner join
         categorias c on p.idcategoria = c.id"""
-        df = BaseDatos.getDataFrame(sql)
+        df = baseDatos.getDataFrame(sql)
         print(df.head())
 
     except Exception as e:
