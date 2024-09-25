@@ -33,8 +33,16 @@ def sumarLista(año_ini, año_fin):
     print(todo["total"]["Jacob","M"])
     print(todo.loc["Jacob","M"]["total"])
 
+def concatenarLista(año_ini, año_fin):
+    # Cargar en una lista el rango de años.    
+    result = [cargaDF(year).reset_index() for year in range(año_ini, año_fin+1)]    
+    todo = pd.concat(result)
+    todo.to_html("../ficheros/names.html")
+
 if __name__ == '__main__':
     #suma = sumar(2016, 2015)
     #print(suma.head())
 
-    sumarLista(2000, 2005)
+    #sumarLista(2000, 2005)
+
+    concatenarLista(2000, 2005)
