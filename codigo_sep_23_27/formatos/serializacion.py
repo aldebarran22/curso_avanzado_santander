@@ -6,14 +6,17 @@ shelve: varios objetos por fichero (trata como un dict)
 
 import pickle as p
 import shelve as s
+from base_datos import Categoria, Producto, BaseDatos, path
 
 
 def serializarPickle(path, objeto):
     fich = None
     try:
-        pass
+        fich = open(path, "wb")
+        p.dump(objeto, fich)
+
     except Exception as e:
-        pass
+        print(e)
     finally:
         if fich:
             fich.close()
@@ -22,7 +25,9 @@ def serializarPickle(path, objeto):
 def deserializarPickle(path):
     fich = None
     try:
-        pass
+        fich = open(path, "rb")
+        objeto = p.load(fich)
+        return objeto
     except Exception as e:
         pass
     finally:
