@@ -53,9 +53,21 @@ def procesarXML(path):
 
 def procesarSAX(path):
     eventos = ["start","end"]
+    categorias = []
+    flag = False
+    
     for evento, nodo in iterparse(path, eventos):
-        if nodo.tag == 'nombre':
-            print(evento, nodo.text)
+        if nodo.tag == 'categoria':
+            flag = True
+
+        elif nodo.tag == 'productos':
+            flag = False
+
+        if nodo.tag == 'nombre' and flag:
+            if evento == 'end':
+                categorias.append(nodo.text)
+
+    print(categorias)
 
 if __name__ == "__main__":
     # generarXML()
