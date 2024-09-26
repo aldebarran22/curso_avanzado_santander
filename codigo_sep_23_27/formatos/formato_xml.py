@@ -16,10 +16,20 @@ def generarXML():
                                    {"idcat":str(c.id)})
             nombreCat = SubElement(categoria, "nombre")
             nombreCat.text = c.nombre
-            
+
+            productos = SubElement(categoria, "productos")            
             listaProductos = bd.select(c.nombre)
             for p in listaProductos:
-                pass
+                producto = SubElement(productos, "producto", \
+                                      {"idprod":str(p.id)})
+                nombreProd = SubElement(producto, "nombre")
+                nombreProd.text = p.nombre
+
+                precioProd = SubElement(producto, "precio")
+                precioProd.text = str(p.precio)
+
+                existenciasProd = SubElement(producto, "existencias")
+                existenciasProd.text = str(p.exis)
         
         print(tostring(raiz))
 
