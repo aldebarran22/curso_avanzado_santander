@@ -2,18 +2,24 @@
 Generar XML con el contenido de la BD
 """
 from base_datos import Categoria, BaseDatos, path
+from xml.etree.ElementTree import Element, SubElement, Comment, tostring
 
 def generarXML():
     try:
         bd = BaseDatos(path)
+        raiz = Element('categorias')
+        raiz.set('version','1.0')
+
         listaCategorias = bd.selectCategorias()
         for c in listaCategorias:
-            print(c.nombre)
-
+            categoria = SubElement(raiz, "categoria",\
+                                   {"idcat":str(c.id)})
+            
             listaProductos = bd.select(c.nombre)
             for p in listaProductos:
-                print("\t",p.nombre)
+                pass
         
+        print(tostring(raiz))
 
     except Exception as e:
         print(e)
