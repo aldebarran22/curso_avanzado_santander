@@ -29,7 +29,8 @@ def deserializarPickle(path):
         objeto = p.load(fich)
         return objeto
     except Exception as e:
-        pass
+        print(e)
+
     finally:
         if fich:
             fich.close()
@@ -58,4 +59,9 @@ def deserializarShelve(path, key):
 
 
 if __name__ == "__main__":
-    pass
+    bd = BaseDatos(path)
+    prod = bd.read(1)
+    print(prod)
+    serializarPickle("producto.bin", prod)
+    prod2 = deserializarPickle("producto.bin")
+    print(prod2)
