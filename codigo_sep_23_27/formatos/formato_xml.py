@@ -3,6 +3,7 @@ Generar XML con el contenido de la BD
 """
 from base_datos import Categoria, BaseDatos, path
 from xml.etree.ElementTree import Element, SubElement, Comment, tostring
+from xml.etree import ElementTree
 
 def generarXML():
     try:
@@ -31,7 +32,10 @@ def generarXML():
                 existenciasProd = SubElement(producto, "existencias")
                 existenciasProd.text = str(p.exis)
         
-        print(tostring(raiz))
+        tree = ElementTree.ElementTree()
+        tree._setroot(raiz)
+        tree.write('productos.xml')
+        print('Fichero generado: productos.xml')
 
     except Exception as e:
         print(e)
