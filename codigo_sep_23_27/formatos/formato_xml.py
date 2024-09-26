@@ -14,6 +14,8 @@ def generarXML():
         for c in listaCategorias:
             categoria = SubElement(raiz, "categoria",\
                                    {"idcat":str(c.id)})
+            nombreCat = SubElement(categoria, "nombre")
+            nombreCat.text = c.nombre
             
             listaProductos = bd.select(c.nombre)
             for p in listaProductos:
