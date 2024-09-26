@@ -3,7 +3,7 @@ Generar XML con el contenido de la BD
 """
 
 from base_datos import Categoria, BaseDatos, path
-from xml.etree.ElementTree import Element, SubElement, Comment, tostring
+from xml.etree.ElementTree import iterparse, Element, SubElement, Comment, tostring
 from xml.etree import ElementTree
 
 
@@ -51,7 +51,12 @@ def procesarXML(path):
         for t in raiz.findall(".//categoria/nombre"):
             print(t.tag, t.text)
 
+def procesarSAX(path):
+    eventos = ["start","end"]
+    for evento, nodo in iterparse(path, eventos):
+        print(evento, nodo.tag)
 
 if __name__ == "__main__":
     # generarXML()
-    procesarXML("productos.xml")
+    # procesarXML("productos.xml")
+    procesarSAX("productos.xml")
