@@ -18,4 +18,5 @@ def cargaFich(path):
 
 if __name__ == '__main__':
     lista = cargaFich("Pedidos.json")
-    print(len(lista), " pedidos")
+    print(len(lista), "pedidos")
+    print(lista[:2])
