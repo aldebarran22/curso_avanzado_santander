@@ -42,7 +42,7 @@ def serializarShelve(path, *objetos):
         for pos, obj in enumerate(objetos):
             clave = f"K-{pos+1}"
             Shelf[clave] = obj
-            
+
         Shelf.close()
     except Exception as e:
         print(e)
@@ -50,25 +50,27 @@ def serializarShelve(path, *objetos):
         
 
 
-def deserializarShelve(path, key):
-    fich = None
+def deserializarShelve(path, key):    
     try:
-        pass
+        Shelf = s.open(path)
+        obj = Shelf[key]
+        Shelf.close()
+        return obj
     except Exception as e:
-        pass
-    finally:
-        if fich:
-            fich.close()
+        print(e)
+   
 
 
 if __name__ == "__main__":
     bd = BaseDatos(path)
     prod = bd.read(1)
     prod2 = bd.read(2)
-    prod3 = bd.read(3)
+    prod3 = bd.read(4)
     print(prod)
     serializarPickle("producto.bin", prod)
     prod_2 = deserializarPickle("producto.bin")
     print(prod_2)
 
     serializarShelve("productos", prod, prod2, prod3)
+    obj = deserializarShelve("productos", "K-3")
+    print(obj)
