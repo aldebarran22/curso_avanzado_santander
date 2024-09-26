@@ -9,6 +9,9 @@ def testBD():
         categorias = bd.selectCategorias()
         print(categorias)
 
+        productos = bd.select("Bebidas")
+        print(productos[:3])
+
     except Exception as e:
         print(e)
 
