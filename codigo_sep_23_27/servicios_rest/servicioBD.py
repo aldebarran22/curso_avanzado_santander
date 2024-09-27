@@ -26,7 +26,7 @@ class RecursoBD(Resource):
         except Exception as e:
             abort(404, str(e))
 
-api.add_resource(RecursoBD, "/productos/<param>")
+api.add_resource(RecursoBD, "/productos","/productos/<param>")
 
 if __name__ == "__main__":
     app.run(debug=True, port=8000)
