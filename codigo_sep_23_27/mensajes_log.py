@@ -51,7 +51,33 @@ def testFichero():
     logging.critical("mensaje critical")
 
 
+def mensajesConFormato():
+
+    # Establecer el nombre del logger
+    logger = logging.getLogger("nombre_log")
+
+    # El nivel de mensajes del logger:
+    logger.setLevel(logging.DEBUG)
+
+    # Crear el handler: puede ser a consola o a fichero:
+    handler = logging.StreamHandler()
+
+    # Configurar el formato de los mensajes de salida
+    formato = logging.Formatter("%(asctime)s - %(name)s - %(levelname)s - %(message)s")
+
+    # Establecer los mensajes del logger:
+    handler.setFormatter(formato)
+
+    logger.addHandler(handler)
+
+    logger.debug("mensaje debug")
+    logger.info("mensaje info")
+    logger.warning("mensaje warning")
+    logger.error("mensaje error")
+    logger.critical("mensaje critical")
+
 if __name__ == "__main__":
     # testConsola()
     # test2Consola()
-    testFichero()
+    # testFichero()
+    mensajesConFormato()
