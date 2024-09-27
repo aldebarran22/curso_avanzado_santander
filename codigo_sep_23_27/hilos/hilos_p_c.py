@@ -20,7 +20,22 @@ class Productor(Thread):
         self.num_muestras = num_muestras
 
     def run(self):
-       pass
+       for i in range(self.num_muestras):
+           pass
+           
+           # Generar un item: número aleatorio
+
+           # Comprobar si hay un hueco: sem_huecos
+
+           # modificar el buffer en excl. mutua
+           # escribir el número en el buffer
+           # modificar el índice
+
+           # Avisar de que hay un nuevo item:
+
+           # Esperar x SG.
+
+
 
 
 class Consumidor(Thread):
