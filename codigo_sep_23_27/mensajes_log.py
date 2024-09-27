@@ -80,9 +80,16 @@ def mensajesConFormato():
 def mensajesConFichConfig():
     pass
 
+def printConFile():
+    fich = open("../mensajes_print.txt", "w")
+    for i in range(10):
+        print(f"Linea de mensaje {i}", file=fich)
+    fich.close()
+
 if __name__ == "__main__":
     # testConsola()
     # test2Consola()
     # testFichero()
     # mensajesConFormato()
     mensajesConFichConfig()
+    printConFile()
