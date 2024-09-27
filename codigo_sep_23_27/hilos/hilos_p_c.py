@@ -55,7 +55,19 @@ class Consumidor(Thread):
         self.num_muestras = num_muestras
 
     def run(self):
-        pass
+        for i in range(self.num_muestras):
+            pass
+        
+            # comprobar si hay items
+
+            # modificar el buffer en excl. mutua
+            # quitar un numero del buffer
+
+            # modificar el indice
+
+            # avisar del nuevo hueco
+
+            # consumir el elemento
 
 
 class TBuffer:
