@@ -23,4 +23,4 @@ class RecursoBD(Resource):
 api.add_resource(RecursoBD, "/productos")
 
 if __name__ == "__main__":
-    api.run(debug=True, port=8000)
+    app.run(debug=True, port=8000)
