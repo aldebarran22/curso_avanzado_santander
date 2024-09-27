@@ -27,12 +27,16 @@ class Hilo(Thread):
 
 if __name__ == "__main__":
     hilos = []
-    nHilos = 5
+    nHilos = 3
     for i in range(nHilos):
         nombre = f"H-{i+1}"
         hilo = Hilo(nombre, randint(5, 10))
-        hilo.start()
-        hilo.join()
+        hilo.start()        
         hilos.append(hilo)
 
+    for h in hilos:
+        h.join()
+
     print("main terminado!")
+    for h in hilos:
+        print(h.L)
