@@ -11,12 +11,12 @@ api = Api(app)
 
 class RecursoBD(Resource):
 
-    def delete(self, id):
+    def delete(self, param):
         try:
             bd = BaseDatos(path) 
-            n = bd.delete(id)
+            n = bd.delete(param)
             if n == 0:
-                raise ValueError(f"No existe el id: {id}")
+                raise ValueError(f"No existe el id: {param}")
             else:
                 return {"delete":n}
             
