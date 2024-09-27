@@ -59,4 +59,4 @@ if __name__ == "__main__":
     while not q.empty():
         L.append(q.get())
     L.sort()
-    print(L[:10])
+    print(L[:10], "...", L[-10:])
