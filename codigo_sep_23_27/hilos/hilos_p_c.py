@@ -56,19 +56,27 @@ class Consumidor(Thread):
 
     def run(self):
         for i in range(self.num_muestras):
-            pass
-        
+
             # comprobar si hay items
+            self.buffer.sem_items.acquire()
 
             # modificar el buffer en excl. mutua
-            # quitar un numero del buffer
+            with self.buffer.mutex:
+                # quitar un numero del buffer
+                numero = self.buffer.buffer[self.buffer.ind_c]
+                self.buffer.buffer[self.buffer.ind_c] = -1
+                print(self.buffer.buffer)
 
-            # modificar el indice
+                # modificar el indice
+                self.buffer.ind_c = (self.buffer.ind_c + 1) % tam_buffer
 
             # avisar del nuevo hueco
+            self.buffer.sem_huecos.release()
 
             # consumir el elemento
+            print(self.name, "CONSUME", numero)
 
+            sleep(randint(2,4))
 
 class TBuffer:
     def __init__(self):
