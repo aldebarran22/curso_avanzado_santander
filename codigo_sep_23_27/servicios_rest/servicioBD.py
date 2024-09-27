@@ -11,6 +11,20 @@ api = Api(app)
 
 class RecursoBD(Resource):
 
+    def put(self):
+        try:
+            bd = BaseDatos(path) 
+            args = request.json
+
+            # Crear un objeto producto:
+            producto = Producto.create(args)
+            n = bd.update(producto)
+            return {"update":n}
+
+        except Exception as e:
+            abort(404, message=str(e))
+
+
     def post(self):
         try:
             bd = BaseDatos(path) 
