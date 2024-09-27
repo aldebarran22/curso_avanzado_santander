@@ -19,7 +19,7 @@ def descargarJSON():
         resp = requests.get(url)
 
         fich = open("productos.json", "w")
-        json.dump(resp.json(), fich)
+        json.dump(resp.json(), fich, indent=4)
         print("productos.json grabado!!")
 
     except Exception as e:
