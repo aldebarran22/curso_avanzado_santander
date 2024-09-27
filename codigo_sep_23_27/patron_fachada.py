@@ -8,6 +8,7 @@ class C:
     """Patron Fachada para crear un envoltorio de la lib de C"""
 
     # Variables de clase
+    # Guarda la lib de C
     __libc = cdll.msvcrt
 
     # Mapeo de funciones de C
@@ -27,7 +28,7 @@ class C:
         return C.__strstr(bytes(cad, 'utf-8'), bytes(search, 'utf-8'))
 
 if __name__ == '__main__':
-    ptr = C.strchr("hola que tal", 'q')
+    ptr = C.strchr("hola que tal", 'x')
     print(ptr)
 
     ptr = C.strstr("hola que tal", 'tal')
