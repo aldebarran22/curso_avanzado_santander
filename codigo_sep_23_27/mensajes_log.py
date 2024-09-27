@@ -8,6 +8,7 @@ del logger.
 """
 
 import logging
+import logging.config
 
 
 def testConsola():
@@ -78,10 +79,13 @@ def mensajesConFormato():
 
 
 def mensajesConFichConfig():
-    pass
+    logging.config.fileConfig("mensajes_log.conf")
+    logger = logging.getLogger("root")
+    logger.info("hola")
+    logger.error("error")
 
 def printConFile():
-    fich = open("../mensajes_print.txt", "w")
+    fich = open("../ficheros/mensajes_print.txt", "w")
     for i in range(10):
         print(f"Linea de mensaje {i}", file=fich)
     fich.close()
