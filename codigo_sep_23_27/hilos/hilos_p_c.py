@@ -2,6 +2,7 @@
 Implementación del productor-consumidor en Python
 Solución M productores-N consumidores
 """
+
 from threading import Thread, Lock, Semaphore
 from random import randint
 from time import sleep
@@ -20,26 +21,35 @@ class Productor(Thread):
         self.num_muestras = num_muestras
 
     def run(self):
-       for i in range(self.num_muestras):
-           pass
-           
-           # Generar un item: número aleatorio
+        for i in range(self.num_muestras):
 
-           # Comprobar si hay un hueco: sem_huecos
+            # Generar un item: número aleatorio
+            numero = randint(1, 20)
+            print(self.name, "PRODUCE", numero)
 
-           # modificar el buffer en excl. mutua
-           # escribir el número en el buffer
-           # modificar el índice
+            # Comprobar si hay un hueco: sem_huecos
+            self.buffer.sem_huecos.acquire()
 
-           # Avisar de que hay un nuevo item:
+            # modificar el buffer en excl. mutua
+            with self.buffer.mutex:
+                # escribir el número en el buffer
+                self.buffer.buffer[self.buffer.ind_p] = numero
+                print(self.buffer.buffer)
 
-           # Esperar x SG.
+                # modificar el índice
+                self.buffer.ind_p = (self.buffer.ind_p + 1) % tam_buffer
 
+            # Avisar de que hay un nuevo item:
+            self.buffer.sem_items.release()
 
+            # Esperar x SG.
+            sleep(randint(1, 3))
+
+        print(self.name, "TERMINA!")
 
 
 class Consumidor(Thread):
-    def __init__(self, buffer,num_muestras, nombre):
+    def __init__(self, buffer, num_muestras, nombre):
         Thread.__init__(self, name=nombre)
         self.buffer = buffer
         self.num_muestras = num_muestras
@@ -88,6 +98,3 @@ if __name__ == "__main__":
 
     for c in consumidores:
         c.join()
-
-
-   
