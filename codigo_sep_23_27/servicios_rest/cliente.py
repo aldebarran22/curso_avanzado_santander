@@ -68,4 +68,4 @@ if __name__ == "__main__":
     # descargarJSON()
     # testDelete(24)
     # nuevoProducto()
-    actualizarProducto(precio=5.0, exis=4000)
+    actualizarProducto(103, precio=5.0, exis=4000)
