@@ -32,6 +32,7 @@ if __name__ == "__main__":
         nombre = f"H-{i+1}"
         hilo = Hilo(nombre, randint(5, 10))
         hilo.start()
+        hilo.join()
         hilos.append(hilo)
 
     print("main terminado!")
