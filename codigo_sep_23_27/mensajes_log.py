@@ -9,6 +9,7 @@ del logger.
 
 import logging
 
+
 def testConsola():
     # Por defecto muestra los mensajes de W, E y C
     logging.debug("mensaje debug")
@@ -17,8 +18,11 @@ def testConsola():
     logging.error("mensaje error")
     logging.critical("mensaje critical")
 
+
 def test2Consola():
     # Establecer una configuración
+
+    # Mostrar mensajes desde debug a critical:
     logging.basicConfig(level=logging.DEBUG)
 
     logging.debug("mensaje debug")
@@ -27,8 +31,23 @@ def test2Consola():
     logging.error("mensaje error")
     logging.critical("mensaje critical")
 
-if __name__ == '__main__':
-    #testConsola()
-    test2Consola()
+
+def testFichero():
+    # Establecer una configuración
+
+    # Mostrar mensajes desde debug a critical:
+    logging.basicConfig(
+        filename="../ficheros/fichero.log", level=logging.info, filemode="w"
+    )
+
+    logging.debug("mensaje debug")
+    logging.info("mensaje info")
+    logging.warning("mensaje warning")
+    logging.error("mensaje error")
+    logging.critical("mensaje critical")
 
 
+if __name__ == "__main__":
+    # testConsola()
+    # test2Consola()
+    testFichero()
