@@ -76,8 +76,13 @@ def mensajesConFormato():
     logger.error("mensaje error")
     logger.critical("mensaje critical")
 
+
+def mensajesConFichConfig():
+    pass
+
 if __name__ == "__main__":
     # testConsola()
     # test2Consola()
     # testFichero()
-    mensajesConFormato()
+    # mensajesConFormato()
+    mensajesConFichConfig()
