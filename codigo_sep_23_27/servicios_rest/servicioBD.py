@@ -11,6 +11,18 @@ api = Api(app)
 
 class RecursoBD(Resource):
 
+    def delete(self, id):
+        try:
+            bd = BaseDatos(path) 
+            n = bd.delete(id)
+            if n == 0:
+                raise ValueError(f"No existe el id: {id}")
+            else:
+                return {"delete":n}
+            
+        except Exception as e:
+            abort(404, message=str(e))
+
     def get(self, param=None):
         try:
             bd = BaseDatos(path)
