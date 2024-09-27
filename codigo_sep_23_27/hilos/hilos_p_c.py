@@ -9,7 +9,7 @@ from time import sleep
 num_muestras = 10
 tam_buffer = 5
 
-num_productores = 2
+num_productores = 1
 num_consumidores = 1
 
 
@@ -30,7 +30,7 @@ class Consumidor(Thread):
         self.num_muestras = num_muestras
 
     def run(self):
-		pass
+        pass
 
 
 class TBuffer:
@@ -53,5 +53,26 @@ if __name__ == "__main__":
     num_muestras_con = num_muestras // num_consumidores
 
     buf = TBuffer()
+    productores = []
+    consumidores = []
+
+    for i in range(num_productores):
+        nombre = f"P-{i+1}"
+        productor = Productor(buf, num_muestras_prod, nombre)
+        productor.start()
+        productores.append(productor)
+
+    for i in range(num_consumidores):
+        nombre = f"C-{i+1}"
+        consumidor = Consumidor(buf, num_muestras_con, nombre)
+        consumidor.start()
+        consumidores.append(consumidor)
+
+    for p in productores:
+        p.join()
+
+    for c in consumidores:
+        c.join()
+
 
    
