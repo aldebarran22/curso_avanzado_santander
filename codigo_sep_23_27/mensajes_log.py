@@ -37,7 +37,7 @@ def testFichero():
 
     # Mostrar mensajes desde debug a critical:
     logging.basicConfig(
-        filename="../ficheros/fichero.log", level=logging.info, filemode="w"
+        filename="../ficheros/fichero.log", level=logging.INFO, filemode="a"
     )
 
     logging.debug("mensaje debug")
