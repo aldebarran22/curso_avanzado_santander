@@ -2,7 +2,7 @@
 Generar varios hilos que lanzan números aleatorios.
 """
 
-from threading import Thread
+from threading import Thread, enumerate, active_count
 from random import randint
 from time import sleep
 
@@ -33,6 +33,9 @@ if __name__ == "__main__":
         hilo = Hilo(nombre, randint(5, 10))
         hilo.start()        
         hilos.append(hilo)
+
+    print('Número de hilos: ', active_count())
+    print('Hilos: ', enumerate())
 
     for h in hilos:
         h.join()
