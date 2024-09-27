@@ -11,6 +11,10 @@ def testHW():
     resp = requests.get(url)
     print("RESP: ", resp.json())
 
+def testDelete(id):
+    url = f"http://localhost:8000/productos/{id}"
+    resp = requests.delete(url)
+    print("RESP: ", resp.json())
 
 def descargarJSON():
     fich = None
@@ -28,7 +32,7 @@ def descargarJSON():
         if fich:
             fich.close()
 
-
 if __name__ == "__main__":
     # testHW()
-    descargarJSON()
+    #descargarJSON()
+    testDelete(24)
