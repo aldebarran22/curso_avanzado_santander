@@ -24,9 +24,9 @@ class RecursoBD(Resource):
                 return prod.to_json()
         
         except Exception as e:
-            abort(404, str(e))
+            abort(404, message=str(e))
 
-api.add_resource(RecursoBD, "/productos","/productos/<param>")
+api.add_resource(RecursoBD, "/productos","/productos/","/productos/<param>")
 
 if __name__ == "__main__":
     app.run(debug=True, port=8000)
