@@ -4,7 +4,7 @@ Cliente REST implementado con requests.
 
 import requests
 import json
-
+from base_datos import Producto, Categoria
 
 def testHW():
     url = "http://localhost:8000"
@@ -32,7 +32,18 @@ def descargarJSON():
         if fich:
             fich.close()
 
+def nuevoProducto():
+    url = "http://localhost:8000/productos"
+    p = Producto(0, "Redbull 33", Categoria(1),1.75,200)
+    dicc = p.to_json()
+
+    cad = json.dumps(dicc)
+    headers = {"Content-type":"application/json"}
+    resp = requests.post(url, data=cad, headers=headers)
+    print(resp.json())
+    
 if __name__ == "__main__":
     # testHW()
     #descargarJSON()
-    testDelete(24)
+    #testDelete(24)
+    nuevoProducto()
