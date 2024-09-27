@@ -38,4 +38,16 @@ class Download(Thread):
 			
 
 if __name__=='__main__':
-	pass
+	num_ficheros = 100
+	num_hilos = 5
+	num_fich_hilo = num_ficheros // num_hilos
+	hilos = []
+	params = [(i*num_fich_hilo,i*num_fich_hilo+num_fich_hilo) for i in range(num_hilos)]
+	
+	for i in range(num_hilos):
+		h = Download(*params[i])
+		h.start()
+		hilos.append(h)
+
+	for h in hilos:
+		h.join()
