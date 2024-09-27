@@ -22,6 +22,10 @@ class RecursoBD(Resource):
                 id = int(param)
                 prod = bd.read(id)
                 return prod.to_json()
+            
+            else:
+                L = bd.select(param)
+                return [prod.to_json() for prod in L]
         
         except Exception as e:
             abort(404, message=str(e))
