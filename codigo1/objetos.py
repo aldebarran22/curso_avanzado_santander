@@ -15,6 +15,9 @@ class Pedido:
         self.importe = importe
         self.pais = pais
 
+    def __repr__(self):
+        return str(self)
+
     def __str__(self):
         return str(self.idpedido) + " " + self.cliente + " " + str(self.importe) + " " + self.pais
 
@@ -31,4 +34,8 @@ if __name__ == '__main__':
     pedido2 = crearObjeto(Pedido, 10250, 'FRTEE', 23.8, "Francia")
     print(pedido2)
 
+    pedido3 = crearObjeto(pedido.__class__, 10260, 'FGHAE', 113.9, "Alemania")
+    print(pedido3)
 
+    L = [pedido, pedido2, pedido3]
+    print(L)
