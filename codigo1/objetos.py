@@ -75,8 +75,13 @@ if __name__ == "__main__":
     else:
         print(pedido2, "es mayor")
 
-    pedido4 = crearObjeto(Pedido, 10250, "FRTEE", 23.8, "Francia")
+    pedido4 = crearObjeto(Pedido, 10251, "FRTEE", 23.8, "Francia")
     if pedido4 == pedido2:  # if pedido.__lt__(pedido2)
         print("son iguales")
     else:
         print("son distintos")
+
+    if pedido4 != pedido2:  # if pedido.__lt__(pedido2)
+        print("son distintos")
+    else:
+        print("son iguales")
