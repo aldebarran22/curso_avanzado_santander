@@ -53,3 +53,6 @@ if __name__ =="__main__":
     print(t2)
     suma = t1 + t2
     print(suma)
+
+    dt = DateTime(9, 12, 2024, 13,17,34)
+    print(dt) # 09/12/2024 13:17:34
