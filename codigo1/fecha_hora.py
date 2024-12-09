@@ -9,7 +9,8 @@ class Time:
 
    
    
-    def __str__(self):        
+    def __str__(self):  
+        # 1, 2, 33 => 01:02:33      
         return '%02d:%02d:%02d' % (self.hh,self.mm,self.ss)
 
 
@@ -34,3 +35,10 @@ class Date:
 
  
 
+if __name__ =="__main__":
+    t1 = Time(12,33,4)
+    print(t1)
+    t2 = Time(8,56,2)
+    print(t2)
+    suma = t1 + t2
+    print(suma)
