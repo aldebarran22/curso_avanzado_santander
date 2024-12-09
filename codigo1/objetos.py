@@ -19,4 +19,9 @@ class Pedido:
 if __name__ == '__main__':
     pedido = Pedido(10248, 'ALFKI', 34.99, "España")
     print(pedido)
+    #print(str(pedido))
+    #print(pedido.__str__())
+    pedido.iva = 3.44
+    pedido.__dict__['dto'] = 1.5
+    print(pedido.__dict__)
 
