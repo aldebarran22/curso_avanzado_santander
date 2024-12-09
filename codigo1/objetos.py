@@ -20,6 +20,9 @@ class Pedido:
 
     def __str__(self):
         return str(self.idpedido) + " " + self.cliente + " " + str(self.importe) + " " + self.pais
+    
+    def __lt__(self, other):
+        return self.importe < other.importe
 
 if __name__ == '__main__':
     pedido = Pedido(10248, 'ALFKI', 34.99, "España")
@@ -39,5 +42,9 @@ if __name__ == '__main__':
 
     L = [pedido, pedido2, pedido3]
     print(L)
-    L.sort(key=lambda ped : ped.importe, reverse=True)
+    L.sort(key=lambda ped : ped.pais)
     print(L)
+    L.sort()
+    print(L)
+    #if pedido < pedido2: # if pedido.__lt__(pedido2)
+    #    pass
