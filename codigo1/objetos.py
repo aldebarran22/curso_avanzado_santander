@@ -1,6 +1,8 @@
 """
 POO en Python
 """
+def crearObjeto(clase, *args):
+    return clase(*args)
 
 class Pedido:
     """
@@ -24,4 +26,9 @@ if __name__ == '__main__':
     pedido.iva = 3.44
     pedido.__dict__['dto'] = 1.5
     print(pedido.__dict__)
+    print("La clase: ",pedido.__class__.__name__)
+
+    pedido2 = crearObjeto(Pedido, 10250, 'FRTEE', 23.8, "Francia")
+    print(pedido2)
+
 
