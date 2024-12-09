@@ -2,6 +2,9 @@
 Cargar ficheros csv y convertirlos a diccionarios
 """
 
+import json
+from os import listdir
+
 def cargarFichero(path):
     fich = open(path, 'r')
     txt = fich.read().strip()
@@ -30,12 +33,19 @@ def dictToCsv(dicc, sep=';'):
         resul.append(datos)
     return "\n".join(resul)
 
+def grabarFichero(path, dicc):
+    fich = open(path, "w")
+    json.dump(dicc, fich, indent=4)
+    fich.close()
+
 
 if __name__ == '__main__':
-    nombreFich = "Pedidos"
-    txt = cargarFichero(f"../ficheros_curso/merge/{nombreFich}.txt")
-    print(txt)
-    dicc = csvToDict(txt)
-    print(dicc)
-    txt2 = dictToCsv(dicc)
-    print(txt == txt2)
+    for f in listdir("../ficheros_curso/merge"):  
+        # Nombre del fichero sin la extensión:     
+        nombreFich = f.partition('.')[0]
+        txt = cargarFichero(f"../ficheros_curso/merge/{nombreFich}.txt")
+        print(txt)
+        dicc = csvToDict(txt)
+        grabarFichero(f"../ficheros/{nombreFich}.json", dicc)
+        txt2 = dictToCsv(dicc)
+        print(txt == txt2)
