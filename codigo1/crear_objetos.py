@@ -56,3 +56,10 @@ if __name__ == "__main__":
 
     p6 = copy.deepcopy(p5)
     print(p6)
+
+    # 6) Con sys.modules
+    import sys
+    p7 = getattr(sys.modules[__name__], 'Punto')(12,4)
+    print(p7)
+
+    print(sys.modules.keys())
