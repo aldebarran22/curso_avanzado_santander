@@ -42,3 +42,17 @@ if __name__ == "__main__":
     print(p3)
     p4 = crearObjeto(Punto, x=12, y=4)
     print(p4)
+
+    # 4) Con la funcion globals()
+    print(globals())
+    p5 = globals()["Punto"](12,4)
+    print(p5)
+
+    for k, v in globals().copy().items():
+          print(k, type(v))
+
+    # 5) Copiando el objeto: copia profunda
+    import copy
+
+    p6 = copy.deepcopy(p5)
+    print(p6)
