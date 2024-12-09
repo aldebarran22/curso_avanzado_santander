@@ -43,7 +43,17 @@ class Pedido:
         return list(self.__dict__.values()) == list(other.__dict__.values())
 
 
-if __name__ == "__main__":
+class PedidoElectronico(Pedido):
+
+    def __init__(
+        self, idpedido=0, cliente="", importe=0.0, pais="", certificado=True, email=""
+    ):
+        Pedido.__init__(self, idpedido, cliente, importe, pais)
+        #super(idpedido, cliente, importe, pais)
+        self.certificado = certificado
+        self.email = email
+
+def pruebasPedido():
     pedido = Pedido(10248, "ALFKI", 34.99, "España")
     print(pedido)
     # print(str(pedido))
@@ -85,3 +95,12 @@ if __name__ == "__main__":
         print("son distintos")
     else:
         print("son iguales")
+
+
+def pruebasPedidoElectronico():
+    ped1 = PedidoElectronico(10248, "ALFKI", 34.99, "España", True, "email")
+    print(ped1)
+
+if __name__ == "__main__":
+    # pruebasPedido()
+    pruebasPedidoElectronico()

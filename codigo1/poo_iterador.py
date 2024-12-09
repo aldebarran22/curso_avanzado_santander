@@ -9,10 +9,12 @@ class Reversa:
 		
 	def __next__(self):
 		if self.indice == 0:
-			#self.indice = len(self.datos) # Para volver a repetir
+			self.indice = len(self.datos) # Para volver a repetir
 			raise StopIteration
+		
 		self.indice = self.indice - 1
 		return self.datos[self.indice]
+
 
 rev = Reversa('spam')
 print(iter(rev))
