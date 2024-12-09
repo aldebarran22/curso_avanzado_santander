@@ -16,8 +16,7 @@ class Conexion:
             self.con = db.connect(path)
 
     def __del__(self):
-        if hasattr(self, "con"):
-            print('cerrando conexion')
+        if hasattr(self, "con"):            
             self.con.close()
 
 
