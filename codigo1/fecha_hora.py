@@ -43,7 +43,8 @@ class Date:
         else:
             return False
 
- 
+class DateTime(Date, Time):
+    pass
 
 if __name__ =="__main__":
     t1 = Time(12,33,4)

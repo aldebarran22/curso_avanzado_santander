@@ -103,6 +103,13 @@ def pruebasPedido():
 def pruebasPedidoElectronico():
     ped1 = PedidoElectronico(10248, "ALFKI", 34.99, "España", True, "email")
     print(ped1)
+    ped2 = PedidoElectronico(10249, "ALFKI", 134.99, "España", False, "email")
+    print(ped2)
+    if ped1 < ped2:
+        print('ped1: ', ped1.importe)
+    else:
+        print('ped2: ', ped2.importe)
+
 
 if __name__ == "__main__":
     # pruebasPedido()
