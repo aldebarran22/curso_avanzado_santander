@@ -39,3 +39,5 @@ if __name__ == '__main__':
 
     L = [pedido, pedido2, pedido3]
     print(L)
+    L.sort(key=lambda ped : ped.importe, reverse=True)
+    print(L)
