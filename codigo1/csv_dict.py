@@ -22,8 +22,20 @@ def csvToDict(texto, sep=';'):
         resul.append(dicc)
     return resul
 
+def dictToCsv(dicc, sep=';'):
+    cabs = sep.join(dicc[0].keys())
+    resul = [cabs]
+    for d in dicc:
+        datos = sep.join(d.values())        
+        resul.append(datos)
+    return "\n".join(resul)
+
+
 if __name__ == '__main__':
-    txt = cargarFichero("../ficheros_curso/merge/Pedidos.txt")
+    nombreFich = "Pedidos"
+    txt = cargarFichero(f"../ficheros_curso/merge/{nombreFich}.txt")
     print(txt)
     dicc = csvToDict(txt)
     print(dicc)
+    txt2 = dictToCsv(dicc)
+    print(txt == txt2)
