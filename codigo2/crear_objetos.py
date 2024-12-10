@@ -20,6 +20,10 @@ class Punto:
     def __str__(self):
             return str(self.__x) + ", " + str(self.__y)
     
+
+def crearObjeto(clase, *args, **kwargs):
+    return clase(*args, **kwargs)
+    
 if __name__=="__main__":
        
     #1)Con el constructor
@@ -36,3 +40,8 @@ if __name__=="__main__":
     p3 = eval(cad)
     print(p3)
 
+    #4) A partir de una función que recibe la clase y los parámetros:
+    p4 = crearObjeto(Punto, 12, 5)
+    print(p4)
+    p5 = crearObjeto(Punto, x = 12, y = 4)
+    print(p5)
