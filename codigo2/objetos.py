@@ -47,3 +47,4 @@ if __name__ == '__main__':
 
     obj = ped1.__class__(10099)
     print(obj)
+    print(ped1.__class__, Pedido)
