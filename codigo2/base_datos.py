@@ -14,11 +14,13 @@ class BaseDatos:
             self.con = db.connect(path)
 
     def __del__(self):
-        self.con.close()
+        if hasattr(self, 'con'):
+            print('Cerrando conexión ...')
+            self.con.close()
 
 if __name__ == '__main__':
     try:
         bd = BaseDatos("../BBDD/empresa3.db")
-        
+
     except Exception as e:
         print(e)
