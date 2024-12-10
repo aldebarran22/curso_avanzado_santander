@@ -28,7 +28,11 @@ def jsonCsv(datos, sep=";"):
     Recibe una lista de dicc. y los convierte a un formato CSV
     """
     cabs = sep.join(datos[0].keys())
-    print(cabs)
+    L = [cabs]
+    for dicc in datos:
+        linea = sep.join(dicc.values())
+        L.append(linea)
+    return "\n".join(L)
 
 
 if __name__ == "__main__":
@@ -38,4 +42,5 @@ if __name__ == "__main__":
     print(txt)
     datos = csvJson(txt)
     print(datos)
-    jsonCsv(datos)
+    txt2 = jsonCsv(datos)
+    print(txt == txt2)
