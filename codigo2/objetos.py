@@ -30,6 +30,9 @@ class PedidoElectronico(Pedido):
         self.certificado = certificado
         self.email = email
 
+    def __str__(self):
+        return Pedido.__str__(self)+ " " + str(self.certificado) + " " + self.email
+
 def pruebaPedidoElectronico():
     ped1 = PedidoElectronico(10440, 'ALFKI', 23.56, 'España', True, 'correo@gmail.com')
     print(ped1)
