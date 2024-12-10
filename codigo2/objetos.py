@@ -22,7 +22,19 @@ class Pedido:
     def __lt__(self, other):
         return self.importe < other.importe
 
-if __name__ == '__main__':
+class PedidoElectronico(Pedido):
+
+    def __init__(self, idpedido=0, idcliente='', importe=0.0, pais='', certificado=False, email=''):
+        Pedido.__init__(self, idpedido, idcliente, importe, pais) 
+        # super(idpedido, idcliente, importe, pais)           
+        self.certificado = certificado
+        self.email = email
+
+def pruebaPedidoElectronico():
+    ped1 = PedidoElectronico(10440, 'ALFKI', 23.56, 'España', True, 'correo@gmail.com')
+    print(ped1)
+
+def pruebaPedido():
     ped1 = Pedido(10440, 'ALFKI', 23.56, 'España')
     print(ped1)
     #print(str(ped1))
@@ -48,3 +60,7 @@ if __name__ == '__main__':
     obj = ped1.__class__(10099)
     print(obj)
     print(ped1.__class__, Pedido)
+
+if __name__ == '__main__':
+    # pruebaPedido()
+    pruebaPedidoElectronico()
