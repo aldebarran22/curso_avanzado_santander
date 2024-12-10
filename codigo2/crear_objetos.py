@@ -19,3 +19,20 @@ class Punto:
 
     def __str__(self):
             return str(self.__x) + ", " + str(self.__y)
+    
+if __name__=="__main__":
+       
+    #1)Con el constructor
+    p1 = Punto(12, 5)
+    print(p1)
+
+    #2) Con el class de un objeto:
+    p2 = p1.__class__(12,5)
+    print(p2)
+
+    #3) A partir de una cadena de texto:
+    cad = "{}({},{})".format('Punto', 12, 5)
+    print(cad, type(cad))
+    p3 = eval(cad)
+    print(p3)
+
