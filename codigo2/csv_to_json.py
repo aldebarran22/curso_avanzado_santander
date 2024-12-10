@@ -9,6 +9,9 @@ def cargarCSV(path):
     fich.close()
     return txt
 
+def grabarJson(path, datos):
+    
+
 
 def csvJson(txt, sep=";"):
     lineas = txt.split("\n")
