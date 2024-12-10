@@ -28,10 +28,14 @@ if __name__ == '__main__':
     #print(str(ped1))
     #print(ped1.__str__())
     ped2 = Pedido(10445, 'DEFRE', 123.02, 'Francia')
+    ped4 = Pedido(10445, 'DEFRE', 123.02, 'Francia')
     ped3 = Pedido(11047, 'OLIKU', 85.44, 'Alemania')
     L = [ped1, ped2, ped3]
     print(L)
     L.sort(key=lambda obj : obj.pais)
     print(L)
     L.sort()
-    print(L)
+    if ped4 == ped2:
+        print('ped4 == ped2')
+    else:
+        print('ped4 != ped2')
