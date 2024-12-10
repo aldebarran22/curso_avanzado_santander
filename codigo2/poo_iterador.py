@@ -19,11 +19,12 @@ class Reversa:
 rev = Reversa('spam')
 print(iter(rev))
 for char in rev:
-	print(char)
-	
+	print(char)	
 	
 for char in rev:
 	print(char)
 	
 for char in rev:
 	print(char)	
+
+
