@@ -45,3 +45,9 @@ if __name__=="__main__":
     print(p4)
     p5 = crearObjeto(Punto, x = 12, y = 4)
     print(p5)
+
+    #5) Con la función globals()
+    for k, v in globals().copy().items():
+          print(k,v)
+    p6 = globals()['Punto'](12, 4)
+    print(p6)
