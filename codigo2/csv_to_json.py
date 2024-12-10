@@ -2,6 +2,7 @@
 Conversor de CSV a Json
 """
 import json
+import os
 
 def cargarCSV(path):
     fich = open(path, "r")
@@ -41,13 +42,14 @@ def jsonCsv(datos, sep=";"):
 
 
 if __name__ == "__main__":
-    fichero = "Empleados"
-    path = f"../ficheros_curso/merge/{fichero}.txt"
-    pathDestino = f"../ficheros/{fichero}.json"
-    txt = cargarCSV(path)
-    #print(txt)
-    datos = csvJson(txt)
-    grabarJson(pathDestino, datos)
-    #print(datos)
-    txt2 = jsonCsv(datos)
-    print(txt == txt2)
+    for f in os.listdir("../ficheros_curso/merge"):
+        fichero = f.partition('.')[0]
+        path = f"../ficheros_curso/merge/{fichero}.txt"
+        pathDestino = f"../ficheros/{fichero}.json"
+        txt = cargarCSV(path)
+        #print(txt)
+        datos = csvJson(txt)
+        grabarJson(pathDestino, datos)
+        #print(datos)
+        txt2 = jsonCsv(datos)
+        print(txt == txt2)
