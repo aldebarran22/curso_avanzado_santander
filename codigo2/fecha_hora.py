@@ -50,6 +50,15 @@ class DateTime(Time, Date):
 
     def __str__(self):
         return Date.__str__(self) + " " + Time.__str__(self) 
+    
+class DateTime2:          
+
+    def __init__(self, d=1, m=1, y=1970, hh=0, mm=0, ss=0):
+        self.fecha = Date(d, m, y)
+        self.hora = Time(hh, mm, ss)
+
+    def __str__(self):
+        return str(self.fecha) + " " + str(self.hora)
 
 if __name__=='__main__':
     t1 = Time(12,34,45)
@@ -61,3 +70,6 @@ if __name__=='__main__':
 
     dt = DateTime(10,12,2024, 13,59,5)
     print(dt) # 10/12/2024 13:59:05
+
+    dt2 = DateTime2(10,12,2024, 13,59,5)
+    print(dt2)
