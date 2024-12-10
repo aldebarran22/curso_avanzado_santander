@@ -36,6 +36,13 @@ class PedidoElectronico(Pedido):
 def pruebaPedidoElectronico():
     ped1 = PedidoElectronico(10440, 'ALFKI', 23.56, 'España', True, 'correo@gmail.com')
     print(ped1)
+    ped2 = PedidoElectronico(10445, 'DEFRE', 123.02, 'Francia', False, 'correo2@gmail.es')
+    print(ped2)
+    if ped1 < ped2:
+        print("ped1 < ped2")
+    else:
+        print("ped2 <= ped1")
+
 
 def pruebaPedido():
     ped1 = Pedido(10440, 'ALFKI', 23.56, 'España')
