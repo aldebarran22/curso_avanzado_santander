@@ -9,6 +9,9 @@ class Time:
     def __str__(self):  
         # 1, 2, 33 => 01:02:33      
         return '%02d:%02d:%02d' % (self.hh,self.mm,self.ss)
+    
+    def __add__(self, other):
+        pass
         
 class Date:
 
