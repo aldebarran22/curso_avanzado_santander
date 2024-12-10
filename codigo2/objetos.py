@@ -39,3 +39,11 @@ if __name__ == '__main__':
         print('ped4 == ped2')
     else:
         print('ped4 != ped2')
+
+    ped1.iva = 2.44
+    ped1.__dict__['dto'] = 0.78
+    print(ped1.__dict__)
+    print(ped1.__class__.__name__)
+
+    obj = ped1.__class__(10099)
+    print(obj)
