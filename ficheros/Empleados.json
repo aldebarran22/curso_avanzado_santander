@@ -1,0 +1,47 @@
+[
+    {
+        "id": "1",
+        "nombre": "Davolio",
+        "cargo": "Representante de ventas"
+    },
+    {
+        "id": "2",
+        "nombre": "Fuller",
+        "cargo": "Vicepresidente comercial"
+    },
+    {
+        "id": "3",
+        "nombre": "Leverling",
+        "cargo": "Representante de ventas"
+    },
+    {
+        "id": "4",
+        "nombre": "Peacock",
+        "cargo": "Representante de ventas"
+    },
+    {
+        "id": "5",
+        "nombre": "Buchanan",
+        "cargo": "Gerente de ventas"
+    },
+    {
+        "id": "6",
+        "nombre": "Suyama",
+        "cargo": "Representante de ventas"
+    },
+    {
+        "id": "7",
+        "nombre": "King",
+        "cargo": "Representante de ventas"
+    },
+    {
+        "id": "8",
+        "nombre": "Callahan",
+        "cargo": "Coordinador ventas interno"
+    },
+    {
+        "id": "9",
+        "nombre": "Dodsworth",
+        "cargo": "Representante de ventas"
+    }
+]
