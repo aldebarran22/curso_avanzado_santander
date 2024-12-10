@@ -18,6 +18,9 @@ class Pedido:
 
     def __repr__(self):
         return str(self)
+    
+    def __lt__(self, other):
+        return self.importe < other.importe
 
 if __name__ == '__main__':
     ped1 = Pedido(10440, 'ALFKI', 23.56, 'España')
@@ -27,4 +30,8 @@ if __name__ == '__main__':
     ped2 = Pedido(10445, 'DEFRE', 123.02, 'Francia')
     ped3 = Pedido(11047, 'OLIKU', 85.44, 'Alemania')
     L = [ped1, ped2, ped3]
+    print(L)
+    L.sort(key=lambda obj : obj.pais)
+    print(L)
+    L.sort()
     print(L)
