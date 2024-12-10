@@ -10,9 +10,6 @@ class Time:
         # 1, 2, 33 => 01:02:33      
         return '%02d:%02d:%02d' % (self.hh,self.mm,self.ss)
         
-        
-
-
 class Date:
 
     def __init__(self, dd,mm,yy):
