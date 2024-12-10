@@ -55,7 +55,7 @@ if __name__=="__main__":
     #6) A partir de sys.modules
     import sys
 
-    p7 = getattr(sys.modules[__name__], 'Punto')(12, 4)
+    p7 = getattr(sys.modules[__name__], 'Punto')(12, 4)    
     print(p7)
 
     print(sys.modules.keys())
