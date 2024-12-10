@@ -26,3 +26,11 @@ class Date:
             return True    
         else:
             return False        
+
+if __name__=='__main__':
+    t1 = Time(12,34,45)
+    t2 = Time(5, 55, 34)
+    suma = t1 + t2 # suma = t1.__add__(t2)
+    print(t1)
+    print(t2)
+    print(suma)
