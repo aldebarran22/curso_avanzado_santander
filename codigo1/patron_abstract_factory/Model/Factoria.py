@@ -1,13 +1,17 @@
 #!/usr/bin/python
 #-*- coding: utf-8 -*-
 
-class Factoria:
+import abc
+
+class Factoria(abc.ABC):
     def __init__(self):
         pass
 
-    def crearTno(self, ):
+    @abc.abstractmethod
+    def crearTno(self):
         pass
 
-    def crearTablet(self, ):
+    @abc.abstractmethod
+    def crearTablet(self):
         pass
 

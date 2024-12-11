@@ -1,10 +1,12 @@
 #!/usr/bin/python
 #-*- coding: utf-8 -*-
 
-class Tno:
+import abc
+class Tno(abc.ABC):
     def __init__(self):
         pass
 
-    def llamar(self, ):
+    @abc.abstractmethod
+    def llamar(self):
         pass
 

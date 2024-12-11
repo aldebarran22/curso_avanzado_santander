@@ -1,10 +1,12 @@
 #!/usr/bin/python
 #-*- coding: utf-8 -*-
 
-class Tablet:
+import abc
+class Tablet(abc.ABC):
     def __init__(self):
         pass
 
-    def internet(self, ):
+    @abc.abstractmethod
+    def internet(self):
         pass
 
