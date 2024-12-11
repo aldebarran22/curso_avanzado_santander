@@ -7,6 +7,7 @@ lo va clonando.
 """
 
 import abc
+import copy
 
 class Prototipo(abc.ABC):
 	
@@ -19,7 +20,7 @@ class Prototipo(abc.ABC):
 			
 	@abc.abstractmethod
 	def clone(self):
-		return
+		pass
 	
 	
 class Circulo(Prototipo):
@@ -31,7 +32,8 @@ class Circulo(Prototipo):
 	def __str__(self):		
 		return super().__str__() + " radio: " + str(self.radio)
 			
-	
+	def clone(self):
+		return copy.deepcopy(self)
 		
 	
 class Rectangulo(Prototipo):
@@ -44,7 +46,8 @@ class Rectangulo(Prototipo):
 	def __str__(self):		
 		return super().__str__() + 	" ancho: " + str(self.ancho) + " alto: " + str(self.alto)
 	
-
+	def clone(self):
+		return copy.deepcopy(self)
 	
 class Triangulo(Prototipo):
 	
@@ -56,5 +59,36 @@ class Triangulo(Prototipo):
 	def __str__(self):		
 		return super().__str__() + 	" base: " + str(self.base) + " altura: " + str(self.altura)
 			
+	def clone(self):
+		return copy.deepcopy(self)
 	
-	
+
+class Factoria1:
+	"""Inicializa todos los prototipos al principio"""
+	pass
+
+
+class Factoria2:
+	"""Inicializa los prototipos bajo demanda, en la primera petición"""
+	pass
+
+
+def test(claseFactoria):
+
+	# Crear la factoria
+	factoria = claseFactoria()
+
+	# Imprimir el catálogo de prototipos:
+	factoria.print()
+
+	# Solicitar algún prototipo
+	fig1 = factoria.get("circulo")
+	fig1.radio *= 2
+	fig1.color = "green"
+
+	factoria.print()
+
+if __name__ == "__main__":
+	test(Factoria1)
+	test(Factoria2)
+
