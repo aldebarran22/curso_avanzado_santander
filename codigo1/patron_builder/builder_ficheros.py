@@ -10,11 +10,11 @@ import json
 class Builder(abc.ABC):
 
     @abc.abstractmethod
-    def crearCabecera(self, L):
+    def crearCabecera(self, L, **kwargs):
         pass
 
     @abc.abstractmethod
-    def crearDetalle(self, L, **kwargs):
+    def crearDetalle(self, L):
         pass
 
     @abc.abstractmethod
@@ -24,11 +24,11 @@ class Builder(abc.ABC):
 
 class BuilderHTML(Builder):
 
-    def crearCabecera(self, L):
+    def crearCabecera(self, L, **kwargs):
         cabecera = "".join([f"<th>{col}</th>" for col in L])
         return "<tr>" + cabecera + "</tr>"
 
-    def crearDetalle(self, L, **kwargs):
+    def crearDetalle(self, L):
         detalle = "".join([f"<td>{col}</td>" for col in L])
         return "<tr>" + detalle + "</tr>"
 
@@ -42,11 +42,11 @@ class BuilderJSON(Builder):
         self.cabeceras = None
         self.lista = []
 
-    def crearCabecera(self, L):
+    def crearCabecera(self, L, **kwargs):
         self.cabeceras = L
         return ""
 
-    def crearDetalle(self, L, **kwargs):
+    def crearDetalle(self, L):
         dicc = dict(zip(self.cabeceras, L))
         self.lista.append(dicc)
         return ""
@@ -60,19 +60,22 @@ class BuilderJSON(Builder):
 class BuilderXML(Builder):
 
     def __init__(self):
-        self.cabeceras = None
+        self.cabeceras = None   
+        self.etiqueta = ""     
+        self.nombreFichero = ""
 
-    def crearCabecera(self, L):
+    def crearCabecera(self, L, **kwargs):
         self.cabeceras = L
+        self.etiqueta = kwargs["etiqueta"]
+        self.nombreFichero = kwargs["nombreFichero"]
         return ""
 
-    def crearDetalle(self, L, **kwargs):
-        detalle = ""
-        etiqueta = kwargs["etiqueta"]
+    def crearDetalle(self, L):
+        detalle = ""        
         for i, col in enumerate(L):
             cab = self.cabeceras[i]
             detalle += f"<{cab}>{col}</{cab}>"
-        return f"<{etiqueta}>{detalle}</{etiqueta}>"
+        return f"<{self.etiqueta}>{detalle}</{self.etiqueta}>"
 
     def crearFichero(self, tabla, path):
         pass
@@ -89,7 +92,7 @@ class Director:
         L = path.split("/")
         fichero = L[-1]
         t = fichero.partition(".")
-        self.nombreFichero = t[0]
+        self.nombreFichero = t[0].lower()
         self.etiqueta = t[0][:-1].lower()
 
     def __getPath(self, path):
@@ -108,12 +111,12 @@ class Director:
                 linea = linea.rstrip()
                 L = linea.split(sep)
                 if cabs:
-                    tabla += self.builder.crearCabecera(L)
+                    tabla += self.builder.crearCabecera(L, etiqueta=self.etiqueta, nombreFichero=self.nombreFichero)
                     cabs = False
                 else:
-                    tabla += self.builder.crearDetalle(L, etiqueta=self.etiqueta)
+                    tabla += self.builder.crearDetalle(L)
 
-            self.builder.crearFichero(tabla, self.__getPath(path))
+            self.builder.crearFichero(tabla, self.__getPath(path))            
 
         except Exception as e:
             raise e
@@ -123,8 +126,8 @@ class Director:
 
 
 if __name__ == "__main__":
-    # builder = BuilderXML()
-    builder = BuilderHTML()
+    builder = BuilderXML()
+    # builder = BuilderHTML()
     # builder = BuilderJSON()
     director = Director(builder)
-    director.convertirFormato("Empleados.txt")
+    director.convertirFormato("Pedidos.txt")
