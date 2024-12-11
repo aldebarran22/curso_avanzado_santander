@@ -51,7 +51,7 @@ class Contexto:
     def __init__(self, clase):
         self.clase = clase
 
-    def compararEstrategias(self, N=100000):
+    def compararEstrategias(self, N=10000):
         # Generar una lista aleatoria de números
         L = [randint(1,N) for _ in range(N)]
         for c in self.clase.__subclasses__():
