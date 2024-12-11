@@ -4,13 +4,16 @@ Implementación del patrón singleton para la traducción de etiquetas
 
 def cargaFichero(idioma):
     fich = None
+    dicc = dict()
     try:
         path = f"idiomas/{idioma}.txt"
         fich = open(path, 'r')
         for fila in fich:
-            print(fila)
+            fila = fila.rstrip()
+            k, _, v = fila.partition('=')
+            dicc[k] = v
 
-
+        return dicc
     except  Exception as e:
         print(e)
 
@@ -19,4 +22,5 @@ def cargaFichero(idioma):
             fich.close()
 
 if __name__ == '__main__':
-    cargaFichero('es')
+    d = cargaFichero('es')
+    print(d)
