@@ -5,7 +5,8 @@ de los algoritmos.
 """
 
 import abc
-
+from datetime import datetime 
+from random import randint
 class Estrategia(abc.ABC):
 
     @abc.abstractmethod
