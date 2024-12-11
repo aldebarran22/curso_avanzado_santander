@@ -93,6 +93,7 @@ class Director:
 
 if __name__ == "__main__":
     #builder = BuilderXML()
-    builder = BuilderHTML()
+    #builder = BuilderHTML()
+    builder = BuilderJSON()
     director = Director(builder)
     director.convertirFormato("Empleados.txt")
