@@ -108,8 +108,24 @@ class Factoria2:
     def __init__(self):
         self.prototipos = dict()
 
-    def get(self):
-        pass
+    def get(self, clave):
+        nombreClase = clave.capitalize()
+        nombreClave = clave.lower()
+
+        if clave not in self.prototipos:
+            # Buscar la clase:
+            dicc = globals()
+            if nombreClase in dicc:
+                # Crear el objeto:
+                obj = dicc[nombreClase]()
+                self.prototipos[nombreClave] = obj
+
+            else:
+                raise ValueError("El prototipo no existe")
+        
+        return self.prototipos[clave].clone()
+        
+        
 
     def print(self):
         print("\nPrototipos:")
