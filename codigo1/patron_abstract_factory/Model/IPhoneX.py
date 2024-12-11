@@ -7,6 +7,6 @@ class IPhoneX(Tno):
     def __init__(self):
         pass
 
-    def llamar(self, ):
-        pass
+    def llamar(self):
+        print('llamar con un IPhone')
 
