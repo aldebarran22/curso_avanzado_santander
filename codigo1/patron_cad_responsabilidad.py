@@ -23,6 +23,9 @@ class Gestor(abc.ABC):
 
 class GestorSMS(Gestor):
 
+    def __init__(self, siguiente=None):
+        Gestor.__init__(self, siguiente)
+
     def trasmitir(self, peticion):
 
         if peticion.destino == 'SMS':
@@ -36,6 +39,10 @@ class GestorSMS(Gestor):
 
 class GestorEMAIL(Gestor):
 
+    
+    def __init__(self, siguiente=None):
+        Gestor.__init__(self, siguiente)
+
     def trasmitir(self, peticion):
 
         if peticion.destino == 'EMAIL':
@@ -48,6 +55,10 @@ class GestorEMAIL(Gestor):
             self.siguiente.trasmitir(peticion)
 
 class GestorWHATSAPP(Gestor):
+
+    
+    def __init__(self, siguiente=None):
+        Gestor.__init__(self, siguiente)
 
     def trasmitir(self, peticion):
 
