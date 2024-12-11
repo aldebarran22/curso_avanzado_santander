@@ -4,6 +4,7 @@ a distintos formatos: XML, HTML, JSON
 """
 
 import abc
+import json
 
 
 class Builder(abc.ABC):
@@ -14,6 +15,10 @@ class Builder(abc.ABC):
 
     @abc.abstractmethod
     def crearDetalle(self, L, **kwargs):
+        pass
+
+    @abc.abstractmethod
+    def crearFichero(self, tabla, path):
         pass
 
 
@@ -27,9 +32,12 @@ class BuilderHTML(Builder):
         detalle = "".join([f"<td>{col}</td>" for col in L])
         return "<tr>" + detalle + "</tr>"
 
+    def crearFichero(self, tabla, path):
+        pass
+
 
 class BuilderJSON(Builder):
-    
+
     def __init__(self):
         self.cabeceras = None
         self.lista = []
@@ -37,11 +45,16 @@ class BuilderJSON(Builder):
     def crearCabecera(self, L):
         self.cabeceras = L
         return ""
-    
+
     def crearDetalle(self, L, **kwargs):
         dicc = dict(zip(self.cabeceras, L))
         self.lista.append(dicc)
         return ""
+
+    def crearFichero(self, tabla, path):
+        fich = open(path + ".json", "w")
+        json.dump(self.lista, fich, indent=4)
+        fich.close()
 
 
 class BuilderXML(Builder):
@@ -55,11 +68,14 @@ class BuilderXML(Builder):
 
     def crearDetalle(self, L, **kwargs):
         detalle = ""
-        etiqueta = kwargs['etiqueta']
+        etiqueta = kwargs["etiqueta"]
         for i, col in enumerate(L):
             cab = self.cabeceras[i]
             detalle += f"<{cab}>{col}</{cab}>"
         return f"<{etiqueta}>{detalle}</{etiqueta}>"
+
+    def crearFichero(self, tabla, path):
+        pass
 
 
 class Director:
@@ -72,12 +88,12 @@ class Director:
     def __extraerEtiqueta(self, path):
         L = path.split("/")
         fichero = L[-1]
-        t = fichero.partition('.')
+        t = fichero.partition(".")
         self.nombreFichero = t[0]
         self.etiqueta = t[0][:-1].lower()
 
     def __getPath(self, path):
-        return path.rpartition('.')[0]
+        return path.rpartition(".")[0]
 
     def convertirFormato(self, path, sep=";"):
         """Va leyendo el fichero y convirtiendo el CSV al formato
@@ -107,8 +123,8 @@ class Director:
 
 
 if __name__ == "__main__":
-    #builder = BuilderXML()
+    # builder = BuilderXML()
     builder = BuilderHTML()
-    #builder = BuilderJSON()
+    # builder = BuilderJSON()
     director = Director(builder)
     director.convertirFormato("Empleados.txt")
