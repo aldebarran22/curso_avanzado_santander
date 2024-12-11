@@ -33,7 +33,30 @@ class BuilderHTML(Builder):
         return "<tr>" + detalle + "</tr>"
 
     def crearFichero(self, tabla, path):
-        pass
+        fich = None
+        fichOut = None
+        try:
+            fich = open("plantilla.html", "r")
+            html = fich.read()
+            tabla = f"<table>{tabla}</table>"
+            html = html.replace("<body></body>",f"<body>{tabla}</body>")
+            fichOut = open(path+".html", "w")
+            fichOut.write(html)
+
+        except Exception as e:
+            raise e
+        
+        finally:
+            if fich:
+                fich.close()
+
+            if fichOut:
+                fichOut.close()
+
+
+
+
+
 
 
 class BuilderJSON(Builder):
@@ -132,8 +155,8 @@ class Director:
 
 
 if __name__ == "__main__":
-    builder = BuilderXML()
-    # builder = BuilderHTML()
+    # builder = BuilderXML()
+    builder = BuilderHTML()
     # builder = BuilderJSON()
     director = Director(builder)
     director.convertirFormato("Pedidos.txt")
