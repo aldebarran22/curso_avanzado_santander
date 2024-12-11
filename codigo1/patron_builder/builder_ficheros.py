@@ -69,12 +69,15 @@ class Director:
         self.nombreFichero = ""
         self.etiqueta = ""
 
-    def extraerEtiqueta(self, path):
+    def __extraerEtiqueta(self, path):
         L = path.split("/")
         fichero = L[-1]
         t = fichero.partition('.')
         self.nombreFichero = t[0]
         self.etiqueta = t[0][:-1].lower()
+
+    def __getPath(self, path):
+        return path.rpartition('.')[0]
 
     def convertirFormato(self, path, sep=";"):
         """Va leyendo el fichero y convirtiendo el CSV al formato
@@ -83,7 +86,7 @@ class Director:
         cabs = True
         tabla = ""
         try:
-            self.extraerEtiqueta(path)
+            self.__extraerEtiqueta(path)
             fich = open(path, "r")
             for linea in fich:
                 linea = linea.rstrip()
@@ -94,7 +97,7 @@ class Director:
                 else:
                     tabla += self.builder.crearDetalle(L, etiqueta=self.etiqueta)
 
-            print(tabla)
+            self.builder.crearFichero(tabla, self.__getPath(path))
 
         except Exception as e:
             raise e
@@ -105,7 +108,7 @@ class Director:
 
 if __name__ == "__main__":
     #builder = BuilderXML()
-    #builder = BuilderHTML()
-    builder = BuilderJSON()
+    builder = BuilderHTML()
+    #builder = BuilderJSON()
     director = Director(builder)
     director.convertirFormato("Empleados.txt")
