@@ -123,9 +123,8 @@ class Factoria2:
             else:
                 raise ValueError("El prototipo no existe")
         
-        return self.prototipos[clave].clone()
-        
-        
+        return self.prototipos[nombreClave].clone()
+               
 
     def print(self):
         print("\nPrototipos:")
@@ -148,9 +147,17 @@ def test(claseFactoria):
     fig1.color = "green"
     print(fig1)
 
+    fig2 = factoria.get("circulo")
+    fig2.radio *= 3
+    fig2.color = "blue"
+    print(fig2)
+
+    fig3 = factoria.get("TRIANGULO")
+    print(fig3)
+
     factoria.print()
 
 
 if __name__ == "__main__":
-    test(Factoria1)
-    # test(Factoria2)
+    # test(Factoria1)
+    test(Factoria2)
