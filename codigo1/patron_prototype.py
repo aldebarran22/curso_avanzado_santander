@@ -1,4 +1,12 @@
+"""
+Patrón prototype. 
+Implementar dos factorias de prototipos:
+a) Inicializa todos los objetos al principio. Después en cada petición clona el prototipo
+b) Inicializa los objetos bajo demanda. En la primera petición crea el objeto y luego
+lo va clonando.
+"""
 
+import abc
 
 class Prototipo(abc.ABC):
 	
