@@ -37,7 +37,25 @@ class Director:
     def convertirFormato(self, path, sep=';'):
         """Va leyendo el fichero y convirtiendo el CSV al formato
         para ello utiliza el builder"""
-        pass
+        fich = None
+        cabs = True
+        tabla = ""
+        try:
+            fich = open(path, 'r')
+            for linea in fich:
+                linea = linea.rstrip()
+                L = linea.split(sep)                
+                if cabs:
+                    tabla += self.builder.crearCabecera(L)
+                    cabs = False
+                else:
+                    tabla += self.builder.crearDetalle(L)
+
+        except Exception as e:
+            raise e
+        finally:
+            if fich:
+                fich.close()
 
 if __name__ == '__main__':
     builder = BuilderHTML()
