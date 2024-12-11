@@ -96,7 +96,7 @@ class Factoria1:
             raise KeyError("Prototipo no encontrado ...")
 
     def print(self):
-        print("Prototipos:")
+        print("\nPrototipos:")
         for k, v in self.prototipos.items():
             print(k, " ", v)
         print()
@@ -105,7 +105,17 @@ class Factoria1:
 class Factoria2:
     """Inicializa los prototipos bajo demanda, en la primera petición"""
 
-    pass
+    def __init__(self):
+        self.prototipos = dict()
+
+    def get(self):
+        pass
+
+    def print(self):
+        print("\nPrototipos:")
+        for k, v in self.prototipos.items():
+            print(k, " ", v)
+        print()
 
 
 def test(claseFactoria):
@@ -120,10 +130,11 @@ def test(claseFactoria):
     fig1 = factoria.get("circulo")
     fig1.radio *= 2
     fig1.color = "green"
+    print(fig1)
 
     factoria.print()
 
 
 if __name__ == "__main__":
     test(Factoria1)
-    test(Factoria2)
+    # test(Factoria2)
