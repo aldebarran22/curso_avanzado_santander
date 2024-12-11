@@ -16,4 +16,9 @@ if __name__=='__main__':
 
     factoria = menu(Factoria.__subclasses__())
     print(factoria.__class__.__name__)
+    tno = factoria.crearTno()
+    tablet = factoria.crearTablet()
+
+    tno.llamar()
+    tablet.internet()
 
