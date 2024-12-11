@@ -54,11 +54,6 @@ class BuilderHTML(Builder):
                 fichOut.close()
 
 
-
-
-
-
-
 class BuilderJSON(Builder):
 
     def __init__(self):
