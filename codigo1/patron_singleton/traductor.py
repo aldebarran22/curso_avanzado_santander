@@ -4,12 +4,15 @@ Implementación del patrón singleton para la traducción de etiquetas
 class SingletonIdioma:
 
     __diccionario = None
+    __idioma = None
 
     @staticmethod
     def getInstance(idioma):
 
-        if SingletonIdioma.__diccionario is None:
+        if SingletonIdioma.__diccionario is None or idioma != SingletonIdioma.__idioma:
             # Cargar el idioma
+            print('Se carga el fichero ...')
+            SingletonIdioma.__idioma = idioma
             SingletonIdioma.__diccionario = SingletonIdioma.__cargaFichero(idioma)
         
         return SingletonIdioma.__diccionario
@@ -38,6 +41,10 @@ class SingletonIdioma:
 if __name__ == '__main__':
     try:
         d = SingletonIdioma.getInstance("en")['inicio']
+        print(d)
+        d = SingletonIdioma.getInstance("en")['twitter']
+        print(d)
+        d = SingletonIdioma.getInstance("es")['inicio']
         print(d)
     except  Exception as e:
         print(e)
