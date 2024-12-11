@@ -153,6 +153,7 @@ def test(claseFactoria):
     print(fig2)
 
     fig3 = factoria.get("TRIANGULO")
+    fig3.color = "white"
     print(fig3)
 
     factoria.print()
