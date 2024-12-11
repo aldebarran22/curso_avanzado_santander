@@ -18,16 +18,27 @@ class Builder(abc.ABC):
 class BuilderHTML(Builder):
 
     def crearCabecera(self,L):
-        pass
+        cabecera = "".join([f"<th>{col}</th>" for col in L])
+        return "<tr>" + cabecera + "</tr>"
    
     def crearDetalle(self,L):
-        pass
+        detalle = "".join([f"<td>{col}</td>" for col in L])
+        return "<tr>" + detalle + "</tr>"
 
 class BuilderJSON(Builder):
     pass
 
 class BuilderXML(Builder):
-    pass
+
+    def __init__(self):
+        self.cabeceras = None
+    
+    def crearCabecera(self,L):
+        self.cabeceras = L
+        return ""
+
+    def crearDetalle(self,L):
+        pass
 
 class Director:
 
@@ -46,10 +57,12 @@ class Director:
                 linea = linea.rstrip()
                 L = linea.split(sep)                
                 if cabs:
-                    tabla += self.builder.crearCabecera(L)
+                    tabla += self.builder.crearCabecera(L)                    
                     cabs = False
                 else:
                     tabla += self.builder.crearDetalle(L)
+
+            print(tabla)
 
         except Exception as e:
             raise e
@@ -60,6 +73,6 @@ class Director:
 if __name__ == '__main__':
     builder = BuilderHTML()
     director = Director(builder)
-    director.convertirFormato("Empleados.txt")
+    director.convertirFormato("Pedidos.txt")
 
 
