@@ -29,7 +29,19 @@ class BuilderHTML(Builder):
 
 
 class BuilderJSON(Builder):
-    pass
+    
+    def __init__(self):
+        self.cabeceras = None
+        self.lista = []
+
+    def crearCabecera(self, L):
+        self.cabeceras = L
+        return ""
+    
+    def crearDetalle(self, L, **kwargs):
+        dicc = dict(zip(self.cabeceras, L))
+        self.lista.append(dicc)
+        return ""
 
 
 class BuilderXML(Builder):
