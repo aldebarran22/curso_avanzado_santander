@@ -38,11 +38,29 @@ class GestorEMAIL(Gestor):
 
     def trasmitir(self, peticion):
 
-        if peticion.destino == 'SMS':
-            print("Enviar la peticion: ", peticion.contenido,' por SMS')
+        if peticion.destino == 'EMAIL':
+            print("Enviar la peticion: ", peticion.contenido,' por EMAIL')
 
         elif self.siguiente != None:
             print('Fin de cadena, no se puede realizar la petición')
 
         else:
             self.siguiente.trasmitir(peticion)
+
+class GestorWHATSAPP(Gestor):
+
+    def trasmitir(self, peticion):
+
+        if peticion.destino == 'WHATSAPP':
+            print("Enviar la peticion: ", peticion.contenido,' por WHATSAPP')
+
+        elif self.siguiente != None:
+            print('Fin de cadena, no se puede realizar la petición')
+
+        else:
+            self.siguiente.trasmitir(peticion)
+
+if __name__ == '__main__':
+    peticion = Peticion("SMS", "Contenido del mensaje")
+    cadena = GestorEMAIL(GestorWHATSAPP(GestorSMS()))     
+    cadena.trasmitir(peticion)
