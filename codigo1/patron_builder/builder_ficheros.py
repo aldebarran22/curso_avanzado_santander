@@ -60,8 +60,8 @@ class BuilderJSON(Builder):
 class BuilderXML(Builder):
 
     def __init__(self):
-        self.cabeceras = None   
-        self.etiqueta = ""     
+        self.cabeceras = None
+        self.etiqueta = ""
         self.nombreFichero = ""
 
     def crearCabecera(self, L, **kwargs):
@@ -71,14 +71,18 @@ class BuilderXML(Builder):
         return ""
 
     def crearDetalle(self, L):
-        detalle = ""        
+        detalle = ""
         for i, col in enumerate(L):
             cab = self.cabeceras[i]
             detalle += f"<{cab}>{col}</{cab}>"
         return f"<{self.etiqueta}>{detalle}</{self.etiqueta}>"
 
     def crearFichero(self, tabla, path):
-        pass
+        xml = f"<{self.nombreFichero}>{tabla}</{self.nombreFichero}>"
+        xml = "<?xml version='1.0' encoding='UTF-8'?>" + xml
+        fich = open(path + ".xml", "w")
+        fich.write(xml)
+        fich.close()
 
 
 class Director:
@@ -111,12 +115,14 @@ class Director:
                 linea = linea.rstrip()
                 L = linea.split(sep)
                 if cabs:
-                    tabla += self.builder.crearCabecera(L, etiqueta=self.etiqueta, nombreFichero=self.nombreFichero)
+                    tabla += self.builder.crearCabecera(
+                        L, etiqueta=self.etiqueta, nombreFichero=self.nombreFichero
+                    )
                     cabs = False
                 else:
                     tabla += self.builder.crearDetalle(L)
 
-            self.builder.crearFichero(tabla, self.__getPath(path))            
+            self.builder.crearFichero(tabla, self.__getPath(path))
 
         except Exception as e:
             raise e
