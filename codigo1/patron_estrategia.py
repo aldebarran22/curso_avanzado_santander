@@ -7,6 +7,7 @@ de los algoritmos.
 import abc
 from datetime import datetime 
 from random import randint
+
 class Estrategia(abc.ABC):
 
     @abc.abstractmethod
@@ -45,3 +46,23 @@ class EstrategiaPython(Estrategia):
         unaLista.sort()
 
 
+class Contexto:
+
+    def __init__(self, clase):
+        self.clase = clase
+
+    def compararEstrategias(self, N=100000):
+        # Generar una lista aleatoria de números
+        L = [randint(1,N) for _ in range(N)]
+        for c in self.clase.__subclasses__():
+            # Crear un objeto:
+            obj = c()
+            copia = L.copy()
+            t1 = datetime.now()
+            obj.ordenar(copia)
+            t2 = datetime.now()
+            print(c.__name__, t2-t1)
+
+if __name__ == '__main__':
+    contexto = Contexto(Estrategia)
+    contexto.compararEstrategias()
