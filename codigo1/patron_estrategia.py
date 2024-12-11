@@ -16,7 +16,7 @@ class Estrategia(abc.ABC):
 
 class EstrategiaBurbuja(Estrategia):
 
-    def ordenamientoBurbuja(self, unaLista):
+    def ordenar(self, unaLista):
         for numPasada in range(len(unaLista)-1,0,-1):
             for i in range(numPasada):
                 if unaLista[i]>unaLista[i+1]:
@@ -27,7 +27,7 @@ class EstrategiaBurbuja(Estrategia):
 
 class EstrategiaInsDirecta(Estrategia):
 
-    def ordenamientoPorInsercion(self,unaLista):
+    def ordenar(self,unaLista):
         for indice in range(1,len(unaLista)):
 
             valorActual = unaLista[indice]
