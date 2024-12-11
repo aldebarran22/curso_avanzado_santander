@@ -15,12 +15,15 @@ def cargaFichero(idioma):
 
         return dicc
     except  Exception as e:
-        print(e)
+        raise ValueError(f'El idioma {idioma} no está soportado')
 
     finally:
         if fich:
             fich.close()
 
 if __name__ == '__main__':
-    d = cargaFichero('es')
-    print(d)
+    try:
+        d = cargaFichero('it')
+        print(d)
+    except  Exception as e:
+        print(e)
