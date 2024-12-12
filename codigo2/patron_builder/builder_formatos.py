@@ -76,7 +76,10 @@ class BuilderJSON(Builder):
 
    
     def grabarFichero(self, tabla, path):
-        pass
+        pathFichero = path + ".json"
+        fich = open(pathFichero, "w")
+        json.dump(self.lista, fich, indent=4)
+        fich.close()
 
 class Director:
 
@@ -105,7 +108,7 @@ class Director:
                 else:
                     self.tabla += self.builder.generarDetalle(L)
 
-            self.builder.grabarFichero(self.tabla, )
+            self.builder.grabarFichero(self.tabla, pathFichero)
 
         except Exception as e:
             raise e
