@@ -67,16 +67,20 @@ class BuilderXML(Builder):
 
     def __init__(self):
         self.cabeceras = ""
+        self.etiquetaPrincipal = ""
+        self.etiqueta = ""
 
     def generarCabecera(self, L, **kwargs):
         self.cabeceras = L
+        self.etiqueta = kwargs["etiqueta"]
+        self.etiquetaPrincipal = kwargs["etiquetaPrincipal"]
         return ""
 
     def generarDetalle(self, L):
         detalle = ""
         for pos, dato in enumerate(L):
             detalle += f"<{self.cabeceras[pos]}>{dato}</{self.cabeceras[pos]}>"
-        return detalle
+        return f"<{self.etiqueta}>{detalle}</{self.etiqueta}>"
 
     def grabarFichero(self, tabla, path):
         print(tabla)
@@ -134,7 +138,7 @@ class Director:
                     self.tabla += self.builder.generarCabecera(
                         L,
                         etiquetaPrincipal=self.etiquetaPrincipal,
-                        etiqueta=self.etiqueta
+                        etiqueta=self.etiqueta,
                     )
                     cabs = False
                 else:
