@@ -28,7 +28,7 @@ class GestorSMS(Gestor):
         Gestor.__init__(self, siguiente)
 
     def trasmitir(self, peticion):
-        if peticion.id == "SMS":
+        if peticion.id.upper() == "SMS":
             print("La Petición se envia por SMS: ", peticion.contenido)
 
         elif self.siguiente == None:
@@ -44,7 +44,7 @@ class GestorEmail(Gestor):
         Gestor.__init__(self, siguiente)
 
     def trasmitir(self, peticion):
-        if peticion.id == "EMAIL":
+        if peticion.id.upper() == "EMAIL":
             print("La Petición se envia por EMAIL: ", peticion.contenido)
 
         elif self.siguiente == None:
@@ -52,4 +52,21 @@ class GestorEmail(Gestor):
 
         else:
             print('EMAIL pasa la petición al siguiente')
-            self.siguiente.trasmitir(peticion)            
+            self.siguiente.trasmitir(peticion)   
+
+
+class GestorWhatsApp(Gestor):
+
+    def __init__(self, siguiente=None):
+        Gestor.__init__(self, siguiente)
+
+    def trasmitir(self, peticion):
+        if peticion.id.upper() == "WHATSAPP":
+            print("La Petición se envia por WHATSAPP: ", peticion.contenido)
+
+        elif self.siguiente == None:
+            print('WHATSAPP - Fin de cadena')
+
+        else:
+            print('WHATSAPP pasa la petición al siguiente')
+            self.siguiente.trasmitir(peticion)                                 
