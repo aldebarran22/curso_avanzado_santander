@@ -55,13 +55,17 @@ class Contexto:
         for clase in self.claseEstrategia.__subclasses__():
             print("Testeando la clase: ", clase.__name__)
             estrategia = clase()
+            copia = self.unaLista.copy()
 
             t1 = datetime.now()
-            estrategia.ordenar(self.unaLista.copy())
+            estrategia.ordenar(copia)
             t2 = datetime.now()
 
-            print('T. de ordenación: ', t2-t1)
+            print('T. de ordenación: ', t2-t1)            
+            print(copia[:10], copia[-10:])
+            print()
+
 
 if __name__=='__main__':
-    contexto = Contexto(Estrategia)
+    contexto = Contexto(Estrategia, 20000)
     contexto.cronometrar()
