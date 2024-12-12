@@ -70,3 +70,10 @@ class GestorWhatsApp(Gestor):
         else:
             print('WHATSAPP pasa la petición al siguiente')
             self.siguiente.trasmitir(peticion)                                 
+
+
+if __name__ == '__main__':
+
+    peticion = Peticion("SMS", "Contenido del mensaje")            
+    cadena = GestorEmail(GestorWhatsApp(GestorSMS())) 
+    cadena.trasmitir(peticion)
