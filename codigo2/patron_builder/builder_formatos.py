@@ -117,7 +117,7 @@ class Director:
 if __name__ == '__main__':
     try:
         builder = BuilderJSON()
-        director = Director(builder)
+        director = Director(builder, "destino")
         director.build("origen/Empleados.txt")
     except Exception as e:
         print(e)
