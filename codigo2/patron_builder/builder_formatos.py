@@ -161,6 +161,6 @@ if __name__ == "__main__":
     try:
         builder = BuilderXML()
         director = Director(builder, "destino")
-        director.build("origen/Empresas.txt")
+        director.build("origen/Pedidos.txt")
     except Exception as e:
         print(e)
