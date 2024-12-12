@@ -39,6 +39,38 @@ class BuilderHTML(Builder):
     def grabarFichero(self, tabla, path):
         pass
 
+class BuilderXML(Builder):
+
+    def __init__(self):
+        self.cabeceras = ""
+    
+    def generarCabecera(self, L):
+        self.cabeceras = L
+        return ""
+    
+    def generarDetalle(self, L):
+        detalle = ""
+        for pos, dato in enumerate(L):
+            detalle += f"<{self.cabeceras[pos]}>{dato}</{self.cabeceras[pos]}>"
+        return detalle
+
+   
+    def grabarFichero(self, tabla, path):
+        pass
+
+class BuilderJSON(Builder):
+    
+    
+    def generarCabecera(self, L):
+        pass
+    
+    def generarDetalle(self, L):
+        pass
+
+   
+    def grabarFichero(self, tabla, path):
+        pass
+
 class Director:
 
     def __init__(self, builder):
@@ -67,15 +99,10 @@ class Director:
             if fich:
                 fich.close()
 
-class BuilderXML(Builder):
-    pass
-
-class BuilderJSON(Builder):
-    pass
 
 if __name__ == '__main__':
     try:
-        builder = BuilderHTML()
+        builder = BuilderXML()
         director = Director(builder)
         director.build("origen/Empleados.txt")
     except Exception as e:
