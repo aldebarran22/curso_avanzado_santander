@@ -77,3 +77,42 @@ class Triangulo(Prototipo):
         return copy.deepcopy(self)
 
 
+class Factoria1:
+    """Crea todos los objetos al principio"""
+
+    def __init__(self):
+        self.prototipos = dict()
+        for clase in Prototipo.__subclasses__():
+            k = clase.__name__.lower()
+            v = clase()
+            self.prototipos[k] = v
+
+    def get(self, etiqueta):
+        pass
+
+    def print(self):
+        print('\nPrototipos:')
+        for k, v in self.prototipos.items():
+            print(k, v)
+        print()
+
+class Factoria2:
+    """Crea los objetos bajo demanda"""
+
+    def __init__(self):
+        pass
+
+    def get(self, etiqueta):
+        pass
+
+    def print(self):
+        pass
+
+def test(claseFactoria):
+
+    factoria = claseFactoria()
+    factoria.print()
+
+if __name__=='__main__':
+    test(Factoria1)
+    # test(Factoria2)
