@@ -74,6 +74,6 @@ class GestorWhatsApp(Gestor):
 
 if __name__ == '__main__':
 
-    peticion = Peticion("SMS", "Contenido del mensaje")            
+    peticion = Peticion("Telegram", "Contenido del mensaje")            
     cadena = GestorEmail(GestorWhatsApp(GestorSMS())) 
     cadena.trasmitir(peticion)
