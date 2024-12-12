@@ -60,12 +60,18 @@ class BuilderXML(Builder):
 
 class BuilderJSON(Builder):
     
+    def __init__(self):
+        self.cabeceras = ""
+        self.lista = []
     
     def generarCabecera(self, L):
-        pass
+        self.cabeceras = L
+        return ""
     
     def generarDetalle(self, L):
-        pass
+        dicc = dict(zip(self.cabeceras, L))
+        self.lista.append(dicc)
+        return ""
 
    
     def grabarFichero(self, tabla, path):
@@ -102,7 +108,7 @@ class Director:
 
 if __name__ == '__main__':
     try:
-        builder = BuilderXML()
+        builder = BuilderJSON()
         director = Director(builder)
         director.build("origen/Empleados.txt")
     except Exception as e:
