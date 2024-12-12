@@ -61,3 +61,7 @@ class Contexto:
             t2 = datetime.now()
 
             print('T. de ordenación: ', t2-t1)
+
+if __name__=='__main__':
+    contexto = Contexto(Estrategia)
+    contexto.cronometrar()
