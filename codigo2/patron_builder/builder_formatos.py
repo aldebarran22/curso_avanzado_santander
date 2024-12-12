@@ -38,7 +38,31 @@ class BuilderHTML(Builder):
 
    
     def grabarFichero(self, tabla, path):
-        pass
+        pathPlantilla = "plantilla.html"
+        pathFichero = path + ".html"
+        htmlTabla = f"<table>{tabla}</table>"
+        fichOut = None
+        fichPlantilla = None
+
+        try:
+            # Cargamos la plantilla
+            fichPlantilla = open(pathPlantilla, "r")
+            html = fichPlantilla.read()
+            html = html.replace("<body></body>", f"<body>{htmlTabla}</body>")
+            fichOut.write(html)
+
+        except Exception as e:
+            raise e
+        
+        finally:
+            if fichPlantilla:
+                fichPlantilla.close()
+
+            if fichOut:
+                fichOut.close()
+
+
+
 
 class BuilderXML(Builder):
 
@@ -119,8 +143,8 @@ class Director:
 
 if __name__ == '__main__':
     try:
-        builder = BuilderJSON()
+        builder = BuilderHTML()
         director = Director(builder, "destino")
-        director.build("origen/Empleados.txt")
+        director.build("origen/Empresas.txt")
     except Exception as e:
         print(e)
