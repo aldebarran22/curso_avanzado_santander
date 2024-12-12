@@ -8,5 +8,5 @@ class S24(Tno):
         pass
 
     def llamar(self):
-        print('llmar con un S24')
+        print('llamar con un S24')
 
