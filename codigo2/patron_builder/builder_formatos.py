@@ -83,8 +83,12 @@ class BuilderXML(Builder):
         return f"<{self.etiqueta}>{detalle}</{self.etiqueta}>"
 
     def grabarFichero(self, tabla, path):
-        print(tabla)
-
+        pathFichero = path + ".xml"
+        fich = open(pathFichero, "w")
+        xml = f"<{self.etiquetaPrincipal}>{tabla}</{self.etiquetaPrincipal}>"
+        xml = "<?xml version='1.0' encoding='utf-8'?>"+xml
+        fich.write(xml)
+        fich.close()
 
 class BuilderJSON(Builder):
 
