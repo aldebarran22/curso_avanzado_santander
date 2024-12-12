@@ -104,13 +104,29 @@ class Factoria2:
     """Crea los objetos bajo demanda"""
 
     def __init__(self):
-        pass
+        self.prototipos = dict()
+        for clase in Prototipo.__subclasses__():
+            k = clase.__name__.lower()           
+            self.prototipos[k] = None
 
     def get(self, etiqueta):
-        pass
+        k = etiqueta.lower()
+        if k not in self.prototipos:
+            raise KeyError(f"No existe el propotipo: {k}")
+        else:
+            if self.prototipos[k] is None:
+                clase = etiqueta.capitalize()
+                objeto = globals()[clase]()
+                self.prototipos[k] = objeto
+
+            return self.prototipos[k].clone()
+        
 
     def print(self):
-        pass
+        print('\nPrototipos 2:')
+        for k, v in self.prototipos.items():
+            print(k, '==>', v)
+        print()
 
 def test(claseFactoria):
 
@@ -125,5 +141,5 @@ def test(claseFactoria):
     factoria.print()
 
 if __name__=='__main__':
-    test(Factoria1)
-    # test(Factoria2)
+    # test(Factoria1)
+    test(Factoria2)
