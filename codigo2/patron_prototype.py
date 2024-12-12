@@ -88,12 +88,16 @@ class Factoria1:
             self.prototipos[k] = v
 
     def get(self, etiqueta):
-        pass
+        k = etiqueta.lower()
+        if k not in self.prototipos:
+            raise KeyError(f"No existe el propotipo: {k}")
+        else:
+            return self.prototipos[k].clone()
 
     def print(self):
         print('\nPrototipos:')
         for k, v in self.prototipos.items():
-            print(k, v)
+            print(k, '==>', v)
         print()
 
 class Factoria2:
@@ -111,6 +115,13 @@ class Factoria2:
 def test(claseFactoria):
 
     factoria = claseFactoria()
+    factoria.print()
+
+    figura = factoria.get("circulo")
+    figura.color = "green"
+    figura.etiqueta = "hola"
+    print('figura: ', figura)
+
     factoria.print()
 
 if __name__=='__main__':
