@@ -25,11 +25,15 @@ class Builder(abc.ABC):
 class BuilderHTML(Builder):
 
     def generarCabecera(self, L):
-        pass
+        cabeceras = ""
+        for col in L:
+            cabeceras += f"<th>{col}</th>"
+        return f"<tr>{cabeceras}</tr>"
 
     
     def generarDetalle(self, L):
-        pass
+        detalle = "".join([f"<td>{campo}</td>" for campo in L])
+        return f"<tr>{detalle}</tr>"
 
    
     def grabarFichero(self, tabla, path):
@@ -56,7 +60,7 @@ class Director:
                     self.tabla += self.builder.generarDetalle(L)
 
             print(self.tabla)
-            
+
         except Exception as e:
             raise e
         finally:
