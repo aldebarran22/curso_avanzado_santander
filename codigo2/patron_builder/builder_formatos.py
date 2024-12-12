@@ -7,6 +7,7 @@ de un fichero CSV a:
 """
 
 import abc
+import json
 
 class Builder(abc.ABC):
 
@@ -79,13 +80,20 @@ class BuilderJSON(Builder):
 
 class Director:
 
-    def __init__(self, builder):
+    def __init__(self, builder, pathDestino):
         self.builder = builder
         self.tabla = ""
+        self.pathDestino = pathDestino
+
+    def __construirPath(self, pathOrigen):
+        L = pathOrigen.split("/")
+        fichero = L[-1]
+        return self.pathDestino + "/" + fichero.partition('.')[0]
 
     def build(self, pathOrigen, sep=';'):
         fich = None
         cabs = True
+        pathFichero = self.__construirPath(pathOrigen) 
         try:
             fich = open(pathOrigen, 'r')
             for fila in fich:
@@ -97,7 +105,7 @@ class Director:
                 else:
                     self.tabla += self.builder.generarDetalle(L)
 
-            print(self.tabla)
+            self.builder.grabarFichero(self.tabla, )
 
         except Exception as e:
             raise e
