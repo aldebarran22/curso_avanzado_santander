@@ -3,7 +3,7 @@ Patrón singleton para implementar un traductor de etiquetas
 """
 
 def cargarIdioma(idioma):
-    path = f"../ficheros_curso/idiomas/{idioma}.txt"
+    path = f"idiomas/{idioma}.txt"
     fich = open(path, 'r')
     dicc = dict()
     for linea in fich:
@@ -15,6 +15,11 @@ def cargarIdioma(idioma):
 
 
 if __name__ == '__main__':
-    dicc = cargarIdioma('it')
-    print(dicc)
+    try:
+        cargarIdioma.propiedad = 0
+        print(cargarIdioma.__dict__, type(cargarIdioma))
+        dicc = cargarIdioma('en')
+        print(dicc)
+    except Exception as e:
+        print(e)
 

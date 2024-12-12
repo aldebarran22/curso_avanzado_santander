@@ -1,7 +1,7 @@
 # -*- coding: cp1252 -*-
 import time
 
-class Singleton(object):
+class Singleton:
 
     __instance = None
 
