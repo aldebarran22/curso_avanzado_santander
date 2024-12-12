@@ -39,15 +39,24 @@ class Director:
 
     def __init__(self, builder):
         self.builder = builder
+        self.tabla = ""
 
-    def build(self, pathOrigen):
+    def build(self, pathOrigen, sep=';'):
         fich = None
+        cabs = True
         try:
             fich = open(pathOrigen, 'r')
             for fila in fich:
                 fila = fila.rstrip()
-                print(fila)
+                L = fila.split(sep)
+                if cabs:
+                    self.tabla += self.builder.generarCabecera(L)
+                    cabs = False
+                else:
+                    self.tabla += self.builder.generarDetalle(L)
 
+            print(self.tabla)
+            
         except Exception as e:
             raise e
         finally:
