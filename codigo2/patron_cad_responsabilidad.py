@@ -37,3 +37,19 @@ class GestorSMS(Gestor):
         else:
             print('SMS pasa la petición al siguiente')
             self.siguiente.trasmitir(peticion)
+
+class GestorEmail(Gestor):
+
+    def __init__(self, siguiente=None):
+        Gestor.__init__(self, siguiente)
+
+    def trasmitir(self, peticion):
+        if peticion.id == "EMAIL":
+            print("La Petición se envia por EMAIL: ", peticion.contenido)
+
+        elif self.siguiente == None:
+            print('EMAIL - Fin de cadena')
+
+        else:
+            print('EMAIL pasa la petición al siguiente')
+            self.siguiente.trasmitir(peticion)            
