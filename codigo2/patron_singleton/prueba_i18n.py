@@ -9,3 +9,4 @@ def funcion1():
 if __name__ == '__main__':
     print(Singletoni18n.getInstance("es")['inicio'])
     print(Singletoni18n.getInstance("es")['facebook'])
+    funcion1()
