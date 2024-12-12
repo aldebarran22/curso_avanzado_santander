@@ -47,6 +47,7 @@ class BuilderHTML(Builder):
         try:
             # Cargamos la plantilla
             fichPlantilla = open(pathPlantilla, "r")
+            fichOut = open(pathFichero, "w")
             html = fichPlantilla.read()
             html = html.replace("<body></body>", f"<body>{htmlTabla}</body>")
             fichOut.write(html)
