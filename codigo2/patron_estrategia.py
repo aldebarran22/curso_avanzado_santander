@@ -5,6 +5,8 @@ de cada algoritmo.
 """
 
 import abc
+from random import randint
+from datetime import datetime
 
 class Estrategia(abc.ABC):
 
@@ -42,4 +44,20 @@ class EstrategiaPython(Estrategia):
         unaLista.sort()
 
 
+class Contexto:
 
+    def __init__(self, claseEstrategia, n=10000):
+        self.unaLista = [randint(1,n) for i in range(n)]
+        self.claseEstrategia = claseEstrategia
+
+    def cronometrar(self):
+
+        for clase in self.claseEstrategia.__subclasses__():
+            print("Testeando la clase: ", clase.__name__)
+            estrategia = clase()
+
+            t1 = datetime.now()
+            estrategia.ordenar(self.unaLista.copy())
+            t2 = datetime.now()
+
+            print('T. de ordenación: ', t2-t1)
