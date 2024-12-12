@@ -41,7 +41,18 @@ class Director:
         self.builder = builder
 
     def build(self, pathOrigen):
-        pass
+        fich = None
+        try:
+            fich = open(pathOrigen, 'r')
+            for fila in fich:
+                fila = fila.rstrip()
+                print(fila)
+
+        except Exception as e:
+            raise e
+        finally:
+            if fich:
+                fich.close()
 
 class BuilderXML(Builder):
     pass
@@ -50,6 +61,6 @@ class BuilderJSON(Builder):
     pass
 
 if __name__ == '__main__':
-    builder = BuilderJSON()
+    builder = BuilderHTML()
     director = Director(builder)
-    director.build()
+    director.build("origen/Empleados.txt")
