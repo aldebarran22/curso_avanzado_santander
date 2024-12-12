@@ -61,6 +61,9 @@ class BuilderJSON(Builder):
     pass
 
 if __name__ == '__main__':
-    builder = BuilderHTML()
-    director = Director(builder)
-    director.build("origen/Empleados.txt")
+    try:
+        builder = BuilderHTML()
+        director = Director(builder)
+        director.build("origen/Empleados.txt")
+    except Exception as e:
+        print(e)
