@@ -19,3 +19,8 @@ def seleccionarFactoria(clases):
 if __name__ == '__main__':
     factoria = seleccionarFactoria(Factoria.__subclasses__())
     print("Familia seleccionada: ", factoria.__class__.__name__)
+    telefono = factoria.crearTno()
+    tableta = factoria.crearTablet()
+
+    telefono.llamar()
+    tableta.internet()
