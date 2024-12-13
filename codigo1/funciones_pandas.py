@@ -46,4 +46,5 @@ if __name__ == '__main__':
     # Cargar en una lista varios años:
     L = [cargaAño(y) for y in range(2010, 2016)]
     total = reduce(sumarDFs, L)
+    total.reset_index(inplace=True)
     print(total.head())
