@@ -14,5 +14,18 @@ def separarPaises(pathOrigen, carpetaDestino):
         dfPedidos[dfPedidos.pais == pais].to_excel(pathDestino, index=False)
 
 
+def sumarNombres(año1, año2):
+
+    def cargaAño(año):
+        path = f"../ficheros_curso/names/yob{año}.txt"
+        df = pd.read_csv(path, header=None, names=['nombre','sexo','total'])
+        return df
+    
+    # Código de sumarNombres:
+    df1 = cargaAño(2015)
+    print(df1.head())
+
+
 if __name__ == '__main__':
-    separarPaises('../ficheros_curso/merge/Pedidos.txt', '../ficheros/paises')
+    #separarPaises('../ficheros_curso/merge/Pedidos.txt', '../ficheros/paises')
+    sumarNombres(2015, 2016)
