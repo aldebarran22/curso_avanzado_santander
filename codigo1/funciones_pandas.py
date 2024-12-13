@@ -46,6 +46,7 @@ def pedidosSQL():
     df = pd.read_sql(sql, conexion.con)
     print(df.head())
 
+
 if __name__ == '__main__':
     pedidosSQL()
 
