@@ -11,14 +11,15 @@ npz (se trata como un diccionario)
 import numpy as np
 
 def grabarTxt(m, path):
-    np.savetxt(path, m, delimiter=';')
+    np.savetxt(path, m, fmt='%d', delimiter=';')
 
 
 def cargarTxt(path):
-    return np.loadtxt(path, dtype=np.int8)
+    return np.loadtxt(path, delimiter=';', dtype="u1")
 
 if __name__ == '__main__':
-    m = np.random.randint(1,100, (10, 25))
+    m = np.random.randint(1,100, (10, 15))
     grabarTxt(m, "../ficheros/matriz.csv")
     m2 = cargarTxt("../ficheros/matriz.csv")
+    print(m2)
     
