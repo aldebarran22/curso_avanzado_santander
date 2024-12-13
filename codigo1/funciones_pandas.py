@@ -3,6 +3,7 @@ Operaciones con pandas
 """
 
 import pandas as pd
+from functools import reduce
 
 def separarPaises(pathOrigen, carpetaDestino):
     """Genera un fichero excel por cada pais"""
@@ -26,6 +27,7 @@ def sumarDFs(df1, df2):
     suma.sort_values("total", ascending=False, inplace=True)
     return suma
 
+
 def sumarNombres(año1, año2):    
     # Código de sumarNombres:
     df1 = cargaAño(año1)
@@ -40,3 +42,8 @@ if __name__ == '__main__':
     suma = sumarNombres(2015, 2016)
     print('TOP 5 de los años: 2015 y 2016')
     print(suma.head())
+
+    # Cargar en una lista varios años:
+    L = [cargaAño(y) for y in range(2010, 2016)]
+    total = reduce(sumarDFs, L)
+    print(total.head())
