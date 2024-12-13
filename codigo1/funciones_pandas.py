@@ -9,7 +9,7 @@ def separarPaises(pathOrigen, carpetaDestino):
     dfPedidos = pd.read_csv(pathOrigen, sep=';')
     paises = dfPedidos.pais.unique()
     for pais in paises:
-        pathDestino = carpetaDestino+f"/{pais}.xlsx"
+        pathDestino = carpetaDestino+f'/{pais}.xlsx'
         print(f'Generando fichero: {pathDestino}')
         dfPedidos[dfPedidos.pais == pais].to_excel(pathDestino, index=False)
 
