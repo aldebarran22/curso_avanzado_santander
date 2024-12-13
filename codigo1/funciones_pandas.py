@@ -14,23 +14,29 @@ def separarPaises(pathOrigen, carpetaDestino):
         dfPedidos[dfPedidos.pais == pais].to_excel(pathDestino, index=False)
 
 
-def sumarNombres(año1, año2):
+def cargaAño(año):
+    path = f"../ficheros_curso/names/yob{año}.txt"
+    df = pd.read_csv(path, header=None, names=['nombre','sexo','total'])
+    df.set_index(['nombre','sexo'], inplace=True) 
+    return df
 
-    def cargaAño(año):
-        path = f"../ficheros_curso/names/yob{año}.txt"
-        df = pd.read_csv(path, header=None, names=['nombre','sexo','total'])
-        df.set_index(['nombre','sexo'], inplace=True) 
-        return df
-    
+
+def sumarDFs(df1, df2):
+    suma = df1.add(df2, fill_value=0)
+    suma.sort_values("total", ascending=False, inplace=True)
+    return suma
+
+def sumarNombres(año1, año2):    
     # Código de sumarNombres:
     df1 = cargaAño(año1)
     df2 = cargaAño(año2)
-    suma = df1.add(df2, fill_value=0)
-    suma.sort_values("total", ascending=False, inplace=True)
-    print(suma.head())
+    suma = sumarDFs(df1, df2)
+    return suma    
     #print(suma.loc['Madison','F'])
 
 
 if __name__ == '__main__':
     #separarPaises('../ficheros_curso/merge/Pedidos.txt', '../ficheros/paises')
-    sumarNombres(2015, 2016)
+    suma = sumarNombres(2015, 2016)
+    print('TOP 5 de los años: 2015 y 2016')
+    print(suma.head())
