@@ -22,8 +22,10 @@ def sumarNombres(año1, año2):
         return df
     
     # Código de sumarNombres:
-    df1 = cargaAño(2015)
-    print(df1.head())
+    df1 = cargaAño(año1)
+    df2 = cargaAño(año2)
+    suma = df1 + df2
+    print(suma.head())
 
 
 if __name__ == '__main__':
