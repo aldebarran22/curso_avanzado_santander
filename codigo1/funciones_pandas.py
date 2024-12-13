@@ -48,3 +48,9 @@ if __name__ == '__main__':
     total = reduce(sumarDFs, L)
     total.reset_index(inplace=True)
     print(total.head())
+
+    # Concatenar varios DataFrame:
+    L = [cargaAño(y).reset_index() for y in range(2010, 2016)]
+    todo = pd.concat(L, ignore_index=True)
+    todo.sort_values("nombre", inplace=True)
+    total.to_excel("../ficheros/todo.xlsx")
