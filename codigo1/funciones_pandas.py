@@ -50,7 +50,7 @@ if __name__ == '__main__':
     print(total.head())
 
     # Concatenar varios DataFrame:
-    L = [cargaAño(y).reset_index() for y in range(2010, 2016)]
-    todo = pd.concat(L, ignore_index=True)
-    todo.sort_values("nombre", inplace=True)
+    L = [cargaAño(y) for y in range(2010, 2016)]
+    todo = pd.concat([cargaAño(2000), cargaAño(2001), cargaAño(2002)])
+    #todo.sort_values("nombre", inplace=True)
     total.to_excel("../ficheros/todo.xlsx")
