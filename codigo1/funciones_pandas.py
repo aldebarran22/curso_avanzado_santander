@@ -26,8 +26,9 @@ def sumarNombres(año1, año2):
     df1 = cargaAño(año1)
     df2 = cargaAño(año2)
     suma = df1.add(df2, fill_value=0)
+    suma.sort_values("total", ascending=False, inplace=True)
     print(suma.head())
-    print(suma.loc['Madison'])
+    #print(suma.loc['Madison','F'])
 
 
 if __name__ == '__main__':
