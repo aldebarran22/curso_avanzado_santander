@@ -19,13 +19,15 @@ def sumarNombres(año1, año2):
     def cargaAño(año):
         path = f"../ficheros_curso/names/yob{año}.txt"
         df = pd.read_csv(path, header=None, names=['nombre','sexo','total'])
+        df.set_index(['nombre','sexo'], inplace=True) 
         return df
     
     # Código de sumarNombres:
     df1 = cargaAño(año1)
     df2 = cargaAño(año2)
-    suma = df1 + df2
+    suma = df1.add(df2, fill_value=0)
     print(suma.head())
+    print(suma.loc['Madison'])
 
 
 if __name__ == '__main__':
