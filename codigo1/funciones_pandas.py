@@ -4,6 +4,7 @@ Operaciones con pandas
 
 import pandas as pd
 from functools import reduce
+from conexionbd import Conexion
 
 def separarPaises(pathOrigen, carpetaDestino):
     """Genera un fichero excel por cada pais"""
@@ -37,7 +38,18 @@ def sumarNombres(año1, año2):
     #print(suma.loc['Madison','F'])
 
 
+def pedidosSQL():
+    conexion = Conexion("../BBDD/empresa3.db")
+    sql = """select pais, sum(importe) as total
+     from pedidos group by 1 order by 2 desc"""
+
+    df = pd.read_sql(sql, conexion.con)
+    print(df.head())
+
 if __name__ == '__main__':
+    pedidosSQL()
+
+    exit()
     #separarPaises('../ficheros_curso/merge/Pedidos.txt', '../ficheros/paises')
     suma = sumarNombres(2015, 2016)
     print('TOP 5 de los años: 2015 y 2016')
@@ -54,3 +66,4 @@ if __name__ == '__main__':
     todo = pd.concat([cargaAño(2000), cargaAño(2001), cargaAño(2002)])
     #todo.sort_values("nombre", inplace=True)
     total.to_excel("../ficheros/todo.xlsx")
+
