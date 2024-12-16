@@ -1,7 +1,7 @@
 ﻿Date ;Time ;Lat ;Lon ;Wind ;Pressure ;Storm Type ;Category 
-sep-16;15:00 GMT;12.2;-50.5°;35 mph ;1008 mb ;Potential Tropical Cyclone;-
-sep-16;18:00 GMT;11.9;-51.6°;35 mph ;1006 mb ;Tropical Depression;-
-sep-16;21:00 GMT;12.3;-52.6°;50 mph ;1002 mb ;Tropical Storm;-
+sep-16;15:00 GMT;12.2º;-50.5°;35 mph ;1008 mb ;Potential Tropical Cyclone;-
+sep-16;18:00 GMT;11.9º;-51.6°;35 mph ;1006 mb ;Tropical Depression;-
+sep-16;21:00 GMT;12.3º;-52.6°;50 mph ;1002 mb ;Tropical Storm;-
 sep-17;00:00 GMT;12.4°;-53.0°;50 mph ;1002 mb ;Tropical Storm;-
 sep-17;03:00 GMT;12.5°;-53.7°;50 mph ;1002 mb ;Tropical Storm;-
 sep-17;06:00 GMT;12.7°;-54.4°;50 mph ;1000 mb ;Tropical Storm;-
