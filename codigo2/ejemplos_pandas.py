@@ -53,4 +53,6 @@ if __name__ == '__main__':
     #cargarDFNames(2000)
     #sumarDosAños(2000, 2001)
     total = sumarRangoAños(2000, 2001, 2002)
+    total.reset_index(inplace=True)
+    total.to_json("../ficheros/names.json", indent=4, orient='records')
     print(total.head(10))
