@@ -1,0 +1,833 @@
+idpedido;idcliente;empresa;empleado;pais;importe;porc_iva;iva;total
+9999;A1234;Speedy Express;Davolio;Estados Unidos;99,0;0,21;20,79;119,78999999999999
+10248;WILMK;Federal Shipping;Buchanan;Finlandia;32,38;0,21;6,8;39,18
+10249;TOMSP;Speedy Express;Suyama;Alemania;11,61;0,21;2,44;14,049999999999999
+10250;HANAR;United Package;Peacock;Brasil;65,83;0,21;13,82;79,65
+10251;VICTE;Speedy Express;Leverling;Francia;41,34;0,21;8,68;50,02
+10252;SUPRD;United Package;Peacock;Belgica;51,3;0,21;10,77;62,06999999999999
+10253;HANAR;United Package;Leverling;Brasil;58,17;0,21;12,22;70,39
+10254;CHOPS;United Package;Buchanan;Suiza;22,98;0,21;4,83;27,810000000000002
+10255;RICSU;Federal Shipping;Dodsworth;Suiza;148,33;0,21;31,15;179,48000000000002
+10256;WELLI;United Package;Leverling;Brasil;13,97;0,21;2,93;16,900000000000002
+10257;HILAA;Federal Shipping;Peacock;Venezuela;81,91;0,21;17,2;99,11
+10258;ERNSH;Speedy Express;Davolio;Austria;140,51;0,21;29,51;170,01999999999998
+10259;CENTC;Federal Shipping;Peacock;Mexico;3,25;0,21;0,68;3,93
+10260;OTTIK;Speedy Express;Peacock;Alemania;55,09;0,21;11,57;66,66
+10261;QUEDE;United Package;Peacock;Brasil;3,05;0,21;0,64;3,69
+10262;RATTC;Federal Shipping;Callahan;Estados Unidos;48,29;0,21;10,14;58,43
+10263;ERNSH;Federal Shipping;Dodsworth;Austria;146,06;0,21;30,67;176,73000000000002
+10264;FOLKO;Federal Shipping;Suyama;Suecia;3,67;0,21;0,77;4,4399999999999995
+10265;BLONP;Speedy Express;Fuller;Francia;55,28;0,21;11,61;66,89
+10266;WARTH;Federal Shipping;Leverling;Finlandia;25,73;0,21;5,4;31,130000000000003
+10267;FRANK;Speedy Express;Peacock;Alemania;208,58;0,21;43,8;252,38
+10268;GROSR;Federal Shipping;Callahan;Venezuela;66,29;0,21;13,92;80,21000000000001
+10269;WHITC;Speedy Express;Buchanan;Estados Unidos;4,56;0,21;0,96;5,52
+10270;WARTH;Speedy Express;Davolio;Finlandia;136,54;0,21;28,67;165,20999999999998
+10271;SPLIR;United Package;Suyama;Estados Unidos;4,54;0,21;0,95;5,49
+10272;RATTC;United Package;Suyama;Estados Unidos;98,03;0,21;20,59;118,62
+10273;QUICK;Federal Shipping;Leverling;Alemania;76,07;0,21;15,97;92,03999999999999
+10274;VINET;Speedy Express;Suyama;Francia;6,01;0,21;1,26;7,27
+10275;MAGAA;Speedy Express;Davolio;Italia;26,93;0,21;5,66;32,59
+10276;TORTU;Federal Shipping;Callahan;Mexico;13,84;0,21;2,91;16,75
+10277;MORGK;Federal Shipping;Fuller;Alemania;125,77;0,21;26,41;152,18
+10278;BERGS;United Package;Callahan;Suecia;92,69;0,21;19,46;112,15
+10279;LEHMS;United Package;Callahan;Alemania;25,83;0,21;5,42;31,25
+10280;BERGS;Speedy Express;Fuller;Suecia;8,98;0,21;1,89;10,870000000000001
+10281;ROMEY;Speedy Express;Peacock;Espanya;2,94;0,21;0,62;3,56
+10282;ROMEY;Speedy Express;Peacock;Espanya;12,69;0,21;2,66;15,35
+10283;LILAS;Federal Shipping;Leverling;Venezuela;84,81;0,21;17,81;102,62
+10284;LEHMS;Speedy Express;Peacock;Alemania;76,56;0,21;16,08;92,64
+10285;QUICK;United Package;Davolio;Alemania;76,83;0,21;16,13;92,96
+10286;QUICK;Federal Shipping;Callahan;Alemania;229,24;0,21;48,14;277,38
+10287;RICAR;Federal Shipping;Callahan;Brasil;12,76;0,21;2,68;15,44
+10288;REGGC;Speedy Express;Peacock;Italia;7,45;0,21;1,56;9,01
+10289;BSBEV;Federal Shipping;King;Reino Unido;22,77;0,21;4,78;27,55
+10290;COMMI;Speedy Express;Callahan;Brasil;79,7;0,21;16,74;96,44
+10291;QUEDE;United Package;Suyama;Brasil;6,4;0,21;1,34;7,74
+10292;TRADH;United Package;Davolio;Brasil;1,35;0,21;0,28;1,6300000000000001
+10293;TORTU;Federal Shipping;Davolio;Mexico;21,18;0,21;4,45;25,63
+10294;RATTC;United Package;Peacock;Estados Unidos;147,26;0,21;30,92;178,18
+10295;VINET;United Package;Fuller;Francia;1,15;0,21;0,24;1,39
+10296;LILAS;Speedy Express;Suyama;Venezuela;0,12;0,21;0,03;0,15
+10297;BLONP;United Package;Buchanan;Francia;5,74;0,21;1,21;6,95
+10298;HUNGO;United Package;Suyama;Irlanda;168,22;0,21;35,33;203,55
+10299;RICAR;United Package;Peacock;Brasil;29,76;0,21;6,25;36,010000000000005
+10300;MAGAA;United Package;Fuller;Italia;17,68;0,21;3,71;21,39
+10301;WANDK;United Package;Callahan;Alemania;45,08;0,21;9,47;54,55
+10302;SUPRD;United Package;Peacock;Belgica;6,27;0,21;1,32;7,59
+10303;GODOS;United Package;King;Espanya;107,83;0,21;22,64;130,47
+10304;TORTU;United Package;Davolio;Mexico;63,79;0,21;13,4;77,19
+10305;OLDWO;Federal Shipping;Callahan;Estados Unidos;257,62;0,21;54,1;311,72
+10306;ROMEY;Federal Shipping;Davolio;Espanya;7,56;0,21;1,59;9,15
+10307;LONEP;United Package;Fuller;Estados Unidos;0,56;0,21;0,12;0,68
+10308;ANATR;Federal Shipping;King;Mexico;1,61;0,21;0,34;1,9500000000000002
+10309;HUNGO;Speedy Express;Leverling;Irlanda;47,3;0,21;9,93;57,23
+10310;THEBI;United Package;Callahan;Estados Unidos;17,52;0,21;3,68;21,2
+10311;DUMON;Federal Shipping;Davolio;Francia;24,69;0,21;5,18;29,87
+10312;WANDK;United Package;Fuller;Alemania;40,26;0,21;8,45;48,709999999999994
+10313;QUICK;United Package;Fuller;Alemania;1,96;0,21;0,41;2,37
+10314;RATTC;United Package;Davolio;Estados Unidos;74,16;0,21;15,57;89,72999999999999
+10315;ISLAT;United Package;Peacock;Reino Unido;41,76;0,21;8,77;50,53
+10316;RATTC;Federal Shipping;Davolio;Estados Unidos;150,15;0,21;31,53;181,68
+10317;LONEP;Speedy Express;Suyama;Estados Unidos;12,69;0,21;2,66;15,35
+10318;ISLAT;United Package;Callahan;Reino Unido;4,73;0,21;0,99;5,720000000000001
+10319;TORTU;Federal Shipping;King;Mexico;64,5;0,21;13,54;78,03999999999999
+10320;WARTH;Federal Shipping;Buchanan;Finlandia;34,57;0,21;7,26;41,83
+10321;ISLAT;United Package;Leverling;Reino Unido;3,43;0,21;0,72;4,15
+10322;PERIC;Federal Shipping;King;Mexico;0,4;0,21;0,08;0,48000000000000004
+10323;KOENE;Speedy Express;Peacock;Alemania;4,88;0,21;1,02;5,9
+10324;SAVEA;Speedy Express;Dodsworth;Estados Unidos;214,27;0,21;45,0;259,27
+10325;KOENE;Federal Shipping;Davolio;Alemania;64,86;0,21;13,62;78,48
+10326;BOLID;United Package;Peacock;Espanya;77,92;0,21;16,36;94,28
+10327;FOLKO;Speedy Express;Fuller;Suecia;63,36;0,21;13,31;76,67
+10328;FURIB;Federal Shipping;Peacock;Portugal;87,03;0,21;18,28;105,31
+10329;SPLIR;United Package;Peacock;Estados Unidos;191,67;0,21;40,25;231,92
+10330;LILAS;Speedy Express;Leverling;Venezuela;12,75;0,21;2,68;15,43
+10331;BONAP;Speedy Express;Dodsworth;Francia;10,19;0,21;2,14;12,33
+10332;MEREP;United Package;Leverling;Canada;52,84;0,21;11,1;63,940000000000005
+10333;WARTH;Federal Shipping;Buchanan;Finlandia;0,59;0,21;0,12;0,71
+10334;VICTE;United Package;Callahan;Francia;8,56;0,21;1,8;10,360000000000001
+10335;HUNGO;United Package;King;Irlanda;42,11;0,21;8,84;50,95
+10336;PRINI;United Package;King;Portugal;15,51;0,21;3,26;18,77
+10337;FRANK;Federal Shipping;Peacock;Alemania;108,26;0,21;22,73;130,99
+10338;OLDWO;Federal Shipping;Peacock;Estados Unidos;84,21;0,21;17,68;101,88999999999999
+10339;MEREP;United Package;Fuller;Canada;15,66;0,21;3,29;18,95
+10340;BONAP;Federal Shipping;Davolio;Francia;166,31;0,21;34,93;201,24
+10341;SIMOB;Federal Shipping;King;Dinamarca;26,78;0,21;5,62;32,4
+10342;FRANK;United Package;Peacock;Alemania;54,83;0,21;11,51;66,34
+10343;LEHMS;Speedy Express;Peacock;Alemania;110,37;0,21;23,18;133,55
+10344;WHITC;United Package;Peacock;Estados Unidos;23,29;0,21;4,89;28,18
+10345;QUICK;United Package;Fuller;Alemania;249,06;0,21;52,3;301,36
+10346;RATTC;Federal Shipping;Leverling;Estados Unidos;142,08;0,21;29,84;171,92000000000002
+10347;FAMIA;Federal Shipping;Peacock;Brasil;3,1;0,21;0,65;3,75
+10348;WANDK;United Package;Peacock;Alemania;0,78;0,21;0,16;0,9400000000000001
+10349;SPLIR;Speedy Express;King;Estados Unidos;8,63;0,21;1,81;10,440000000000001
+10350;LAMAI;United Package;Suyama;Francia;64,19;0,21;13,48;77,67
+10351;ERNSH;Speedy Express;Davolio;Austria;162,33;0,21;34,09;196,42000000000002
+10352;FURIB;Federal Shipping;Leverling;Portugal;1,3;0,21;0,27;1,57
+10353;PICCO;Federal Shipping;King;Austria;360,63;0,21;75,73;436,36
+10354;PERIC;Federal Shipping;Callahan;Mexico;53,8;0,21;11,3;65,1
+10355;AROUT;Speedy Express;Suyama;Reino Unido;41,95;0,21;8,81;50,760000000000005
+10356;WANDK;United Package;Suyama;Alemania;36,71;0,21;7,71;44,42
+10357;LILAS;Federal Shipping;Davolio;Venezuela;34,88;0,21;7,32;42,2
+10358;LAMAI;Speedy Express;Buchanan;Francia;19,64;0,21;4,12;23,76
+10359;SEVES;Federal Shipping;Buchanan;Reino Unido;288,43;0,21;60,57;349,0
+10360;BLONP;Federal Shipping;Peacock;Francia;131,7;0,21;27,66;159,35999999999999
+10361;QUICK;United Package;Davolio;Alemania;183,17;0,21;38,47;221,64
+10362;BONAP;Speedy Express;Leverling;Francia;96,04;0,21;20,17;116,21000000000001
+10363;DRACD;Federal Shipping;Peacock;Alemania;30,54;0,21;6,41;36,95
+10364;EASTC;Speedy Express;Davolio;Reino Unido;71,97;0,21;15,11;87,08
+10365;ANTON;United Package;Leverling;Mexico;22,0;0,21;4,62;26,62
+10366;GALED;United Package;Callahan;Espanya;10,14;0,21;2,13;12,27
+10367;VAFFE;Federal Shipping;King;Dinamarca;13,55;0,21;2,85;16,400000000000002
+10368;ERNSH;United Package;Fuller;Austria;101,95;0,21;21,41;123,36
+10369;SPLIR;United Package;Callahan;Estados Unidos;195,68;0,21;41,09;236,77
+10370;CHOPS;United Package;Suyama;Suiza;1,17;0,21;0,25;1,42
+10371;LAMAI;Speedy Express;Davolio;Francia;0,45;0,21;0,09;0,54
+10372;QUEEN;United Package;Buchanan;Brasil;890,78;0,21;187,06;1077,84
+10373;HUNGO;Federal Shipping;Peacock;Irlanda;124,12;0,21;26,07;150,19
+10374;WOLZA;Federal Shipping;Davolio;Polonia;3,94;0,21;0,83;4,77
+10375;HUNGC;United Package;Leverling;Estados Unidos;20,12;0,21;4,23;24,35
+10376;MEREP;United Package;Davolio;Canada;20,39;0,21;4,28;24,67
+10377;SEVES;Federal Shipping;Davolio;Reino Unido;22,21;0,21;4,66;26,87
+10378;FOLKO;Federal Shipping;Buchanan;Suecia;5,44;0,21;1,14;6,58
+10379;QUEDE;Speedy Express;Fuller;Brasil;45,03;0,21;9,46;54,49
+10380;HUNGO;Federal Shipping;Callahan;Irlanda;35,03;0,21;7,36;42,39
+10381;LILAS;Federal Shipping;Leverling;Venezuela;7,99;0,21;1,68;9,67
+10382;ERNSH;Speedy Express;Peacock;Austria;94,77;0,21;19,9;114,66999999999999
+10383;AROUT;Federal Shipping;Callahan;Reino Unido;34,24;0,21;7,19;41,43
+10384;BERGS;Federal Shipping;Leverling;Suecia;168,64;0,21;35,41;204,04999999999998
+10385;SPLIR;United Package;Davolio;Estados Unidos;30,96;0,21;6,5;37,46
+10386;FAMIA;Federal Shipping;Dodsworth;Brasil;13,99;0,21;2,94;16,93
+10387;SANTG;United Package;Davolio;Noruega;93,63;0,21;19,66;113,28999999999999
+10388;SEVES;Speedy Express;Fuller;Reino Unido;34,86;0,21;7,32;42,18
+10389;BOTTM;United Package;Peacock;Canada;47,42;0,21;9,96;57,38
+10390;ERNSH;Speedy Express;Suyama;Austria;126,38;0,21;26,54;152,92
+10391;DRACD;Federal Shipping;Leverling;Alemania;5,45;0,21;1,14;6,59
+10392;PICCO;Federal Shipping;Fuller;Austria;122,46;0,21;25,72;148,18
+10393;SAVEA;Federal Shipping;Davolio;Estados Unidos;126,56;0,21;26,58;153,14
+10394;HUNGC;Federal Shipping;Davolio;Estados Unidos;30,34;0,21;6,37;36,71
+10395;HILAA;Speedy Express;Suyama;Venezuela;184,41;0,21;38,73;223,14
+10396;FRANK;Federal Shipping;Davolio;Alemania;135,35;0,21;28,42;163,76999999999998
+10397;PRINI;Speedy Express;Buchanan;Portugal;60,26;0,21;12,65;72,91
+10398;SAVEA;Federal Shipping;Fuller;Estados Unidos;89,16;0,21;18,72;107,88
+10399;VAFFE;Federal Shipping;Callahan;Dinamarca;27,36;0,21;5,75;33,11
+10400;EASTC;Federal Shipping;Davolio;Reino Unido;83,93;0,21;17,63;101,56
+10401;RATTC;Speedy Express;Davolio;Estados Unidos;12,51;0,21;2,63;15,14
+10402;ERNSH;United Package;Callahan;Austria;67,88;0,21;14,25;82,13
+10403;ERNSH;Federal Shipping;Peacock;Austria;73,79;0,21;15,5;89,29
+10404;MAGAA;Speedy Express;Fuller;Italia;155,97;0,21;32,75;188,72
+10405;LINOD;Speedy Express;Davolio;Venezuela;34,82;0,21;7,31;42,13
+10406;QUEEN;Speedy Express;King;Brasil;108,04;0,21;22,69;130,73000000000002
+10407;OTTIK;United Package;Fuller;Alemania;91,48;0,21;19,21;110,69
+10408;FOLIG;Speedy Express;Callahan;Francia;11,26;0,21;2,36;13,62
+10409;OCEAN;Speedy Express;Leverling;Argentina;29,83;0,21;6,26;36,089999999999996
+10410;BOTTM;Federal Shipping;Leverling;Canada;2,4;0,21;0,5;2,9
+10411;BOTTM;Federal Shipping;Dodsworth;Canada;23,65;0,21;4,97;28,619999999999997
+10412;WARTH;United Package;Callahan;Finlandia;3,77;0,21;0,79;4,5600000000000005
+10413;LAMAI;United Package;Leverling;Francia;95,66;0,21;20,09;115,75
+10414;FAMIA;Federal Shipping;Fuller;Brasil;21,48;0,21;4,51;25,990000000000002
+10415;HUNGC;Speedy Express;Leverling;Estados Unidos;0,2;0,21;0,04;0,24000000000000002
+10416;WARTH;Federal Shipping;Callahan;Finlandia;22,72;0,21;4,77;27,49
+10417;SIMOB;Federal Shipping;Peacock;Dinamarca;70,29;0,21;14,76;85,05000000000001
+10418;QUICK;Speedy Express;Peacock;Alemania;17,55;0,21;3,69;21,240000000000002
+10419;RICSU;United Package;Peacock;Suiza;137,35;0,21;28,84;166,19
+10420;WELLI;Speedy Express;Leverling;Brasil;44,12;0,21;9,27;53,39
+10421;QUEDE;Speedy Express;Callahan;Brasil;99,23;0,21;20,84;120,07000000000001
+10422;FRANS;Speedy Express;Fuller;Italia;3,02;0,21;0,63;3,65
+10423;GOURL;Federal Shipping;Suyama;Brasil;24,5;0,21;5,14;29,64
+10424;MEREP;United Package;King;Canada;370,61;0,21;77,83;448,44
+10425;LAMAI;United Package;Suyama;Francia;7,93;0,21;1,67;9,6
+10426;GALED;Speedy Express;Peacock;Espanya;18,69;0,21;3,92;22,61
+10427;PICCO;United Package;Peacock;Austria;31,29;0,21;6,57;37,86
+10428;REGGC;Speedy Express;King;Italia;11,09;0,21;2,33;13,42
+10429;HUNGO;United Package;Leverling;Irlanda;56,63;0,21;11,89;68,52000000000001
+10430;ERNSH;Speedy Express;Peacock;Austria;458,78;0,21;96,34;555,12
+10431;BOTTM;United Package;Peacock;Canada;44,17;0,21;9,28;53,45
+10432;SPLIR;United Package;Leverling;Estados Unidos;4,34;0,21;0,91;5,25
+10433;PRINI;Federal Shipping;Leverling;Portugal;73,83;0,21;15,5;89,33
+10434;FOLKO;United Package;Leverling;Suecia;17,92;0,21;3,76;21,68
+10435;CONSH;United Package;Callahan;Reino Unido;9,21;0,21;1,93;11,14
+10436;BLONP;United Package;Leverling;Francia;156,66;0,21;32,9;189,56
+10437;WARTH;Speedy Express;Callahan;Finlandia;19,97;0,21;4,19;24,16
+10438;TOMSP;United Package;Leverling;Alemania;8,24;0,21;1,73;9,97
+10439;MEREP;Federal Shipping;Suyama;Canada;4,07;0,21;0,85;4,92
+10440;SAVEA;United Package;Peacock;Estados Unidos;86,53;0,21;18,17;104,7
+10441;OLDWO;United Package;Leverling;Estados Unidos;73,02;0,21;15,33;88,35
+10442;ERNSH;United Package;Leverling;Austria;47,94;0,21;10,07;58,01
+10443;REGGC;Speedy Express;Callahan;Italia;13,95;0,21;2,93;16,88
+10444;BERGS;Federal Shipping;Leverling;Suecia;3,5;0,21;0,74;4,24
+10445;BERGS;Speedy Express;Leverling;Suecia;9,3;0,21;1,95;11,25
+10446;TOMSP;Speedy Express;Suyama;Alemania;14,68;0,21;3,08;17,759999999999998
+10447;RICAR;United Package;Peacock;Brasil;68,66;0,21;14,42;83,08
+10448;RANCH;United Package;Peacock;Argentina;38,82;0,21;8,15;46,97
+10449;BLONP;United Package;Leverling;Francia;53,3;0,21;11,19;64,49
+10450;VICTE;United Package;Callahan;Francia;7,23;0,21;1,52;8,75
+10451;QUICK;Federal Shipping;Peacock;Alemania;189,09;0,21;39,71;228,8
+10452;SAVEA;Speedy Express;Callahan;Estados Unidos;140,26;0,21;29,45;169,70999999999998
+10453;AROUT;United Package;Davolio;Reino Unido;25,36;0,21;5,33;30,689999999999998
+10454;LAMAI;Federal Shipping;Peacock;Francia;2,74;0,21;0,58;3,3200000000000003
+10455;WARTH;United Package;Callahan;Finlandia;180,45;0,21;37,89;218,33999999999997
+10456;KOENE;United Package;Callahan;Alemania;8,12;0,21;1,71;9,829999999999998
+10457;KOENE;Speedy Express;Fuller;Alemania;11,57;0,21;2,43;14,0
+10458;SUPRD;Federal Shipping;King;Belgica;147,06;0,21;30,88;177,94
+10459;VICTE;United Package;Peacock;Francia;25,09;0,21;5,27;30,36
+10460;FOLKO;Speedy Express;Callahan;Suecia;16,27;0,21;3,42;19,689999999999998
+10461;LILAS;Federal Shipping;Davolio;Venezuela;148,61;0,21;31,21;179,82000000000002
+10462;CONSH;Speedy Express;Fuller;Reino Unido;6,17;0,21;1,3;7,47
+10463;SUPRD;Federal Shipping;Buchanan;Belgica;14,78;0,21;3,1;17,88
+10464;FURIB;United Package;Peacock;Portugal;89,0;0,21;18,69;107,69
+10465;VAFFE;Federal Shipping;Davolio;Dinamarca;145,04;0,21;30,46;175,5
+10466;COMMI;Speedy Express;Peacock;Brasil;11,93;0,21;2,51;14,44
+10467;MAGAA;United Package;Callahan;Italia;4,93;0,21;1,04;5,97
+10468;KOENE;Federal Shipping;Leverling;Alemania;44,12;0,21;9,27;53,39
+10469;WHITC;Speedy Express;Davolio;Estados Unidos;60,18;0,21;12,64;72,82
+10470;BONAP;United Package;Peacock;Francia;64,56;0,21;13,56;78,12
+10471;BSBEV;Federal Shipping;Fuller;Reino Unido;45,59;0,21;9,57;55,160000000000004
+10472;SEVES;Speedy Express;Callahan;Reino Unido;4,2;0,21;0,88;5,08
+10473;ISLAT;Federal Shipping;Davolio;Reino Unido;16,37;0,21;3,44;19,810000000000002
+10474;PERIC;United Package;Buchanan;Mexico;83,49;0,21;17,53;101,02
+10475;SUPRD;Speedy Express;Dodsworth;Belgica;68,52;0,21;14,39;82,91
+10476;HILAA;Federal Shipping;Callahan;Venezuela;4,41;0,21;0,93;5,34
+10477;PRINI;United Package;Buchanan;Portugal;13,02;0,21;2,73;15,75
+10478;VICTE;Federal Shipping;Fuller;Francia;4,81;0,21;1,01;5,819999999999999
+10479;RATTC;Federal Shipping;Leverling;Estados Unidos;708,95;0,21;148,88;857,83
+10480;FOLIG;United Package;Suyama;Francia;1,35;0,21;0,28;1,6300000000000001
+10481;RICAR;United Package;Callahan;Brasil;64,33;0,21;13,51;77,84
+10482;LAZYK;Federal Shipping;Davolio;Estados Unidos;7,48;0,21;1,57;9,05
+10483;WHITC;United Package;King;Estados Unidos;15,28;0,21;3,21;18,49
+10484;BSBEV;Federal Shipping;Leverling;Reino Unido;6,88;0,21;1,44;8,32
+10485;LINOD;United Package;Peacock;Venezuela;64,45;0,21;13,53;77,98
+10486;HILAA;United Package;Davolio;Venezuela;30,53;0,21;6,41;36,94
+10487;QUEEN;United Package;Fuller;Brasil;71,07;0,21;14,92;85,99
+10488;FRANK;United Package;Callahan;Alemania;4,93;0,21;1,04;5,97
+10489;PICCO;United Package;Suyama;Austria;5,29;0,21;1,11;6,4
+10490;HILAA;United Package;King;Venezuela;210,19;0,21;44,14;254,32999999999998
+10491;FURIB;Federal Shipping;Callahan;Portugal;16,96;0,21;3,56;20,52
+10492;BOTTM;Speedy Express;Leverling;Canada;62,89;0,21;13,21;76,1
+10493;LAMAI;Federal Shipping;Peacock;Francia;10,64;0,21;2,23;12,870000000000001
+10494;COMMI;United Package;Peacock;Brasil;65,99;0,21;13,86;79,85
+10495;LAUGB;Federal Shipping;Leverling;Canada;4,65;0,21;0,98;5,630000000000001
+10496;TRADH;United Package;King;Brasil;46,77;0,21;9,82;56,59
+10497;LEHMS;Speedy Express;King;Alemania;36,21;0,21;7,6;43,81
+10498;HILAA;United Package;Callahan;Venezuela;29,75;0,21;6,25;36,0
+10499;LILAS;United Package;Peacock;Venezuela;102,02;0,21;21,42;123,44
+10500;LAMAI;Speedy Express;Suyama;Francia;42,68;0,21;8,96;51,64
+10501;BLAUS;Federal Shipping;Dodsworth;Alemania;8,85;0,21;1,86;10,709999999999999
+10502;PERIC;Speedy Express;Fuller;Mexico;69,32;0,21;14,56;83,88
+10503;HUNGO;United Package;Suyama;Irlanda;16,74;0,21;3,52;20,259999999999998
+10504;WHITC;Federal Shipping;Peacock;Estados Unidos;59,13;0,21;12,42;71,55
+10505;MEREP;Federal Shipping;Leverling;Canada;7,13;0,21;1,5;8,629999999999999
+10506;KOENE;United Package;Dodsworth;Alemania;21,19;0,21;4,45;25,64
+10507;ANTON;Speedy Express;King;Mexico;47,45;0,21;9,96;57,410000000000004
+10508;OTTIK;United Package;Davolio;Alemania;4,99;0,21;1,05;6,04
+10509;BLAUS;Speedy Express;Peacock;Alemania;0,15;0,21;0,03;0,18
+10510;SAVEA;Federal Shipping;Suyama;Estados Unidos;367,63;0,21;77,2;444,83
+10511;BONAP;Federal Shipping;Peacock;Francia;350,64;0,21;73,63;424,27
+10512;FAMIA;United Package;King;Brasil;3,53;0,21;0,74;4,27
+10513;WANDK;Speedy Express;King;Alemania;105,65;0,21;22,19;127,84
+10514;ERNSH;United Package;Leverling;Austria;789,95;0,21;165,89;955,84
+10515;QUICK;Speedy Express;Fuller;Alemania;204,47;0,21;42,94;247,41
+10516;HUNGO;Federal Shipping;Fuller;Irlanda;62,78;0,21;13,18;75,96000000000001
+10517;NORTS;Federal Shipping;Leverling;Reino Unido;32,07;0,21;6,73;38,8
+10518;TORTU;United Package;Peacock;Mexico;218,15;0,21;45,81;263,96000000000004
+10519;CHOPS;Federal Shipping;Suyama;Suiza;91,76;0,21;19,27;111,03
+10520;SANTG;Speedy Express;King;Noruega;13,37;0,21;2,81;16,18
+10521;CACTU;United Package;Callahan;Argentina;17,22;0,21;3,62;20,84
+10522;LEHMS;Speedy Express;Peacock;Alemania;45,33;0,21;9,52;54,849999999999994
+10523;SEVES;United Package;King;Reino Unido;77,63;0,21;16,3;93,92999999999999
+10524;BERGS;United Package;Davolio;Suecia;244,79;0,21;51,41;296,2
+10525;BONAP;United Package;Davolio;Francia;11,06;0,21;2,32;13,38
+10526;WARTH;United Package;Peacock;Finlandia;58,59;0,21;12,3;70,89
+10527;QUICK;Speedy Express;King;Alemania;41,9;0,21;8,8;50,7
+10528;GREAL;United Package;Suyama;Estados Unidos;3,35;0,21;0,7;4,05
+10529;MAISD;United Package;Buchanan;Belgica;66,69;0,21;14,0;80,69
+10530;PICCO;United Package;Leverling;Austria;339,22;0,21;71,24;410,46000000000004
+10531;OCEAN;Speedy Express;King;Argentina;8,12;0,21;1,71;9,829999999999998
+10532;EASTC;Federal Shipping;King;Reino Unido;74,46;0,21;15,64;90,1
+10533;FOLKO;Speedy Express;Callahan;Suecia;188,04;0,21;39,49;227,53
+10534;LEHMS;United Package;Callahan;Alemania;27,94;0,21;5,87;33,81
+10535;ANTON;Speedy Express;Peacock;Mexico;15,64;0,21;3,28;18,92
+10536;LEHMS;United Package;Leverling;Alemania;58,88;0,21;12,36;71,24000000000001
+10537;RICSU;Speedy Express;Davolio;Suiza;78,85;0,21;16,56;95,41
+10538;BSBEV;Federal Shipping;Dodsworth;Reino Unido;4,87;0,21;1,02;5,890000000000001
+10539;BSBEV;Federal Shipping;Suyama;Reino Unido;12,36;0,21;2,6;14,959999999999999
+10540;QUICK;Federal Shipping;Leverling;Alemania;1007,64;0,21;211,6;1219,24
+10541;HANAR;Speedy Express;Fuller;Brasil;68,65;0,21;14,42;83,07000000000001
+10542;KOENE;Federal Shipping;Davolio;Alemania;10,95;0,21;2,3;13,25
+10543;LILAS;United Package;Callahan;Venezuela;48,17;0,21;10,12;58,29
+10544;LONEP;Speedy Express;Peacock;Estados Unidos;24,91;0,21;5,23;30,14
+10545;LAZYK;United Package;Callahan;Estados Unidos;11,92;0,21;2,5;14,42
+10546;VICTE;Federal Shipping;Davolio;Francia;194,72;0,21;40,89;235,61
+10547;SEVES;United Package;Leverling;Reino Unido;178,43;0,21;37,47;215,9
+10548;TOMSP;United Package;Leverling;Alemania;1,43;0,21;0,3;1,73
+10549;QUICK;Speedy Express;Buchanan;Alemania;171,24;0,21;35,96;207,20000000000002
+10550;GODOS;Federal Shipping;King;Espanya;4,32;0,21;0,91;5,23
+10551;FURIB;Federal Shipping;Peacock;Portugal;72,95;0,21;15,32;88,27000000000001
+10552;HILAA;Speedy Express;Fuller;Venezuela;83,22;0,21;17,48;100,7
+10553;WARTH;United Package;Fuller;Finlandia;149,49;0,21;31,39;180,88
+10554;OTTIK;Federal Shipping;Peacock;Alemania;120,97;0,21;25,4;146,37
+10555;SAVEA;Federal Shipping;Suyama;Estados Unidos;252,49;0,21;53,02;305,51
+10556;SIMOB;Speedy Express;Fuller;Dinamarca;9,8;0,21;2,06;11,860000000000001
+10557;LEHMS;United Package;Dodsworth;Alemania;96,72;0,21;20,31;117,03
+10558;AROUT;United Package;Davolio;Reino Unido;72,97;0,21;15,32;88,28999999999999
+10559;BLONP;Speedy Express;Suyama;Francia;8,05;0,21;1,69;9,74
+10560;FRANK;Speedy Express;Callahan;Alemania;36,65;0,21;7,7;44,35
+10561;FOLKO;United Package;Fuller;Suecia;242,21;0,21;50,86;293,07
+10562;REGGC;Speedy Express;Davolio;Italia;22,95;0,21;4,82;27,77
+10563;RICAR;United Package;Fuller;Brasil;60,43;0,21;12,69;73,12
+10564;RATTC;Federal Shipping;Peacock;Estados Unidos;13,75;0,21;2,89;16,64
+10565;MEREP;United Package;Callahan;Canada;7,15;0,21;1,5;8,65
+10566;BLONP;Speedy Express;Dodsworth;Francia;88,4;0,21;18,56;106,96000000000001
+10567;HUNGO;Speedy Express;Davolio;Irlanda;33,97;0,21;7,13;41,1
+10568;GALED;Federal Shipping;Leverling;Espanya;6,54;0,21;1,37;7,91
+10569;RATTC;Speedy Express;Buchanan;Estados Unidos;58,98;0,21;12,39;71,37
+10570;MEREP;Federal Shipping;Leverling;Canada;188,99;0,21;39,69;228,68
+10571;ERNSH;Federal Shipping;Callahan;Austria;26,06;0,21;5,47;31,529999999999998
+10572;BERGS;United Package;Leverling;Suecia;116,43;0,21;24,45;140,88
+10573;ANTON;Federal Shipping;King;Mexico;84,84;0,21;17,82;102,66
+10574;TRAIH;United Package;Peacock;Estados Unidos;37,6;0,21;7,9;45,5
+10575;MORGK;Speedy Express;Buchanan;Alemania;127,34;0,21;26,74;154,08
+10576;TORTU;Federal Shipping;Leverling;Mexico;18,56;0,21;3,9;22,459999999999997
+10577;TRAIH;United Package;Dodsworth;Estados Unidos;25,41;0,21;5,34;30,75
+10578;BSBEV;Federal Shipping;Peacock;Reino Unido;29,6;0,21;6,22;35,82
+10579;LETSS;United Package;Davolio;Estados Unidos;13,73;0,21;2,88;16,61
+10580;OTTIK;Federal Shipping;Peacock;Alemania;75,89;0,21;15,94;91,83
+10581;FAMIA;Speedy Express;Leverling;Brasil;3,01;0,21;0,63;3,6399999999999997
+10582;BLAUS;United Package;Leverling;Alemania;27,71;0,21;5,82;33,53
+10583;WARTH;United Package;Fuller;Finlandia;7,28;0,21;1,53;8,81
+10584;BLONP;Speedy Express;Peacock;Francia;59,14;0,21;12,42;71,56
+10585;WELLI;Speedy Express;King;Brasil;13,41;0,21;2,82;16,23
+10586;REGGC;Speedy Express;Dodsworth;Italia;0,48;0,21;0,1;0,58
+10587;QUEDE;Speedy Express;Davolio;Brasil;62,52;0,21;13,13;75,65
+10588;QUICK;Federal Shipping;Fuller;Alemania;194,67;0,21;40,88;235,54999999999998
+10589;GREAL;United Package;Callahan;Estados Unidos;4,42;0,21;0,93;5,35
+10590;MEREP;Federal Shipping;Peacock;Canada;44,77;0,21;9,4;54,17
+10591;VAFFE;Speedy Express;Davolio;Dinamarca;55,92;0,21;11,74;67,66
+10592;LEHMS;Speedy Express;Leverling;Alemania;32,1;0,21;6,74;38,84
+10593;LEHMS;United Package;King;Alemania;174,2;0,21;36,58;210,77999999999997
+10594;OLDWO;United Package;Leverling;Estados Unidos;5,24;0,21;1,1;6,34
+10595;ERNSH;Speedy Express;Fuller;Austria;96,78;0,21;20,32;117,1
+10596;WHITC;Speedy Express;Callahan;Estados Unidos;16,34;0,21;3,43;19,77
+10597;PICCO;Federal Shipping;King;Austria;35,12;0,21;7,38;42,5
+10598;RATTC;Federal Shipping;Davolio;Estados Unidos;44,42;0,21;9,33;53,75
+10599;BSBEV;Federal Shipping;Suyama;Reino Unido;29,98;0,21;6,3;36,28
+10600;HUNGC;Speedy Express;Peacock;Estados Unidos;45,13;0,21;9,48;54,61
+10601;HILAA;Speedy Express;King;Venezuela;58,3;0,21;12,24;70,53999999999999
+10602;VAFFE;United Package;Callahan;Dinamarca;2,92;0,21;0,61;3,53
+10603;SAVEA;United Package;Callahan;Estados Unidos;48,77;0,21;10,24;59,010000000000005
+10604;FURIB;Speedy Express;Davolio;Portugal;7,46;0,21;1,57;9,03
+10605;MEREP;United Package;Davolio;Canada;379,13;0,21;79,62;458,75
+10606;TRADH;Federal Shipping;Peacock;Brasil;79,4;0,21;16,67;96,07000000000001
+10607;SAVEA;Speedy Express;Buchanan;Estados Unidos;200,24;0,21;42,05;242,29000000000002
+10608;TOMSP;United Package;Peacock;Alemania;27,79;0,21;5,84;33,629999999999995
+10609;DUMON;United Package;King;Francia;1,85;0,21;0,39;2,24
+10610;LAMAI;Speedy Express;Callahan;Francia;26,78;0,21;5,62;32,4
+10611;WOLZA;United Package;Suyama;Polonia;80,65;0,21;16,94;97,59
+10612;SAVEA;United Package;Davolio;Estados Unidos;544,08;0,21;114,26;658,34
+10613;HILAA;United Package;Peacock;Venezuela;8,11;0,21;1,7;9,809999999999999
+10614;BLAUS;Federal Shipping;Callahan;Alemania;1,93;0,21;0,41;2,34
+10615;WILMK;Federal Shipping;Fuller;Finlandia;0,75;0,21;0,16;0,91
+10616;GREAL;United Package;Davolio;Estados Unidos;116,53;0,21;24,47;141,0
+10617;GREAL;United Package;Peacock;Estados Unidos;18,53;0,21;3,89;22,42
+10618;MEREP;Speedy Express;Davolio;Canada;154,68;0,21;32,48;187,16
+10619;MEREP;Federal Shipping;Leverling;Canada;91,05;0,21;19,12;110,17
+10620;LAUGB;Federal Shipping;Fuller;Canada;0,94;0,21;0,2;1,14
+10621;ISLAT;United Package;Peacock;Reino Unido;23,73;0,21;4,98;28,71
+10622;RICAR;Federal Shipping;Peacock;Brasil;50,97;0,21;10,7;61,67
+10623;FRANK;United Package;Callahan;Alemania;97,18;0,21;20,41;117,59
+10624;THECR;United Package;Peacock;Estados Unidos;94,8;0,21;19,91;114,71
+10625;ANATR;Speedy Express;Leverling;Mexico;43,9;0,21;9,22;53,12
+10626;BERGS;United Package;Davolio;Suecia;138,69;0,21;29,12;167,81
+10627;SAVEA;Federal Shipping;Callahan;Estados Unidos;107,46;0,21;22,57;130,03
+10628;BLONP;Federal Shipping;Peacock;Francia;30,36;0,21;6,38;36,74
+10629;GODOS;Federal Shipping;Peacock;Espanya;85,46;0,21;17,95;103,41
+10630;KOENE;United Package;Davolio;Alemania;32,35;0,21;6,79;39,14
+10631;LAMAI;Speedy Express;Callahan;Francia;0,87;0,21;0,18;1,05
+10632;WANDK;Speedy Express;Callahan;Alemania;41,38;0,21;8,69;50,07
+10633;ERNSH;Federal Shipping;King;Austria;477,9;0,21;100,36;578,26
+10634;FOLIG;Federal Shipping;Peacock;Francia;487,38;0,21;102,35;589,73
+10635;MAGAA;Federal Shipping;Callahan;Italia;47,46;0,21;9,97;57,43
+10636;WARTH;Speedy Express;Peacock;Finlandia;1,15;0,21;0,24;1,39
+10637;QUEEN;Speedy Express;Suyama;Brasil;201,29;0,21;42,27;243,56
+10638;LINOD;Speedy Express;Leverling;Venezuela;158,44;0,21;33,27;191,71
+10639;SANTG;Federal Shipping;King;Noruega;38,64;0,21;8,11;46,75
+10640;WANDK;Speedy Express;Peacock;Alemania;23,55;0,21;4,95;28,5
+10641;HILAA;United Package;Peacock;Venezuela;179,61;0,21;37,72;217,33
+10642;SIMOB;Federal Shipping;King;Dinamarca;41,89;0,21;8,8;50,69
+10643;ALFKI;United Package;Suyama;Alemania;29,46;0,21;6,19;35,65
+10644;WELLI;United Package;Leverling;Brasil;0,14;0,21;0,03;0,17
+10645;HANAR;Speedy Express;Peacock;Brasil;12,41;0,21;2,61;15,02
+10646;HUNGO;Federal Shipping;Dodsworth;Irlanda;142,33;0,21;29,89;172,22000000000003
+10647;QUEDE;United Package;Peacock;Brasil;45,54;0,21;9,56;55,1
+10648;RICAR;United Package;Buchanan;Brasil;14,25;0,21;2,99;17,240000000000002
+10649;MAISD;Federal Shipping;Buchanan;Belgica;6,2;0,21;1,3;7,5
+10650;FAMIA;Federal Shipping;Buchanan;Brasil;176,81;0,21;37,13;213,94
+10651;WANDK;United Package;Callahan;Alemania;20,6;0,21;4,33;24,93
+10652;GOURL;United Package;Peacock;Brasil;7,14;0,21;1,5;8,64
+10653;FRANK;Speedy Express;Davolio;Alemania;93,25;0,21;19,58;112,83
+10654;BERGS;Speedy Express;Buchanan;Suecia;55,26;0,21;11,6;66,86
+10655;REGGC;United Package;Davolio;Italia;4,41;0,21;0,93;5,34
+10656;GREAL;Speedy Express;Suyama;Estados Unidos;57,15;0,21;12,0;69,15
+10657;SAVEA;United Package;Fuller;Estados Unidos;352,69;0,21;74,06;426,75
+10658;QUICK;Speedy Express;Peacock;Alemania;364,15;0,21;76,47;440,62
+10659;QUEEN;United Package;King;Brasil;105,81;0,21;22,22;128,03
+10660;HUNGC;Speedy Express;Callahan;Estados Unidos;111,29;0,21;23,37;134,66
+10661;HUNGO;Federal Shipping;King;Irlanda;17,55;0,21;3,69;21,240000000000002
+10662;LONEP;United Package;Leverling;Estados Unidos;1,28;0,21;0,27;1,55
+10663;BONAP;United Package;Fuller;Francia;113,15;0,21;23,76;136,91
+10664;FURIB;Federal Shipping;Davolio;Portugal;1,27;0,21;0,27;1,54
+10665;LONEP;United Package;Davolio;Estados Unidos;26,31;0,21;5,53;31,84
+10666;RICSU;United Package;King;Suiza;232,42;0,21;48,81;281,23
+10667;ERNSH;Speedy Express;King;Austria;78,09;0,21;16,4;94,49000000000001
+10668;WANDK;United Package;Davolio;Alemania;47,22;0,21;9,92;57,14
+10669;SIMOB;Speedy Express;Fuller;Dinamarca;24,39;0,21;5,12;29,51
+10670;FRANK;Speedy Express;Peacock;Alemania;203,48;0,21;42,73;246,20999999999998
+10671;FRANR;Speedy Express;Davolio;Francia;30,34;0,21;6,37;36,71
+10672;BERGS;United Package;Dodsworth;Suecia;95,75;0,21;20,11;115,86
+10673;WILMK;Speedy Express;Fuller;Finlandia;22,76;0,21;4,78;27,540000000000003
+10674;ISLAT;United Package;Peacock;Reino Unido;0,9;0,21;0,19;1,09
+10675;FRANK;United Package;Buchanan;Alemania;31,85;0,21;6,69;38,54
+10676;TORTU;United Package;Fuller;Mexico;2,01;0,21;0,42;2,4299999999999997
+10677;ANTON;Federal Shipping;Davolio;Mexico;4,03;0,21;0,85;4,88
+10678;SAVEA;Federal Shipping;King;Estados Unidos;388,98;0,21;81,69;470,67
+10679;BLONP;Federal Shipping;Callahan;Francia;27,94;0,21;5,87;33,81
+10680;OLDWO;Speedy Express;Davolio;Estados Unidos;26,61;0,21;5,59;32,2
+10681;GREAL;Federal Shipping;Leverling;Estados Unidos;76,13;0,21;15,99;92,11999999999999
+10682;ANTON;United Package;Leverling;Mexico;36,13;0,21;7,59;43,72
+10683;DUMON;Speedy Express;Fuller;Francia;4,4;0,21;0,92;5,32
+10684;OTTIK;Speedy Express;Leverling;Alemania;145,63;0,21;30,58;176,20999999999998
+10685;GOURL;United Package;Peacock;Brasil;33,75;0,21;7,09;40,84
+10686;PICCO;Speedy Express;Fuller;Austria;96,5;0,21;20,26;116,76
+10687;HUNGO;United Package;Dodsworth;Irlanda;296,43;0,21;62,25;358,68
+10688;VAFFE;United Package;Peacock;Dinamarca;299,09;0,21;62,81;361,9
+10689;BERGS;United Package;Davolio;Suecia;13,42;0,21;2,82;16,24
+10690;HANAR;Speedy Express;Davolio;Brasil;15,8;0,21;3,32;19,12
+10691;QUICK;United Package;Fuller;Alemania;810,05;0,21;170,11;980,16
+10692;ALFKI;United Package;Peacock;Alemania;61,02;0,21;12,81;73,83
+10693;WHITC;Federal Shipping;Leverling;Estados Unidos;139,34;0,21;29,26;168,6
+10694;QUICK;Federal Shipping;Callahan;Alemania;398,36;0,21;83,66;482,02
+10695;WILMK;Speedy Express;King;Finlandia;16,72;0,21;3,51;20,229999999999997
+10696;WHITC;Federal Shipping;Callahan;Estados Unidos;102,55;0,21;21,54;124,09
+10697;LINOD;Speedy Express;Leverling;Venezuela;45,52;0,21;9,56;55,080000000000005
+10698;ERNSH;Speedy Express;Peacock;Austria;272,47;0,21;57,22;329,69000000000005
+10699;MORGK;Federal Shipping;Leverling;Alemania;0,58;0,21;0,12;0,7
+10700;SAVEA;Speedy Express;Leverling;Estados Unidos;65,1;0,21;13,67;78,77
+10701;HUNGO;Federal Shipping;Suyama;Irlanda;220,31;0,21;46,27;266,58
+10702;ALFKI;Speedy Express;Peacock;Alemania;23,94;0,21;5,03;28,970000000000002
+10703;FOLKO;United Package;Suyama;Suecia;152,3;0,21;31,98;184,28
+10704;QUEEN;Speedy Express;Suyama;Brasil;4,78;0,21;1,0;5,78
+10705;HILAA;United Package;Dodsworth;Venezuela;3,52;0,21;0,74;4,26
+10706;OLDWO;Federal Shipping;Callahan;Estados Unidos;135,63;0,21;28,48;164,10999999999999
+10707;AROUT;Federal Shipping;Peacock;Reino Unido;21,74;0,21;4,57;26,31
+10708;THEBI;United Package;Suyama;Estados Unidos;2,96;0,21;0,62;3,58
+10709;GOURL;Federal Shipping;Davolio;Brasil;210,8;0,21;44,27;255,07000000000002
+10710;FRANS;Speedy Express;Davolio;Italia;4,98;0,21;1,05;6,03
+10711;SAVEA;United Package;Buchanan;Estados Unidos;52,41;0,21;11,01;63,419999999999995
+10712;HUNGO;Speedy Express;Leverling;Irlanda;89,93;0,21;18,89;108,82000000000001
+10713;SAVEA;Speedy Express;Davolio;Estados Unidos;167,05;0,21;35,08;202,13
+10714;SAVEA;Federal Shipping;Buchanan;Estados Unidos;24,49;0,21;5,14;29,63
+10715;BONAP;Speedy Express;Leverling;Francia;63,2;0,21;13,27;76,47
+10716;RANCH;United Package;Peacock;Argentina;22,57;0,21;4,74;27,310000000000002
+10717;FRANK;United Package;Davolio;Alemania;59,25;0,21;12,44;71,69
+10718;KOENE;Federal Shipping;Davolio;Alemania;170,88;0,21;35,88;206,76
+10719;LETSS;United Package;Callahan;Estados Unidos;51,44;0,21;10,8;62,239999999999995
+10720;QUEDE;United Package;Callahan;Brasil;9,53;0,21;2,0;11,53
+10721;QUICK;Federal Shipping;Buchanan;Alemania;48,92;0,21;10,27;59,19
+10722;SAVEA;Speedy Express;Callahan;Estados Unidos;74,58;0,21;15,66;90,24
+10723;WHITC;Speedy Express;Leverling;Estados Unidos;21,72;0,21;4,56;26,279999999999998
+10724;MEREP;United Package;Callahan;Canada;57,75;0,21;12,13;69,88
+10725;FAMIA;Federal Shipping;Peacock;Brasil;10,83;0,21;2,27;13,1
+10726;EASTC;Speedy Express;Peacock;Reino Unido;16,56;0,21;3,48;20,04
+10727;REGGC;Speedy Express;Fuller;Italia;89,9;0,21;18,88;108,78
+10728;QUEEN;United Package;Peacock;Brasil;58,33;0,21;12,25;70,58
+10729;LINOD;Federal Shipping;Callahan;Venezuela;141,06;0,21;29,62;170,68
+10730;BONAP;Speedy Express;Buchanan;Francia;20,12;0,21;4,23;24,35
+10731;CHOPS;Speedy Express;King;Suiza;96,65;0,21;20,3;116,95
+10732;BONAP;Speedy Express;Leverling;Francia;16,97;0,21;3,56;20,529999999999998
+10733;BERGS;Federal Shipping;Davolio;Suecia;110,11;0,21;23,12;133,23
+10734;GOURL;Federal Shipping;Fuller;Brasil;1,63;0,21;0,34;1,97
+10735;LETSS;United Package;Suyama;Estados Unidos;45,97;0,21;9,65;55,62
+10736;HUNGO;United Package;Dodsworth;Irlanda;44,1;0,21;9,26;53,36
+10737;VINET;United Package;Fuller;Francia;7,79;0,21;1,64;9,43
+10738;SPECD;Speedy Express;Fuller;Francia;2,91;0,21;0,61;3,52
+10739;VINET;Federal Shipping;Leverling;Francia;11,08;0,21;2,33;13,41
+10740;WHITC;United Package;Peacock;Estados Unidos;81,88;0,21;17,19;99,07
+10741;BERGS;Federal Shipping;Peacock;Suecia;10,96;0,21;2,3;13,260000000000002
+10742;BOTTM;Federal Shipping;Leverling;Canada;243,73;0,21;51,18;294,90999999999997
+10743;AROUT;United Package;Davolio;Reino Unido;23,72;0,21;4,98;28,7
+10744;VAFFE;Speedy Express;Suyama;Dinamarca;69,19;0,21;14,53;83,72
+10745;QUICK;Speedy Express;Dodsworth;Alemania;3,52;0,21;0,74;4,26
+10746;CHOPS;Federal Shipping;Davolio;Suiza;31,43;0,21;6,6;38,03
+10747;PICCO;Speedy Express;Suyama;Austria;117,33;0,21;24,64;141,97
+10748;SAVEA;Speedy Express;Leverling;Estados Unidos;232,55;0,21;48,84;281,39
+10749;ISLAT;United Package;Peacock;Reino Unido;61,53;0,21;12,92;74,45
+10750;WARTH;Speedy Express;Dodsworth;Finlandia;79,3;0,21;16,65;95,94999999999999
+10751;RICSU;Federal Shipping;Leverling;Suiza;130,79;0,21;27,47;158,26
+10752;NORTS;Federal Shipping;Fuller;Reino Unido;1,39;0,21;0,29;1,68
+10753;FRANS;Speedy Express;Leverling;Italia;7,7;0,21;1,62;9,32
+10754;MAGAA;Federal Shipping;Suyama;Italia;2,38;0,21;0,5;2,88
+10755;BONAP;United Package;Peacock;Francia;16,71;0,21;3,51;20,22
+10756;SPLIR;United Package;Callahan;Estados Unidos;73,21;0,21;15,37;88,58
+10757;SAVEA;Speedy Express;Suyama;Estados Unidos;8,19;0,21;1,72;9,91
+10758;RICSU;Federal Shipping;Leverling;Suiza;138,17;0,21;29,02;167,19
+10759;ANATR;Federal Shipping;Leverling;Mexico;11,99;0,21;2,52;14,51
+10760;MAISD;Speedy Express;Peacock;Belgica;155,64;0,21;32,68;188,32
+10761;RATTC;United Package;Buchanan;Estados Unidos;18,66;0,21;3,92;22,58
+10762;FOLKO;Speedy Express;Leverling;Suecia;328,74;0,21;69,04;397,78000000000003
+10763;FOLIG;Federal Shipping;Leverling;Francia;37,35;0,21;7,84;45,19
+10764;ERNSH;Federal Shipping;Suyama;Austria;145,45;0,21;30,54;175,98999999999998
+10765;QUICK;Federal Shipping;Leverling;Alemania;42,74;0,21;8,98;51,72
+10766;OTTIK;Speedy Express;Peacock;Alemania;157,55;0,21;33,09;190,64000000000001
+10767;SUPRD;Federal Shipping;Peacock;Belgica;1,59;0,21;0,33;1,9200000000000002
+10768;AROUT;United Package;Leverling;Reino Unido;146,32;0,21;30,73;177,04999999999998
+10769;VAFFE;Speedy Express;Leverling;Dinamarca;65,06;0,21;13,66;78,72
+10770;HANAR;Federal Shipping;Callahan;Brasil;5,32;0,21;1,12;6,44
+10771;ERNSH;United Package;Dodsworth;Austria;11,19;0,21;2,35;13,54
+10772;LEHMS;United Package;Leverling;Alemania;91,28;0,21;19,17;110,45
+10773;ERNSH;Federal Shipping;Davolio;Austria;96,43;0,21;20,25;116,68
+10774;FOLKO;Speedy Express;Peacock;Suecia;48,2;0,21;10,12;58,32
+10775;THECR;Speedy Express;King;Estados Unidos;20,25;0,21;4,25;24,5
+10776;ERNSH;Federal Shipping;Davolio;Austria;351,53;0,21;73,82;425,34999999999997
+10777;GOURL;United Package;King;Brasil;3,01;0,21;0,63;3,6399999999999997
+10778;BERGS;Speedy Express;Leverling;Suecia;6,79;0,21;1,43;8,22
+10779;MORGK;United Package;Leverling;Alemania;58,13;0,21;12,21;70,34
+10780;LILAS;Speedy Express;Fuller;Venezuela;42,13;0,21;8,85;50,980000000000004
+10781;WARTH;Federal Shipping;Fuller;Finlandia;73,16;0,21;15,36;88,52
+10782;CACTU;Federal Shipping;Dodsworth;Argentina;1,1;0,21;0,23;1,33
+10783;HANAR;United Package;Peacock;Brasil;124,98;0,21;26,25;151,23000000000002
+10784;MAGAA;Federal Shipping;Peacock;Italia;70,09;0,21;14,72;84,81
+10785;GROSR;Federal Shipping;Davolio;Venezuela;1,51;0,21;0,32;1,83
+10786;QUEEN;Speedy Express;Callahan;Brasil;110,87;0,21;23,28;134,15
+10787;LAMAI;Speedy Express;Fuller;Francia;249,93;0,21;52,49;302,42
+10788;QUICK;United Package;Davolio;Alemania;42,7;0,21;8,97;51,67
+10789;FOLIG;United Package;Davolio;Francia;100,6;0,21;21,13;121,72999999999999
+10790;GOURL;Speedy Express;Suyama;Brasil;28,23;0,21;5,93;34,16
+10791;FRANK;United Package;Suyama;Alemania;16,85;0,21;3,54;20,39
+10792;WOLZA;Federal Shipping;Davolio;Polonia;23,79;0,21;5,0;28,79
+10793;AROUT;Federal Shipping;Leverling;Reino Unido;4,52;0,21;0,95;5,47
+10794;QUEDE;Speedy Express;Suyama;Brasil;21,49;0,21;4,51;26,0
+10795;ERNSH;United Package;Callahan;Austria;126,66;0,21;26,6;153,26
+10796;HILAA;Speedy Express;Leverling;Venezuela;26,52;0,21;5,57;32,09
+10797;DRACD;United Package;King;Alemania;33,35;0,21;7,0;40,35
+10798;ISLAT;Speedy Express;Fuller;Reino Unido;2,33;0,21;0,49;2,8200000000000003
+10799;KOENE;Federal Shipping;Dodsworth;Alemania;30,76;0,21;6,46;37,22
+10800;SEVES;Federal Shipping;Davolio;Reino Unido;137,44;0,21;28,86;166,3
+10801;BOLID;United Package;Peacock;Espanya;97,09;0,21;20,39;117,48
+10802;SIMOB;United Package;Peacock;Dinamarca;257,26;0,21;54,02;311,28
+10803;WELLI;Speedy Express;Peacock;Brasil;55,23;0,21;11,6;66,83
+10804;SEVES;United Package;Suyama;Reino Unido;27,33;0,21;5,74;33,07
+10805;THEBI;Federal Shipping;Fuller;Estados Unidos;237,34;0,21;49,84;287,18
+10806;VICTE;United Package;Leverling;Francia;22,11;0,21;4,64;26,75
+10807;FRANS;Speedy Express;Peacock;Italia;1,36;0,21;0,29;1,6500000000000001
+10808;OLDWO;Federal Shipping;Fuller;Estados Unidos;45,53;0,21;9,56;55,09
+10809;WELLI;Speedy Express;King;Brasil;4,87;0,21;1,02;5,890000000000001
+10810;LAUGB;Federal Shipping;Fuller;Canada;4,33;0,21;0,91;5,24
+10811;LINOD;Speedy Express;Callahan;Venezuela;31,22;0,21;6,56;37,78
+10812;REGGC;Speedy Express;Buchanan;Italia;59,78;0,21;12,55;72,33
+10813;RICAR;Speedy Express;Davolio;Brasil;47,38;0,21;9,95;57,33
+10814;VICTE;Federal Shipping;Leverling;Francia;130,94;0,21;27,5;158,44
+10815;SAVEA;Federal Shipping;Fuller;Estados Unidos;14,62;0,21;3,07;17,689999999999998
+10816;GREAL;United Package;Peacock;Estados Unidos;719,78;0,21;151,15;870,93
+10817;KOENE;United Package;Leverling;Alemania;306,07;0,21;64,27;370,34
+10818;MAGAA;Federal Shipping;King;Italia;65,48;0,21;13,75;79,23
+10819;CACTU;Federal Shipping;Fuller;Argentina;19,76;0,21;4,15;23,910000000000004
+10820;RATTC;United Package;Leverling;Estados Unidos;37,52;0,21;7,88;45,400000000000006
+10821;SPLIR;Speedy Express;Davolio;Estados Unidos;36,68;0,21;7,7;44,38
+10822;TRAIH;Federal Shipping;Suyama;Estados Unidos;7,0;0,21;1,47;8,47
+10823;LILAS;United Package;Buchanan;Venezuela;163,97;0,21;34,43;198,4
+10824;FOLKO;Speedy Express;Callahan;Suecia;1,23;0,21;0,26;1,49
+10825;DRACD;Speedy Express;Davolio;Alemania;79,25;0,21;16,64;95,89
+10826;BLONP;Speedy Express;Suyama;Francia;7,09;0,21;1,49;8,58
+10827;BONAP;United Package;Davolio;Francia;63,54;0,21;13,34;76,88
+10828;RANCH;Speedy Express;Dodsworth;Argentina;90,85;0,21;19,08;109,92999999999999
+10829;ISLAT;Speedy Express;Dodsworth;Reino Unido;154,72;0,21;32,49;187,21
+10830;TRADH;United Package;Peacock;Brasil;81,83;0,21;17,18;99,00999999999999
+10831;SANTG;United Package;Leverling;Noruega;72,19;0,21;15,16;87,35
+10832;LAMAI;United Package;Fuller;Francia;43,26;0,21;9,08;52,339999999999996
+10833;OTTIK;United Package;Suyama;Alemania;71,49;0,21;15,01;86,5
+10834;TRADH;Federal Shipping;Davolio;Brasil;29,78;0,21;6,25;36,03
+10835;ALFKI;Federal Shipping;Davolio;Alemania;69,53;0,21;14,6;84,13
+10836;ERNSH;Speedy Express;King;Austria;411,88;0,21;86,49;498,37
+10837;BERGS;Federal Shipping;Dodsworth;Suecia;13,32;0,21;2,8;16,12
+10838;LINOD;Federal Shipping;Leverling;Venezuela;59,28;0,21;12,45;71,73
+10839;TRADH;Federal Shipping;Leverling;Brasil;35,43;0,21;7,44;42,87
+10840;LINOD;United Package;Peacock;Venezuela;2,71;0,21;0,57;3,28
+10841;SUPRD;United Package;Buchanan;Belgica;424,3;0,21;89,1;513,4
+10842;TORTU;Federal Shipping;Davolio;Mexico;54,42;0,21;11,43;65,85
+10843;VICTE;United Package;Peacock;Francia;9,26;0,21;1,94;11,2
+10844;PICCO;United Package;Callahan;Austria;25,22;0,21;5,3;30,52
+10845;QUICK;Speedy Express;Callahan;Alemania;212,98;0,21;44,73;257,71
+10846;SUPRD;Federal Shipping;Fuller;Belgica;56,46;0,21;11,86;68,32
+10847;SAVEA;Federal Shipping;Peacock;Estados Unidos;487,57;0,21;102,39;589,96
+10848;CONSH;United Package;King;Reino Unido;38,24;0,21;8,03;46,27
+10849;KOENE;United Package;Dodsworth;Alemania;0,56;0,21;0,12;0,68
+10850;VICTE;Speedy Express;Davolio;Francia;49,19;0,21;10,33;59,519999999999996
+10851;RICAR;Speedy Express;Buchanan;Brasil;160,55;0,21;33,72;194,27
+10852;RATTC;Speedy Express;Callahan;Estados Unidos;174,05;0,21;36,55;210,60000000000002
+10853;BLAUS;United Package;Dodsworth;Alemania;53,83;0,21;11,3;65,13
+10854;ERNSH;United Package;Leverling;Austria;100,22;0,21;21,05;121,27
+10855;OLDWO;Speedy Express;Leverling;Estados Unidos;170,97;0,21;35,9;206,87
+10856;ANTON;United Package;Leverling;Mexico;58,43;0,21;12,27;70,7
+10857;BERGS;United Package;Callahan;Suecia;188,85;0,21;39,66;228,51
+10858;LACOR;Speedy Express;Fuller;Francia;52,51;0,21;11,03;63,54
+10859;FRANK;United Package;Davolio;Alemania;76,1;0,21;15,98;92,08
+10860;FRANR;Federal Shipping;Leverling;Francia;19,26;0,21;4,04;23,3
+10861;WHITC;United Package;Peacock;Estados Unidos;14,93;0,21;3,14;18,07
+10862;LEHMS;United Package;Callahan;Alemania;53,23;0,21;11,18;64,41
+10863;HILAA;United Package;Peacock;Venezuela;30,26;0,21;6,35;36,61
+10864;AROUT;United Package;Peacock;Reino Unido;3,04;0,21;0,64;3,68
+10865;QUICK;Speedy Express;Fuller;Alemania;348,14;0,21;73,11;421,25
+10866;BERGS;Speedy Express;Buchanan;Suecia;109,11;0,21;22,91;132,02
+10867;LONEP;Speedy Express;Suyama;Estados Unidos;1,93;0,21;0,41;2,34
+10868;QUEEN;United Package;King;Brasil;191,27;0,21;40,17;231,44
+10869;SEVES;Speedy Express;Buchanan;Reino Unido;143,28;0,21;30,09;173,37
+10870;WHITC;Federal Shipping;Buchanan;Estados Unidos;12,04;0,21;2,53;14,569999999999999
+10871;BONAP;United Package;Dodsworth;Francia;112,27;0,21;23,58;135,85
+10872;GODOS;United Package;Buchanan;Espanya;175,32;0,21;36,82;212,14
+10873;WILMK;Speedy Express;Peacock;Finlandia;0,82;0,21;0,17;0,99
+10874;GODOS;United Package;Buchanan;Espanya;19,58;0,21;4,11;23,689999999999998
+10875;BERGS;United Package;Peacock;Suecia;32,37;0,21;6,8;39,169999999999995
+10876;BONAP;Federal Shipping;King;Francia;60,42;0,21;12,69;73,11
+10877;RICAR;Speedy Express;Davolio;Brasil;38,06;0,21;7,99;46,050000000000004
+10878;QUICK;Speedy Express;Peacock;Alemania;46,69;0,21;9,8;56,489999999999995
+10879;WILMK;Federal Shipping;Leverling;Finlandia;8,5;0,21;1,78;10,28
+10880;FOLKO;Speedy Express;King;Suecia;88,01;0,21;18,48;106,49000000000001
+10881;CACTU;Speedy Express;Peacock;Argentina;2,84;0,21;0,6;3,44
+10882;SAVEA;Federal Shipping;Peacock;Estados Unidos;23,1;0,21;4,85;27,950000000000003
+10883;LONEP;Federal Shipping;Callahan;Estados Unidos;0,53;0,21;0,11;0,64
+10884;LETSS;United Package;Peacock;Estados Unidos;90,97;0,21;19,1;110,07
+10885;SUPRD;Federal Shipping;Suyama;Belgica;5,64;0,21;1,18;6,819999999999999
+10886;HANAR;Speedy Express;Davolio;Brasil;4,99;0,21;1,05;6,04
+10887;GALED;Federal Shipping;Callahan;Espanya;1,25;0,21;0,26;1,51
+10888;GODOS;United Package;Davolio;Espanya;51,87;0,21;10,89;62,76
+10889;RATTC;Federal Shipping;Dodsworth;Estados Unidos;280,61;0,21;58,93;339,54
+10890;DUMON;Speedy Express;King;Francia;32,76;0,21;6,88;39,64
+10891;LEHMS;United Package;King;Alemania;20,37;0,21;4,28;24,650000000000002
+10892;MAISD;United Package;Peacock;Belgica;120,27;0,21;25,26;145,53
+10893;KOENE;United Package;Dodsworth;Alemania;77,78;0,21;16,33;94,11
+10894;SAVEA;Speedy Express;Davolio;Estados Unidos;116,13;0,21;24,39;140,51999999999998
+10895;ERNSH;Speedy Express;Leverling;Austria;162,75;0,21;34,18;196,93
+10896;MAISD;Federal Shipping;King;Belgica;32,45;0,21;6,81;39,260000000000005
+10897;HUNGO;United Package;Leverling;Irlanda;603,54;0,21;126,74;730,28
+10898;OCEAN;United Package;Peacock;Argentina;1,27;0,21;0,27;1,54
+10899;LILAS;Federal Shipping;Buchanan;Venezuela;1,21;0,21;0,25;1,46
+10900;WELLI;United Package;Davolio;Brasil;1,66;0,21;0,35;2,01
+10901;HILAA;Speedy Express;Peacock;Venezuela;62,09;0,21;13,04;75,13
+10902;FOLKO;Speedy Express;Davolio;Suecia;44,15;0,21;9,27;53,42
+10903;HANAR;Federal Shipping;Leverling;Brasil;36,71;0,21;7,71;44,42
+10904;WHITC;Federal Shipping;Leverling;Estados Unidos;162,95;0,21;34,22;197,17
+10905;WELLI;United Package;Dodsworth;Brasil;13,72;0,21;2,88;16,6
+10906;WOLZA;Federal Shipping;Peacock;Polonia;26,29;0,21;5,52;31,81
+10907;SPECD;Federal Shipping;Suyama;Francia;9,19;0,21;1,93;11,12
+10908;REGGC;United Package;Peacock;Italia;32,96;0,21;6,92;39,88
+10909;SANTG;United Package;Davolio;Noruega;53,05;0,21;11,14;64,19
+10910;WILMK;Federal Shipping;Davolio;Finlandia;38,11;0,21;8,0;46,11
+10911;GODOS;Speedy Express;Leverling;Espanya;38,19;0,21;8,02;46,209999999999994
+10912;HUNGO;United Package;Fuller;Irlanda;580,91;0,21;121,99;702,9
+10913;QUEEN;Speedy Express;Peacock;Brasil;33,05;0,21;6,94;39,989999999999995
+10914;QUEEN;Speedy Express;Suyama;Brasil;21,19;0,21;4,45;25,64
+10915;TORTU;United Package;Fuller;Mexico;3,51;0,21;0,74;4,25
+10916;RANCH;United Package;Davolio;Argentina;63,77;0,21;13,39;77,16
+10917;ROMEY;United Package;Peacock;Espanya;8,29;0,21;1,74;10,03
+10918;BOTTM;Federal Shipping;Leverling;Canada;48,83;0,21;10,25;59,08
+10919;LINOD;United Package;Fuller;Venezuela;19,8;0,21;4,16;23,96
+10920;AROUT;United Package;Peacock;Reino Unido;29,61;0,21;6,22;35,83
+10921;VAFFE;Speedy Express;Davolio;Dinamarca;176,48;0,21;37,06;213,54
+10922;HANAR;Federal Shipping;Buchanan;Brasil;62,74;0,21;13,18;75,92
+10923;LAMAI;Federal Shipping;King;Francia;68,26;0,21;14,33;82,59
+10924;BERGS;United Package;Leverling;Suecia;151,52;0,21;31,82;183,34
+10925;HANAR;Speedy Express;Leverling;Brasil;2,27;0,21;0,48;2,75
+10926;ANATR;Federal Shipping;Peacock;Mexico;39,92;0,21;8,38;48,300000000000004
+10927;LACOR;Speedy Express;Peacock;Francia;19,79;0,21;4,16;23,95
+10928;GALED;Speedy Express;Davolio;Espanya;1,36;0,21;0,29;1,6500000000000001
+10929;FRANK;Speedy Express;Suyama;Alemania;33,93;0,21;7,13;41,06
+10930;SUPRD;Federal Shipping;Peacock;Belgica;15,55;0,21;3,27;18,82
+10931;RICSU;United Package;Peacock;Suiza;13,6;0,21;2,86;16,46
+10932;BONAP;Speedy Express;Callahan;Francia;134,64;0,21;28,27;162,91
+10933;ISLAT;Federal Shipping;Suyama;Reino Unido;54,15;0,21;11,37;65,52
+10934;LEHMS;Federal Shipping;Leverling;Alemania;32,01;0,21;6,72;38,73
+10935;WELLI;Federal Shipping;Peacock;Brasil;47,59;0,21;9,99;57,580000000000005
+10936;GREAL;United Package;Leverling;Estados Unidos;33,68;0,21;7,07;40,75
+10937;CACTU;Federal Shipping;King;Argentina;31,51;0,21;6,62;38,13
+10938;QUICK;United Package;Leverling;Alemania;31,89;0,21;6,7;38,59
+10939;MAGAA;United Package;Fuller;Italia;76,33;0,21;16,03;92,36
+10940;BONAP;Federal Shipping;Callahan;Francia;19,77;0,21;4,15;23,92
+10941;SAVEA;United Package;King;Estados Unidos;400,81;0,21;84,17;484,98
+10942;REGGC;Federal Shipping;Dodsworth;Italia;17,95;0,21;3,77;21,72
+10943;BSBEV;United Package;Peacock;Reino Unido;2,17;0,21;0,46;2,63
+10944;BOTTM;Federal Shipping;Suyama;Canada;52,92;0,21;11,11;64,03
+10945;MORGK;Speedy Express;Peacock;Alemania;10,22;0,21;2,15;12,370000000000001
+10946;VAFFE;United Package;Davolio;Dinamarca;27,2;0,21;5,71;32,91
+10947;BSBEV;United Package;Leverling;Reino Unido;3,26;0,21;0,68;3,94
+10948;GODOS;Federal Shipping;Leverling;Espanya;23,39;0,21;4,91;28,3
+10949;BOTTM;Federal Shipping;Fuller;Canada;74,44;0,21;15,63;90,07
+10950;MAGAA;United Package;Davolio;Italia;2,5;0,21;0,52;3,02
+10951;RICSU;United Package;Dodsworth;Suiza;30,85;0,21;6,48;37,33
+10952;ALFKI;Speedy Express;Davolio;Alemania;40,42;0,21;8,49;48,910000000000004
+10953;AROUT;United Package;Dodsworth;Reino Unido;23,72;0,21;4,98;28,7
+10954;LINOD;Speedy Express;Buchanan;Venezuela;27,91;0,21;5,86;33,77
+10955;FOLKO;United Package;Callahan;Suecia;3,26;0,21;0,68;3,94
+10956;BLAUS;United Package;Suyama;Alemania;44,65;0,21;9,38;54,03
+10957;HILAA;Federal Shipping;Callahan;Venezuela;105,36;0,21;22,13;127,49
+10958;OCEAN;United Package;King;Argentina;49,56;0,21;10,41;59,97
+10959;GOURL;United Package;Suyama;Brasil;4,98;0,21;1,05;6,03
+10960;HILAA;Speedy Express;Leverling;Venezuela;2,08;0,21;0,44;2,52
+10961;QUEEN;Speedy Express;Callahan;Brasil;104,47;0,21;21,94;126,41
+10962;QUICK;United Package;Callahan;Alemania;275,79;0,21;57,92;333,71000000000004
+10963;FURIB;Federal Shipping;Dodsworth;Portugal;2,7;0,21;0,57;3,27
+10964;SPECD;United Package;Leverling;Francia;87,38;0,21;18,35;105,72999999999999
+10965;OLDWO;Federal Shipping;Suyama;Estados Unidos;144,38;0,21;30,32;174,7
+10966;CHOPS;Speedy Express;Peacock;Suiza;27,19;0,21;5,71;32,9
+10967;TOMSP;United Package;Fuller;Alemania;62,22;0,21;13,07;75,28999999999999
+10968;ERNSH;Federal Shipping;Davolio;Austria;74,6;0,21;15,67;90,27
+10969;COMMI;United Package;Davolio;Brasil;0,21;0,21;0,04;0,25
+10970;BOLID;Speedy Express;Dodsworth;Espanya;16,16;0,21;3,39;19,55
+10971;FRANR;United Package;Fuller;Francia;121,82;0,21;25,58;147,39999999999998
+10972;LACOR;United Package;Peacock;Francia;0,02;0,21;0,0;0,02
+10973;LACOR;United Package;Suyama;Francia;15,17;0,21;3,19;18,36
+10974;SPLIR;Federal Shipping;Leverling;Estados Unidos;12,96;0,21;2,72;15,680000000000001
+10975;BOTTM;Federal Shipping;Davolio;Canada;32,27;0,21;6,78;39,050000000000004
+10976;HILAA;Speedy Express;Davolio;Venezuela;37,97;0,21;7,97;45,94
+10977;FOLKO;Federal Shipping;Callahan;Suecia;208,5;0,21;43,78;252,28
+10978;MAISD;United Package;Dodsworth;Belgica;32,82;0,21;6,89;39,71
+10979;ERNSH;United Package;Callahan;Austria;353,07;0,21;74,14;427,21
+10980;FOLKO;Speedy Express;Peacock;Suecia;1,26;0,21;0,26;1,52
+10981;HANAR;United Package;Davolio;Brasil;193,37;0,21;40,61;233,98000000000002
+10982;BOTTM;Speedy Express;Fuller;Canada;14,01;0,21;2,94;16,95
+10983;SAVEA;United Package;Fuller;Estados Unidos;657,54;0,21;138,08;795,62
+10984;SAVEA;Federal Shipping;Davolio;Estados Unidos;211,22;0,21;44,36;255,57999999999998
+10985;HUNGO;Speedy Express;Fuller;Irlanda;91,51;0,21;19,22;110,73
+10986;OCEAN;United Package;Callahan;Argentina;217,86;0,21;45,75;263,61
+10987;EASTC;Speedy Express;Callahan;Reino Unido;185,48;0,21;38,95;224,43
+10988;RATTC;United Package;Leverling;Estados Unidos;61,14;0,21;12,84;73,98
+10989;QUEDE;Speedy Express;Fuller;Brasil;34,76;0,21;7,3;42,059999999999995
+10990;ERNSH;Federal Shipping;Fuller;Austria;117,61;0,21;24,7;142,31
+10991;QUICK;Speedy Express;Davolio;Alemania;38,51;0,21;8,09;46,599999999999994
+10992;THEBI;Federal Shipping;Davolio;Estados Unidos;4,27;0,21;0,9;5,17
+10993;FOLKO;Federal Shipping;King;Suecia;8,81;0,21;1,85;10,66
+10994;VAFFE;Federal Shipping;Fuller;Dinamarca;65,53;0,21;13,76;79,29
+10995;PERIC;Federal Shipping;Davolio;Mexico;46,0;0,21;9,66;55,66
+10996;QUICK;United Package;Peacock;Alemania;1,12;0,21;0,24;1,36
+10997;LILAS;United Package;Callahan;Venezuela;73,91;0,21;15,52;89,42999999999999
+10998;WOLZA;United Package;Callahan;Polonia;20,31;0,21;4,27;24,58
+10999;OTTIK;United Package;Suyama;Alemania;96,35;0,21;20,23;116,58
+11000;RATTC;Federal Shipping;Fuller;Estados Unidos;55,12;0,21;11,58;66,7
+11001;FOLKO;United Package;Fuller;Suecia;197,3;0,21;41,43;238,73000000000002
+11002;SAVEA;Speedy Express;Peacock;Estados Unidos;141,16;0,21;29,64;170,8
+11003;THECR;Federal Shipping;Leverling;Estados Unidos;14,91;0,21;3,13;18,04
+11004;MAISD;Speedy Express;Leverling;Belgica;44,84;0,21;9,42;54,260000000000005
+11005;WILMK;Speedy Express;Fuller;Finlandia;0,75;0,21;0,16;0,91
+11006;GREAL;United Package;Leverling;Estados Unidos;25,19;0,21;5,29;30,48
+11007;PRINI;United Package;Callahan;Portugal;202,24;0,21;42,47;244,71
+11008;ERNSH;Federal Shipping;King;Austria;79,46;0,21;16,69;96,14999999999999
+11009;GODOS;Speedy Express;Fuller;Espanya;59,11;0,21;12,41;71,52
+11010;REGGC;United Package;Fuller;Italia;28,71;0,21;6,03;34,74
+11011;ALFKI;Speedy Express;Leverling;Alemania;1,21;0,21;0,25;1,46
+11012;FRANK;Federal Shipping;Davolio;Alemania;242,95;0,21;51,02;293,96999999999997
+11013;ROMEY;Speedy Express;Fuller;Espanya;32,99;0,21;6,93;39,92
+11014;LINOD;Federal Shipping;Fuller;Venezuela;23,6;0,21;4,96;28,560000000000002
+11015;SANTG;United Package;Fuller;Noruega;4,62;0,21;0,97;5,59
+11016;AROUT;United Package;Dodsworth;Reino Unido;33,8;0,21;7,1;40,9
+11017;ERNSH;United Package;Dodsworth;Austria;754,26;0,21;158,39;912,65
+11018;LONEP;United Package;Peacock;Estados Unidos;11,65;0,21;2,45;14,100000000000001
+11019;RANCH;Federal Shipping;Suyama;Argentina;3,17;0,21;0,67;3,84
+11020;OTTIK;United Package;Fuller;Alemania;43,3;0,21;9,09;52,39
+11021;QUICK;Speedy Express;Leverling;Alemania;297,18;0,21;62,41;359,59000000000003
+11022;HANAR;United Package;Dodsworth;Brasil;6,27;0,21;1,32;7,59
+11023;BSBEV;United Package;Davolio;Reino Unido;123,83;0,21;26,0;149,82999999999998
+11024;EASTC;Speedy Express;Peacock;Reino Unido;74,36;0,21;15,62;89,98
+11025;WARTH;Federal Shipping;Suyama;Finlandia;29,17;0,21;6,13;35,300000000000004
+11026;FRANS;Speedy Express;Peacock;Italia;47,09;0,21;9,89;56,980000000000004
+11027;BOTTM;Speedy Express;Davolio;Canada;52,52;0,21;11,03;63,550000000000004
+11028;KOENE;Speedy Express;Fuller;Alemania;29,59;0,21;6,21;35,8
+11029;CHOPS;Speedy Express;Peacock;Suiza;47,84;0,21;10,05;57,89
+11030;SAVEA;United Package;King;Estados Unidos;830,75;0,21;174,46;1005,21
+11031;SAVEA;United Package;Suyama;Estados Unidos;227,22;0,21;47,72;274,94
+11032;WHITC;Federal Shipping;Fuller;Estados Unidos;606,19;0,21;127,3;733,49
+11033;RICSU;Federal Shipping;King;Suiza;84,74;0,21;17,8;102,53999999999999
+11034;OLDWO;Speedy Express;Callahan;Estados Unidos;40,32;0,21;8,47;48,79
+11035;SUPRD;United Package;Fuller;Belgica;0,17;0,21;0,04;0,21000000000000002
+11036;DRACD;Federal Shipping;Callahan;Alemania;149,47;0,21;31,39;180,86
+11037;GODOS;Speedy Express;King;Espanya;3,2;0,21;0,67;3,87
+11038;SUPRD;United Package;Davolio;Belgica;29,59;0,21;6,21;35,8
+11039;LINOD;United Package;Davolio;Venezuela;65,0;0,21;13,65;78,65
+11040;GREAL;Federal Shipping;Peacock;Estados Unidos;18,84;0,21;3,96;22,8
+11041;CHOPS;United Package;Leverling;Suiza;48,22;0,21;10,13;58,35
+11042;COMMI;Speedy Express;Fuller;Brasil;29,99;0,21;6,3;36,29
+11043;SPECD;United Package;Buchanan;Francia;8,8;0,21;1,85;10,65
+11044;WOLZA;Speedy Express;Peacock;Polonia;8,72;0,21;1,83;10,55
+11045;BOTTM;United Package;Suyama;Canada;70,58;0,21;14,82;85,4
+11046;WANDK;United Package;Callahan;Alemania;71,64;0,21;15,04;86,68
+11047;EASTC;Federal Shipping;King;Reino Unido;46,62;0,21;9,79;56,41
+11048;BOTTM;Federal Shipping;King;Canada;24,12;0,21;5,07;29,19
+11049;GOURL;Speedy Express;Leverling;Brasil;8,34;0,21;1,75;10,09
+11050;FOLKO;United Package;Callahan;Suecia;59,41;0,21;12,48;71,89
+11051;LAMAI;Federal Shipping;King;Francia;2,79;0,21;0,59;3,38
+11052;HANAR;Speedy Express;Leverling;Brasil;67,26;0,21;14,12;81,38000000000001
+11053;PICCO;United Package;Fuller;Austria;53,05;0,21;11,14;64,19
+11054;CACTU;Speedy Express;Callahan;Argentina;0,33;0,21;0,07;0,4
+11055;HILAA;United Package;King;Venezuela;120,92;0,21;25,39;146,31
+11056;EASTC;United Package;Callahan;Reino Unido;278,96;0,21;58,58;337,53999999999996
+11057;NORTS;Federal Shipping;Leverling;Reino Unido;4,13;0,21;0,87;5,0
+11058;BLAUS;Federal Shipping;Dodsworth;Alemania;31,14;0,21;6,54;37,68
+11059;RICAR;United Package;Fuller;Brasil;85,8;0,21;18,02;103,82
+11060;FRANS;United Package;Fuller;Italia;10,98;0,21;2,31;13,290000000000001
+11061;GREAL;Federal Shipping;Peacock;Estados Unidos;14,01;0,21;2,94;16,95
+11062;REGGC;United Package;Peacock;Italia;29,93;0,21;6,29;36,22
+11063;HUNGO;United Package;Leverling;Irlanda;81,73;0,21;17,16;98,89
+11064;SAVEA;Speedy Express;Davolio;Estados Unidos;30,09;0,21;6,32;36,41
+11065;LILAS;Speedy Express;Callahan;Venezuela;12,91;0,21;2,71;15,620000000000001
+11066;WHITC;United Package;King;Estados Unidos;44,72;0,21;9,39;54,11
+11067;DRACD;United Package;Davolio;Alemania;7,98;0,21;1,68;9,66
+11068;QUEEN;United Package;Callahan;Brasil;81,75;0,21;17,17;98,92
+11069;TORTU;United Package;Davolio;Mexico;15,67;0,21;3,29;18,96
+11070;LEHMS;Speedy Express;Fuller;Alemania;136,0;0,21;28,56;164,56
+11071;LILAS;Speedy Express;Davolio;Venezuela;0,93;0,21;0,2;1,1300000000000001
+11072;ERNSH;United Package;Peacock;Austria;258,64;0,21;54,31;312,95
+11073;PERIC;United Package;Fuller;Mexico;24,95;0,21;5,24;30,189999999999998
+11074;SIMOB;United Package;King;Dinamarca;18,44;0,21;3,87;22,310000000000002
+11075;RICSU;United Package;Callahan;Suiza;6,19;0,21;1,3;7,49
+11076;BONAP;United Package;Peacock;Francia;38,28;0,21;8,04;46,32
+11077;RATTC;United Package;Davolio;Estados Unidos;8,53;0,21;1,79;10,32
+11078;ALFKI;Speedy Express;Davolio;España;1200,0;0,21;252,0;1452,0
