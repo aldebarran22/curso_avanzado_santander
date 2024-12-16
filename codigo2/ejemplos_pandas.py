@@ -18,6 +18,7 @@ def exportarPaises(path, pathDestino):
 def cargarDFNames(año):
     path = f"../ficheros_curso/names/yob{año}.txt"
     df = pd.read_csv(path, header=None, names=['nombre','sexo','total'])
+    df.set_index(["nombre","sexo"], inplace=True)
     return df
 
 def sumarDosAños(año1, año2):
@@ -27,6 +28,7 @@ def sumarDosAños(año1, año2):
 
     suma = df1 + df2
     print(suma.head(6))
+    #print(suma.loc['Madisson'])
 
 
     
