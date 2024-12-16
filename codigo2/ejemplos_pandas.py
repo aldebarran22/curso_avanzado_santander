@@ -21,8 +21,13 @@ def cargarDFNames(año):
     df.set_index(["nombre","sexo"], inplace=True)
     return df
 
+def sumarRangoAños(*años):    
+
+    return [cargarDFNames(año) for año in años]
+
+
 def sumarDosAños(año1, año2):
-    """Suma dos años con el operador +"""
+    """Suma dos años con el operador"""
     df1 = cargarDFNames(año1)
     df2 = cargarDFNames(año2)
 
