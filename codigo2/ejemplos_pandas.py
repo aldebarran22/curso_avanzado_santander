@@ -55,4 +55,9 @@ if __name__ == '__main__':
     total = sumarRangoAños(2000, 2001, 2002)
     total.reset_index(inplace=True)
     total.to_json("../ficheros/names.json", indent=4, orient='records')
-    print(total.head(10))
+    #print(total.head(10))
+
+    L = [cargarDFNames(año).reset_index() for año in [2000, 2001, 2002]]
+    total2 = pd.concat(L, ignore_index=True)
+    total2.sort_values(by="nombre", inplace=True, ascending=False)
+    print(total2.head(10))
