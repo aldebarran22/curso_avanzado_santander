@@ -18,10 +18,19 @@ def exportarPaises(path, pathDestino):
 def cargarDFNames(año):
     path = f"../ficheros_curso/names/yob{año}.txt"
     df = pd.read_csv(path, header=None, names=['nombre','sexo','total'])
-    print(df.head())
+    return df
+
+def sumarDosAños(año1, año2):
+    """Suma dos años con el operador +"""
+    df1 = cargarDFNames(año1)
+    df2 = cargarDFNames(año2)
+
+    suma = df1 + df2
+    print(suma.head(6))
 
 
     
 if __name__ == '__main__':
     #exportarPaises('../ficheros_curso/merge/Pedidos.txt', '../ficheros/paises')
-    cargarDFNames(2000)
+    #cargarDFNames(2000)
+    sumarDosAños(2000, 2001)
