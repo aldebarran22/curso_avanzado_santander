@@ -14,7 +14,14 @@ def exportarPaises(path, pathDestino):
         print('Generando el fichero: ' + pathPais)
         df[df.pais==pais].to_excel(pathPais, index=False)
 
-        
 
+def cargarDFNames(año):
+    path = f"../ficheros_curso/names/yob{año}.txt"
+    df = pd.read_csv(path, header=None, names=['nombre','sexo','total'])
+    print(df.head())
+
+
+    
 if __name__ == '__main__':
-    exportarPaises('../ficheros_curso/merge/Pedidos.txt', '../ficheros/paises')
+    #exportarPaises('../ficheros_curso/merge/Pedidos.txt', '../ficheros/paises')
+    cargarDFNames(2000)
