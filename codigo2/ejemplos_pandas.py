@@ -59,5 +59,5 @@ if __name__ == '__main__':
 
     L = [cargarDFNames(año).reset_index() for año in [2000, 2001, 2002]]
     total2 = pd.concat(L, ignore_index=True)
-    total2.sort_values(by="nombre", inplace=True, ascending=False)
-    print(total2.head(10))
+    total2.sort_values(by="total", inplace=True, ascending=False)
+    print(total2[total2.nombre=='Michael'])
