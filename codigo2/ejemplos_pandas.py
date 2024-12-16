@@ -1,6 +1,7 @@
 import pandas as pd
 from os import mkdir
 from os.path import isdir
+from functools import reduce
 
 def exportarPaises(path, pathDestino):
     if not isdir(pathDestino):
@@ -21,9 +22,15 @@ def cargarDFNames(año):
     df.set_index(["nombre","sexo"], inplace=True)
     return df
 
-def sumarRangoAños(*años):    
+def sumarRangoAños(*años):  
 
-    return [cargarDFNames(año) for año in años]
+    def sumarDF(df1, df2):
+        suma = df1.add(df2, fill_value=0)
+        suma.sort_values("total", ascending=False, inplace=True)
+        return suma
+
+    L = [cargarDFNames(año) for año in años]
+    return reduce(sumarDF, L)
 
 
 def sumarDosAños(año1, año2):
