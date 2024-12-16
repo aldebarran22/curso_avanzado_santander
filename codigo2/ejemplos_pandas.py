@@ -26,7 +26,9 @@ def sumarDosAños(año1, año2):
     df1 = cargarDFNames(año1)
     df2 = cargarDFNames(año2)
 
-    suma = df1 + df2
+    #suma = df1 + df2
+    suma = df1.add(df2, fill_value=0)
+    suma.sort_values("total", ascending=False, inplace=True)
     print(suma.head(6))
     #print(suma.loc['Madisson'])
 
