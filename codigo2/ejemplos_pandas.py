@@ -30,8 +30,10 @@ def sumarDosAños(año1, año2):
     suma = df1.add(df2, fill_value=0)
     suma.sort_values("total", ascending=False, inplace=True)
     print(suma.head(6))
-    #print(suma.loc['Madisson'])
-
+    print("---------------")
+    print(suma.loc['Mallory','M']['total'])
+    suma.reset_index(inplace=True)
+    suma.to_html("../ficheros/names_2000_2001.html", index=False)
 
     
 if __name__ == '__main__':
