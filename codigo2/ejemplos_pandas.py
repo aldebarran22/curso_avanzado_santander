@@ -51,4 +51,6 @@ def sumarDosAños(año1, año2):
 if __name__ == '__main__':
     #exportarPaises('../ficheros_curso/merge/Pedidos.txt', '../ficheros/paises')
     #cargarDFNames(2000)
-    sumarDosAños(2000, 2001)
+    #sumarDosAños(2000, 2001)
+    total = sumarRangoAños(2000, 2001, 2002)
+    print(total.head(10))
