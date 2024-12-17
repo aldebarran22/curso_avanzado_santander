@@ -21,8 +21,22 @@ class Productor(Thread):
         self.num_muestras = num_muestras
 
     def run(self):
-        pass
+        for i in range(self.num_muestras):
+            # Producir un item:
+            numero = randint(1,10)
+            print(self.name, "GENERA -> ",numero)
 
+            # Comprobar si hay hueco:
+            self.buffer.sem_huecos.acquire()
+
+            # Escribir el buffer el item:
+            with self.buffer.mutex:
+                self.buffer.buffer[self.buffer.ind_p] = numero
+                print(self.buffer.buffer)
+                self.buffer.ind_p = (self.buffer.ind_p + 1) % tam_buffer
+            
+            # Avisar que hay un nuevo item:
+            self.buffer.sem_items.release()
 
 class Consumidor(Thread):
     def __init__(self, buffer, num_muestras, nombre):
