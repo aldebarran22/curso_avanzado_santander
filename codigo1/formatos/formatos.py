@@ -151,7 +151,7 @@ if __name__ == "__main__":
         L2 = deserializarPickle("productos.bin")
         print(L2[:3])
 
-        serializarShelve("objetos", *L[:3])
+        serializarShelve("objetos", *L[:3], L*5)
         obj3 = deserializarShelve("objetos", "K-3")
         print('obj3: ', obj3)
 
