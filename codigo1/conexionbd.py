@@ -7,6 +7,7 @@ import sqlite3 as db
 from os.path import isfile
 import json
 
+
 class Conexion:
 
     def __init__(self, path):
@@ -23,7 +24,7 @@ class Conexion:
             cabs = tuple([t[0] for t in cur.description])
             print(cabs)
             L = [t for t in cur.fetchall()]
-            L.insert(0, cabs)           
+            L.insert(0, cabs)
             return L
 
         except Exception as e:
@@ -33,15 +34,17 @@ class Conexion:
                 cur.close()
 
     def __del__(self):
-        if hasattr(self, "con"):            
+        if hasattr(self, "con"):
             self.con.close()
 
 
-def convertirJson(L, path):
+def grabarJson(L, path):
     fich = None
     try:
         fich = open(path, "w")
-
+        cabs = L[0]
+        resul = [dict(zip(cabs, t)) for t in L[1:]]
+        json.dump(resul, fich, indent=4)
 
     except Exception as e:
         print(e)
@@ -49,12 +52,14 @@ def convertirJson(L, path):
     finally:
         if fich:
             fich.close()
-    
+
 
 if __name__ == "__main__":
     try:
+        tabla = "pedidos"
         conexion = Conexion("../BBDD/empresa3.db")
-        L = conexion.query("select * from empresasenvios")
+        L = conexion.query(f"select * from {tabla}")
+        grabarJson(L, "../ficheros/{tabla}.json")
 
-    except  Exception as e:
+    except Exception as e:
         print(e)
