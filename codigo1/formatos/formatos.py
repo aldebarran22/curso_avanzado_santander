@@ -97,7 +97,7 @@ def serializarPickle(objeto, path):
     fich = None
     try:
         fich = open(path, "wb")
-        p.dump(objeto, fich)
+        p.dump(objeto, fich, protocol=5)
     except Exception as e:
         print(e)
     finally:
@@ -119,6 +119,14 @@ def deserializarPickle(path):
             fich.close()
 
 
+def serializarShelve(path, *objetos):
+    Shelf = s.open(path)
+    for pos, obj in enumerate(objetos):
+        clave = f"K-{pos+1}"
+        Shelf[clave] = obj
+    Shelf.close()
+
+
 if __name__ == "__main__":
     try:
         bd = BaseDatos("empresa3.db")
@@ -131,6 +139,7 @@ if __name__ == "__main__":
         # Serialización con pickle:
         serializarPickle(L, "productos.bin")
         L2 = deserializarPickle("productos.bin")
+        print(L2[:3])
 
     except Exception as e:
         print(e)
