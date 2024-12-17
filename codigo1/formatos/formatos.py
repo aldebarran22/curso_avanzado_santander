@@ -4,8 +4,18 @@ Serialización de objetos con: pickle, shelve
 """
 
 from base_datos import Producto, Categoria, BaseDatos
-from xml.etree.ElementTree import iterparse, Element, SubElement, tostring, Comment, ElementTree
+from xml.etree.ElementTree import (
+    iterparse,
+    Element,
+    SubElement,
+    tostring,
+    Comment,
+    ElementTree,
+)
 from xml.etree import ElementTree as ET
+import pickle as p
+import shelve as s
+
 
 def generarXML(L, path):
 
@@ -19,17 +29,17 @@ def generarXML(L, path):
 
     # Generar un producto por cada objeto de la colección:
     for p in L:
-        nodoProducto = SubElement(raiz, 'producto')
-        nodoProducto.attrib['id'] = str(p.id)
-        nodoNombre = SubElement(nodoProducto, 'nombre')
+        nodoProducto = SubElement(raiz, "producto")
+        nodoProducto.attrib["id"] = str(p.id)
+        nodoNombre = SubElement(nodoProducto, "nombre")
         nodoNombre.text = p.nombre
-        nodoPrecio = SubElement(nodoProducto, 'precio')
-        nodoPrecio.text = str(round(p.precio,2))
-        nodoCat = SubElement(nodoProducto, 'categoria')
-        nodoCat.attrib['idcat']=str(p.cat.id)
-        nodoCatNombre = SubElement(nodoCat, 'nombre')
+        nodoPrecio = SubElement(nodoProducto, "precio")
+        nodoPrecio.text = str(round(p.precio, 2))
+        nodoCat = SubElement(nodoProducto, "categoria")
+        nodoCat.attrib["idcat"] = str(p.cat.id)
+        nodoCatNombre = SubElement(nodoCat, "nombre")
         nodoCatNombre.text = p.cat.nombre
-        nodoExistencias = SubElement(nodoProducto, 'existencias')
+        nodoExistencias = SubElement(nodoProducto, "existencias")
         nodoExistencias.text = str(p.exis)
 
     et = ElementTree()
@@ -37,20 +47,21 @@ def generarXML(L, path):
     et.write(path)
 
     # Imprimir el árbol
-    #print(tostring(raiz, encoding='unicode'))
+    # print(tostring(raiz, encoding='unicode'))
+
 
 def cargarBuscar(path):
 
     # Cargar el DOM:
     with open(path, "rt") as fichero:
         tree = ET.parse(fichero)
-    
+
     # Recuperar el nodo raíz;
     raiz = tree.getroot()
-    #print(tostring(raiz))
+    # print(tostring(raiz))
 
     # Los nombres de los productos con XPath:
-    #cad = ".//nombre"
+    # cad = ".//nombre"
     # Los nombres de la categorias:
     cad = ".//categoria/nombre"
     nombres = set([nodo.text for nodo in raiz.findall(cad)])
@@ -61,35 +72,65 @@ def cargarBuscar(path):
     for nodo in raiz.findall(cad):
         print(tostring(nodo))
 
+
 def parsearConSAX(path):
     eventos = ["start", "end"]
     categorias = set()
     existe = False
 
-    for (event, nodo) in iterparse(path, eventos):
-        if event == 'start':
-            if nodo.tag == 'categoria':
+    for event, nodo in iterparse(path, eventos):
+        if event == "start":
+            if nodo.tag == "categoria":
                 existe = True
 
-            if nodo.tag == 'nombre' and existe:
-                categorias.add(nodo.text)            
+            if nodo.tag == "nombre" and existe:
+                categorias.add(nodo.text)
 
-        if event == 'end':
-            if nodo.tag == 'categoria':
+        if event == "end":
+            if nodo.tag == "categoria":
                 existe = False
 
-    return sorted(categorias)
-        
-        
+    return sorted(categorias, key=lambda obj: obj.capitalize())
+
+
+def serializarPickle(objeto, path):
+    fich = None
+    try:
+        fich = open(path, "wb")
+        p.dump(objeto, fich)
+    except Exception as e:
+        print(e)
+    finally:
+        if fich:
+            fich.close()
+
+
+def deserializarPickle(path):
+    fich = None
+    try:
+        fich = open(path, "rb")
+        objeto = p.load(fich)
+        return objeto
+
+    except Exception as e:
+        print(e)
+    finally:
+        if fich:
+            fich.close()
+
 
 if __name__ == "__main__":
     try:
         bd = BaseDatos("empresa3.db")
         L = bd.select()
-        generarXML(L, "productos.xml")
-        #cargarBuscar("productos.xml")
-        cats = parsearConSAX("productos.xml")
-        print(cats)
+        # generarXML(L, "productos.xml")
+        # cargarBuscar("productos.xml")
+        # cats = parsearConSAX("productos.xml")
+        # print(cats)
+
+        # Serialización con pickle:
+        serializarPickle(L, "productos.bin")
+        L2 = deserializarPickle("productos.bin")
 
     except Exception as e:
         print(e)
