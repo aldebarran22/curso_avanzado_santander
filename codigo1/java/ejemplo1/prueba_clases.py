@@ -6,6 +6,9 @@ Created on 17-dic-2024
 
 from es.curso.app import Direccion, Usuario
 from java.util import ArrayList
+from collections import deque, Counter, namedtuple
+from random import randint
+
 
 if __name__ == '__main__':
     dir1 = Direccion("Gran Via", 33)
@@ -26,5 +29,28 @@ if __name__ == '__main__':
     arr.add(user3)
     
     print(arr)
+    
+    
+    d = deque()
+    d.append(100)
+    d.append(200)
+    d.appendleft(99)
+    print(d)
+    d.rotate(2)
+    print(d)
+    
+    # Crear un histograma:
+    L = [randint(1,20) for i in range(100)]
+    c = Counter(L)
+    print(c)
+    
+    # Tuplas con nombre:
+    CuentaBancaria = namedtuple('CuentaBancaria', ['entidad','sucursal','dc','numero'], verbose=True)
+    cb = CuentaBancaria(4000, 1224, 55, 12345678)
+    print(cb)
+    cb._replace(dc=99)
+    print(cb)
+    
+    
     
     
