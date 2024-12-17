@@ -52,13 +52,28 @@ def grabarJson(L, path):
         if fich:
             fich.close()
 
+def cargarJson(path):
+    fich = None
+    try:
+        fich = open(path, "r")
+        resul = json.load(fich)      
+        return resul
+
+    except Exception as e:
+        print(e)
+
+    finally:
+        if fich:
+            fich.close()
+
 
 if __name__ == "__main__":
     try:
         tabla = "pedidos"
         conexion = Conexion("../BBDD/empresa3.db")
         L = conexion.query(f"select * from {tabla}")
-        grabarJson(L, "../ficheros/{tabla}.json")
-
+        grabarJson(L, f"../ficheros/{tabla}.json")
+        R = cargarJson(f"../ficheros/{tabla}.json")
+        print(R)
     except Exception as e:
         print(e)
