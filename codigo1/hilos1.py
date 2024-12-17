@@ -3,7 +3,7 @@ Crear hilos, listas de hilos y problemas con join (al esperar a que
 terminen los hilos)
 """
 
-from threading import Thread
+from threading import Thread, enumerate, active_count
 from time import sleep
 from random import randint
 
@@ -28,6 +28,9 @@ if __name__ == "__main__":
         hilo = Mensajes(randint(5, 10), nombre)
         hilo.start()
         L.append(hilo)
+
+    print(enumerate())
+    print(active_count())
 
     for hilo in L:
         hilo.join()
