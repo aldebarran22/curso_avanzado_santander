@@ -64,6 +64,7 @@ def cargarBuscar(path):
 def parsearConSAX(path):
     eventos = ["start", "end"]
     categorias = set()
+    existe = False
 
     for (event, nodo) in iterparse(path, eventos):
         if event == 'start':
@@ -76,8 +77,8 @@ def parsearConSAX(path):
         if event == 'end':
             if nodo.tag == 'categoria':
                 existe = False
-                
-    return categorias
+
+    return sorted(categorias)
         
         
 
@@ -87,7 +88,8 @@ if __name__ == "__main__":
         L = bd.select()
         generarXML(L, "productos.xml")
         #cargarBuscar("productos.xml")
-        parsearConSAX("productos.xml")
+        cats = parsearConSAX("productos.xml")
+        print(cats)
 
     except Exception as e:
         print(e)
