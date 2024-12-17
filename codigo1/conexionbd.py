@@ -21,8 +21,7 @@ class Conexion:
         try:
             cur = self.con.cursor()
             cur.execute(sql)
-            cabs = tuple([t[0] for t in cur.description])
-            print(cabs)
+            cabs = tuple([t[0] for t in cur.description])            
             L = [t for t in cur.fetchall()]
             L.insert(0, cabs)
             return L
