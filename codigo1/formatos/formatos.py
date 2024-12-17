@@ -4,7 +4,7 @@ Serialización de objetos con: pickle, shelve
 """
 
 from base_datos import Producto, Categoria, BaseDatos
-from xml.etree.ElementTree import Element, SubElement, tostring, Comment, ElementTree
+from xml.etree.ElementTree import iterparse, Element, SubElement, tostring, Comment, ElementTree
 from xml.etree import ElementTree as ET
 
 def generarXML(L, path):
@@ -50,15 +50,44 @@ def cargarBuscar(path):
     #print(tostring(raiz))
 
     # Los nombres de los productos con XPath:
-    
+    #cad = ".//nombre"
+    # Los nombres de la categorias:
+    cad = ".//categoria/nombre"
+    nombres = set([nodo.text for nodo in raiz.findall(cad)])
+    print(nombres)
 
+    # Obtener los ids de las categorias:
+    cad = ".//categoria[@idcat='1']"
+    for nodo in raiz.findall(cad):
+        print(tostring(nodo))
+
+def parsearConSAX(path):
+    eventos = ["start", "end"]
+    categorias = set()
+
+    for (event, nodo) in iterparse(path, eventos):
+        if event == 'start':
+            if nodo.tag == 'categoria':
+                existe = True
+
+            if nodo.tag == 'nombre' and existe:
+                categorias.add(nodo.text)            
+
+        if event == 'end':
+            if nodo.tag == 'categoria':
+                existe = False
+                
+    return categorias
+        
+        
 
 if __name__ == "__main__":
     try:
         bd = BaseDatos("empresa3.db")
         L = bd.select()
         generarXML(L, "productos.xml")
-        cargarBuscar("productos.xml")
+        #cargarBuscar("productos.xml")
+        parsearConSAX("productos.xml")
 
     except Exception as e:
         print(e)
