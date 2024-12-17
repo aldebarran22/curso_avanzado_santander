@@ -5,7 +5,7 @@ Serialización de objetos con: pickle, shelve
 
 from base_datos import Producto, Categoria, BaseDatos
 from xml.etree.ElementTree import Element, SubElement, tostring, Comment, ElementTree
-
+from xml.etree import ElementTree as ET
 
 def generarXML(L, path):
 
@@ -27,7 +27,8 @@ def generarXML(L, path):
         nodoPrecio.text = str(round(p.precio,2))
         nodoCat = SubElement(nodoProducto, 'categoria')
         nodoCat.attrib['idcat']=str(p.cat.id)
-        nodoCat.text = p.cat.nombre
+        nodoCatNombre = SubElement(nodoCat, 'nombre')
+        nodoCatNombre.text = p.cat.nombre
         nodoExistencias = SubElement(nodoProducto, 'existencias')
         nodoExistencias.text = str(p.exis)
 
@@ -38,11 +39,26 @@ def generarXML(L, path):
     # Imprimir el árbol
     #print(tostring(raiz, encoding='unicode'))
 
+def cargarBuscar(path):
+
+    # Cargar el DOM:
+    with open(path, "rt") as fichero:
+        tree = ET.parse(fichero)
+    
+    # Recuperar el nodo raíz;
+    raiz = tree.getroot()
+    #print(tostring(raiz))
+
+    # Los nombres de los productos con XPath:
+    
+
+
 if __name__ == "__main__":
     try:
         bd = BaseDatos("empresa3.db")
         L = bd.select()
         generarXML(L, "productos.xml")
+        cargarBuscar("productos.xml")
 
     except Exception as e:
         print(e)
