@@ -2,6 +2,7 @@
 Implementación del productor-consumidor en Python
 Solución M productores-N consumidores
 """
+
 from threading import Thread, Lock, Semaphore
 from random import randint
 from time import sleep
@@ -20,17 +21,17 @@ class Productor(Thread):
         self.num_muestras = num_muestras
 
     def run(self):
-       pass
+        pass
 
 
 class Consumidor(Thread):
-    def __init__(self, buffer,num_muestras, nombre):
+    def __init__(self, buffer, num_muestras, nombre):
         Thread.__init__(self, name=nombre)
         self.buffer = buffer
         self.num_muestras = num_muestras
 
     def run(self):
-		pass
+        pass
 
 
 class TBuffer:
@@ -48,10 +49,27 @@ if __name__ == "__main__":
         print("El número tiene que estar equilibrado entre el n. de prod/con")
         exit()
 
-    # Calcular el numero de muestra por productor y consumidor:
+    # Calcular el numero de muestras por productor y consumidor:
     num_muestras_prod = num_muestras // num_productores
     num_muestras_con = num_muestras // num_consumidores
 
+    productores = []
+    consumidores = []
+
     buf = TBuffer()
 
-   
+    for i in range(num_productores):
+        prod = Productor(buf, num_muestras_prod, f"P-{i+1}")
+        prod.start()
+        productores.append(prod)
+
+    for i in range(num_consumidores):
+        con = Consumidor(buf, num_muestras_con, f"C-{i+1}")
+        con.start()
+        consumidores.append(prod)
+
+    for p in productores:
+        p.join()
+
+    for c in consumidores:
+        c.join()
