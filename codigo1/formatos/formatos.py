@@ -141,5 +141,7 @@ if __name__ == "__main__":
         L2 = deserializarPickle("productos.bin")
         print(L2[:3])
 
+        serializarShelve("objetos", *L[:3])
+
     except Exception as e:
         print(e)
