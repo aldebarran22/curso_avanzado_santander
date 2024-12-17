@@ -152,6 +152,11 @@ if __name__ == "__main__":
         print(L2[:3])
 
         serializarShelve("objetos", *L[:3])
+        obj3 = deserializarShelve("objetos", "K-3")
+        print('obj3: ', obj3)
+
+        obj4 = deserializarShelve("objetos", "K-4")
+        print('obj4: ', obj4)
 
     except Exception as e:
         print(e)
