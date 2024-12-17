@@ -4,7 +4,8 @@ Serialización de objetos con: pickle, shelve
 """
 
 from base_datos import Producto, Categoria, BaseDatos
-from xml.etree.ElementTree import Element, SubElement, tostring, Comment
+from xml.etree.ElementTree import Element, SubElement, tostring, Comment, ElementTree
+
 
 def generarXML(L, path):
 
@@ -30,16 +31,18 @@ def generarXML(L, path):
         nodoExistencias = SubElement(nodoProducto, 'existencias')
         nodoExistencias.text = str(p.exis)
 
-
+    et = ElementTree()
+    et._setroot(raiz)
+    et.write(path)
 
     # Imprimir el árbol
-    print(tostring(raiz, encoding='unicode'))
+    #print(tostring(raiz, encoding='unicode'))
 
 if __name__ == "__main__":
     try:
         bd = BaseDatos("empresa3.db")
         L = bd.select()
-        generarXML(L, "../ficheros/productos.xml")
+        generarXML(L, "productos.xml")
 
     except Exception as e:
         print(e)
