@@ -3,7 +3,7 @@ Crear varios hilos y almacenarlos en una lista.
 Uso de join()
 """
 
-from threading import Thread
+from threading import Thread, enumerate, active_count
 from random import randint
 from time import sleep
 
@@ -28,6 +28,9 @@ if __name__ == "__main__":
         hilo = Mensaje(randint(5, 10), f"H-{i+1}")
         L.append(hilo)
         hilo.start()
+
+    print(enumerate())
+    print(active_count()," hilos en total!")
 
     for hilo in L:
         hilo.join()
