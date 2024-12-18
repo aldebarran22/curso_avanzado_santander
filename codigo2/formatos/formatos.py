@@ -178,7 +178,7 @@ if __name__ == "__main__":
         serializarPickle(L, "productos.dat")
         deserializarPickle("productos.dat")
         serializarShelve("productos_shelve", L[0], L[7], L[13])
-        deserializarShelve("productos_shelve", "K-22")
+        deserializarShelve("productos_shelve", "K-2")
 
     except Exception as e:
         print(e)
