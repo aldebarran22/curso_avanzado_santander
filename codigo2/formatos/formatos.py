@@ -47,9 +47,13 @@ def exportarXML(L, path):
     nodoRaiz.set('version','1.0')
     comentario = Comment('Productos de la BD.')
     nodoRaiz.append(comentario)
+    for producto in L:
+        nodoProducto = SubElement(nodoRaiz, 'producto')
+        nodoProducto.attrib['id']=str(producto.id)
+        nodoNombre = SubElement(nodoProducto, 'nombre')
+        nodoNombre.text = producto.nombre
 
-
-    print(tostring(nodoRaiz))
+    print(tostring(nodoRaiz, encoding='unicode'))
 
 
 if __name__ == '__main__':
