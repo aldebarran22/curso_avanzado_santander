@@ -100,36 +100,38 @@ def buscarXMLDom(path):
 
 def buscarXMLSax(path):
     catEncontrada = False
-    eventos = ['start','end']
+    eventos = ["start", "end"]
     categorias = set()
     for evento, nodo in iterparse(path, eventos):
         print(evento, nodo)
 
-        if evento == 'start' and nodo.tag == 'categoria':
+        if evento == "start" and nodo.tag == "categoria":
             catEncontrada = True
 
-        if evento == 'start' and catEncontrada and nodo.tag == 'nombre':
+        if evento == "start" and catEncontrada and nodo.tag == "nombre":
             categorias.add(nodo.text)
 
-        if evento == 'end' and nodo.tag == 'categoria':
+        if evento == "end" and nodo.tag == "categoria":
             catEncontrada = False
-    
+
     print("SAX: ", categorias)
     return categorias
+
 
 def serializarPickle(obj, path):
     fich = None
     try:
         fich = open(path, "wb")
         p.dump(obj, fich, protocol=5)
-        
+
     except Exception as e:
         raise e
 
     finally:
         if fich:
             fich.close()
-        
+
+
 def deserializarPickle(path):
     fich = None
     try:
@@ -137,13 +139,22 @@ def deserializarPickle(path):
         obj = p.load(fich)
         print(obj[:3])
         return obj
-        
+
     except Exception as e:
         raise e
 
     finally:
         if fich:
             fich.close()
+
+
+def serializarShelve(path, *objetos):
+    Shelf = s.open(path)
+    for i, obj in enumerate(objetos):
+        clave = f"K-{i+1}"
+        Shelf[clave] = obj
+    Shelf.close()
+
 
 if __name__ == "__main__":
     try:
