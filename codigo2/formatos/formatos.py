@@ -11,6 +11,8 @@ from base_datos import Categoria, Producto, BaseDatos
 import json
 from xml.etree.ElementTree import Element, SubElement, Comment, tostring, iterparse
 from xml.etree import ElementTree
+import pickle as p
+import shelve as s
 
 
 def exportarJson(L, path):
@@ -114,6 +116,19 @@ def buscarXMLSax(path):
     
     print("SAX: ", categorias)
     return categorias
+
+def serializarPickle(obj, path):
+    fich = None
+    try:
+        fich = open(path, "wb")
+        p.dump(obj, fich, protocol=5)
+        
+    except Exception as e:
+        raise e
+
+    finally:
+        if fich:
+            fich.close()
         
 
 if __name__ == "__main__":
@@ -125,6 +140,7 @@ if __name__ == "__main__":
         exportarXML(L, "productos.xml")
         buscarXMLDom("productos.xml")
         buscarXMLSax("productos.xml")
+        serializarPickle(L, "productos5.dat")
 
     except Exception as e:
         print(e)
