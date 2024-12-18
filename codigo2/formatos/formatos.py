@@ -10,6 +10,7 @@ Serialización:
 from base_datos import Categoria, Producto, BaseDatos
 import json
 from xml.etree.ElementTree import Element, SubElement, Comment, tostring
+from xml.etree import ElementTree
 
 def exportarJson(L, path):
     """Exportar todos los productos con la categoría a un fichero json"""
@@ -58,8 +59,14 @@ def exportarXML(L, path):
         nodoNombreCat = SubElement(nodoCat, 'nombre')
         nodoNombreCat.attrib['idcat'] = str(producto.cat.id)
         nodoNombreCat.text = producto.cat.nombre
+        nodoExistencias = SubElement(nodoProducto, 'existencias')
+        nodoExistencias.text = str(producto.exis)
 
-    print(tostring(nodoRaiz, encoding='unicode'))
+    #print(tostring(nodoRaiz, encoding='unicode'))
+    tree = ElementTree.ElementTree()
+    tree._setroot(nodoRaiz)
+    tree.write(path)
+    print(f'Se ha generado el fichero: {path}')
 
 
 if __name__ == '__main__':
