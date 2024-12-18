@@ -65,7 +65,7 @@ class Consumidor(Thread):
 
             # Consumir el item
             print(self.name, "CONSUME ->", item)
-            sleep(3, 4)
+            sleep(randint(3, 4))
 
 
 class TBuffer:
