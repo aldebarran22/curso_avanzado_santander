@@ -69,6 +69,29 @@ def exportarXML(L, path):
     print(f'Se ha generado el fichero: {path}')
 
 
+def buscarXMLDom(path):
+    with open(path,'rt') as f:
+        tree = ElementTree.parse(f)
+    raiz = tree.getroot()
+    print('num nodo: ', len([n for n in raiz]))
+
+    # Todos los valores de la etiqueta nombre a cualquier nivel del fichero:
+    xpath = ".//nombre"
+    L = [nodo.text for nodo in raiz.findall(xpath)]
+    print(L)
+
+    # Solo nombres de los productos:
+    xpath = ".//producto/nombre"
+    L = [nodo.text for nodo in raiz.findall(xpath)]
+    print(L)
+
+    # Solo nombres de las categorias
+    xpath = ".//categoria/nombre"
+    c = {nodo.text for nodo in raiz.findall(xpath)}
+    print(sorted(c, key=lambda cad : cad.capitalize()))
+
+       
+
 if __name__ == '__main__':
     try:
         bd = BaseDatos("empresa3.db")
@@ -76,6 +99,7 @@ if __name__ == '__main__':
         exportarJson(L, "productos.json")
         importarJson("productos.json")
         exportarXML(L, "productos.xml")
+        buscarXMLDom("productos.xml")
 
     except Exception as e:
         print(e)
