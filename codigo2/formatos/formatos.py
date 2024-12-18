@@ -130,6 +130,20 @@ def serializarPickle(obj, path):
         if fich:
             fich.close()
         
+def deserializarPickle(path):
+    fich = None
+    try:
+        fich = open(path, "rb")
+        obj = p.load(fich)
+        print(obj[:3])
+        return obj
+        
+    except Exception as e:
+        raise e
+
+    finally:
+        if fich:
+            fich.close()
 
 if __name__ == "__main__":
     try:
@@ -140,7 +154,8 @@ if __name__ == "__main__":
         exportarXML(L, "productos.xml")
         buscarXMLDom("productos.xml")
         buscarXMLSax("productos.xml")
-        serializarPickle(L, "productos5.dat")
+        serializarPickle(L, "productos.dat")
+        deserializarPickle("productos.dat")
 
     except Exception as e:
         print(e)
