@@ -9,6 +9,7 @@ Serialización:
 
 from base_datos import Categoria, Producto, BaseDatos
 import json
+from xml.etree.ElementTree import Element, SubElement, Comment, tostring
 
 def exportarJson(L, path):
     """Exportar todos los productos con la categoría a un fichero json"""
@@ -41,12 +42,23 @@ def importarJson(path):
     finally:
         if fich:fich.close()
 
+def exportarXML(L, path):
+    nodoRaiz = Element("productos")
+    nodoRaiz.set('version','1.0')
+    comentario = Comment('Productos de la BD.')
+    nodoRaiz.append(comentario)
+
+
+    print(tostring(nodoRaiz))
+
+
 if __name__ == '__main__':
     try:
         bd = BaseDatos("empresa3.db")
         L = bd.select()
         exportarJson(L, "productos.json")
         importarJson("productos.json")
+        exportarXML(L, "productos.xml")
 
     except Exception as e:
         print(e)
