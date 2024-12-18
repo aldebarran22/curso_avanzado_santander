@@ -90,7 +90,7 @@ class Producto:
         return Producto(d["id"], d["nombre"], cat, d["precio"], d["exis"])
 
     def to_json(self):
-        d = self.__dict__
+        d = self.__dict__.copy()
         d["cat"] = self.cat.__dict__
         return d
 

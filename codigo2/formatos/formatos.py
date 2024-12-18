@@ -52,6 +52,12 @@ def exportarXML(L, path):
         nodoProducto.attrib['id']=str(producto.id)
         nodoNombre = SubElement(nodoProducto, 'nombre')
         nodoNombre.text = producto.nombre
+        nodoPrecio = SubElement(nodoProducto, "precio")
+        nodoPrecio.text = str(round(producto.precio, 2))
+        nodoCat = SubElement(nodoProducto, 'categoria')
+        nodoNombreCat = SubElement(nodoCat, 'nombre')
+        nodoNombreCat.attrib['idcat'] = str(producto.cat.id)
+        nodoNombreCat.text = producto.cat.nombre
 
     print(tostring(nodoRaiz, encoding='unicode'))
 
