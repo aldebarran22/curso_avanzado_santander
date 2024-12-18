@@ -22,15 +22,23 @@ class Productor(Thread):
 
     def run(self):
         for i in range(self.num_muestras):
-            pass
 
             # Generar un item:
+            item = randint(1, 10)
+            print(self.name, "GENERA ->", item)
 
             # Comprobar si tienen hueco para colocar el item en el buffer:
+            self.buffer.sem_huecos.acquire()
 
             # Escribir en exclusión mutua el item en el buffer:
+            with self.buffer.mutex:
+                self.buffer.buffer[self.buffer.ind_p] = item
+                print(self.name, self.buffer.buffer)
+                self.buffer.ind_p = (self.buffer.ind_p + 1) % tam_buffer
 
             # Avisar que hay un nuevo item:
+            self.buffer.sem_item.release()
+            sleep(randint(2, 4))
 
 
 class Consumidor(Thread):
@@ -80,8 +88,10 @@ if __name__ == "__main__":
         productores.append(prod)
         prod.start()
 
+    """
     consumidores = []
     for i in range(num_consumidores):
         con = Consumidor(buf, num_muestras_con, f"C-{i+1}")
         consumidores.append(con)
         con.start()
+    """
