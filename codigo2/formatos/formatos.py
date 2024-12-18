@@ -18,7 +18,23 @@ def exportarJson(L, path):
         R = [objeto.to_json() for objeto in L]
         json.dump(R, fich, indent=4)
         print(f'Se ha generado el fichero: {path}')
-        
+
+    except Exception as e:
+        raise e
+    
+    finally:
+        if fich:fich.close()
+
+
+def importarJson(path):
+    fich = None
+    try:
+        fich = open(path, 'r')
+        R = json.load(fich)
+        L = [Producto.create(d) for d in R]
+        print(L[:3])
+        return L
+
     except Exception as e:
         raise e
     
@@ -30,6 +46,7 @@ if __name__ == '__main__':
         bd = BaseDatos("empresa3.db")
         L = bd.select()
         exportarJson(L, "productos.json")
+        importarJson("productos.json")
 
     except Exception as e:
         print(e)

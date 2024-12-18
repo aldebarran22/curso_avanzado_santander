@@ -44,7 +44,8 @@ class Categoria:
     @staticmethod
     def create(d):
         """Crear la categoria a partir de un dict"""
-        return Categoria(d["id"], d["nombre"])
+        #return Categoria(d["id"], d["nombre"])
+        return Categoria(**d)
 
     @staticmethod
     def getNumInstancias():
