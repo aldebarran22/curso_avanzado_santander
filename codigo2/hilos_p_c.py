@@ -96,10 +96,8 @@ if __name__ == "__main__":
         productores.append(prod)
         prod.start()
 
-    """
     consumidores = []
     for i in range(num_consumidores):
         con = Consumidor(buf, num_muestras_con, f"C-{i+1}")
         consumidores.append(con)
         con.start()
-    """
