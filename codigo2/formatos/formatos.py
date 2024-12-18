@@ -97,9 +97,24 @@ def buscarXMLDom(path):
 
 
 def buscarXMLSax(path):
+    catEncontrada = False
     eventos = ['start','end']
+    categorias = set()
     for evento, nodo in iterparse(path, eventos):
         print(evento, nodo)
+
+        if evento == 'start' and nodo.tag == 'categoria':
+            catEncontrada = True
+
+        if evento == 'start' and catEncontrada and nodo.tag == 'nombre':
+            categorias.add(nodo.text)
+
+        if evento == 'end' and nodo.tag == 'categoria':
+            catEncontrada = False
+    
+    print("SAX: ", categorias)
+    return categorias
+        
 
 if __name__ == "__main__":
     try:
