@@ -21,7 +21,16 @@ class Productor(Thread):
         self.num_muestras = num_muestras
 
     def run(self):
-        pass
+        for i in range(self.num_muestras):
+            pass
+
+            # Generar un item:
+
+            # Comprobar si tienen hueco para colocar el item en el buffer:
+
+            # Escribir en exclusión mutua el item en el buffer:
+
+            # Avisar que hay un nuevo item:
 
 
 class Consumidor(Thread):
@@ -31,7 +40,16 @@ class Consumidor(Thread):
         self.num_muestras = num_muestras
 
     def run(self):
-        pass
+        for i in range(self.num_muestras):
+            pass
+
+            # Comprobar si hay items en el buffer:
+
+            # Recoger un item del buffer en exclusión mutua:
+
+            # Avisar que hay un nuevo hueco
+
+            # Consumir el item
 
 
 class TBuffer:
@@ -62,10 +80,8 @@ if __name__ == "__main__":
         productores.append(prod)
         prod.start()
 
-
     consumidores = []
     for i in range(num_consumidores):
         con = Consumidor(buf, num_muestras_con, f"C-{i+1}")
         consumidores.append(con)
         con.start()
-
