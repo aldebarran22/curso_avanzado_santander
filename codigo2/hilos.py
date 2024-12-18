@@ -28,3 +28,8 @@ if __name__ == "__main__":
         hilo = Mensaje(randint(5, 10), f"H-{i+1}")
         L.append(hilo)
         hilo.start()
+
+    for hilo in L:
+        hilo.join()
+
+    print('main termina!')
