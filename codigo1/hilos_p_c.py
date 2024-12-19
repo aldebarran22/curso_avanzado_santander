@@ -59,7 +59,7 @@ class Consumidor(Thread):
                 numero = self.buffer.buffer[self.buffer.ind_c]
                 self.buffer.buffer[self.buffer.ind_c] = -1
                 print(self.name, self.buffer.buffer)
-                self.buffer.ind_c = (self.buffer.ind_c + 1) % num_muestras
+                self.buffer.ind_c = (self.buffer.ind_c + 1) % tam_buffer
 
             # Avisar que hay un nuevo hueco:
             self.buffer.sem_huecos.release()
