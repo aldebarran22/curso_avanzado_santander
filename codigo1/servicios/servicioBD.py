@@ -47,7 +47,6 @@ class RecursoProducto(Resource):
         except Exception as e:
             abort(404, menssage=str(e))
 
-
     def post(self):
         try:
             bd = BaseDatos(path)
@@ -55,8 +54,8 @@ class RecursoProducto(Resource):
 
             # Tenemos que crear un objeto producto a partir del dicc en json
             producto = Producto.create(args)
-            n = bd.create(producto) # Crearlo en la BD.
-            return {"create":n}
+            n = bd.create(producto)  # Crearlo en la BD.
+            return {"create": n}
 
         except Exception as e:
             abort(404, message=str(e))
@@ -65,15 +64,17 @@ class RecursoProducto(Resource):
         try:
             bd = BaseDatos(path)
             args = request.json
+            print("args: ", args)
 
             # Tenemos que crear un objeto producto a partir del dicc en json
             producto = Producto.create(args)
-            n = bd.update(producto) # Actualizarlo en la BD.
-            return {"update":n}
+            print("producto: ", producto)
+
+            n = bd.update(producto)  # Actualizarlo en la BD.
+            return {"update": n}
 
         except Exception as e:
             abort(404, message=str(e))
-
 
 
 api.add_resource(RecursoProducto, "/productos", "/productos/", "/productos/<id>")

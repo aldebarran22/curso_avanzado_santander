@@ -49,21 +49,33 @@ def testPutProductos():
 
 def testPutProductos2(id):
     """Subir el precio un 10%"""
-    url = f"http://localhost:5000/productos/{id}"
-    resp = get(url)
-    dicc = resp.json()
-    print(dicc)
-    producto = Producto.create(dicc)
-    producto.precio *= 1.1
-        
-    dicc = producto.to_json()
-    cabs = {"Content-type": "application/json"}
-    resp = put(url, data=json.dumps(dicc), headers=cabs)
-    print(resp.json())
+    try:
+        url = f"http://localhost:5000/productos/{id}"
+        resp = get(url)
+        dicc = resp.json()
+        print("Descarga:",dicc)
+        producto = Producto.create(dicc)
+        producto.precio *= 1.1
+        print("Objeto:",producto)
+            
+        dicc2 = producto.to_json()
+        print("Dicc a enviar:",dicc2)
+
+        # Si no cambiamos la url al llegar al método put recibe el parámetro id
+        # de la petición GET anterior. Hay que quitarlo!!!
+        url = "http://localhost:5000/productos"
+        cabs = {"Content-type": "application/json"}
+        resp = put(url, data=json.dumps(dicc2), headers=cabs)
+        print(resp.json())
+
+    except Exception as e:
+        print(e)
+
 
 if __name__ == "__main__":
     # testHelloWorld()
     # testGetProductos()
     # testDeleteProductos(24)
     # testPostProductos()
-    testPutProductos()
+    # testPutProductos()
+    testPutProductos2(150)
