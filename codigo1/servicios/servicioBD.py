@@ -13,17 +13,23 @@ path = "empresa3.db"
 
 class RecursoProducto(Resource):
 
-    def get(self, id):
+    def get(self, id=None):
         try:
             bd = BaseDatos(path)
-            producto = bd.read(id)
-            return producto.to_json()
+            if id is None:
+                # Listar todos los productos:
+                L = bd.select()
+                return [p.to_json() for p in L]
+            
+            else:
+                producto = bd.read(id)
+                return producto.to_json()
 
         except Exception as e:
             abort(404, message=str(e))
 
 
-api.add_resource(RecursoProducto, "productos/<int:id>")
+api.add_resource(RecursoProducto, "/productos","/productos/<id>")
 
 if __name__ == "__main__":
     app.run(debug=True)
