@@ -4,6 +4,8 @@ requests.
 """
 
 from requests import get
+import json
+
 
 def testHelloWorld():
     url = "http://localhost:5000"
@@ -11,5 +13,15 @@ def testHelloWorld():
     print(resp.json())
 
 
-if __name__ == '__main__':
-    testHelloWorld()
+def testGetProductos():
+    url = "http://localhost:5000/productos"
+    resp = get(url)
+    fich = open("productos.json", "w")
+    json.dump(resp.json(), fich, indent=4)
+    fich.close()
+    print("Se ha generado el fichero de productos...")
+
+
+if __name__ == "__main__":
+    # testHelloWorld()
+    testGetProductos()
