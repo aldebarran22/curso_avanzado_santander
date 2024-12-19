@@ -62,7 +62,7 @@ if __name__ == "__main__":
     # mensajes1()
     # mensajes2()
     # mensajes3()
-    mensajes4("logs","semanal")
+    mensajes4("../ficheros","semanal")
 
 
     """
