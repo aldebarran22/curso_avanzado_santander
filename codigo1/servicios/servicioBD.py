@@ -20,13 +20,13 @@ class RecursoProducto(Resource):
                 # Listar todos los productos:
                 L = bd.select()
                 return [p.to_json() for p in L]
-            
+
             elif id.isnumeric():
                 # Comprobar si es número entero, si lo es: cargar un producto por id
-                id = int(id) 
+                id = int(id)
                 producto = bd.read(id)
                 return producto.to_json()
-            
+
             else:
                 # Lo tomamos como si fuera el nombre de la categoria:
                 L = bd.select(id)
@@ -35,8 +35,20 @@ class RecursoProducto(Resource):
         except Exception as e:
             abort(404, message=str(e))
 
+    def delete(self, id):
+        try:
+            bd = BaseDatos(path)
+            n = bd.delete(id)
+            if n > 0:
+                return {"delete": n}
+            else:
+                raise ValueError(f"No se encuentra el producto con id:{id}")
 
-api.add_resource(RecursoProducto, "/productos","/productos/","/productos/<id>")
+        except Exception as e:
+            abort(404, menssage=str(e))
+
+
+api.add_resource(RecursoProducto, "/productos", "/productos/", "/productos/<id>")
 
 if __name__ == "__main__":
     app.run(debug=True)
