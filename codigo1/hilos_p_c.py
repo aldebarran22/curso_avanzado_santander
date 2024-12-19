@@ -32,11 +32,14 @@ class Productor(Thread):
             # Escribir el buffer el item:
             with self.buffer.mutex:
                 self.buffer.buffer[self.buffer.ind_p] = numero
-                print(self.buffer.buffer)
+                print(self.name, self.buffer.buffer)
                 self.buffer.ind_p = (self.buffer.ind_p + 1) % tam_buffer
 
             # Avisar que hay un nuevo item:
             self.buffer.sem_items.release()
+
+            # Retardo:
+            sleep(randint(3,5))
 
 
 class Consumidor(Thread):
@@ -53,16 +56,16 @@ class Consumidor(Thread):
 
             # Recuperar un numero del buffer:
             with self.buffer.mutex:
-
                 numero = self.buffer.buffer[self.buffer.ind_c]
                 self.buffer.buffer[self.buffer.ind_c] = -1
-                print(self.buffer.buffer)
+                print(self.name, self.buffer.buffer)
                 self.buffer.ind_c = (self.buffer.ind_c + 1) % num_muestras
 
             # Avisar que hay un nuevo hueco:
             self.buffer.sem_huecos.release()
 
             print(self.name, "CONSUME -> ", numero)
+            sleep(randint(4,6))
 
 
 class TBuffer:
