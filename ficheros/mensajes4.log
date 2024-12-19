@@ -1,0 +1,35 @@
+19-Dec-2024 13:19:39	DEBUG	mensaje debug
+19-Dec-2024 13:19:39	INFO	mensaje info
+19-Dec-2024 13:19:39	WARNING	mensaje warning
+19-Dec-2024 13:19:39	ERROR	mensaje error
+19-Dec-2024 13:19:39	CRITICAL	mensaje critical
+19-Dec-2024 13:19:44	DEBUG	mensaje debug
+19-Dec-2024 13:19:44	INFO	mensaje info
+19-Dec-2024 13:19:44	WARNING	mensaje warning
+19-Dec-2024 13:19:44	ERROR	mensaje error
+19-Dec-2024 13:19:44	CRITICAL	mensaje critical
+19-Dec-2024 13:22:09	DEBUG	mensaje debug
+19-Dec-2024 13:22:09	INFO	mensaje info
+19-Dec-2024 13:22:09	WARNING	mensaje warning
+19-Dec-2024 13:22:09	ERROR	mensaje error
+19-Dec-2024 13:22:09	CRITICAL	mensaje critical
+19-Dec-2024 13:23:17 Thursday	DEBUG	mensaje debug
+19-Dec-2024 13:23:17 Thursday	INFO	mensaje info
+19-Dec-2024 13:23:17 Thursday	WARNING	mensaje warning
+19-Dec-2024 13:23:17 Thursday	ERROR	mensaje error
+19-Dec-2024 13:23:17 Thursday	CRITICAL	mensaje critical
+19-Dec-2024 13:24:09 Thursday	DEBUG	mensaje debug	root
+19-Dec-2024 13:24:09 Thursday	INFO	mensaje info	root
+19-Dec-2024 13:24:09 Thursday	WARNING	mensaje warning	root
+19-Dec-2024 13:24:09 Thursday	ERROR	mensaje error	root
+19-Dec-2024 13:24:09 Thursday	CRITICAL	mensaje critical	root
+19-Dec-2024 13:24:10 Thursday	DEBUG	mensaje debug	root
+19-Dec-2024 13:24:10 Thursday	INFO	mensaje info	root
+19-Dec-2024 13:24:10 Thursday	WARNING	mensaje warning	root
+19-Dec-2024 13:24:10 Thursday	ERROR	mensaje error	root
+19-Dec-2024 13:24:10 Thursday	CRITICAL	mensaje critical	root
+19-Dec-2024 13:24:10 Thursday	DEBUG	mensaje debug	root
+19-Dec-2024 13:24:10 Thursday	INFO	mensaje info	root
+19-Dec-2024 13:24:10 Thursday	WARNING	mensaje warning	root
+19-Dec-2024 13:24:10 Thursday	ERROR	mensaje error	root
+19-Dec-2024 13:24:10 Thursday	CRITICAL	mensaje critical	root

@@ -3,6 +3,8 @@ Pruebas con la librería de logging
 """
 
 import logging
+import sys
+from datetime import datetime
 
 
 def mensajes1():
@@ -34,20 +36,37 @@ def mensajes3():
     logging.error("mensaje error")
     logging.critical("mensaje critical")
 
+def getNombreFichero(dir, prefijo):
+    dt = datetime.now()
+    fecha = dt.strftime("%Y_%m_%d_%H_%M_%S")
+    return f"{dir}/{prefijo}_{fecha}.log"
 
-def mensajes4():
+def mensajes4(dir, prefijo):
+    path = getNombreFichero(dir, prefijo)
     """Configuración a un fichero y volcando la fecha/hora, el mensaje y el nivel"""
-    logging.basicConfig("../ficheros/mensajes4.log", 
-                        format="%(asctime)s\t%(levelname)s\t%(message)s",
-                        datefmt="%d-%b-%Y %H:%M:%S", level=logging.DEBUG)
+    logging.basicConfig(filename=path, 
+                        format="%(asctime)s\t%(levelname)s\t%(message)s\t%(name)s",
+                        datefmt="%d-%b-%Y %H:%M:%S %A", level=logging.DEBUG)
     logging.debug("mensaje debug")
     logging.info("mensaje info")
     logging.warning("mensaje warning")
     logging.error("mensaje error")
     logging.critical("mensaje critical")
 
+def redireccion(texto, file=sys.stdout):
+    print(texto, file=file)
+
+
+
 if __name__ == "__main__":
     # mensajes1()
     # mensajes2()
     # mensajes3()
-    mensajes4()
+    mensajes4("logs","semanal")
+
+
+    """
+    fich = open("../ficheros/redireccion.txt","w")
+    redireccion("hola que tal estas", fich)
+    fich.close()
+    """
