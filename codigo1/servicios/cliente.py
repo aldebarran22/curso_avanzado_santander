@@ -3,7 +3,7 @@ Implementación de un cliente Rest con la librería
 requests.
 """
 
-from requests import get
+from requests import get, delete
 import json
 
 
@@ -22,6 +22,13 @@ def testGetProductos():
     print("Se ha generado el fichero de productos...")
 
 
+def testDeleteProductos(id):
+    url = f"http://localhost:5000/productos/{id}"
+    resp = delete(url)
+    print(resp.json())
+
+
 if __name__ == "__main__":
     # testHelloWorld()
-    testGetProductos()
+    # testGetProductos()
+    testDeleteProductos(24)
