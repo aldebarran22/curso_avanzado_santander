@@ -3,7 +3,7 @@ Servicio de Rest con las operaciones CRUD a la BD.
 """
 
 from flask import Flask
-from flask_restful import Resource, Api, abort
+from flask_restful import Resource, Api, abort, request
 from base_datos import BaseDatos, Categoria, Producto
 
 app = Flask(__name__)
@@ -46,6 +46,20 @@ class RecursoProducto(Resource):
 
         except Exception as e:
             abort(404, menssage=str(e))
+
+
+    def post(self):
+        try:
+            bd = BaseDatos(path)
+            args = request.json
+
+            # Tenemos que crear un objeto producto a partir del dicc en json
+            producto = Producto.create(args)
+            n = bd.create(producto) # Crearlo en la BD.
+            return {"create":n}
+
+        except Exception as e:
+            abort(404, message=str(e))
 
 
 api.add_resource(RecursoProducto, "/productos", "/productos/", "/productos/<id>")
