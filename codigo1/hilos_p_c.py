@@ -11,7 +11,7 @@ num_muestras = 10
 tam_buffer = 5
 
 num_productores = 2
-num_consumidores = 1
+num_consumidores = 2
 
 
 class Productor(Thread):
