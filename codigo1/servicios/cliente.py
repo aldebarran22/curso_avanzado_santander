@@ -37,10 +37,33 @@ def testPostProductos():
     cabs = {"Content-type": "application/json"}
     resp = post(url, data=json.dumps(dicc), headers=cabs)
     print(resp.json())
-     
+
+def testPutProductos():
+    url = "http://localhost:5000/productos"
+    # Crear un objeto producto:
+    modificado = Producto(150, "Red Bull III", Categoria(1), 2.05, 150)
+    dicc = modificado.to_json()
+    cabs = {"Content-type": "application/json"}
+    resp = put(url, data=json.dumps(dicc), headers=cabs)
+    print(resp.json())
+
+def testPutProductos2(id):
+    """Subir el precio un 10%"""
+    url = f"http://localhost:5000/productos/{id}"
+    resp = get(url)
+    dicc = resp.json()
+    print(dicc)
+    producto = Producto.create(dicc)
+    producto.precio *= 1.1
+        
+    dicc = producto.to_json()
+    cabs = {"Content-type": "application/json"}
+    resp = put(url, data=json.dumps(dicc), headers=cabs)
+    print(resp.json())
 
 if __name__ == "__main__":
     # testHelloWorld()
     # testGetProductos()
     # testDeleteProductos(24)
-    testPostProductos()
+    # testPostProductos()
+    testPutProductos()

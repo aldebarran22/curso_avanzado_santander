@@ -61,6 +61,20 @@ class RecursoProducto(Resource):
         except Exception as e:
             abort(404, message=str(e))
 
+    def put(self):
+        try:
+            bd = BaseDatos(path)
+            args = request.json
+
+            # Tenemos que crear un objeto producto a partir del dicc en json
+            producto = Producto.create(args)
+            n = bd.update(producto) # Actualizarlo en la BD.
+            return {"update":n}
+
+        except Exception as e:
+            abort(404, message=str(e))
+
+
 
 api.add_resource(RecursoProducto, "/productos", "/productos/", "/productos/<id>")
 
