@@ -27,9 +27,15 @@ class RecursoProducto(Resource):
                 L = bd.select()
                 return [p.to_json() for p in L]
             
-            else:
+            elif id.isnumeric():
+                # Localizar un solo producto por clave primaria
                 prod = bd.read(id)
                 return prod.to_json()
+            
+            else:
+                # Listar productos de una categoría
+                L = bd.select(id)
+                return [p.to_json() for p in L]
 
         except Exception as e:
             abort(404, message=str(e))
