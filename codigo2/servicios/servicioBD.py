@@ -8,7 +8,7 @@ CRUD sobre un producto:
 """
 
 from flask import Flask
-from flask_restful import Resource, Api, abort
+from flask_restful import Resource, Api, abort, request
 from base_datos import Categoria, Producto, BaseDatos
 
 app = Flask(__name__)
@@ -17,6 +17,26 @@ path = "empresa3.db"
 
 
 class RecursoProducto(Resource):
+
+    def post(self):
+        try:
+            # Abrir la base de datos
+            bd = BaseDatos(path)
+
+            # Recuperar el json que viene del cliente:
+            dicc = request.json
+
+            # Convertir el diccionario en un objeto Producto:
+            nuevo = Producto.create(dicc)
+
+            # Grabar el producto en la BD:
+            n = bd.create(nuevo)
+
+            return {"create":n}
+        
+        except Exception as e:
+            abort(500, message=str(e))
+    
 
     def delete(self, id):
         try:
@@ -30,7 +50,7 @@ class RecursoProducto(Resource):
             return {"delete":n}
         
         except Exception as e:
-            abort(500, message=str(e))
+            abort(404, message=str(e))
 
 
     def get(self, id=None):
