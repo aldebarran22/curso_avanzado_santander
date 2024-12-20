@@ -49,6 +49,9 @@ class FachadaDLL:
 
     def suma(self, a, b):
         return self.__dll.suma(c_int(a), c_int(b))
+    
+    def helloWorld(self):
+        self.__dll.HelloWorld()
         
 
 def testFachada():
@@ -70,6 +73,7 @@ def testFachada():
 def testFachadaDLL():
     dll = FachadaDLL("./funciones.dll")
     print("sumar: ", dll.suma(12, 55))
+    dll.helloWorld()
 
 if __name__ == '__main__':
    # testFachada()
