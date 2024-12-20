@@ -25,6 +25,7 @@ class RecursoProducto(Resource):
 
             # Recuperar el json que viene del cliente:
             dicc = request.json
+            print('Recibimos:', dicc)
 
             # Convertir el diccionario en un objeto Producto:
             nuevo = Producto.create(dicc)
