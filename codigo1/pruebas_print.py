@@ -9,4 +9,7 @@ cabs = tuple(L[0].keys())
 for d in L:
     t = tuple(d.values())
     print("%-15s\t%2d\t%.2f" % t)
+
+
+
    
