@@ -2,7 +2,7 @@
 Implementación de un Servicio SOAP con la librería pysimplesoap
 """
 
-from pysimplesoap import SoapDispatcher, SOAPHandler
+from pysimplesoap.server import SoapDispatcher, SOAPHandler
 from http.server import HTTPServer
 
 
