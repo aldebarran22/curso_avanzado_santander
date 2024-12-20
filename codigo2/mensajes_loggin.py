@@ -6,7 +6,11 @@ import logging
 
 
 def prueba1():
-    pass
+    logging.debug('mensaje de debug')
+    logging.info('mensaje de info')
+    logging.warning('mensaje de warning')
+    logging.error('mensaje de error')
+    logging.critical('mensaje de critical')
 
 
 if __name__ == "__main__":
