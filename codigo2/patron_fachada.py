@@ -45,6 +45,7 @@ class FachadaDLL:
     def __init__(self, path):
         self.path = path
         self.__dll = cdll.LoadLibrary(path)
+        print(f'DLL {path} cargada ...')
         
 
 def testFachada():
@@ -64,7 +65,7 @@ def testFachada():
 
 
 def testFachadaDLL():
-    dll = FachadaDLL("funciones.dll")
+    dll = FachadaDLL("./funciones.dll")
 
 if __name__ == '__main__':
    # testFachada()
