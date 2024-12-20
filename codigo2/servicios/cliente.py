@@ -51,6 +51,27 @@ def testProductosPost():
     resp = requests.post(url, data=datos, headers=cabs)
     print(resp.json())
 
+def testProductosPut(id, porc = 0.15):
+    # Recuperar el producto que vamos a modificar:
+    url = f"http://localhost:5000/productos/{id}"
+
+    # La petición Get:
+    resp = requests.get(url)
+    producto = Producto.create(resp.json())
+    print(producto)
+
+    # Modificar el precio del producto:
+    producto.precio *= (1+porc)
+
+    # Publicar de nuevo el producto -> Put
+    url = "http://localhost:5000/productos"
+
+    # Convetir de nuevo el producto a json:
+    dicc = producto.to_json()
+    datos = json.dumps(dicc)
+    cabs = {"Content-type": "application/json"}
+    resp = requests.put(url, data=datos, headers=cabs)
+    print(resp.json())    
 
 if __name__ == "__main__":
     # testHelloWorld()
