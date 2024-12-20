@@ -4,6 +4,7 @@ Implementación de un cliente de Rest con la librería requests
 
 import requests
 import json
+from base_datos import Producto, Categoria
 
 
 def testHelloWorld():
@@ -32,9 +33,22 @@ def testProductosGetCategoria(categoria):
     resp = requests.get(url)
     print(resp.json())
 
+
 def testProductosDeleteId(id):
     url = f"http://localhost:5000/productos/{id}"
     resp = requests.delete(url)
+    print(resp.json())
+
+
+def testProductosPost():
+    url = "http://localhost:5000/productos"
+
+    producto = Producto(200, "Café", Categoria(1), 1.45, 200)
+    dicc = producto.to_json()
+    datos = json.dumps(dicc)
+    cabs = {"Content-type": "application/json"}
+
+    resp = requests.post(url, data=datos, headers=cabs)
     print(resp.json())
 
 
@@ -43,4 +57,5 @@ if __name__ == "__main__":
     # testProductosGet()
     # testProductosGetId(1)
     # testProductosGetCategoria("bebidas")
-    testProductosDeleteId(26)
+    # testProductosDeleteId(26)
+    testProductosPost()
