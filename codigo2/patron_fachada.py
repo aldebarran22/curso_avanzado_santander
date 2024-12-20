@@ -17,9 +17,24 @@ class Fachada:
     # El tipo que devuelve:
     __strchr.restype = c_char_p
 
+    # La función de strstr de C, busca cadenas dentro de cadenas:
+    __strstr = __libc.strstr
+    # El tipo que devuelve:
+    __strstr.restype = c_char_p
+
+
+
     @staticmethod
     def strchr(cadena, letra):
         resul = Fachada.__strchr(cadena.encode('utf8'), ord(letra))
+        if resul:
+            return resul.decode('utf8')
+        else:
+            return None
+        
+    @staticmethod
+    def strstr(cadena, subcadena):
+        resul = Fachada.__strstr(cadena.encode('utf8'), subcadena.encode('utf8'))
         if resul:
             return resul.decode('utf8')
         else:
@@ -33,3 +48,10 @@ if __name__ == '__main__':
         print(resul)
     else:
         print('No existe la letra')
+
+    
+    resul = Fachada.strstr(cad, 'Que')
+    if resul:
+        print(resul)
+    else:
+        print('No existe la palabra')
