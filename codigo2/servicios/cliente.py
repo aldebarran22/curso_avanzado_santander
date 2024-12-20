@@ -21,6 +21,13 @@ def testProductosGet():
     print("Se ha descargado el fichero: productos.json")
 
 
+def testProductosGetId(id):
+    url = f"http://localhost:5000/productos/{id}"
+    resp = requests.get(url)
+    print(resp.json())
+
 if __name__ == "__main__":
     #testHelloWorld()
-    testProductosGet()
+    #testProductosGet()
+    testProductosGetId(1)
+
