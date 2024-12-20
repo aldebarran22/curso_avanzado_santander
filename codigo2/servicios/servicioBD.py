@@ -18,6 +18,27 @@ path = "empresa3.db"
 
 class RecursoProducto(Resource):
 
+    def put(self):
+        try:
+            # Abrir la base de datos
+            bd = BaseDatos(path)
+
+            # Recuperar el json que viene del cliente:
+            dicc = request.json
+            print('Recibimos:', dicc)
+
+            # Convertir el diccionario en un objeto Producto:
+            nuevo = Producto.create(dicc)
+
+            # Grabar el producto en la BD:
+            n = bd.update(nuevo)
+
+            return {"update":n}
+        
+        except Exception as e:
+            abort(500, message=str(e))
+
+
     def post(self):
         try:
             # Abrir la base de datos

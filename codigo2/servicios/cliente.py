@@ -66,7 +66,7 @@ def testProductosPut(id, porc = 0.15):
     # Publicar de nuevo el producto -> Put
     url = "http://localhost:5000/productos"
 
-    # Convetir de nuevo el producto a json:
+    # Convertir de nuevo el producto a json:
     dicc = producto.to_json()
     datos = json.dumps(dicc)
     cabs = {"Content-type": "application/json"}
