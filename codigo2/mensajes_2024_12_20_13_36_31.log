@@ -1,0 +1,5 @@
+2024-12-20 13:36:31,228 DEBUG root mensaje de debug
+2024-12-20 13:36:31,229 INFO root mensaje de info
+2024-12-20 13:36:31,229 WARNING root mensaje de warning
+2024-12-20 13:36:31,229 ERROR root mensaje de error
+2024-12-20 13:36:31,229 CRITICAL root mensaje de critical

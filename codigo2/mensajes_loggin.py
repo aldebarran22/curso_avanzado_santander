@@ -18,7 +18,9 @@ def getFileName(directorio='.', prefijo='mensajes'):
     return f"{directorio}/{prefijo}_{cad_fecha}.log"
 
 def prueba2():
-    logging.basicConfig(filename=getFileName(), level=logging.DEBUG)
+    logging.basicConfig(filename=getFileName(), filemode='w', 
+                        level=logging.DEBUG, 
+                        format = "%(asctime)s %(levelname)s %(name)s %(message)s")
     logging.debug('mensaje de debug')
     logging.info('mensaje de info')
     logging.warning('mensaje de warning')
