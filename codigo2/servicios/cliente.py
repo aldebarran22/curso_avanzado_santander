@@ -32,9 +32,15 @@ def testProductosGetCategoria(categoria):
     resp = requests.get(url)
     print(resp.json())
 
+def testProductosDeleteId(id):
+    url = f"http://localhost:5000/productos/{id}"
+    resp = requests.delete(url)
+    print(resp.json())
+
 
 if __name__ == "__main__":
     # testHelloWorld()
     # testProductosGet()
     # testProductosGetId(1)
-    testProductosGetCategoria("bebidas")
+    # testProductosGetCategoria("bebidas")
+    testProductosDeleteId(26)
