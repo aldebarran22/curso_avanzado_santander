@@ -16,7 +16,7 @@ def testProductosGet():
     url = "http://localhost:5000/productos"
     resp = requests.get(url)
     fich = open("productos.json", "w")
-    json.dump(resp.json(), fich)
+    json.dump(resp.json(), fich, indent=4)
     fich.close()
     print("Se ha descargado el fichero: productos.json")
 
