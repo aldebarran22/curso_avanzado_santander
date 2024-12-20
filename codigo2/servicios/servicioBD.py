@@ -19,12 +19,18 @@ path = "empresa3.db"
 class RecursoProducto(Resource):
 
     def delete(self, id):
-        # Abrir la base de datos
-        pass
+        try:
+            # Abrir la base de datos
+            bd = BaseDatos(path)
 
-        # Ejecutar el método delete de la BD:
+            # Ejecutar el método delete de la BD:
+            n = bd.delete(id)
 
-        # Retorna un json {"delete": ?} con el resultado del método delete de la BD:
+            # Retorna un json {"delete": ?} con el resultado del método delete de la BD:
+            return {"delete":n}
+        
+        except Exception as e:
+            abort(500, message=str(e))
 
 
     def get(self, id=None):
