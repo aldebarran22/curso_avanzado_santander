@@ -24,3 +24,12 @@ class Fachada:
             return resul.decode('utf8')
         else:
             return None
+        
+
+if __name__ == '__main__':
+    cad = "hola que tal"        
+    resul = Fachada.strchr(cad, 'q')
+    if resul:
+        print(resul)
+    else:
+        print('No existe la letra')
