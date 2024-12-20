@@ -79,4 +79,5 @@ if __name__ == "__main__":
     # testProductosGetId(1)
     # testProductosGetCategoria("bebidas")
     # testProductosDeleteId(26)
-    testProductosPost()
+    # testProductosPost()
+    testProductosPut(200)
