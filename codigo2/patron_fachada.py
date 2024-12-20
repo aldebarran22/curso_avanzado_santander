@@ -46,6 +46,9 @@ class FachadaDLL:
         self.path = path
         self.__dll = cdll.LoadLibrary(path)
         print(f'DLL {path} cargada ...')
+
+    def suma(self, a, b):
+        return self.__dll.suma(c_int(a), c_int(b))
         
 
 def testFachada():
@@ -66,6 +69,7 @@ def testFachada():
 
 def testFachadaDLL():
     dll = FachadaDLL("./funciones.dll")
+    print("sumar: ", dll.suma(12, 55))
 
 if __name__ == '__main__':
    # testFachada()
