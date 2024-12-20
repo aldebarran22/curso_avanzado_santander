@@ -6,12 +6,12 @@ CC       = gcc.exe
 WINDRES  = windres.exe
 OBJ      = dllmain.o
 LINKOBJ  = dllmain.o
-LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib32" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib32" -static-libgcc -m32
+LIBS     = -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -lgdi32 -lcomdlg32
 INCS     = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Program Files (x86)/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
 BIN      = dll2.dll
-CXXFLAGS = $(CXXINCS) -m32 -DBUILDING_DLL=1
-CFLAGS   = $(INCS) -m32 -DBUILDING_DLL=1
+CXXFLAGS = $(CXXINCS) -std=c++11 -DBUILDING_DLL=1
+CFLAGS   = $(INCS) -std=c++11 -DBUILDING_DLL=1
 RM       = rm.exe -f
 DEF      = libdll2.def
 STATIC   = libdll2.a

@@ -40,8 +40,14 @@ class Fachada:
         else:
             return None
         
+class FachadaDLL:
 
-if __name__ == '__main__':
+    def __init__(self, path):
+        self.path = path
+        self.__dll = cdll.LoadLibrary(path)
+        
+
+def testFachada():
     cad = "hola que tal"        
     resul = Fachada.strchr(cad, 'q')
     if resul:
@@ -55,3 +61,11 @@ if __name__ == '__main__':
         print(resul)
     else:
         print('No existe la palabra')
+
+
+def testFachadaDLL():
+    dll = FachadaDLL("funciones.dll")
+
+if __name__ == '__main__':
+   # testFachada()
+   testFachadaDLL()
