@@ -26,8 +26,15 @@ def testProductosGetId(id):
     resp = requests.get(url)
     print(resp.json())
 
-if __name__ == "__main__":
-    #testHelloWorld()
-    #testProductosGet()
-    testProductosGetId(1)
 
+def testProductosGetCategoria(categoria):
+    url = f"http://localhost:5000/productos/{categoria}"
+    resp = requests.get(url)
+    print(resp.json())
+
+
+if __name__ == "__main__":
+    # testHelloWorld()
+    # testProductosGet()
+    # testProductosGetId(1)
+    testProductosGetCategoria("bebidas")
