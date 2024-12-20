@@ -20,7 +20,8 @@ def getFileName(directorio='.', prefijo='mensajes'):
 def prueba2():
     logging.basicConfig(filename=getFileName(), filemode='w', 
                         level=logging.DEBUG, 
-                        format = "%(asctime)s %(levelname)s %(name)s %(message)s")
+                        format = "%(asctime)s %(levelname)s %(name)s %(message)s",
+                        datefmt="%d %b %Y %H:%M:%S")
     logging.debug('mensaje de debug')
     logging.info('mensaje de info')
     logging.warning('mensaje de warning')
