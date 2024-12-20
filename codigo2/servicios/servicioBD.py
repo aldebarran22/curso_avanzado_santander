@@ -28,7 +28,7 @@ class RecursoProducto(Resource):
             abort(404, message=str(e))
 
 
-api.add_resource(RecursoProducto, "/productos")
+api.add_resource(RecursoProducto, "/productos", "/productos/")
 
 if __name__ == "__main__":
     app.run(debug=True)
